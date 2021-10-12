@@ -32,7 +32,7 @@ typedef struct _piece {
 
 
 //Description
-void get_moves(_piece(*)[7],  _piece*);
+void get_moves(_piece(*)[8],  _piece*);
 
 //Description
 //void illuminate(piece, COLOR);
@@ -41,7 +41,7 @@ void get_moves(_piece(*)[7],  _piece*);
 bool check_legal(_piece*);
 
 //Description
-void reset_board(_piece(*)[7]);
+void reset_board(_piece(*)[8]);
 
 //Description
-void move_piece(_piece(*)[7], _piece*, int, int);
+void move_piece(_piece(*)[8], _piece*, int, int);

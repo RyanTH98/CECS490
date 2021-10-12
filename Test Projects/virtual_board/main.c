@@ -24,17 +24,17 @@
 
 int main(void) {
 
-	_piece board[7][7];
+	_piece board[8][8];
 
-	//reset_board(board);
+	reset_board(board);
 
-	printf("Test");
+	printf("Test\n");
 
 	return 0;
 }
 
 
-void get_moves(_piece (*board)[7], _piece *p) {
+void get_moves(_piece (*board)[8], _piece *p) {
 	switch(p->type) {
 		case NO_PIECE:
 			break;
@@ -271,7 +271,7 @@ bool check_legal(_piece *p) {
 	return (p->type == NO_PIECE);
 }
 
-void reset_board(_piece(*board)[7]) {
+void reset_board(_piece(*board)[8]) {
 
 	/* Assign color of all Black pieces
 	   Set default direction to moving downward */
@@ -326,7 +326,7 @@ void reset_board(_piece(*board)[7]) {
 
 }
 
-void move_piece(_piece (*board)[7], _piece *p, int x, int y) {
+void move_piece(_piece(*board)[8], _piece *p, int x, int y) {
 	if (p->firstMove == true)
 		p->firstMove == false;
 
