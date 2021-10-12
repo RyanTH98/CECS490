@@ -34,76 +34,94 @@ void get_moves(piece *board, piece *p) {
 		case NONE:
 			break;
 		case PAWN:
-			/* If the pawn HAS NOT moved yet, it can move forward by one OR two spaces, OR forward and to either side (if there is a capturable piece)
-			   If the pawn HAS moved, it can move forward by one space, OR forward and to either side */
-			
-			
-			if (p->direction == 'D') { // Piece moving Down
-				if (check_legal(board[p->row - 1][p->column]))     // Down
-					// illuminate(&p, white);
-				if (check_legal(board[p->row - 1][p->column - 1])) // Down & Left
-					// illuminate(&p, white);
-				if (check_legal(board[p->row - 1][p->column + 1])) // Down & Right
-					// illuminate(&p, white);
+			/* If a piece is moving DOWN the board */
+			if (p->direction == 'D') {
+
+				/* Check BELOW for a piece */
+				if (check_legal(board[p->row - 1][p->column]))
+					// Light up square in white
+
+				/* Check BELOW, DIAGONALLY for a piece */
+				if (!check_legal(board[p->row - 1][p->column - 1]))
+					// Light up square in red
+				if (!check_legal(board[p->row - 1][p->column + 1]))
+					// Light up square in red
+
+
+				/* Special Case */
+				/* FIRST move ONLY - Check two squares BELOW for a piece */
 				if (p->firstMove == true)
-					if (check_legal(board[p->row - 2][p->column])) // Down by two
-						// illuminate(&p, white);
-		    } else if(p->direction == 'U') { // Piece moving Up
-				if (check_legal(board[p->row + 1][p->column]))	   // Up
-					// illuminate(&p, white);
-				if (check_legal(board[p->row + 1][p->column - 1])) // Up & Left
-					// illuminate(&p, white);
-				if (check_legal(board[p->row + 1][p->column + 1])) // Up & Right
-					// illuminate(&p, white);
+					if (check_legal(board[p->row - 2][p->column]))
+						// Light up square in white/
+		    }
+
+			/* If a piece is moving UP the board */
+			else if (p->direction == 'D') {
+
+				/* Check ABOVE for a piece */
+				if (check_legal(board[p->row + 1][p->column]))
+					// Light up square in white
+
+				/* Check ABOVE, DIAGONALLY for a piece */
+				if (!check_legal(board[p->row + 1][p->column - 1]))
+					// Light up square in red
+				if (!check_legal(board[p->row + 1][p->column + 1]))
+					// Light up square in red
+
+							
+				/* Special Case */
+				/* FIRST move ONLY - Check two squares BELOW for a piece */
 				if (p->firstMove == true)
-					if (check_legal(board[p->row + 2][p->column])) // Up by two
-						// illuminate(&p, white);
-			} else {}
+					if (check_legal(board[p->row - 2][p->column]))
+						// Light up square in white/
+			}
 			break;
 		case BISHOP:
-			/* Diagonally, Down & Right */
-			for (int i = p->row; i < 8; i--) {
+			/* Check DIAGONALLY for a piece, until one is detected */
+
+			/* BELOW and to the RIGHT */
+			for (int i = p->row; i < 8; i++) {
 				for (int j = p->column; j < 8; j++) {
 					if (check_legal(board[i][j])) {
-						// illuminate(&p, white);
+						// Light up square in white
 					} else {
-						// illuminate(&p, red);
+						// Light up square in red
 						break;
 					}
 				}
 			}
 
-			/* Diagonally, Down & Left */
-			for (int i = p->row; i < 8; i--) {	// Check Down, diagonally, until a piece is detected or the index reaches the edge of the board
+			/* BELOW and to the LEFT */
+			for (int i = p->row; i < 8; i++) {
 				for (int j = p->column; j >= 0; j--) {
 					if (check_legal(board[i][j])) {
-						// illuminate(&p, white);
+						// Light up square in white
 					} else {
-						// illuminate(&p, red);
+						// Light up square in red
 						break;
 					}
 				}
 			}
 
-			/* Diagonally, Up & Right */
-			for (int i = p->row; i >= 0; i--) {	// Check Down, diagonally, until a piece is detected or the index reaches the edge of the board
-				for (int j = p->column; j > 8; j--) {
+			/* ABOVE and to the Right */
+			for (int i = p->row; i >= 0; i--) {
+				for (int j = p->column; j > 8; j++) {
 					if (check_legal(board[i][j])) {
-						// illuminate(&p, white);
+						// Light up square in white
 					} else {
-						// illuminate(&p, red);
+						// Light up square in red
 						break;
 					}
 				}
 			}
 
-			/* Diagonally, Up & Left */
-			for (int i = p->row; i >= 0; i--) {	// Check Down, diagonally, until a piece is detected or the index reaches the edge of the board
-				for (int j = p->column; j <= 0; j--) {
+			/* ABOVE and to the LEFT */
+			for (int i = p->row; i >= 0; i--) {
+				for (int j = p->column; j >= 0; j--) {
 					if (check_legal(board[i][j])) {
-						// illuminate(&p, white);
+						// Light up square in white
 					} else {
-						// illuminate(&p, red);
+						// Light up square in red
 						break;
 					}
 				}
@@ -112,14 +130,127 @@ void get_moves(piece *board, piece *p) {
 		case KNIGHT:
 			break;
 		case ROOK:
+			/* Check HORIZONTALLY or a piece, until one is detected */
+
+			/* LEFT, until a piece is detected */
+			for (int j = p->column; j <= 0; j--) {
+				if (check_legal(board[p->row][j])) {
+					// Light up square in white
+				} else {
+					// Light up square in red
+					break;
+				}
+			}
+
+			/* RIGHT, until a piece is detected */
+			for (int j = p->column; j > 8; j++) {
+				if (check_legal(board[p->row][j])) {
+					// Light up square in white
+				} else {
+					// Light up square in red
+					break;
+				}
+			}
+
+			/* Special Case */
+			/* FIRST move ONLY - Check for King to castle */
+			piece p1 = board[p - row][p->column - 3];
+			piece p2 = board[p - row][p->column - 2];
+			piece p3 = board[p - row][p->column - 1];
+			
+			/* Check if King is in the proper place, and squares in between Rook and King are empty */
+			if (p1->type == KING && check_legal(p2) && check_legal(p3)) {
+				// Light up squares in between Rook and King, in white
+			}
 			break;
 		case QUEEN:
+			/* Check DIAGONALLY for a piece, until one is detected */
+
+			/* BELOW and to the RIGHT */
+			for (int i = p->row; i < 8; i++) {
+				for (int j = p->column; j < 8; j++) {
+					if (check_legal(board[i][j])) {
+						// Light up square in white
+					}
+					else {
+						// Light up square in red
+						break;
+					}
+				}
+			}
+
+			/* BELOW and to the LEFT */
+			for (int i = p->row; i < 8; i++) {
+				for (int j = p->column; j >= 0; j--) {
+					if (check_legal(board[i][j])) {
+						// Light up square in white
+					}
+					else {
+						// Light up square in red
+						break;
+					}
+				}
+			}
+
+			/* ABOVE and to the Right */
+			for (int i = p->row; i >= 0; i--) {
+				for (int j = p->column; j > 8; j++) {
+					if (check_legal(board[i][j])) {
+						// Light up square in white
+					}
+					else {
+						// Light up square in red
+						break;
+					}
+				}
+			}
+
+			/* ABOVE and to the LEFT */
+			for (int i = p->row; i >= 0; i--) {
+				for (int j = p->column; j >= 0; j--) {
+					if (check_legal(board[i][j])) {
+						// Light up square in white
+					}
+					else {
+						// Light up square in red
+						break;
+					}
+				}
+			}
+
+
+			/* Check HORIZONTALLY or a piece, until one is detected */
+
+			/* LEFT, until a piece is detected */
+			for (int j = p->column; j <= 0; j--) {
+				if (check_legal(board[p->row][j])) {
+					// Light up square in white
+				}
+				else {
+					// Light up square in red
+					break;
+				}
+			}
+
+			/* RIGHT, until a piece is detected */
+			for (int j = p->column; j > 8; j++) {
+				if (check_legal(board[p->row][j])) {
+					// Light up square in white
+				}
+				else {
+					// Light up square in red
+					break;
+				}
+			}
 			break;
 		case KING:
 			break;
 		default:
+			break;
 	}
 }
+
+
 
 /*
 void illuminate(piece* p, COLOR) {
