@@ -75,62 +75,95 @@ int main(void) {
 	return 0;
 }
 
+void push_back(_piece (*array)[2],_piece *new_move , int num) {
+    array[num][0].row = new_move->row;
+    array[num][1].column = new_move->column;
+}
 
 void get_moves(_piece (*board)[8], _piece *p) {
-    _piece moves[27][2];
-    int num_moves;
+    int row_dif, column_dif;
+    int num_legal = 0, num_illegal = 0, num = 0;
+
+
+    _piece legal_moves[27][2], illegal_moves[27][2];
+    _piece new_move;
 
 	switch(p->type) {
 		case NO_PIECE:
 			break;
 		case PAWN:
-			/* If a piece is moving DOWN the board */
-			if (p->direction == 'D') {
+            for(int c = 0; c <= 4; c++) {
+                /* If a piece is moving DOWN the board */
+                if (p->direction == 'D' | p->direction == 'B') {
+                    switch(c) {
+                        case 0:
+                            /* Check BELOW for a piece */
+                            row_dif    =  1;
+                            column_dif =  0;
+                            break;
+                        case 1:
+                            /* Check BELOW, DIAGONALLY left for a piece */
+                            row_dif    =  1;
+                            column_dif = -1;
+                            break;
+                        case 2:
+                            /* Check BELOW, DIAGONALLY right for a piece */
+                            row_dif    =  1;
+                            column_dif =  1;
+                            break;
+                        case 3:
+                            /* Special Case */
+                            /* FIRST move ONLY - Check two squares BELOW for a piece */
+                            if (p->firstMove == true)
+                                row_dif    = 2;
+                                column_dif = 0;
+                            break;
+                        default:
+                            break;
+                    }
+                }
 
-				/* Check BELOW for a piece */
-				if (check_legal(&board[p->row - 1][p->column])) {
+                /* If a piece is moving UP the board */
+                else if(p->direction == 'U' | p->direction == 'B') {
+                    switch(c) {
+                        case 0:
+                            /* Check ABOVE for a piece */
+                            row_dif    = -1;
+                            column_dif =  0;
+                            break;
+                        case 1:
+                            /* Check ABOVE, DIAGONALLY left for a piece */
+                            row_dif    = -1;
+                            column_dif = -1;
+                            break;
+                        case 2:
+                            /* Check ABOVE, DIAGONALLY right for a piece */
+                            row_dif    = -1;
+                            column_dif =  1;
+                            break;
+                        case 3:
+                            /* Special Case */
+                            /* FIRST move ONLY - Check two squares BELOW for a piece */
+                            if (p->firstMove == true)
+                                row_dif    = -2;
+                                column_dif =  0;
+                            break;
+                        default:
+                            break;
+                    }
+                }
 
-                    num_moves++;
-					// Light up square in white
-				}
+                /* Add LEGAL moves to Moves 2D Array*/
+                new_move = board[p->row + row_dif][p->column + column_dif];
 
-				/* Check BELOW, DIAGONALLY for a piece */
-				if (!check_legal(&board[p->row - 1][p->column - 1]))
-					// Light up square in red
-				if (!check_legal(&board[p->row - 1][p->column + 1]))
-					// Light up square in red
-
-
-				/* Special Case */
-				/* FIRST move ONLY - Check two squares BELOW for a piece */
-				if (p->firstMove == true){
-					if (check_legal(&board[p->row - 2][p->column])){
-						// Light up square in white/
-					}
-				}
-		    	}
-
-			/* If a piece is moving UP the board */
-			else if (p->direction == 'D') {
-
-				/* Check ABOVE for a piece */
-				if (check_legal(&board[p->row + 1][p->column]))
-					// Light up square in white
-
-				/* Check ABOVE, DIAGONALLY for a piece */
-				if (!check_legal(&board[p->row + 1][p->column - 1]))
-					// Light up square in red
-				if (!check_legal(&board[p->row + 1][p->column + 1]))
-					// Light up square in red
-
-
-				/* Special Case */
-				/* FIRST move ONLY - Check two squares BELOW for a piece */
-				if (p->firstMove == true){
-					if (check_legal(&board[p->row - 2][p->column])){
-						// Light up square in white/
-					}
-				}
+                if (check_legal(&new_move) == true) {
+                    num = num_legal++;
+                    push_back(legal_moves, &new_move, num);
+                }
+                else if(check_legal((&new_move)) == false) {
+                    num = num_illegal++;
+                    push_back(illegal_moves, &new_move, num);
+                }
 			}
 			break;
 		case BISHOP:
@@ -304,6 +337,10 @@ void get_moves(_piece (*board)[8], _piece *p) {
 			break;
 		default:
 			break;
+
+    num = 0;
+    num_legal = 0;
+    num_illegal = 0;
 	}
 }
 
