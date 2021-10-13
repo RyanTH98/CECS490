@@ -45,3 +45,6 @@ void reset_board(_piece(*)[8]);
 
 //Description
 void move_piece(_piece(*)[8], _piece*, int, int);
+
+//Description
+void print_board(_piece(*)[8]);

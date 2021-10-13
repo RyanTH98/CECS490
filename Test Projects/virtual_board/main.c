@@ -27,8 +27,9 @@ int main(void) {
 	_piece board[8][8];
 
 	reset_board(board);
-
-	printf("Test\n");
+	
+	//printf("Test\n");
+	print_board(board);
 
 	return 0;
 }
@@ -321,6 +322,9 @@ void reset_board(_piece(*board)[8]) {
 		for (int j = 0; j < 8; j++) {
 			board[i][j].row = i;
 			board[i][j].column = j;
+
+			if(i >= 2 && i <= 5)
+				board[i][j].type = NO_PIECE;
 		}
 	}
 
@@ -334,4 +338,42 @@ void move_piece(_piece(*board)[8], _piece *p, int x, int y) {
 
 	p->type = NO_PIECE;
 	p->color = NO_COLOR;
+}
+
+
+
+
+void print_board(_piece(*board)[8]){
+	int i, j;
+	for(i = 0; i<8;i++){
+		for(j=0;j<8;j++){
+			switch(board[i][j].type){
+				case NO_PIECE:
+					printf(" ");
+					break;
+				case PAWN:
+					printf("p");
+					break;
+				case BISHOP:
+					printf("B");
+					break;
+				case KNIGHT:
+					printf("k");
+					break;
+				case ROOK:
+					printf("R");
+					break;
+				case QUEEN:
+					printf("Q");
+					break;
+				case KING:
+					printf("K");
+					break;
+				default:
+					printf("You broke something on row %d, column %d\n", i, j);
+					break;
+			}
+		}
+		printf("\n");
+	}
 }
