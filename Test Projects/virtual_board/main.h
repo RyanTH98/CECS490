@@ -3,18 +3,22 @@
  *
  *       Filename:  main.h
  *
- *    Description:  
+ *    Description:
  *
  *        Version:  1.0
  *        Created:  10/12/2021 02:43:39 PM
  *       Revision:  none
  *       Compiler:  gcc
  *
- *        Authors:  Alex Gonzalez(ag), Benjamin Gillmore (bg), bggillmore@gmail.com
- *        Company:  California State University Long Beach
+ *        Authors:  Alex Gonzalez(ag) - alexcbensen@gmail.com,
+                    Benjamin Gillmore (bg) - bggillmore@gmail.com
+ *
+          Company:  California State University Long Beach
  *
  * =====================================================================================
  */
+
+
 #include <stdbool.h>
 
 typedef enum _type { NO_PIECE, PAWN, BISHOP, KNIGHT, ROOK, QUEEN, KING } _type;

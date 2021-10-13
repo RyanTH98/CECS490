@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1634155343 source:c:\users\alexc\documents\github\cecs490\test projects\virtual_board\main.c
+	"main.h"
+	<stdio.h>
+
+1634155173 c:\users\alexc\documents\github\cecs490\test projects\virtual_board\main.h
+	<stdbool.h>
+

@@ -1,10 +1,27 @@
-// Author:  Alex Gonzalez
-// Project: Smart Chess Board
+/*
+ * =====================================================================================
+ *
+ *       Filename:  main.c
+ *
+ *    Description:
+ *
+ *        Version:  1.0
+ *        Created:  10/11/2021 07:25:58 PM
+ *       Revision:  none
+ *       Compiler:  gcc
+ *
+ *        Authors:  Alex Gonzalez     (ag) - alexcbensen@gmail.com,
+                    Benjamin Gillmore (bg) - bggillmore@gmail.com
+ *
+          Company:  California State University Long Beach
+ *
+ * =====================================================================================
+ */
 
 #include "main.h"
 #include <stdio.h>
 
-//These defines are not nesassary, they are just for coloring strings on console
+//These defines are not necessary, they are just for coloring strings on console
 #define KNRM  "\x1B[0m"
 #define KRED  "\x1B[31m"
 #define KGRN  "\x1B[32m"
@@ -38,15 +55,31 @@ int main(void) {
 	_piece board[8][8];
 
 	reset_board(board);
-	
+
 	//printf("Test\n");
-	print_board(board);
+    //print_board(board);
+
+    int x, y;
+
+    printf("Enter move:\nrow: ");
+    scanf("%d", &x);
+
+    printf("Enter move:\ncolumn: ");
+    scanf("%d", &y);
+
+    move_piece(board, &board[0][0], x, y);
+
+    print_board(board);
+
 
 	return 0;
 }
 
 
 void get_moves(_piece (*board)[8], _piece *p) {
+    _piece moves[27][2];
+    int num_moves;
+
 	switch(p->type) {
 		case NO_PIECE:
 			break;
@@ -55,8 +88,11 @@ void get_moves(_piece (*board)[8], _piece *p) {
 			if (p->direction == 'D') {
 
 				/* Check BELOW for a piece */
-				if (check_legal(&board[p->row - 1][p->column]))
+				if (check_legal(&board[p->row - 1][p->column])) {
+
+                    num_moves++;
 					// Light up square in white
+				}
 
 				/* Check BELOW, DIAGONALLY for a piece */
 				if (!check_legal(&board[p->row - 1][p->column - 1]))
@@ -73,7 +109,7 @@ void get_moves(_piece (*board)[8], _piece *p) {
 					}
 				}
 		    	}
-			
+
 			/* If a piece is moving UP the board */
 			else if (p->direction == 'D') {
 
@@ -87,7 +123,7 @@ void get_moves(_piece (*board)[8], _piece *p) {
 				if (!check_legal(&board[p->row + 1][p->column + 1]))
 					// Light up square in red
 
-							
+
 				/* Special Case */
 				/* FIRST move ONLY - Check two squares BELOW for a piece */
 				if (p->firstMove == true){
@@ -178,7 +214,7 @@ void get_moves(_piece (*board)[8], _piece *p) {
 			_piece* p1 = &board[p -> row][p->column - 3];
 			_piece* p2 = &board[p -> row][p->column - 2];
 			_piece* p3 = &board[p -> row][p->column - 1];
-			
+
 			/* Check if King is in the proper place, and squares in between Rook and King are empty */
 			if (p1->type == KING && check_legal(p2) && check_legal(p3)) {
 				// Light up squares in between Rook and King, in white
@@ -271,8 +307,6 @@ void get_moves(_piece (*board)[8], _piece *p) {
 	}
 }
 
-
-
 /*
 void illuminate(piece* p, COLOR) {
 	// Code for hardware LED
@@ -341,6 +375,7 @@ void reset_board(_piece(*board)[8]) {
 
 }
 
+/* Input: Board (2D Array), Piece being moved (Piece), row, column */
 void move_piece(_piece(*board)[8], _piece *p, int x, int y) {
 	if (p->firstMove == true)
 		p->firstMove == false;
@@ -351,12 +386,9 @@ void move_piece(_piece(*board)[8], _piece *p, int x, int y) {
 	p->color = NO_COLOR;
 }
 
-
-
-
 void print_board(_piece(*board)[8]){
 	int i, j;
-	
+
 	printf("%s---------------------------------\n", KMAG);
 	for(i = 0; i<8;i++){
 		for(j=0;j<8;j++){
