@@ -4,6 +4,17 @@
 #include "main.h"
 #include <stdio.h>
 
+//These defines are not nesassary, they are just for coloring strings on console
+#define KNRM  "\x1B[0m"
+#define KRED  "\x1B[31m"
+#define KGRN  "\x1B[32m"
+#define KYEL  "\x1B[33m"
+#define KBLU  "\x1B[34m"
+#define KMAG  "\x1B[35m"
+#define KCYN  "\x1B[36m"
+#define KWHT  "\x1B[37m"
+
+
 //EDIT: Put in header file (bg)
 
 // Piece
@@ -352,22 +363,22 @@ void print_board(_piece(*board)[8]){
 					printf(" ");
 					break;
 				case PAWN:
-					printf("p");
+					printf("%sp%s", (board[i][j].color == BLACK)?KRED:KWHT, KWHT);
 					break;
 				case BISHOP:
-					printf("B");
+					printf("%sb%s", (board[i][j].color == BLACK)?KRED:KWHT, KWHT);
 					break;
 				case KNIGHT:
-					printf("k");
+					printf("%sk%s", (board[i][j].color == BLACK)?KRED:KWHT, KWHT);
 					break;
 				case ROOK:
-					printf("R");
+					printf("%sr%s", (board[i][j].color == BLACK)?KRED:KWHT, KWHT);
 					break;
 				case QUEEN:
-					printf("Q");
+					printf("%sQ%s", (board[i][j].color == BLACK)?KRED:KWHT, KWHT);
 					break;
 				case KING:
-					printf("K");
+					printf("%sK%s", (board[i][j].color == BLACK)?KRED:KWHT, KWHT);
 					break;
 				default:
 					printf("You broke something on row %d, column %d\n", i, j);
