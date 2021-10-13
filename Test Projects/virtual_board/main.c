@@ -356,37 +356,42 @@ void move_piece(_piece(*board)[8], _piece *p, int x, int y) {
 
 void print_board(_piece(*board)[8]){
 	int i, j;
+	
+	printf("%s---------------------------------\n", KMAG);
 	for(i = 0; i<8;i++){
 		for(j=0;j<8;j++){
-			printf("%s", (board[i][j].color == BLACK)?KRED:KWHT);
+			printf("%s|", KMAG);
+			printf("%s", (board[i][j].color == BLACK)?KGRN:KBLU);
 			switch(board[i][j].type){
 				case NO_PIECE:
-					printf(" ");
+					printf("   ");
 					break;
 				case PAWN:
-					printf("p");
+					printf(" p ");
 					break;
 				case BISHOP:
-					printf("B");
+					printf(" b ");
 					break;
 				case KNIGHT:
-					printf("k");
+					printf(" k ");
 					break;
 				case ROOK:
-					printf("R");
+					printf(" r ");
 					break;
 				case QUEEN:
-					printf("Q");
+					printf(" Q ");
 					break;
 				case KING:
-					printf("K");
+					printf(" K ");
 					break;
 				default:
 					printf("You broke something on row %d, column %d\n", i, j);
 					break;
 			}
 		}
-		printf("\n");
+		printf("%s|\n---------------------------------\n", KMAG);
 	}
-	printf("%s", KWHT);
+	//printf("%s-----------------\n", KCYN);
+	printf("%s", KNRM);
+
 }
