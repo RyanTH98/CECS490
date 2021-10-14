@@ -11,9 +11,9 @@
  *       Compiler:  gcc
  *
  *        Authors:  Alex Gonzalez     (ag) - alexcbensen@gmail.com,
-                    Benjamin Gillmore (bg) - bggillmore@gmail.com
+ *                  Benjamin Gillmore (bg) - bggillmore@gmail.com
  *
-          Company:  California State University Long Beach
+ *        Company:  California State University Long Beach
  *
  * =====================================================================================
  */
@@ -21,7 +21,7 @@
 #include "main.h"
 #include <stdio.h>
 
-//These defines are not necessary, they are just for coloring strings on console
+// These defines are not necessary, they are just for coloring strings on console
 #define KNRM  "\x1B[0m"
 #define KRED  "\x1B[31m"
 #define KGRN  "\x1B[32m"
@@ -30,24 +30,6 @@
 #define KMAG  "\x1B[35m"
 #define KCYN  "\x1B[36m"
 #define KWHT  "\x1B[37m"
-
-
-//EDIT: Put in header file (bg)
-
-// Piece
-//typedef enum type { NONE, PAWN, BISHOP, KNIGHT, ROOK, QUEEN, KING } type;
-//
-//typedef enum color { NONE, BLACK, WHITE } color;
-//
-//typedef struct _piece {
-//	type  type		= NONE;
-//	color color		= NONE;
-//	int   row	    = -1;
-//	int   column    = -1;
-//	char  direction = 'X';
-//	bool  firstMove = true;
-//} piece;
-
 
 
 int main(void) {
@@ -60,12 +42,32 @@ int main(void) {
     //print_board(board);
 
     int x, y;
+    char name[20], yn;
 
-    printf("Enter move:\nrow: ");
-    scanf("%d", &x);
+    printf("Hello! \nWould you like to play chess? (Y/N)\n> ");
 
-    printf("Enter move:\ncolumn: ");
-    scanf("%d", &y);
+    scanf(" %c", &yn);
+
+    if(yn == 'y' | yn == 'Y')
+        printf("Please enter your name\n> ");
+    else if(yn == 'n' | yn == 'N') {
+        printf("Alright. See you later!");
+        return 0;
+    }
+    else {
+        return 0;
+    }
+
+    fgetc(stdin); // Clear buffer
+    fgets(name, 20, stdin);
+    printf("Hey, %sLet's begin!\n", name);
+    printf("\nIn this test, we'll be moving the rook in the top-left corner of the board.");
+
+    printf("\n\nWhich row would you like to move it to?\n> ");
+    scanf(" %d", &x);
+
+    printf("Column?\n> ");
+    scanf(" %d", &y);
 
     move_piece(board, &board[0][0], x, y);
 
@@ -86,45 +88,15 @@ void get_moves(_piece (*board)[8], _piece *p) {
 
 
     _piece legal_moves[27][2], illegal_moves[27][2];
-    _piece new_move;
+    _piece possible_move;
 
 	switch(p->type) {
 		case NO_PIECE:
 			break;
 		case PAWN:
             for(int c = 0; c <= 4; c++) {
-                /* If a piece is moving DOWN the board */
-                if (p->direction == 'D' | p->direction == 'B') {
-                    switch(c) {
-                        case 0:
-                            /* Check BELOW for a piece */
-                            row_dif    =  1;
-                            column_dif =  0;
-                            break;
-                        case 1:
-                            /* Check BELOW, DIAGONALLY left for a piece */
-                            row_dif    =  1;
-                            column_dif = -1;
-                            break;
-                        case 2:
-                            /* Check BELOW, DIAGONALLY right for a piece */
-                            row_dif    =  1;
-                            column_dif =  1;
-                            break;
-                        case 3:
-                            /* Special Case */
-                            /* FIRST move ONLY - Check two squares BELOW for a piece */
-                            if (p->firstMove == true)
-                                row_dif    = 2;
-                                column_dif = 0;
-                            break;
-                        default:
-                            break;
-                    }
-                }
-
-                /* If a piece is moving UP the board */
-                else if(p->direction == 'U' | p->direction == 'B') {
+                /* If a pawn is moving UP the board */
+                if(p->direction == 'U' | p->direction == 'B') {
                     switch(c) {
                         case 0:
                             /* Check ABOVE for a piece */
@@ -144,7 +116,7 @@ void get_moves(_piece (*board)[8], _piece *p) {
                         case 3:
                             /* Special Case */
                             /* FIRST move ONLY - Check two squares BELOW for a piece */
-                            if (p->firstMove == true)
+                            if (p->firstMove)
                                 row_dif    = -2;
                                 column_dif =  0;
                             break;
@@ -153,16 +125,48 @@ void get_moves(_piece (*board)[8], _piece *p) {
                     }
                 }
 
-                /* Add LEGAL moves to Moves 2D Array*/
-                new_move = board[p->row + row_dif][p->column + column_dif];
-
-                if (check_legal(&new_move) == true) {
-                    num = num_legal++;
-                    push_back(legal_moves, &new_move, num);
+                /* If a Pawn is moving UP the board */
+                else if (p->direction == 'D' | p->direction == 'B') {
+                    switch(c) {
+                        case 0:
+                            /* Check BELOW for a piece */
+                            row_dif    =  1;
+                            column_dif =  0;
+                            break;
+                        case 1:
+                            /* Check BELOW, diagonally LEFT for a piece */
+                            row_dif    =  1;
+                            column_dif = -1;
+                            break;
+                        case 2:
+                            /* Check BELOW, diagonally RIGHT for a piece */
+                            row_dif    =  1;
+                            column_dif =  1;
+                            break;
+                        case 3:
+                            /* Special Case */
+                            /* FIRST move ONLY - Check two squares BELOW for a piece */
+                            if (p->firstMove == true)
+                                row_dif    = 2;
+                                column_dif = 0;
+                            break;
+                        default:
+                            break;
+                    }
                 }
-                else if(check_legal((&new_move)) == false) {
+
+                possible_move = board[p->row + row_dif][p->column + column_dif];
+
+                /* Legal */
+                if (check_legal(&possible_move) == true) {
+                    num = num_legal++;
+                    push_back(legal_moves, &possible_move, num);
+                }
+
+                /* Illegal */
+                else if(check_legal((&possible_move)) == false) {
                     num = num_illegal++;
-                    push_back(illegal_moves, &new_move, num);
+                    push_back(illegal_moves, &possible_move, num);
                 }
 			}
 			break;

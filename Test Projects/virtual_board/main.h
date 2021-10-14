@@ -11,9 +11,9 @@
  *       Compiler:  gcc
  *
  *        Authors:  Alex Gonzalez(ag) - alexcbensen@gmail.com,
-                    Benjamin Gillmore (bg) - bggillmore@gmail.com
+ *   Benjamin Gillmore (bg) - bggillmore@gmail.com
  *
-          Company:  California State University Long Beach
+ *        Company:  California State University Long Beach
  *
  * =====================================================================================
  */
