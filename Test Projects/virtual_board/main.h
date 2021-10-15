@@ -10,8 +10,8 @@
  *       Revision:  none
  *       Compiler:  gcc
  *
- *        Authors:  Alex Gonzalez(ag) - alexcbensen@gmail.com,
- *   Benjamin Gillmore (bg) - bggillmore@gmail.com
+ *        Authors:  Alex Gonzalez(ag)	   - alexcbensen@gmail.com,
+ *				    Benjamin Gillmore (bg) - bggillmore@gmail.com
  *
  *        Company:  California State University Long Beach
  *
@@ -35,20 +35,68 @@ typedef struct _piece {
 } _piece;
 
 
-//Description
+/*  Function: check_legal
+
+	Inputs:   Space on board to check,
+
+	Outputs:  Boolean value - Whether the move is legal or not
+*/
+bool check_for(_type, _piece*);
+
+/*	Function: get_int
+
+	Inputs:   Lower and upper bounds for integer
+
+	Outputs:  None
+*/
+int get_int(int lower, int upper);
+
+/*	Function: get_moves
+
+	Inputs:   2D Array of Chess Board,
+		      Piece to be moved
+			
+	Outputs:  None
+*/
 void get_moves(_piece(*)[8],  _piece*);
 
-//Description
-//void illuminate(piece, COLOR);
 
-//Description
-bool check_legal(_piece*);
+/*  Function: move_piece
 
-//Description
-void reset_board(_piece(*)[8]);
+	Inputs:   2D Array of Chess Board,
+			  Piece to be moved,
+			  Index of destination row,
+			  Index of destination column
 
-//Description
-void move_piece(_piece(*)[8], _piece*, int, int);
+	Outputs:  None
+*/
+void move_piece(_piece(*)[8], _piece*, int x, int y);
 
-//Description
+
+/*  Function: print_board
+
+	Inputs:   2D Array of Chess Board,
+
+	Outputs:  None
+*/
 void print_board(_piece(*)[8]);
+
+
+/*	Function: push_back
+	
+	Inputs:   Array to add Piece to,
+		      Piece to be added to the array,
+		      Index of array piece should be inserted into
+
+	Outputs:  None
+*/
+void push_back(_piece(*array)[2], _piece* new_move, int num);
+
+
+/*  Function: reset_legal
+
+	Inputs:   2D Array of Chess Board,
+
+	Outputs:  None
+*/
+void reset_board(_piece(*)[8]);
