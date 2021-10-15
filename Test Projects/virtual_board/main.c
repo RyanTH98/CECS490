@@ -114,11 +114,11 @@ int get_int(int lower, int upper) {
 */
 void get_moves(_piece(*board)[8], _piece* p) {
 	int row_dif, column_dif;
-	int num_legal = 0, num_illegal = 0, num = 0;
+	int available = 0, capturable = 0, moves = 0;
 
 
-	_piece legal_moves[27][2], illegal_moves[27][2];
-	_piece possible_move;
+	_piece available_moves[27][2], capturable_moves[27][2];
+	_piece move;
 	_piece check;
 
 	switch (p->type) {
@@ -126,6 +126,10 @@ void get_moves(_piece(*board)[8], _piece* p) {
 		break;
 	case PAWN:
 		for (int c = 0; c <= 4; c++) {
+
+			/* Can this move only be made if there is a piece on the destination square? */
+			bool capture_only;
+			
 			/* If a pawn is moving UP the board */
 			if (p->direction == 'U' | p->direction == 'A') {
 				switch (c) {
@@ -133,73 +137,83 @@ void get_moves(_piece(*board)[8], _piece* p) {
 						/* Check ABOVE for a piece */
 						row_dif = -1;
 						column_dif = 0;
-						check.type = NO_PIECE;
+						capture_only = false;
 						break;
 					case 1:
 						/* Check ABOVE, DIAGONALLY left for a piece */
 						row_dif = -1;
 						column_dif = -1;
+						capture_only = true;
 						break;
 					case 2:
 						/* Check ABOVE, DIAGONALLY right for a piece */
 						row_dif = -1;
 						column_dif = 1;
+						capture_only = true;
 						break;
 					case 3:
 						/* Special Case */
 						/* FIRST move ONLY - Check two squares BELOW for a piece */
 						if (p->firstMove)
 							row_dif = -2;
-						column_dif = 0;
+							column_dif = 0;
+							capture_only = false;
 						break;
 					default:
 						break;
 				}
 			}
 
-			/* If a Pawn is moving UP the board */
+			/* If a Pawn is moving DOWN the board */
 			else if (p->direction == 'D' | p->direction == 'A') {
 				switch (c) {
 					case 0:
 						/* Check BELOW for a piece */
 						row_dif = 1;
 						column_dif = 0;
+						capture_only = false;
 						break;
 					case 1:
 						/* Check BELOW, diagonally LEFT for a piece */
 						row_dif = 1;
 						column_dif = -1;
+						capture_only = true;
 						break;
 					case 2:
 						/* Check BELOW, diagonally RIGHT for a piece */
 						row_dif = 1;
 						column_dif = 1;
+						capture_only = true;
 						break;
 					case 3:
 						/* Special Case */
 						/* FIRST move ONLY - Check two squares BELOW for a piece */
 						if (p->firstMove == true)
 							row_dif = 2;
-						column_dif = 0;
+							column_dif = 0;
+							capture_only = false;
 						break;
 					default:
 						break;
 				}
 			}
 
-			possible_move = board[p->row + row_dif][p->column + column_dif];
+			move = board[p->row + row_dif][p->column + column_dif];
 
-			/* Legal */
-			if (check_for(NO_PIECE, &possible_move) == true) {
-				num = num_legal++;
-				push_back(legal_moves, &possible_move, num);
+			/* If there IS NOT a piece on the destination square */
+			if ((check_for(NO_PIECE, &move) == true) & (capture_only == false)) {
+				moves = available++;
+				push_back(available_moves, &move, available);
 			}
 
-			/* Illegal */
-			else if (check_for(NO_PIECE, &possible_move) == false) {
-				num = num_illegal++;
-				push_back(illegal_moves, &possible_move, num);
+			/* If there IS a piece on the destination square AND that piece is of a different color */
+			else if ((check_for(NO_PIECE, &move) == false) & (p->color != move.color) & (capture_only == true)) {
+			/*   if there IS a piece on the destination square AND it is of a different color AND the move can only be made if a piece is present */
+				moves = capturable++;
+				push_back(capturable_moves, &move, capturable);
 			}
+
+			capture_only = false;
 		}
 		break;
 	case BISHOP:
@@ -380,9 +394,9 @@ void get_moves(_piece(*board)[8], _piece* p) {
 	default:
 		break;
 
-		num = 0;
-		num_legal = 0;
-		num_illegal = 0;
+		moves = 0;
+		available = 0;
+		capturable = 0;
 	}
 }
 
