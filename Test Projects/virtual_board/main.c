@@ -20,6 +20,7 @@
 
 #include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /* String colors for console output */
 #define KNRM  "\x1B[0m"
@@ -34,6 +35,7 @@
 
 int main(void) {
 	int x, y;
+	int move[4];
 	char name[20], yn;
 	_piece board[8][8];
 
@@ -43,11 +45,11 @@ int main(void) {
     printf("Hello! \nWould you like to play chess? (Y/N)\n> ");
     scanf(" %c", &yn);
 
-    if(yn == 'y' | yn == 'Y')
+    if((yn == 'y') | (yn == 'Y'))
         printf("\nPlease enter your name\n> ");
-    else if(yn == 'n' | yn == 'N') {
+    else if((yn == 'n') | (yn == 'N')) {
         printf("Alright. See you later!");
-        return 0;
+		return 0;
     }
     else
         return 0;
@@ -56,20 +58,15 @@ int main(void) {
     fgetc(stdin);
     fgets(name, 20, stdin);
 	
-    printf("\nHey, %sLet's begin!\n", name);
-    printf("\nIn this test, we'll be moving the rook in the top-left corner of the board.\n\n");
+    printf("\nHey, %sLet's begin!\n\n", name);
+    printf("Please use the following format: [Letter][Number].\nExamples: A0, e7, C6\n\n");
 	print_board(board);
 
-    printf("\n\nWhich row would you like to move it to?\n> ");
-	x = get_int(0, 7);
-
-    printf("\nWhich column would you like to move it to?\n> ");
-	y = get_int(0, 7);
+	get_move(&move);
 
     move_piece(board, &board[0][0], x, y);
-
+	printf("Moving %d%d to %d%d", move[0], move[1], move[2], move[3]);
     print_board(board);
-
 
 	return 0;
 }
@@ -85,12 +82,32 @@ bool check_for(_type t,_piece* p) {
 	return (p->type == t);
 }
 
+/*	Function: get_char
+
+	Inputs:   Lower and upper bounds for char's ASCII value
+
+	Outputs:  Char
+*/
+char get_char() {
+	char c;
+
+	while (1) {
+		scanf(" %c", &c);
+
+		/* If the character is a letter a-h, lowercase or uppercase */
+		if ((((int)c >= 97) & ((int)c <= 104)) | (((int)c >= 65) == ((int)c <= 72)))
+			return c;
+		else
+			printf("Letter must be between a and h.\n\n");
+
+	}
+}
 
 /*	Function: get_int
 
 	Inputs:   Lower and upper bounds for integer
 
-	Outputs:  None
+	Outputs:  Integer
 */
 int get_int(int lower, int upper) {
 	int i;
@@ -103,6 +120,26 @@ int get_int(int lower, int upper) {
 
 		printf("The number must be between %d, and %d.\n> ", lower, upper);
 	}
+}
+
+
+void get_move(int(*move)[4]) {
+	char new_move[4];
+
+	printf("\n\nPlease enter a move\n> ");
+	fgets(new_move, 5, stdin);
+	
+
+	for (int i = 0; i < 4; i++) {
+		*move[i] = to_int(new_move[i]);
+	}
+
+	printf("Moving %d%d to %d%d\n\n", *move[0], *move[1], *move[2], *move[3]);
+
+	//printf("%d", to_int(new_move[i]));
+
+	//move[i] = to_int(new_move[i]);
+
 }
 
 /*	Function: get_moves
@@ -478,7 +515,7 @@ void print_board(_piece(*board)[8]) {
 
 	Outputs:  None
 */
-void push_back(_piece (*array)[2],_piece *new_move , int num) {
+void push_back(_piece(*array)[2],_piece *new_move , int num) {
     array[num][0].row = new_move->row;
     array[num][1].column = new_move->column;
 }
@@ -546,4 +583,16 @@ void reset_board(_piece(*board)[8]) {
 		}
 	}
 
+}
+
+int to_int(char c) {
+	/* Lowercase Letters */
+	if (((int)c >= 97) & ((int)c <= 104))
+		return ((int)c - 96);
+	/* Uppercase Letters */
+	else if (((int)c >= 65) == ((int)c <= 72))
+		return ((int)c - 64);
+	/* Numbers 0 - 9 */
+	else if (((int)c >= 48) == ((int)c <= 57))
+		return abs(((int)c - 48) - 7);
 }

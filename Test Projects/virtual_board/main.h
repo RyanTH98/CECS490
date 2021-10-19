@@ -26,12 +26,12 @@ typedef enum _type { NO_PIECE, PAWN, BISHOP, KNIGHT, ROOK, QUEEN, KING } _type;
 typedef enum _color { NO_COLOR, BLACK, WHITE } _color;
 
 typedef struct _piece {
-	_type type;
+	  bool firstMove; 
+	   int row, column; 
+	  char row_char, direction;
+	 _type type;
 	_color color;
-	int row;
-	int column;
-	char direction;
-	bool firstMove;
+	
 } _piece;
 
 
@@ -43,6 +43,9 @@ typedef struct _piece {
 */
 bool check_for(_type, _piece*);
 
+
+char get_char();
+
 /*	Function: get_int
 
 	Inputs:   Lower and upper bounds for integer
@@ -50,6 +53,9 @@ bool check_for(_type, _piece*);
 	Outputs:  None
 */
 int get_int(int lower, int upper);
+
+
+void get_move(int(*)[4]);
 
 /*	Function: get_moves
 
@@ -90,7 +96,7 @@ void print_board(_piece(*)[8]);
 
 	Outputs:  None
 */
-void push_back(_piece(*array)[2], _piece* new_move, int num);
+void push_back(_piece(*)[2], _piece* new_move, int num);
 
 
 /*  Function: reset_legal
@@ -100,3 +106,6 @@ void push_back(_piece(*array)[2], _piece* new_move, int num);
 	Outputs:  None
 */
 void reset_board(_piece(*)[8]);
+
+
+int to_int(char c);
