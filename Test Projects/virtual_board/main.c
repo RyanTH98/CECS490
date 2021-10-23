@@ -35,428 +35,107 @@
 
 int main(void) {
 	int x, y;
-	int move[4];
+	_space move[2];
 	char name[20], yn;
 	_piece board[8][8];
 
 	reset_board(board);
 
 	/* Begin Game */
-    printf("Hello! \nWould you like to play chess? (Y/N)\n> ");
-    scanf(" %c", &yn);
+	printf("Hello \nWould you like to play chess? (Y/N)\n> ");
+        scanf(" %c", &yn);
 
-    if((yn == 'y') | (yn == 'Y'))
-        printf("\nPlease enter your name\n> ");
-    else if((yn == 'n') | (yn == 'N')) {
-        printf("Alright. See you later!");
-		return 0;
-    }
-    else
-        return 0;
+        if((yn == 'y') | (yn == 'Y'))
+                printf("\nPlease enter your name\n> ");
+        else if((yn == 'n') | (yn == 'N')) {
+                printf("Alright. See you later!");
+                return 0;
+        }
+        else
+                return 0;
 
-	/* Clear buffer and get player's name */
-    fgetc(stdin);
-    fgets(name, 20, stdin);
-	
-    printf("\nHey, %sLet's begin!\n\n", name);
-    printf("Please use the following format: [Letter][Number].\nExamples: A0, e7, C6\n\n");
-	print_board(board);
+        /* Clear buffer and get player's name */
+        fgetc(stdin);
+        fgets(name, 20, stdin);
 
-	get_move(&move);
+        printf("\nHey, %sLet's begin!\n\n", name);
+        printf("Please use the following format: [Letter][Number].\nExamples: A0, e7, C6\n\n");
+        print_board(board);
 
-    move_piece(board, &board[0][0], x, y);
-	printf("Moving %d%d to %d%d", move[0], move[1], move[2], move[3]);
-    print_board(board);
+        get_move(move);
+
+        move_piece(board, move);
+        //printf("Moving %d%d to %d%d", move[0], move[1], move[2], move[3]);
+        print_board(board);
 
 	return 0;
 }
 
-
-/*  Function: check
-
-	Inputs:   Space on board to check,
-
-	Outputs:  Boolean value - Whether the move is legal or not
-*/
-bool check_for(_type t,_piece* p) {
-	return (p->type == t);
-}
-
-/*	Function: get_char
-
-	Inputs:   Lower and upper bounds for char's ASCII value
-
-	Outputs:  Char
-*/
-char get_char() {
-	char c;
-
-	while (1) {
-		scanf(" %c", &c);
-
-		/* If the character is a letter a-h, lowercase or uppercase */
-		if ((((int)c >= 97) & ((int)c <= 104)) | (((int)c >= 65) == ((int)c <= 72)))
-			return c;
-		else
-			printf("Letter must be between a and h.\n\n");
-
-	}
-}
-
-/*	Function: get_int
-
-	Inputs:   Lower and upper bounds for integer
-
-	Outputs:  Integer
-*/
-int get_int(int lower, int upper) {
-	int i;
-
-	while (1) {
-		scanf(" %d", &i);
-
-		if ((i >= lower) & (i <= upper))
-			return i;
-
-		printf("The number must be between %d, and %d.\n> ", lower, upper);
-	}
-}
-
-
-void get_move(int(*move)[4]) {
-	char new_move[4];
-
-	printf("\n\nPlease enter a move\n> ");
-	fgets(new_move, 5, stdin);
-	
-
-	for (int i = 0; i < 4; i++) {
-		*move[i] = to_int(new_move[i]);
-	}
-
-	printf("Moving %d%d to %d%d\n\n", *move[0], *move[1], *move[2], *move[3]);
-
-	//printf("%d", to_int(new_move[i]));
-
-	//move[i] = to_int(new_move[i]);
-
-}
-
-/*	Function: get_moves
-
-	Inputs:   2D Array of Chess Board,
-			  Piece to be moved
-
-	Outputs:  None
-*/
-void get_moves(_piece(*board)[8], _piece* p) {
-	int row_dif, column_dif;
-	int available = 0, capturable = 0, moves = 0;
-
-
-	_piece available_moves[27][2], capturable_moves[27][2];
-	_piece move;
-	_piece check;
-
-	switch (p->type) {
-	case NO_PIECE:
-		break;
-	case PAWN:
-		for (int c = 0; c <= 4; c++) {
-
-			/* Can this move only be made if there is a piece on the destination square? */
-			bool capture_only;
-			
-			/* If a pawn is moving UP the board */
-			if (p->direction == 'U' | p->direction == 'A') {
-				switch (c) {
-					case 0:
-						/* Check ABOVE for a piece */
-						row_dif = -1;
-						column_dif = 0;
-						capture_only = false;
-						break;
-					case 1:
-						/* Check ABOVE, DIAGONALLY left for a piece */
-						row_dif = -1;
-						column_dif = -1;
-						capture_only = true;
-						break;
-					case 2:
-						/* Check ABOVE, DIAGONALLY right for a piece */
-						row_dif = -1;
-						column_dif = 1;
-						capture_only = true;
-						break;
-					case 3:
-						/* Special Case */
-						/* FIRST move ONLY - Check two squares BELOW for a piece */
-						if (p->firstMove)
-							row_dif = -2;
-							column_dif = 0;
-							capture_only = false;
-						break;
-					default:
-						break;
-				}
-			}
-
-			/* If a Pawn is moving DOWN the board */
-			else if (p->direction == 'D' | p->direction == 'A') {
-				switch (c) {
-					case 0:
-						/* Check BELOW for a piece */
-						row_dif = 1;
-						column_dif = 0;
-						capture_only = false;
-						break;
-					case 1:
-						/* Check BELOW, diagonally LEFT for a piece */
-						row_dif = 1;
-						column_dif = -1;
-						capture_only = true;
-						break;
-					case 2:
-						/* Check BELOW, diagonally RIGHT for a piece */
-						row_dif = 1;
-						column_dif = 1;
-						capture_only = true;
-						break;
-					case 3:
-						/* Special Case */
-						/* FIRST move ONLY - Check two squares BELOW for a piece */
-						if (p->firstMove == true)
-							row_dif = 2;
-							column_dif = 0;
-							capture_only = false;
-						break;
-					default:
-						break;
-				}
-			}
-
-			move = board[p->row + row_dif][p->column + column_dif];
-
-			/* If there IS NOT a piece on the destination square */
-			if ((check_for(NO_PIECE, &move) == true) & (capture_only == false)) {
-				moves = available++;
-				push_back(available_moves, &move, available);
-			}
-
-			/* If there IS a piece on the destination square AND that piece is of a different color */
-			else if ((check_for(NO_PIECE, &move) == false) & (p->color != move.color) & (capture_only == true)) {
-			/*   if there IS a piece on the destination square AND it is of a different color AND the move can only be made if a piece is present */
-				moves = capturable++;
-				push_back(capturable_moves, &move, capturable);
-			}
-
-			capture_only = false;
-		}
-		break;
-	case BISHOP:
-		/* Check DIAGONALLY for a piece, until one is detected */
-
-		/* BELOW and to the RIGHT */
-		for (int i = p->row; i < 8; i++) {
-			for (int j = p->column; j < 8; j++) {
-				if (check_for(NO_PIECE, &board[i][j])) {
-					// Light up square in white
-				}
-				else {
-					// Light up square in red
-					break;
-				}
-			}
-		}
-
-		/* BELOW and to the LEFT */
-		for (int i = p->row; i < 8; i++) {
-			for (int j = p->column; j >= 0; j--) {
-				if (check_for(NO_PIECE, &board[i][j])) {
-					// Light up square in white
-				}
-				else {
-					// Light up square in red
-					break;
-				}
-			}
-		}
-
-		/* ABOVE and to the Right */
-		for (int i = p->row; i >= 0; i--) {
-			for (int j = p->column; j > 8; j++) {
-				if (check_for(NO_PIECE, &board[i][j])) {
-					// Light up square in white
-				}
-				else {
-					// Light up square in red
-					break;
-				}
-			}
-		}
-
-		/* ABOVE and to the LEFT */
-		for (int i = p->row; i >= 0; i--) {
-			for (int j = p->column; j >= 0; j--) {
-				if (check_for(NO_PIECE, &board[i][j])) {
-					// Light up square in white
-				}
-				else {
-					// Light up square in red
-					break;
-				}
-			}
-		}
-		break;
-	case KNIGHT:
-		break;
-	case ROOK:
-		/* Check HORIZONTALLY or a piece, until one is detected */
-
-		/* LEFT, until a piece is detected */
-		for (int j = p->column; j <= 0; j--) {
-			if (check_for(NO_PIECE, &board[p->row][j])) {
-				// Light up square in white
-			}
-			else {
-				// Light up square in red
-				break;
-			}
-		}
-
-		/* RIGHT, until a piece is detected */
-		for (int j = p->column; j > 8; j++) {
-			if (check_for(NO_PIECE, &board[p->row][j])) {
-				// Light up square in white
-			}
-			else {
-				// Light up square in red
-				break;
-			}
-		}
-
-		/* Special Case */
-		/* FIRST move ONLY - Check for King to castle */
-		_piece* p1 = &board[p->row][p->column - 3];
-		_piece* p2 = &board[p->row][p->column - 2];
-		_piece* p3 = &board[p->row][p->column - 1];
-
-		/* Check if King is in the proper place, and squares in between Rook and King are empty */
-		if (check_for(KING, p1) && check_for(NO_PIECE, p2) && check_for(NO_PIECE, p3)) {
-			// Light up squares in between Rook and King, in white
-		}
-		break;
-	case QUEEN:
-		/* Check DIAGONALLY for a piece, until one is detected */
-
-		/* BELOW and to the RIGHT */
-		for (int i = p->row; i < 8; i++) {
-			for (int j = p->column; j < 8; j++) {
-				if (check_for(NO_PIECE, &board[i][j])) {
-					// Light up square in white
-				}
-				else {
-					// Light up square in red
-					break;
-				}
-			}
-		}
-
-		/* BELOW and to the LEFT */
-		for (int i = p->row; i < 8; i++) {
-			for (int j = p->column; j >= 0; j--) {
-				if (check_for(NO_PIECE, &board[i][j])) {
-					// Light up square in white
-				}
-				else {
-					// Light up square in red
-					break;
-				}
-			}
-		}
-
-		/* ABOVE and to the Right */
-		for (int i = p->row; i >= 0; i--) {
-			for (int j = p->column; j > 8; j++) {
-				if (check_for(NO_PIECE, &board[i][j])) {
-					// Light up square in white
-				}
-				else {
-					// Light up square in red
-					break;
-				}
-			}
-		}
-
-		/* ABOVE and to the LEFT */
-		for (int i = p->row; i >= 0; i--) {
-			for (int j = p->column; j >= 0; j--) {
-				if (check_for(NO_PIECE, &board[i][j])) {
-					// Light up square in white
-				}
-				else {
-					// Light up square in red
-					break;
-				}
-			}
-		}
-
-
-		/* Check HORIZONTALLY or a piece, until one is detected */
-
-		/* LEFT, until a piece is detected */
-		for (int j = p->column; j <= 0; j--) {
-			if (check_for(NO_PIECE, &board[p->row][j])) {
-				// Light up square in white
-			}
-			else {
-				// Light up square in red
-				break;
-			}
-		}
-
-		/* RIGHT, until a piece is detected */
-		for (int j = p->column; j > 8; j++) {
-			if (check_for(NO_PIECE, &board[p->row][j])) {
-				// Light up square in white
-			}
-			else {
-				// Light up square in red
-				break;
-			}
-		}
-		break;
-	case KING:
-		break;
-	default:
-		break;
-
-		moves = 0;
-		available = 0;
-		capturable = 0;
-	}
-}
-
-
 /*  Function: move_piece
-
-	Inputs:   2D Array of Chess Board,
-			  Piece to be moved,
-			  Index of destination row,
-			  Index of destination column
-
-	Outputs:  None
-*/
-void move_piece(_piece(*board)[8], _piece* p, int x, int y) {
-	if (p->firstMove == true)
-		p->firstMove == false;
-
-	board[x][y] = *p;
-
-	p->type = NO_PIECE;
-	p->color = NO_COLOR;
+ *
+ *          Inputs:   2D Array of Chess Board,
+ *                    Piece to be moved,
+ *                    Index of destination row,
+ *                    Index of destination column
+ *          Outputs:  None
+ */
+void move_piece(_piece(*board)[8], _space move[2]) {
+        bool legal = false;
+	int row1, row2, column1, column2;
+	row1 = move[0]/8;
+	column1 = move[0]%8;
+	row2 = move[1]/8;
+	column2 = move[1]%8;
+	for(int i = 0; i < 26; i++){
+		//printf("%d == %d => %d\n", board[row1][column1].legal[i], move[1], board[row1][column1].legal[i] == move[1]);
+		if(board[row1][column1].legal[i] == move[1]){
+			legal = true;
+		}
+	}
+	if(legal){
+		board[row2][column2] = board[row1][column1];
+		board[row1][column1].type = NO_PIECE;
+		board[row1][column1].color = NO_COLOR;
+	}
+	else{
+		printf("Not a legal move\n");
+	}
 }
 
+
+
+
+
+
+
+/*	Function: 	get_move
+ *	Inputs: 	enum space[2] move index1 to index2
+ *	Outputs:	None
+ *
+ */
+void get_move(_space move[2]) {
+        char new_move[4];
+
+        printf("\n\nPlease enter a move\n> ");
+        fgets(new_move, 5, stdin);
+
+
+        for (int i = 0; i < 4; i++) {
+		//printf("--------> %d\n", to_int(new_move[i]));
+                new_move[i] = to_int(new_move[i]);
+		if(new_move[i] == -1){
+			printf("invalid input\n");
+			//if you wish to make it repetedly ask for a valid answer make it recursive
+			//im close but its printing multiple times, (fgets buffer?)
+			//get_move(move);
+			return;
+		}
+        }
+	move[0] = new_move[0] + new_move[1]*8;
+	move[1] = new_move[2] + new_move[3]*8;
+
+        printf("Moving %d to %d\n\n", move[0], move[1]);
+}
 
 /*  Function: print_board
 
@@ -507,17 +186,14 @@ void print_board(_piece(*board)[8]) {
 }
 
 
-/*	Function: push_back
-
-	Inputs:   Array to add Piece to,
-			  Piece to be added to the array,
-			  Index of array piece should be inserted into
-
-	Outputs:  None
-*/
-void push_back(_piece(*array)[2],_piece *new_move , int num) {
-    array[num][0].row = new_move->row;
-    array[num][1].column = new_move->column;
+void printLegalMoves(_piece* p){
+	printf("Legal moves for piece on square %d: ", p->position);
+	for(int i=0; i<sizeof(p->legal)/sizeof(p->legal[0]);i++){
+		if(p->legal[i] != -1){
+			printf("%d, ", p->legal[i]);
+		}
+	}
+	printf("\n");
 }
 
 
@@ -529,13 +205,11 @@ void push_back(_piece(*array)[2],_piece *new_move , int num) {
 */
 void reset_board(_piece(*board)[8]) {
 
-	/* Assign color of all Black pieces
+	/* Assign color of all White pieces
 	   Set default direction to moving downward */
 	for (int i = 0; i < 2; i++) {
 		for (int j = 0; j < 8; j++) {
-			board[i][j].color = BLACK;
-			board[i][j].direction = 'D';
-
+			board[i][j].color = WHITE;
 			if(i == 1)
 				board[i][j].type = PAWN;
 		}
@@ -551,13 +225,11 @@ void reset_board(_piece(*board)[8]) {
 	board[0][7].type = ROOK;
 
 
-	/* Assign color of all White pieces
+	/* Assign color of all Black pieces
        Set default direction to moving upward */
 	for (int i = 6; i < 8; i++) {
 			for (int j = 0; j < 8; j++) {
-				board[i][j].color = WHITE;
-				board[i][j].direction = 'U';
-
+				board[i][j].color = BLACK;
 				if(i == 6)
 					board[i][j].type = PAWN;
 			}
@@ -575,24 +247,184 @@ void reset_board(_piece(*board)[8]) {
 	/* Assign each piece to their corresponding space on the board */
 	for (int i = 0; i < 8; i++) {
 		for (int j = 0; j < 8; j++) {
-			board[i][j].row = i;
-			board[i][j].column = j;
+			board[i][j].position = (i*8)+j;
 
-			if(i >= 2 && i <= 5)
+			if(i >= 2 && i <= 5){
 				board[i][j].type = NO_PIECE;
+				board[i][j].color = NO_COLOR;
+			}
 		}
 	}
 
+	/*get legal moves for every piece on the board*/
+	update_legal(board);
+
+}
+int to_int(char c) {
+	int n = (int)c;
+        /* Lowercase Letters */
+	// Maps a-h -> 0-7
+        if ((n >= 97) && (n <= 104))
+                return (n - 97);
+        // Maps A-H -> 0-7
+	/* Uppercase Letters */
+        else if ((n >= 65) && (n <= 72))
+                return (n - 65);
+        /* Numbers 0 - 9 */
+	// Map char 1-8 to int 0-7
+        else if ((n > 48) && (n < 57))
+                return (n - 49);
+	else
+		return -1;
 }
 
-int to_int(char c) {
-	/* Lowercase Letters */
-	if (((int)c >= 97) & ((int)c <= 104))
-		return ((int)c - 96);
-	/* Uppercase Letters */
-	else if (((int)c >= 65) == ((int)c <= 72))
-		return ((int)c - 64);
-	/* Numbers 0 - 9 */
-	else if (((int)c >= 48) == ((int)c <= 57))
-		return abs(((int)c - 48) - 7);
+/*
+ *
+ *
+ */
+void update_legal(_piece(*board)[8]){
+	_piece* p;
+	for(int i = 0; i < 64; i++){
+		p = &board[i/8][i%8];
+		//clear old moves
+		for(int l = 0; l < sizeof(p->legal)/sizeof(p->legal[0]); l++){
+			p->legal[l] = -1;
+		}
+
+		switch(p->type){
+			case NO_PIECE:
+				break;
+			case PAWN:
+				get_moves_pawn(board, p);
+				break;
+			case BISHOP:
+				//get_moves_bishop(board, &p);
+				break;
+			case KNIGHT:
+				//get_moves_knight(board, &p);
+				break;
+			case ROOK:
+				get_moves_rook(board, p);
+				break;
+			case QUEEN:
+				//get_moves_queen(board, &p);
+				break;
+			case KING:
+				//get_moves_king(board, &p);
+				break;
+			default:
+				break;
+
+		}
+		printLegalMoves(p);
+	}
+}
+
+
+
+void get_moves_pawn(_piece(*board)[8], _piece* p){
+	//for now im leaving out enpasant and queening
+	int row, column, x, y, index;
+	row = p->position/8;
+	column = p->position%8;
+	index = 0;
+	switch(p->color){
+		case BLACK:
+			if(row == 6){ //first move
+				if(board[row-2][column].type == NO_PIECE){ //check two ahead for piece
+					p->legal[index] = ((row-2)*8+column);
+					index++;
+				}
+			}
+			if(board[row-1][column].type == NO_PIECE){ //check one ahead for piece
+				p->legal[index] = ((row-1)*8+column);
+				index++;
+			}
+			if( (board[row-1][column-1].type != NO_PIECE) && (board[row-1][column-1].color == WHITE) ){ //check for piece to take to the left
+				p->legal[index] = ((row-1)*8+(column-1));
+				index++;	
+			}
+			if( (board[row-1][column+1].type != NO_PIECE) && (board[row-1][column+1].color == WHITE) ){ //check for piece to take to the right
+				p->legal[index] = ((row-1)*8+(column+1));
+				index++;	
+			}
+			break;
+		case WHITE:
+			if(row == 1){ //first move
+				if(board[row+2][column].type == NO_PIECE){ //check two ahead for piece
+					p->legal[index] = ((row+2)*8+column);
+					index++;
+				}
+			}
+			if(board[row+1][column].type == NO_PIECE){ //check one ahead for piece
+				p->legal[index] = ((row+1)*8+column);
+				index++;
+			}
+			if( (board[row+1][column-1].type != NO_PIECE) && (board[row+1][column-1].color == BLACK) ){ //check for piece to take in upper left
+				p->legal[index] = ((row+1)*8+(column-1));
+				index++;	
+			}
+			if( (board[row+1][column+1].type != NO_PIECE) && (board[row+1][column+1].color == BLACK) ){ //check for piece to take in upper right
+				p->legal[index] = ((row+1)*8+(column+1));
+				index++;	
+			}
+			break;
+	}
+
+
+}
+
+
+
+void get_moves_rook(_piece(*board)[8], _piece* pp){
+	_piece p = *pp;
+	int row, column, x, y, index;
+	
+	row = p.position/8;
+	column = p.position%8;
+	index = 0;
+
+	//for each direction a rook can move
+	// add the legal sqares to its legal member
+	for(int dir = 0; dir < 4; dir++){
+		x = y = 0;
+		switch(dir){
+			case 0: //up
+				do{ 
+					y++;
+					if(board[row+y][column].color != p.color){
+						p.legal[index] = ((row+y)*8+column);
+						index++;
+					}
+				}while((row+y < 8) && (board[row+y][column].type == NO_PIECE));
+				break;
+			case 1: //down
+				do{ 
+					y++;
+					if(board[row-y][column].color != p.color){
+						p.legal[index] = ((row-y)*8+column);
+						index++;
+					}
+				}while((row-y > 0) && (board[row-y][column].type == NO_PIECE));
+				break;
+			case 2: //right
+				do{ 
+					x++;
+					if(board[row][column+x].color != p.color){
+						p.legal[index] = ((row*8)+(column+x));
+						index++;
+					}
+				}while((column+x < 8) && (board[row][column+x].type == NO_PIECE));
+				break;
+			case 3: //left
+				do{ 
+					x++;
+					if(board[row][column-x].color != p.color){
+						p.legal[index] = ((row*8)+(column-x));
+						index++;
+					}
+				}while((column-x > 0) && (board[row][column-x].type == NO_PIECE));
+				break;
+		}
+	}	
 }
