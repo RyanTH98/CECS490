@@ -61,13 +61,13 @@ int main(void) {
         printf("\nHey, %sLet's begin!\n\n", name);
         printf("Please use the following format: [Letter][Number].\nExamples: A0, e7, C6\n\n");
         print_board(board);
+	while(true){
+        	get_move(move);
 
-        get_move(move);
-
-        move_piece(board, move);
-        //printf("Moving %d%d to %d%d", move[0], move[1], move[2], move[3]);
-        print_board(board);
-
+        	move_piece(board, move);
+        	//printf("Moving %d%d to %d%d", move[0], move[1], move[2], move[3]);
+        	print_board(board);
+	}
 	return 0;
 }
 
@@ -94,8 +94,10 @@ void move_piece(_piece(*board)[8], _space move[2]) {
 	}
 	if(legal){
 		board[row2][column2] = board[row1][column1];
+		board[row2][column2].position = move[1];
 		board[row1][column1].type = NO_PIECE;
 		board[row1][column1].color = NO_COLOR;
+		update_legal(board);
 	}
 	else{
 		printf("Not a legal move\n");
@@ -114,17 +116,17 @@ void move_piece(_piece(*board)[8], _space move[2]) {
  *
  */
 void get_move(_space move[2]) {
-        char new_move[4];
+        char new_move[6];
 
         printf("\n\nPlease enter a move\n> ");
-        fgets(new_move, 5, stdin);
+        fgets(new_move, 6, stdin);
 
 
-        for (int i = 0; i < 4; i++) {
-		//printf("--------> %d\n", to_int(new_move[i]));
+        
+	for (int i = 0; i < 4; i++) {
+		printf("--------> %d\n", to_int(new_move[i]));
                 new_move[i] = to_int(new_move[i]);
 		if(new_move[i] == -1){
-			printf("invalid input\n");
 			//if you wish to make it repetedly ask for a valid answer make it recursive
 			//im close but its printing multiple times, (fgets buffer?)
 			//get_move(move);
@@ -357,6 +359,7 @@ void get_moves_pawn(_piece(*board)[8], _piece* p){
 				}
 			}
 			if(board[row+1][column].type == NO_PIECE){ //check one ahead for piece
+				printf("checkingforpawn");
 				p->legal[index] = ((row+1)*8+column);
 				index++;
 			}
