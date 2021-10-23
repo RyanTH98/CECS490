@@ -106,10 +106,6 @@ void move_piece(_piece(*board)[8], _space move[2]) {
 
 
 
-
-
-
-
 /*	Function: 	get_move
  *	Inputs: 	enum space[2] move index1 to index2
  *	Outputs:	None
@@ -379,54 +375,68 @@ void get_moves_pawn(_piece(*board)[8], _piece* p){
 
 
 
-void get_moves_rook(_piece(*board)[8], _piece* pp){
-	_piece p = *pp;
+void get_moves_rook(_piece(*board)[8], _piece* p){
 	int row, column, x, y, index;
-	
-	row = p.position/8;
-	column = p.position%8;
+	bool hit;
+
+	row = p->position/8;
+	column = p->position%8;
 	index = 0;
 
 	//for each direction a rook can move
 	// add the legal sqares to its legal member
 	for(int dir = 0; dir < 4; dir++){
-		x = y = 0;
+		x = 1;
+		y = 1;
+		hit = false;
 		switch(dir){
 			case 0: //up
-				do{ 
-					y++;
-					if(board[row+y][column].color != p.color){
-						p.legal[index] = ((row+y)*8+column);
+				while((row+y < 8) && (hit == false)){
+					if(board[row+y][column].color != p->color){
+						p->legal[index] = ((row+y)*8+column);
 						index++;
 					}
-				}while((row+y < 8) && (board[row+y][column].type == NO_PIECE));
+					if(board[row+y][column].type != NO_PIECE){
+						hit = true;
+					}
+					y++;
+				}
 				break;
 			case 1: //down
-				do{ 
-					y++;
-					if(board[row-y][column].color != p.color){
-						p.legal[index] = ((row-y)*8+column);
+				while((row-y >= 0) && (hit == false)){
+					if(board[row-y][column].color != p->color){
+						p->legal[index] = ((row-y)*8+column);
 						index++;
 					}
-				}while((row-y > 0) && (board[row-y][column].type == NO_PIECE));
+					if(board[row-y][column].type != NO_PIECE){
+						hit = true;
+					}
+					y++;
+				}
 				break;
 			case 2: //right
-				do{ 
-					x++;
-					if(board[row][column+x].color != p.color){
-						p.legal[index] = ((row*8)+(column+x));
+				while((column+x < 8) && (hit == false)){
+					if(board[row][column+x].color != p->color){
+						p->legal[index] = (row*8)+(column+x);
 						index++;
 					}
-				}while((column+x < 8) && (board[row][column+x].type == NO_PIECE));
+					if(board[row][column+x].type != NO_PIECE){
+						hit = true;
+					}
+					x++;
+				}
 				break;
-			case 3: //left
-				do{ 
-					x++;
-					if(board[row][column-x].color != p.color){
-						p.legal[index] = ((row*8)+(column-x));
+			case 3: //left 
+				while((column-x >= 0) && (hit == false)){
+					if(board[row][column-x].color != p->color){
+						p->legal[index] = (row*8)+(column-x);
 						index++;
 					}
-				}while((column-x > 0) && (board[row][column-x].type == NO_PIECE));
+					if(board[row][column-x].type != NO_PIECE){
+						hit = true;
+					}
+					x++;
+				}
 				break;
 		}
 	}	
