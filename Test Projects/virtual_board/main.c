@@ -626,3 +626,18 @@ void get_moves_knight(_piece(*board)[8], _piece* p){
 		}
 	}
 }
+
+
+
+/*	Function: 	get_moves_knight
+ *	Inputs: 	
+ *	Outputs:	None
+ *
+ */
+void get_moves_king(_piece(*board)[8], _piece* p){
+	//make copy of chessboard
+	//move king to new square on replica board
+	//check if king is attacked 
+	//	yes: not a legal move
+	//	no: yes it is a legal move
+}
