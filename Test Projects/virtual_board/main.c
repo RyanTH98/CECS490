@@ -120,7 +120,7 @@ void get_move(_space move[2]) {
 
         
 	for (int i = 0; i < 4; i++) {
-		printf("--------> %d\n", to_int(new_move[i]));
+		//printf("--------> %d\n", to_int(new_move[i]));
                 new_move[i] = to_int(new_move[i]);
 		if(new_move[i] == -1){
 			//if you wish to make it repetedly ask for a valid answer make it recursive
@@ -258,6 +258,13 @@ void reset_board(_piece(*board)[8]) {
 	update_legal(board);
 
 }
+
+
+/*	Function: 	to_int
+ *	Inputs: 	
+ *	Outputs:	
+ *
+ */
 int to_int(char c) {
 	int n = (int)c;
         /* Lowercase Letters */
@@ -276,8 +283,9 @@ int to_int(char c) {
 		return -1;
 }
 
-/*
- *
+/*	Function: 	update_legal
+ *	Inputs: 	
+ *	Outputs:	None
  *
  */
 void update_legal(_piece(*board)[8]){
@@ -296,16 +304,16 @@ void update_legal(_piece(*board)[8]){
 				get_moves_pawn(board, p);
 				break;
 			case BISHOP:
-				//get_moves_bishop(board, &p);
+				get_moves_bishop(board, p, 0);
 				break;
 			case KNIGHT:
 				//get_moves_knight(board, &p);
 				break;
 			case ROOK:
-				get_moves_rook(board, p);
+				get_moves_rook(board, p, 0);
 				break;
 			case QUEEN:
-				//get_moves_queen(board, &p);
+				get_moves_queen(board, p);
 				break;
 			case KING:
 				//get_moves_king(board, &p);
@@ -314,12 +322,17 @@ void update_legal(_piece(*board)[8]){
 				break;
 
 		}
-		printLegalMoves(p);
+		//printLegalMoves(p);
 	}
 }
 
 
 
+/*	Function: 	get_moves_pawn
+ *	Inputs: 	
+ *	Outputs:	None
+ *
+ */
 void get_moves_pawn(_piece(*board)[8], _piece* p){
 	//for now im leaving out enpasant and queening
 	int row, column, x, y, index;
@@ -355,7 +368,7 @@ void get_moves_pawn(_piece(*board)[8], _piece* p){
 				}
 			}
 			if(board[row+1][column].type == NO_PIECE){ //check one ahead for piece
-				printf("checkingforpawn");
+				//printf("checkingforpawn");
 				p->legal[index] = ((row+1)*8+column);
 				index++;
 			}
@@ -375,13 +388,17 @@ void get_moves_pawn(_piece(*board)[8], _piece* p){
 
 
 
-void get_moves_rook(_piece(*board)[8], _piece* p){
-	int row, column, x, y, index;
+/*	Function: 	get_moves_rook
+ *	Inputs: 	
+ *	Outputs:	None
+ *
+ */
+int get_moves_rook(_piece(*board)[8], _piece* p, int index){
+	int row, column, x, y;
 	bool hit;
 
 	row = p->position/8;
 	column = p->position%8;
-	index = 0;
 
 	//for each direction a rook can move
 	// add the legal sqares to its legal member
@@ -439,5 +456,204 @@ void get_moves_rook(_piece(*board)[8], _piece* p){
 				}
 				break;
 		}
-	}	
+	}
+	return index;	
+}
+
+
+/*	Function: 	get_moves_bishop
+ *	Inputs: 	
+ *	Outputs:	None
+ *
+ */
+int get_moves_bishop(_piece(*board)[8], _piece* p, int index){
+	int row, column, d;
+	bool hit;
+
+	row = p->position/8;
+	column = p->position%8;
+
+	//for each direction a bishop can move
+	// add the legal sqares to its legal member
+	for(int dir = 0; dir < 4; dir++){
+		d = 1;
+		hit = false;
+		switch(dir){
+			case 0: //up-right
+				while((row+d < 8) && (column+d < 8) && (hit == false)){
+					if(board[row+d][column+d].color != p->color){
+						p->legal[index] = ((row+d)*8 + (column+d));
+						index++;
+					}
+					if(board[row+d][column+d].type != NO_PIECE){
+						hit = true;
+					}
+					d++;
+				}
+				break;
+			case 1: //up-left
+				while((row+d < 8) && (column-d >= 0) && (hit == false)){
+					if(board[row+d][column-d].color != p->color){
+						p->legal[index] = ((row+d)*8 + (column-d));
+						index++;
+					}
+					if(board[row+d][column-d].type != NO_PIECE){
+						hit = true;
+					}
+					d++;
+				}
+				break;
+			case 2: //down-right
+				while((row-d >= 0) && (column+d < 8) && (hit == false)){
+					if(board[row+d][column-d].color != p->color){
+						p->legal[index] = ((row-d)*8 + (column+d));
+						index++;
+					}
+					if(board[row-d][column+d].type != NO_PIECE){
+						hit = true;
+					}
+					d++;
+				}
+				break;
+			case 3: //down-left 
+				while((row-d >= 0) && (column-d >= 0) && (hit == false)){
+					if(board[row-d][column-d].color != p->color){
+						p->legal[index] = ((row-d)*8 + (column-d));
+						index++;
+					}
+					if(board[row-d][column-d].type != NO_PIECE){
+						hit = true;
+					}
+					d++;
+				}
+				break;
+		}
+	}
+	return index;
+}
+
+
+/*	Function: 	get_moves_queen
+ *	Inputs: 	
+ *	Outputs:	None
+ *
+ */
+void get_moves_queen(_piece(*board)[8], _piece* p){
+	int index;
+	index = get_moves_rook(board, p, 0);
+	get_moves_bishop(board, p, index); 
+
+
+
+/*	int row, column, d, index;
+	bool hit;
+
+	row = p->position/8;
+	column = p->position%8;
+	index = 0;
+
+	//for each direction a queen can move
+	// add the legal sqares to its legal member
+	for(int dir = 0; dir < 8; dir++){
+		d = 1;
+		hit = false;
+		switch(dir){
+			case 0: //up-right
+				while((row+d < 8) && (column+d < 8) && (hit == false)){
+					if(board[row+d][column+d].color != p->color){
+						p->legal[index] = ((row+d)*8 + (column+d));
+						index++;
+					}
+					if(board[row+d][column+d].type != NO_PIECE){
+						hit = true;
+					}
+					d++;
+				}
+				break;
+			case 1: //up-left
+				while((row+d < 8) && (column-d >= 0) && (hit == false)){
+					if(board[row+d][column-d].color != p->color){
+						p->legal[index] = ((row+d)*8 + (column-d));
+						index++;
+					}
+					if(board[row+d][column-d].type != NO_PIECE){
+						hit = true;
+					}
+					d++;
+				}
+				break;
+			case 2: //down-right
+				while((row-d >= 0) && (column+d < 8) && (hit == false)){
+					if(board[row+d][column-d].color != p->color){
+						p->legal[index] = ((row-d)*8 + (column+d));
+						index++;
+					}
+					if(board[row-d][column+d].type != NO_PIECE){
+						hit = true;
+					}
+					d++;
+				}
+				break;
+			case 3: //down-left 
+				while((row-d >= 0) && (column-d >= 0) && (hit == false)){
+					if(board[row-d][column-d].color != p->color){
+						p->legal[index] = ((row-d)*8 + (column-d));
+						index++;
+					}
+					if(board[row-d][column-d].type != NO_PIECE){
+						hit = true;
+					}
+					d++;
+				}
+				break;
+			case 4: //up
+				while((row+d < 8) && (hit == false)){
+					if(board[row+d][column].color != p->color){
+						p->legal[index] = ((row+y)*8+column);
+						index++;
+					}
+					if(board[row+d][column].type != NO_PIECE){
+						hit = true;
+					}
+					y++;
+				}
+				break;
+			case 5: //down
+				while((row-d >= 0) && (hit == false)){
+					if(board[row-d][column].color != p->color){
+						p->legal[index] = ((row-d)*8+column);
+						index++;
+					}
+					if(board[row-d][column].type != NO_PIECE){
+						hit = true;
+					}
+					d++;
+				}
+				break;
+			case 6: //right
+				while((column+d < 8) && (hit == false)){
+					if(board[row][column+d].color != p->color){
+						p->legal[index] = (row*8)+(column+d);
+						index++;
+					}
+					if(board[row][column+d].type != NO_PIECE){
+						hit = true;
+					}
+					d++;
+				}
+				break;
+			case 7: //left 
+				while((column-d >= 0) && (hit == false)){
+					if(board[row][column-d].color != p->color){
+						p->legal[index] = (row*8)+(column-d);
+						index++;
+					}
+					if(board[row][column-d].type != NO_PIECE){
+						hit = true;
+					}
+					d++;
+				}
+				break;
+		}
+	}*/	
 }

@@ -74,8 +74,8 @@ void get_move(_space[2]);
 */
 void get_moves(_piece(*)[8],  _piece*);
 void get_moves_pawn(_piece(*)[8], _piece*);
-void get_moves_bishop(_piece(*)[8], _piece*);
-void get_moves_rook(_piece(*)[8], _piece*);
+int get_moves_bishop(_piece(*)[8], _piece*, int);
+int get_moves_rook(_piece(*)[8], _piece*, int);
 void get_moves_knight(_piece(*)[8], _piece*);
 void get_moves_queen(_piece(*)[8], _piece*);
 void get_moves_king(_piece(*)[8], _piece*);
