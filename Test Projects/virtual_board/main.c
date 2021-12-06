@@ -34,10 +34,11 @@
 
 
 int main(void) {
-	int x, y;
+	int x, y, row, col;
 	_space move[2];
 	char name[20], yn;
 	_piece board[8][8];
+	_color turnColor = WHITE;	
 
 	reset_board(board);
 
@@ -62,7 +63,18 @@ int main(void) {
         printf("Please use the following format: [Letter][Number].\nExamples: A0, e7, C6\n\n");
         print_board(board);
 	while(true){
-        	get_move(move);
+		while(true){
+        		get_move(move);
+			row = move[0]/8;
+			col = move[0]%8;
+			if(board[row][col].color != turnColor){
+				printf("It is not your turn");
+			}
+			else{
+				turnColor = (turnColor==WHITE)?BLACK:WHITE;
+				break;
+			}
+		}
 
         	move_piece(board, move);
         	//printf("Moving %d%d to %d%d", move[0], move[1], move[2], move[3]);
