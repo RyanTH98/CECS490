@@ -1,4 +1,4 @@
-# Install script for directory: /home/graham/esp/led_blinky/main
+# Install script for directory: /home/graham/esp/CECS490/led_blinky/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
