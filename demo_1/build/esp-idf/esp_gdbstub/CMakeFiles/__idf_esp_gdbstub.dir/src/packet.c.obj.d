@@ -1,0 +1,26 @@
+esp-idf/esp_gdbstub/CMakeFiles/__idf_esp_gdbstub.dir/src/packet.c.obj: \
+ /Users/user/esp/esp-idf/components/esp_gdbstub/src/packet.c \
+ /Users/user/esp/esp-idf/components/esp_gdbstub/private_include/esp_gdbstub_common.h \
+ /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/lib/gcc/xtensa-esp32s2-elf/8.4.0/include/stdint.h \
+ /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/stdint.h \
+ /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/machine/_default_types.h \
+ /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/sys/features.h \
+ /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/_newlib_version.h \
+ /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/sys/_intsup.h \
+ /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/sys/_stdint.h \
+ /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/lib/gcc/xtensa-esp32s2-elf/8.4.0/include/stddef.h \
+ /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/lib/gcc/xtensa-esp32s2-elf/8.4.0/include/stdbool.h \
+ /Users/user/esp/esp-idf/components/esp_gdbstub/esp32s2/gdbstub_target_config.h \
+ /Users/user/esp/esp-idf/components/esp_gdbstub/xtensa/esp_gdbstub_arch.h \
+ /Users/user/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/xtensa_context.h \
+ /Users/user/esp/esp-idf/components/xtensa/include/xtensa/xtensa_context.h \
+ /Users/user/esp/esp-idf/components/xtensa/esp32s2/include/xtensa/config/tie.h \
+ /Users/user/esp/esp-idf/components/xtensa/include/xtensa/corebits.h \
+ /Users/user/esp/esp-idf/components/xtensa/esp32s2/include/xtensa/config/system.h \
+ /Users/user/esp/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h \
+ /Users/user/esp/esp-idf/components/xtensa/esp32s2/include/xtensa/config/core.h \
+ /Users/user/esp/esp-idf/components/xtensa/include/xtensa/hal.h \
+ /Users/user/esp/esp-idf/components/xtensa/include/xtensa/xtensa-versions.h \
+ /Users/user/esp/esp-idf/components/xtensa/esp32s2/include/xtensa/config/core-isa.h \
+ /Users/user/esp/esp-idf/components/xtensa/esp32s2/include/xtensa/config/core-matmap.h \
+ /Users/user/esp/CECS490/led_blinky/build/config/sdkconfig.h
