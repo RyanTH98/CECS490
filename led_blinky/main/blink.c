@@ -21,96 +21,104 @@
 #define out2 15
 #define out3 14
 
+#define input  1
+#define output 0
+
+int binaryIndex = 0;
+
+int input_pins[]  = { muxOut };
+int output_pins[] = { muxA, muxB, muxC, decA0, decA1, decA2, out0, out1,   out2, out3 };
+
+long binary_out[];
+
 const int scan_delay = 1;
 
-int input_pins[] = { muxOut };
+void delay (void);
+void init  (void);
+void scan  (void);
+void set   (int direction);
 
-int output_pins[] = {
-    muxA, muxB, muxC,
-    decA0, decA1, decA2,
-    out0, out1, out2, out3
-};
-
-
-void hall_scan(void);
-void set_inputs(void);
-void set_outputs(void);
-//void instatiate_pins(void);
 //long decimalToBinary(int decimalNum);
 
 void app_main(void) {
-    set_inputs();
-    set_outputs();
-    
-    gpio_set_level(muxA, 0);
-    gpio_set_level(muxB, 0);
-    gpio_set_level(muxC, 0);
-
-    gpio_set_level(decA0, 0);
-    gpio_set_level(decA1, 0);
-    gpio_set_level(decA2, 0);
-
-    gpio_set_level(decA0, 1);
-    gpio_set_level(muxA,  1);
+    init();
     
     while(1) {
-        hall_scan();
-        vTaskDelay(scan_delay / portTICK_PERIOD_MS);
+        scan();
+        delay();
     }
 }
 
-void hall_scan(void) {
+void delay(void) {
+    vTaskDelay(scan_delay / portTICK_PERIOD_MS);
+}
+
+void init(void) {
+    set(input);
+    set(output);
+}
+
+void scan(void) {
     gpio_set_level(decA0, 0);
     gpio_set_level(muxA,  0);
-    
-    vTaskDelay(scan_delay / portTICK_PERIOD_MS);
-    gpio_set_level(out3,  !gpio_get_level(muxOut));
+    delay();
+    gpio_set_level(out3, !gpio_get_level(muxOut));
 
     gpio_set_level(decA0, 0);
     gpio_set_level(muxA,  1);
-
-    vTaskDelay(scan_delay / portTICK_PERIOD_MS);
-    gpio_set_level(out0,  !gpio_get_level(muxOut));
-
+    delay();
+    gpio_set_level(out0, !gpio_get_level(muxOut));
+    
     gpio_set_level(decA0, 1);
     gpio_set_level(muxA,  0);
-
-    vTaskDelay(scan_delay / portTICK_PERIOD_MS);
-    gpio_set_level(out1,  !gpio_get_level(muxOut));
-    
+    delay();
+    gpio_set_level(out1, !gpio_get_level(muxOut));
 
     gpio_set_level(decA0, 1);
     gpio_set_level(muxA,  1);
-    //trigger(out3);
-    vTaskDelay(scan_delay / portTICK_PERIOD_MS);
-    gpio_set_level(out2,  !gpio_get_level(muxOut));
+    delay();
+    gpio_set_level(out2, !gpio_get_level(muxOut));
 }
 
-void set_inputs(void) {
+void set(int direction) {
     int pin;
+    int size  = 0;
+    int state = 0;
+    int input_size  = sizeof(input_pins)  / sizeof(input_pins[0]);
+    int output_size = sizeof(output_pins) / sizeof(output_pins[0]);
     
-    for (int i = 0; i < sizeof(input_pins)/sizeof(input_pins[0]); i++) {
-        pin = input_pins[i];
+    if (direction == input) {
+        state = input;
+        size  = input_size;
+    } else if (direction == output) {
+        state = output;
+        size  = output_size;
+    };
+    
+    for (int i = 0; i < size; i++) {
+        state == input ? (pin = input_pins[i]) : (pin = output_pins[i]);
         
         gpio_reset_pin(pin);
-        gpio_set_direction(pin, GPIO_MODE_INPUT);
+        
+        if (state == input)
+            gpio_set_direction(pin, GPIO_MODE_INPUT);
+        else if (state == output)
+            gpio_set_direction(pin, GPIO_MODE_OUTPUT);
     }
 }
 
-void set_outputs(void) {
-    int pin;
-    
-    for (int i = 0; i < sizeof(output_pins)/sizeof(output_pins[0]); i++) {
-        pin = output_pins[i];
-        
-        gpio_reset_pin(pin);
-        gpio_set_direction(pin, GPIO_MODE_OUTPUT);
-    }
-}
+
+
+
+
+
 
 //void instatiate_pins(void) {
 //
 //}
+
+
+
 
 //long decimalToBinary(int decimalNum) {
 //    long binaryNum = 0;
