@@ -1999,6 +1999,8 @@ CMakeFiles/_project_elf_src.dir/clean:
 # Target rules for target CMakeFiles/led_blinky.elf.dir
 
 # All Build rule for target.
+CMakeFiles/led_blinky.elf.dir/all: CMakeFiles/_project_elf_src.dir/all
+CMakeFiles/led_blinky.elf.dir/all: esp-idf/esp_ringbuf/CMakeFiles/__idf_esp_ringbuf.dir/all
 CMakeFiles/led_blinky.elf.dir/all: esp-idf/app_trace/CMakeFiles/__idf_app_trace.dir/all
 CMakeFiles/led_blinky.elf.dir/all: esp-idf/asio/CMakeFiles/__idf_asio.dir/all
 CMakeFiles/led_blinky.elf.dir/all: esp-idf/unity/CMakeFiles/__idf_unity.dir/all
@@ -2027,8 +2029,6 @@ CMakeFiles/led_blinky.elf.dir/all: esp-idf/usb/CMakeFiles/__idf_usb.dir/all
 CMakeFiles/led_blinky.elf.dir/all: esp-idf/touch_element/CMakeFiles/__idf_touch_element.dir/all
 CMakeFiles/led_blinky.elf.dir/all: esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/all
 CMakeFiles/led_blinky.elf.dir/all: esp-idf/main/CMakeFiles/__idf_main.dir/all
-CMakeFiles/led_blinky.elf.dir/all: CMakeFiles/_project_elf_src.dir/all
-CMakeFiles/led_blinky.elf.dir/all: esp-idf/esp_ringbuf/CMakeFiles/__idf_esp_ringbuf.dir/all
 CMakeFiles/led_blinky.elf.dir/all: esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/led_blinky.elf.dir/build.make CMakeFiles/led_blinky.elf.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/led_blinky.elf.dir/build.make CMakeFiles/led_blinky.elf.dir/build
@@ -3202,6 +3202,7 @@ esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/clean:
 # Target rules for target esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir
 
 # All Build rule for target.
+esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/esp_ringbuf/CMakeFiles/__idf_esp_ringbuf.dir/all
 esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/app_trace/CMakeFiles/__idf_app_trace.dir/all
 esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/asio/CMakeFiles/__idf_asio.dir/all
 esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/unity/CMakeFiles/__idf_unity.dir/all
@@ -3230,7 +3231,6 @@ esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/usb/CM
 esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/touch_element/CMakeFiles/__idf_touch_element.dir/all
 esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/all
 esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/main/CMakeFiles/__idf_main.dir/all
-esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/esp_ringbuf/CMakeFiles/__idf_esp_ringbuf.dir/all
 	$(MAKE) $(MAKESILENT) -f esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/build.make esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/depend
 	$(MAKE) $(MAKESILENT) -f esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/build.make esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num= "Built target __ldgen_output_sections.ld"
@@ -3880,8 +3880,8 @@ esp-idf/unity/CMakeFiles/__idf_unity.dir/clean:
 # Target rules for target esp-idf/cmock/CMakeFiles/__idf_cmock.dir
 
 # All Build rule for target.
-esp-idf/cmock/CMakeFiles/__idf_cmock.dir/all: esp-idf/unity/CMakeFiles/__idf_unity.dir/all
 esp-idf/cmock/CMakeFiles/__idf_cmock.dir/all: esp-idf/esp_ringbuf/CMakeFiles/__idf_esp_ringbuf.dir/all
+esp-idf/cmock/CMakeFiles/__idf_cmock.dir/all: esp-idf/unity/CMakeFiles/__idf_unity.dir/all
 	$(MAKE) $(MAKESILENT) -f esp-idf/cmock/CMakeFiles/__idf_cmock.dir/build.make esp-idf/cmock/CMakeFiles/__idf_cmock.dir/depend
 	$(MAKE) $(MAKESILENT) -f esp-idf/cmock/CMakeFiles/__idf_cmock.dir/build.make esp-idf/cmock/CMakeFiles/__idf_cmock.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=3 "Built target __idf_cmock"
@@ -4245,9 +4245,9 @@ esp-idf/protobuf-c/CMakeFiles/__idf_protobuf-c.dir/clean:
 # Target rules for target esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir
 
 # All Build rule for target.
+esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/all: esp-idf/esp_ringbuf/CMakeFiles/__idf_esp_ringbuf.dir/all
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/all: esp-idf/console/CMakeFiles/__idf_console.dir/all
 esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/all: esp-idf/protobuf-c/CMakeFiles/__idf_protobuf-c.dir/all
-esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/all: esp-idf/esp_ringbuf/CMakeFiles/__idf_esp_ringbuf.dir/all
 	$(MAKE) $(MAKESILENT) -f esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/depend
 	$(MAKE) $(MAKESILENT) -f esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/build.make esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=63,64 "Built target __idf_protocomm"
@@ -4273,8 +4273,8 @@ esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/clean:
 # Target rules for target esp-idf/mdns/CMakeFiles/__idf_mdns.dir
 
 # All Build rule for target.
-esp-idf/mdns/CMakeFiles/__idf_mdns.dir/all: esp-idf/console/CMakeFiles/__idf_console.dir/all
 esp-idf/mdns/CMakeFiles/__idf_mdns.dir/all: esp-idf/esp_ringbuf/CMakeFiles/__idf_esp_ringbuf.dir/all
+esp-idf/mdns/CMakeFiles/__idf_mdns.dir/all: esp-idf/console/CMakeFiles/__idf_console.dir/all
 	$(MAKE) $(MAKESILENT) -f esp-idf/mdns/CMakeFiles/__idf_mdns.dir/build.make esp-idf/mdns/CMakeFiles/__idf_mdns.dir/depend
 	$(MAKE) $(MAKESILENT) -f esp-idf/mdns/CMakeFiles/__idf_mdns.dir/build.make esp-idf/mdns/CMakeFiles/__idf_mdns.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=57 "Built target __idf_mdns"
@@ -4300,11 +4300,11 @@ esp-idf/mdns/CMakeFiles/__idf_mdns.dir/clean:
 # Target rules for target esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir
 
 # All Build rule for target.
+esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/all: esp-idf/esp_ringbuf/CMakeFiles/__idf_esp_ringbuf.dir/all
 esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/all: esp-idf/console/CMakeFiles/__idf_console.dir/all
 esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/all: esp-idf/protobuf-c/CMakeFiles/__idf_protobuf-c.dir/all
 esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/all: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/all
 esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/all: esp-idf/mdns/CMakeFiles/__idf_mdns.dir/all
-esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/all: esp-idf/esp_ringbuf/CMakeFiles/__idf_esp_ringbuf.dir/all
 	$(MAKE) $(MAKESILENT) -f esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/build.make esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/depend
 	$(MAKE) $(MAKESILENT) -f esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/build.make esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=22 "Built target __idf_esp_local_ctrl"
@@ -4460,8 +4460,8 @@ esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/clean:
 # Target rules for target esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir
 
 # All Build rule for target.
-esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/all: esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/all
 esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/all: esp-idf/esp_ringbuf/CMakeFiles/__idf_esp_ringbuf.dir/all
+esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/all: esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/all
 	$(MAKE) $(MAKESILENT) -f esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/build.make esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/depend
 	$(MAKE) $(MAKESILENT) -f esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/build.make esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=32 "Built target __idf_fatfs"
@@ -4722,12 +4722,12 @@ esp-idf/ulp/CMakeFiles/__idf_ulp.dir/clean:
 # Target rules for target esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir
 
 # All Build rule for target.
+esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/all: esp-idf/esp_ringbuf/CMakeFiles/__idf_esp_ringbuf.dir/all
 esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/all: esp-idf/console/CMakeFiles/__idf_console.dir/all
 esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/all: esp-idf/protobuf-c/CMakeFiles/__idf_protobuf-c.dir/all
 esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/all: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/all
 esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/all: esp-idf/mdns/CMakeFiles/__idf_mdns.dir/all
 esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/all: esp-idf/json/CMakeFiles/__idf_json.dir/all
-esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/all: esp-idf/esp_ringbuf/CMakeFiles/__idf_esp_ringbuf.dir/all
 	$(MAKE) $(MAKESILENT) -f esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/build.make esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/depend
 	$(MAKE) $(MAKESILENT) -f esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/build.make esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=76 "Built target __idf_wifi_provisioning"
@@ -4753,6 +4753,7 @@ esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/clean:
 # Target rules for target esp-idf/main/CMakeFiles/__idf_main.dir
 
 # All Build rule for target.
+esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/esp_ringbuf/CMakeFiles/__idf_esp_ringbuf.dir/all
 esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/app_trace/CMakeFiles/__idf_app_trace.dir/all
 esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/asio/CMakeFiles/__idf_asio.dir/all
 esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/unity/CMakeFiles/__idf_unity.dir/all
@@ -4780,7 +4781,6 @@ esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/spiffs/CMakeFiles/__idf_spif
 esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/usb/CMakeFiles/__idf_usb.dir/all
 esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/touch_element/CMakeFiles/__idf_touch_element.dir/all
 esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/all
-esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/esp_ringbuf/CMakeFiles/__idf_esp_ringbuf.dir/all
 	$(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=56 "Built target __idf_main"
