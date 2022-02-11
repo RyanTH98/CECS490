@@ -1999,19 +1999,6 @@ CMakeFiles/_project_elf_src.dir/clean:
 # Target rules for target CMakeFiles/led_blinky.elf.dir
 
 # All Build rule for target.
-CMakeFiles/led_blinky.elf.dir/all: esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/all
-CMakeFiles/led_blinky.elf.dir/all: esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/all
-CMakeFiles/led_blinky.elf.dir/all: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/all
-CMakeFiles/led_blinky.elf.dir/all: esp-idf/json/CMakeFiles/__idf_json.dir/all
-CMakeFiles/led_blinky.elf.dir/all: esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/all
-CMakeFiles/led_blinky.elf.dir/all: esp-idf/openssl/CMakeFiles/__idf_openssl.dir/all
-CMakeFiles/led_blinky.elf.dir/all: esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/all
-CMakeFiles/led_blinky.elf.dir/all: esp-idf/perfmon/CMakeFiles/__idf_perfmon.dir/all
-CMakeFiles/led_blinky.elf.dir/all: esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/all
-CMakeFiles/led_blinky.elf.dir/all: esp-idf/usb/CMakeFiles/__idf_usb.dir/all
-CMakeFiles/led_blinky.elf.dir/all: esp-idf/touch_element/CMakeFiles/__idf_touch_element.dir/all
-CMakeFiles/led_blinky.elf.dir/all: esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/all
-CMakeFiles/led_blinky.elf.dir/all: esp-idf/main/CMakeFiles/__idf_main.dir/all
 CMakeFiles/led_blinky.elf.dir/all: CMakeFiles/_project_elf_src.dir/all
 CMakeFiles/led_blinky.elf.dir/all: esp-idf/esp_ringbuf/CMakeFiles/__idf_esp_ringbuf.dir/all
 CMakeFiles/led_blinky.elf.dir/all: esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all
@@ -2027,9 +2014,22 @@ CMakeFiles/led_blinky.elf.dir/all: esp-idf/esp_hid/CMakeFiles/__idf_esp_hid.dir/
 CMakeFiles/led_blinky.elf.dir/all: esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/all
 CMakeFiles/led_blinky.elf.dir/all: esp-idf/protobuf-c/CMakeFiles/__idf_protobuf-c.dir/all
 CMakeFiles/led_blinky.elf.dir/all: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/all
+CMakeFiles/led_blinky.elf.dir/all: esp-idf/esp_websocket_client/CMakeFiles/__idf_esp_websocket_client.dir/all
+CMakeFiles/led_blinky.elf.dir/all: esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/all
+CMakeFiles/led_blinky.elf.dir/all: esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/all
+CMakeFiles/led_blinky.elf.dir/all: esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/all
+CMakeFiles/led_blinky.elf.dir/all: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/all
 CMakeFiles/led_blinky.elf.dir/all: esp-idf/mdns/CMakeFiles/__idf_mdns.dir/all
 CMakeFiles/led_blinky.elf.dir/all: esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/all
-CMakeFiles/led_blinky.elf.dir/all: esp-idf/esp_websocket_client/CMakeFiles/__idf_esp_websocket_client.dir/all
+CMakeFiles/led_blinky.elf.dir/all: esp-idf/json/CMakeFiles/__idf_json.dir/all
+CMakeFiles/led_blinky.elf.dir/all: esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/all
+CMakeFiles/led_blinky.elf.dir/all: esp-idf/openssl/CMakeFiles/__idf_openssl.dir/all
+CMakeFiles/led_blinky.elf.dir/all: esp-idf/perfmon/CMakeFiles/__idf_perfmon.dir/all
+CMakeFiles/led_blinky.elf.dir/all: esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/all
+CMakeFiles/led_blinky.elf.dir/all: esp-idf/usb/CMakeFiles/__idf_usb.dir/all
+CMakeFiles/led_blinky.elf.dir/all: esp-idf/touch_element/CMakeFiles/__idf_touch_element.dir/all
+CMakeFiles/led_blinky.elf.dir/all: esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/all
+CMakeFiles/led_blinky.elf.dir/all: esp-idf/main/CMakeFiles/__idf_main.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/led_blinky.elf.dir/build.make CMakeFiles/led_blinky.elf.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/led_blinky.elf.dir/build.make CMakeFiles/led_blinky.elf.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num= "Built target led_blinky.elf"
@@ -3202,19 +3202,6 @@ esp-idf/esp_system/CMakeFiles/__idf_esp_system.dir/clean:
 # Target rules for target esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir
 
 # All Build rule for target.
-esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/all
-esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/all
-esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/all
-esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/json/CMakeFiles/__idf_json.dir/all
-esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/all
-esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/openssl/CMakeFiles/__idf_openssl.dir/all
-esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/all
-esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/perfmon/CMakeFiles/__idf_perfmon.dir/all
-esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/all
-esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/usb/CMakeFiles/__idf_usb.dir/all
-esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/touch_element/CMakeFiles/__idf_touch_element.dir/all
-esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/all
-esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/main/CMakeFiles/__idf_main.dir/all
 esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/esp_ringbuf/CMakeFiles/__idf_esp_ringbuf.dir/all
 esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/app_trace/CMakeFiles/__idf_app_trace.dir/all
 esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/asio/CMakeFiles/__idf_asio.dir/all
@@ -3228,9 +3215,22 @@ esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/esp_hi
 esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/all
 esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/protobuf-c/CMakeFiles/__idf_protobuf-c.dir/all
 esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/all
+esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/esp_websocket_client/CMakeFiles/__idf_esp_websocket_client.dir/all
+esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/all
+esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/all
+esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/all
+esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/all
 esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/mdns/CMakeFiles/__idf_mdns.dir/all
 esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/all
-esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/esp_websocket_client/CMakeFiles/__idf_esp_websocket_client.dir/all
+esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/json/CMakeFiles/__idf_json.dir/all
+esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/all
+esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/openssl/CMakeFiles/__idf_openssl.dir/all
+esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/perfmon/CMakeFiles/__idf_perfmon.dir/all
+esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/all
+esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/usb/CMakeFiles/__idf_usb.dir/all
+esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/touch_element/CMakeFiles/__idf_touch_element.dir/all
+esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/all
+esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/all: esp-idf/main/CMakeFiles/__idf_main.dir/all
 	$(MAKE) $(MAKESILENT) -f esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/build.make esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/depend
 	$(MAKE) $(MAKESILENT) -f esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/build.make esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num= "Built target __ldgen_output_sections.ld"
@@ -4460,8 +4460,8 @@ esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/clean:
 # Target rules for target esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir
 
 # All Build rule for target.
-esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/all: esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/all
 esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/all: esp-idf/esp_ringbuf/CMakeFiles/__idf_esp_ringbuf.dir/all
+esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/all: esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/all
 	$(MAKE) $(MAKESILENT) -f esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/build.make esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/depend
 	$(MAKE) $(MAKESILENT) -f esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/build.make esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=32 "Built target __idf_fatfs"
@@ -4722,12 +4722,12 @@ esp-idf/ulp/CMakeFiles/__idf_ulp.dir/clean:
 # Target rules for target esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir
 
 # All Build rule for target.
-esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/all: esp-idf/json/CMakeFiles/__idf_json.dir/all
 esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/all: esp-idf/esp_ringbuf/CMakeFiles/__idf_esp_ringbuf.dir/all
 esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/all: esp-idf/console/CMakeFiles/__idf_console.dir/all
 esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/all: esp-idf/protobuf-c/CMakeFiles/__idf_protobuf-c.dir/all
 esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/all: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/all
 esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/all: esp-idf/mdns/CMakeFiles/__idf_mdns.dir/all
+esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/all: esp-idf/json/CMakeFiles/__idf_json.dir/all
 	$(MAKE) $(MAKESILENT) -f esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/build.make esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/depend
 	$(MAKE) $(MAKESILENT) -f esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/build.make esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=76 "Built target __idf_wifi_provisioning"
@@ -4753,18 +4753,6 @@ esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/clean:
 # Target rules for target esp-idf/main/CMakeFiles/__idf_main.dir
 
 # All Build rule for target.
-esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/all
-esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/all
-esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/all
-esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/json/CMakeFiles/__idf_json.dir/all
-esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/all
-esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/openssl/CMakeFiles/__idf_openssl.dir/all
-esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/all
-esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/perfmon/CMakeFiles/__idf_perfmon.dir/all
-esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/all
-esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/usb/CMakeFiles/__idf_usb.dir/all
-esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/touch_element/CMakeFiles/__idf_touch_element.dir/all
-esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/all
 esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/esp_ringbuf/CMakeFiles/__idf_esp_ringbuf.dir/all
 esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/app_trace/CMakeFiles/__idf_app_trace.dir/all
 esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/asio/CMakeFiles/__idf_asio.dir/all
@@ -4778,9 +4766,21 @@ esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/esp_hid/CMakeFiles/__idf_esp
 esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/all
 esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/protobuf-c/CMakeFiles/__idf_protobuf-c.dir/all
 esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/protocomm/CMakeFiles/__idf_protocomm.dir/all
+esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/esp_websocket_client/CMakeFiles/__idf_esp_websocket_client.dir/all
+esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/espcoredump/CMakeFiles/__idf_espcoredump.dir/all
+esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/all
+esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/all
+esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/freemodbus/CMakeFiles/__idf_freemodbus.dir/all
 esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/mdns/CMakeFiles/__idf_mdns.dir/all
 esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/all
-esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/esp_websocket_client/CMakeFiles/__idf_esp_websocket_client.dir/all
+esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/json/CMakeFiles/__idf_json.dir/all
+esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/mqtt/CMakeFiles/__idf_mqtt.dir/all
+esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/openssl/CMakeFiles/__idf_openssl.dir/all
+esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/perfmon/CMakeFiles/__idf_perfmon.dir/all
+esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/all
+esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/usb/CMakeFiles/__idf_usb.dir/all
+esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/touch_element/CMakeFiles/__idf_touch_element.dir/all
+esp-idf/main/CMakeFiles/__idf_main.dir/all: esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/all
 	$(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f esp-idf/main/CMakeFiles/__idf_main.dir/build.make esp-idf/main/CMakeFiles/__idf_main.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=56 "Built target __idf_main"

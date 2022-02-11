@@ -8,5 +8,5 @@ C_INCLUDES = -I/Users/user/esp/CECS490/led_blinky/build/config -I/Users/user/esp
 
 C_FLAGS = -mlongcalls  -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wextra -Wno-unused-parameter -Wno-sign-compare -ggdb -Og -fmacro-prefix-map=/Users/user/esp/CECS490/led_blinky=. -fmacro-prefix-map=/Users/user/esp/esp-idf=/IDF -fstrict-volatile-bitfields -Wno-error=unused-but-set-variable -fno-jump-tables -fno-tree-switch-conversion -std=gnu99 -Wno-old-style-declaration -D_GNU_SOURCE -DIDF_VER=\"v5.0-dev-1478-g6895a662aa\" -DESP_PLATFORM -D_POSIX_READER_WRITER_LOCKS
 
-# Custom defines: esp-idf/app_update/CMakeFiles/__idf_app_update.dir/esp_app_desc.c.obj_DEFINES = PROJECT_VER="d92eb97-dirty"; PROJECT_NAME="led_blinky"
+# Custom defines: esp-idf/app_update/CMakeFiles/__idf_app_update.dir/esp_app_desc.c.obj_DEFINES = PROJECT_VER="cf47e86-dirty"; PROJECT_NAME="led_blinky"
 
