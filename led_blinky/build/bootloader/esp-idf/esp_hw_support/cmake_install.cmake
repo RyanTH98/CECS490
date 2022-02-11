@@ -1,4 +1,4 @@
-# Install script for directory: /home/graham/esp/esp-idf/components/esp_hw_support
+# Install script for directory: /Users/user/esp/esp-idf/components/esp_hw_support
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,12 +34,12 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/home/graham/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-objdump")
+  set(CMAKE_OBJDUMP "/Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-objdump")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/graham/esp/CECS490/led_blinky/build/bootloader/esp-idf/esp_hw_support/port/esp32s2/cmake_install.cmake")
+  include("/Users/user/esp/CECS490/led_blinky/build/bootloader/esp-idf/esp_hw_support/port/esp32s2/cmake_install.cmake")
 
 endif()
 

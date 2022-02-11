@@ -1,0 +1,2 @@
+/Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-ar qc libulp.a CMakeFiles/__idf_ulp.dir/ulp_common/ulp_common.c.obj
+/Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-ranlib libulp.a
