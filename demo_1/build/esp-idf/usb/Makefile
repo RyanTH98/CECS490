@@ -57,10 +57,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/led_blinky
+CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/demo_1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/user/esp/CECS490/led_blinky/build
+CMAKE_BINARY_DIR = /Users/user/esp/CECS490/demo_1/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/led_blinky/build/CMakeFiles /Users/user/esp/CECS490/led_blinky/build/esp-idf/usb//CMakeFiles/progress.marks
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/usb/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/led_blinky/build/CMakeFiles 0
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/demo_1/build/CMakeFiles /Users/user/esp/CECS490/demo_1/build/esp-idf/usb//CMakeFiles/progress.marks
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/usb/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/demo_1/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/usb/clean
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/usb/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/usb/preinstall
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/usb/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/usb/preinstall
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/usb/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 esp-idf/usb/CMakeFiles/__idf_usb.dir/rule:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/usb/CMakeFiles/__idf_usb.dir/rule
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/usb/CMakeFiles/__idf_usb.dir/rule
 .PHONY : esp-idf/usb/CMakeFiles/__idf_usb.dir/rule
 
 # Convenience name for target.
@@ -172,7 +172,7 @@ __idf_usb: esp-idf/usb/CMakeFiles/__idf_usb.dir/rule
 
 # fast build rule for target.
 __idf_usb/fast:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/build
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/build
 .PHONY : __idf_usb/fast
 
 hcd.obj: hcd.c.obj
@@ -180,7 +180,7 @@ hcd.obj: hcd.c.obj
 
 # target to build an object file
 hcd.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/hcd.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/hcd.c.obj
 .PHONY : hcd.c.obj
 
 hcd.i: hcd.c.i
@@ -188,7 +188,7 @@ hcd.i: hcd.c.i
 
 # target to preprocess a source file
 hcd.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/hcd.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/hcd.c.i
 .PHONY : hcd.c.i
 
 hcd.s: hcd.c.s
@@ -196,7 +196,7 @@ hcd.s: hcd.c.s
 
 # target to generate assembly for a file
 hcd.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/hcd.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/hcd.c.s
 .PHONY : hcd.c.s
 
 hub.obj: hub.c.obj
@@ -204,7 +204,7 @@ hub.obj: hub.c.obj
 
 # target to build an object file
 hub.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/hub.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/hub.c.obj
 .PHONY : hub.c.obj
 
 hub.i: hub.c.i
@@ -212,7 +212,7 @@ hub.i: hub.c.i
 
 # target to preprocess a source file
 hub.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/hub.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/hub.c.i
 .PHONY : hub.c.i
 
 hub.s: hub.c.s
@@ -220,7 +220,7 @@ hub.s: hub.c.s
 
 # target to generate assembly for a file
 hub.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/hub.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/hub.c.s
 .PHONY : hub.c.s
 
 usb_helpers.obj: usb_helpers.c.obj
@@ -228,7 +228,7 @@ usb_helpers.obj: usb_helpers.c.obj
 
 # target to build an object file
 usb_helpers.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_helpers.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_helpers.c.obj
 .PHONY : usb_helpers.c.obj
 
 usb_helpers.i: usb_helpers.c.i
@@ -236,7 +236,7 @@ usb_helpers.i: usb_helpers.c.i
 
 # target to preprocess a source file
 usb_helpers.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_helpers.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_helpers.c.i
 .PHONY : usb_helpers.c.i
 
 usb_helpers.s: usb_helpers.c.s
@@ -244,7 +244,7 @@ usb_helpers.s: usb_helpers.c.s
 
 # target to generate assembly for a file
 usb_helpers.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_helpers.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_helpers.c.s
 .PHONY : usb_helpers.c.s
 
 usb_host.obj: usb_host.c.obj
@@ -252,7 +252,7 @@ usb_host.obj: usb_host.c.obj
 
 # target to build an object file
 usb_host.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_host.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_host.c.obj
 .PHONY : usb_host.c.obj
 
 usb_host.i: usb_host.c.i
@@ -260,7 +260,7 @@ usb_host.i: usb_host.c.i
 
 # target to preprocess a source file
 usb_host.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_host.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_host.c.i
 .PHONY : usb_host.c.i
 
 usb_host.s: usb_host.c.s
@@ -268,7 +268,7 @@ usb_host.s: usb_host.c.s
 
 # target to generate assembly for a file
 usb_host.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_host.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_host.c.s
 .PHONY : usb_host.c.s
 
 usb_phy.obj: usb_phy.c.obj
@@ -276,7 +276,7 @@ usb_phy.obj: usb_phy.c.obj
 
 # target to build an object file
 usb_phy.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_phy.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_phy.c.obj
 .PHONY : usb_phy.c.obj
 
 usb_phy.i: usb_phy.c.i
@@ -284,7 +284,7 @@ usb_phy.i: usb_phy.c.i
 
 # target to preprocess a source file
 usb_phy.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_phy.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_phy.c.i
 .PHONY : usb_phy.c.i
 
 usb_phy.s: usb_phy.c.s
@@ -292,7 +292,7 @@ usb_phy.s: usb_phy.c.s
 
 # target to generate assembly for a file
 usb_phy.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_phy.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_phy.c.s
 .PHONY : usb_phy.c.s
 
 usb_private.obj: usb_private.c.obj
@@ -300,7 +300,7 @@ usb_private.obj: usb_private.c.obj
 
 # target to build an object file
 usb_private.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_private.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_private.c.obj
 .PHONY : usb_private.c.obj
 
 usb_private.i: usb_private.c.i
@@ -308,7 +308,7 @@ usb_private.i: usb_private.c.i
 
 # target to preprocess a source file
 usb_private.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_private.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_private.c.i
 .PHONY : usb_private.c.i
 
 usb_private.s: usb_private.c.s
@@ -316,7 +316,7 @@ usb_private.s: usb_private.c.s
 
 # target to generate assembly for a file
 usb_private.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_private.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_private.c.s
 .PHONY : usb_private.c.s
 
 usbh.obj: usbh.c.obj
@@ -324,7 +324,7 @@ usbh.obj: usbh.c.obj
 
 # target to build an object file
 usbh.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/usbh.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/usbh.c.obj
 .PHONY : usbh.c.obj
 
 usbh.i: usbh.c.i
@@ -332,7 +332,7 @@ usbh.i: usbh.c.i
 
 # target to preprocess a source file
 usbh.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/usbh.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/usbh.c.i
 .PHONY : usbh.c.i
 
 usbh.s: usbh.c.s
@@ -340,7 +340,7 @@ usbh.s: usbh.c.s
 
 # target to generate assembly for a file
 usbh.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/usbh.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make esp-idf/usb/CMakeFiles/__idf_usb.dir/usbh.c.s
 .PHONY : usbh.c.s
 
 # Help Target
@@ -388,6 +388,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

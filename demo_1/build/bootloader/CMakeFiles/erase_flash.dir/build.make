@@ -56,7 +56,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /Users/user/esp/esp-idf/components/bootloader/subproject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/user/esp/CECS490/led_blinky/build/bootloader
+CMAKE_BINARY_DIR = /Users/user/esp/CECS490/demo_1/build/bootloader
 
 # Utility rule file for erase_flash.
 
@@ -82,6 +82,6 @@ CMakeFiles/erase_flash.dir/clean:
 .PHONY : CMakeFiles/erase_flash.dir/clean
 
 CMakeFiles/erase_flash.dir/depend:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/esp-idf/components/bootloader/subproject /Users/user/esp/esp-idf/components/bootloader/subproject /Users/user/esp/CECS490/led_blinky/build/bootloader /Users/user/esp/CECS490/led_blinky/build/bootloader /Users/user/esp/CECS490/led_blinky/build/bootloader/CMakeFiles/erase_flash.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/esp-idf/components/bootloader/subproject /Users/user/esp/esp-idf/components/bootloader/subproject /Users/user/esp/CECS490/demo_1/build/bootloader /Users/user/esp/CECS490/demo_1/build/bootloader /Users/user/esp/CECS490/demo_1/build/bootloader/CMakeFiles/erase_flash.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/erase_flash.dir/depend
 

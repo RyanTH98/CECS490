@@ -1,6 +1,6 @@
 esp-idf/hal/CMakeFiles/__idf_hal.dir/spi_flash_hal_iram.c.obj: \
  /Users/user/esp/esp-idf/components/hal/spi_flash_hal_iram.c \
- /Users/user/esp/CECS490/led_blinky/build/config/sdkconfig.h \
+ /Users/user/esp/CECS490/demo_1/build/config/sdkconfig.h \
  /Users/user/esp/esp-idf/components/hal/include/hal/spi_flash_hal.h \
  /Users/user/esp/esp-idf/components/hal/esp32s2/include/hal/spi_flash_ll.h \
  /Users/user/esp/esp-idf/components/hal/esp32s2/include/hal/gpspi_flash_ll.h \

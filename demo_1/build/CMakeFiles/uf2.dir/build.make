@@ -53,10 +53,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/led_blinky
+CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/demo_1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/user/esp/CECS490/led_blinky/build
+CMAKE_BINARY_DIR = /Users/user/esp/CECS490/demo_1/build
 
 # Utility rule file for uf2.
 
@@ -67,7 +67,7 @@ include CMakeFiles/uf2.dir/compiler_depend.make
 include CMakeFiles/uf2.dir/progress.make
 
 CMakeFiles/uf2:
-	/Users/user/.espressif/python_env/idf5.0_py3.9_env/bin/python /Users/user/esp/esp-idf/tools/mkuf2.py write -o /Users/user/esp/CECS490/led_blinky/build/uf2.bin --json /Users/user/esp/CECS490/led_blinky/build/flasher_args.json --chip-id 0xbfdd4eee
+	/Users/user/.espressif/python_env/idf5.0_py3.9_env/bin/python /Users/user/esp/esp-idf/tools/mkuf2.py write -o /Users/user/esp/CECS490/demo_1/build/uf2.bin --json /Users/user/esp/CECS490/demo_1/build/flasher_args.json --chip-id 0xbfdd4eee
 
 uf2: CMakeFiles/uf2
 uf2: CMakeFiles/uf2.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/uf2.dir/clean:
 .PHONY : CMakeFiles/uf2.dir/clean
 
 CMakeFiles/uf2.dir/depend:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/CECS490/led_blinky /Users/user/esp/CECS490/led_blinky /Users/user/esp/CECS490/led_blinky/build /Users/user/esp/CECS490/led_blinky/build /Users/user/esp/CECS490/led_blinky/build/CMakeFiles/uf2.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/CECS490/demo_1 /Users/user/esp/CECS490/demo_1 /Users/user/esp/CECS490/demo_1/build /Users/user/esp/CECS490/demo_1/build /Users/user/esp/CECS490/demo_1/build/CMakeFiles/uf2.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uf2.dir/depend
 

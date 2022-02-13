@@ -53,10 +53,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/led_blinky
+CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/demo_1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/user/esp/CECS490/led_blinky/build
+CMAKE_BINARY_DIR = /Users/user/esp/CECS490/demo_1/build
 
 # Utility rule file for dfu.
 
@@ -67,7 +67,7 @@ include CMakeFiles/dfu.dir/compiler_depend.make
 include CMakeFiles/dfu.dir/progress.make
 
 CMakeFiles/dfu:
-	/Users/user/.espressif/python_env/idf5.0_py3.9_env/bin/python /Users/user/esp/esp-idf/tools/mkdfu.py write -o /Users/user/esp/CECS490/led_blinky/build/dfu.bin --json /Users/user/esp/CECS490/led_blinky/build/flasher_args.json --pid 2
+	/Users/user/.espressif/python_env/idf5.0_py3.9_env/bin/python /Users/user/esp/esp-idf/tools/mkdfu.py write -o /Users/user/esp/CECS490/demo_1/build/dfu.bin --json /Users/user/esp/CECS490/demo_1/build/flasher_args.json --pid 2
 
 dfu: CMakeFiles/dfu
 dfu: CMakeFiles/dfu.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/dfu.dir/clean:
 .PHONY : CMakeFiles/dfu.dir/clean
 
 CMakeFiles/dfu.dir/depend:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/CECS490/led_blinky /Users/user/esp/CECS490/led_blinky /Users/user/esp/CECS490/led_blinky/build /Users/user/esp/CECS490/led_blinky/build /Users/user/esp/CECS490/led_blinky/build/CMakeFiles/dfu.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/CECS490/demo_1 /Users/user/esp/CECS490/demo_1 /Users/user/esp/CECS490/demo_1/build /Users/user/esp/CECS490/demo_1/build /Users/user/esp/CECS490/demo_1/build/CMakeFiles/dfu.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/dfu.dir/depend
 

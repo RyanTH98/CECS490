@@ -1,7 +1,7 @@
 esp-idf/spi_flash/CMakeFiles/__idf_spi_flash.dir/spi_flash_os_func_noos.c.obj: \
  /Users/user/esp/esp-idf/components/spi_flash/spi_flash_os_func_noos.c \
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/lib/gcc/xtensa-esp32s2-elf/8.4.0/include/stdarg.h \
- /Users/user/esp/CECS490/led_blinky/build/config/sdkconfig.h \
+ /Users/user/esp/CECS490/demo_1/build/config/sdkconfig.h \
  /Users/user/esp/esp-idf/components/spi_flash/include/esp_flash.h \
  /Users/user/esp/esp-idf/components/esp_common/include/esp_err.h \
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/lib/gcc/xtensa-esp32s2-elf/8.4.0/include/stdint.h \

@@ -57,10 +57,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/led_blinky
+CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/demo_1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/user/esp/CECS490/led_blinky/build
+CMAKE_BINARY_DIR = /Users/user/esp/CECS490/demo_1/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/led_blinky/build/CMakeFiles /Users/user/esp/CECS490/led_blinky/build/esp-idf/esp_event//CMakeFiles/progress.marks
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_event/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/led_blinky/build/CMakeFiles 0
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/demo_1/build/CMakeFiles /Users/user/esp/CECS490/demo_1/build/esp-idf/esp_event//CMakeFiles/progress.marks
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_event/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/demo_1/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_event/clean
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_event/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_event/preinstall
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_event/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_event/preinstall
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_event/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/rule:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/rule
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/rule
 .PHONY : esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/rule
 
 # Convenience name for target.
@@ -172,7 +172,7 @@ __idf_esp_event: esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/rule
 
 # fast build rule for target.
 __idf_esp_event/fast:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/build.make esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/build
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/build.make esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/build
 .PHONY : __idf_esp_event/fast
 
 default_event_loop.obj: default_event_loop.c.obj
@@ -180,7 +180,7 @@ default_event_loop.obj: default_event_loop.c.obj
 
 # target to build an object file
 default_event_loop.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/build.make esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/default_event_loop.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/build.make esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/default_event_loop.c.obj
 .PHONY : default_event_loop.c.obj
 
 default_event_loop.i: default_event_loop.c.i
@@ -188,7 +188,7 @@ default_event_loop.i: default_event_loop.c.i
 
 # target to preprocess a source file
 default_event_loop.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/build.make esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/default_event_loop.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/build.make esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/default_event_loop.c.i
 .PHONY : default_event_loop.c.i
 
 default_event_loop.s: default_event_loop.c.s
@@ -196,7 +196,7 @@ default_event_loop.s: default_event_loop.c.s
 
 # target to generate assembly for a file
 default_event_loop.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/build.make esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/default_event_loop.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/build.make esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/default_event_loop.c.s
 .PHONY : default_event_loop.c.s
 
 esp_event.obj: esp_event.c.obj
@@ -204,7 +204,7 @@ esp_event.obj: esp_event.c.obj
 
 # target to build an object file
 esp_event.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/build.make esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/esp_event.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/build.make esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/esp_event.c.obj
 .PHONY : esp_event.c.obj
 
 esp_event.i: esp_event.c.i
@@ -212,7 +212,7 @@ esp_event.i: esp_event.c.i
 
 # target to preprocess a source file
 esp_event.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/build.make esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/esp_event.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/build.make esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/esp_event.c.i
 .PHONY : esp_event.c.i
 
 esp_event.s: esp_event.c.s
@@ -220,7 +220,7 @@ esp_event.s: esp_event.c.s
 
 # target to generate assembly for a file
 esp_event.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/build.make esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/esp_event.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/build.make esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/esp_event.c.s
 .PHONY : esp_event.c.s
 
 esp_event_private.obj: esp_event_private.c.obj
@@ -228,7 +228,7 @@ esp_event_private.obj: esp_event_private.c.obj
 
 # target to build an object file
 esp_event_private.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/build.make esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/esp_event_private.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/build.make esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/esp_event_private.c.obj
 .PHONY : esp_event_private.c.obj
 
 esp_event_private.i: esp_event_private.c.i
@@ -236,7 +236,7 @@ esp_event_private.i: esp_event_private.c.i
 
 # target to preprocess a source file
 esp_event_private.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/build.make esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/esp_event_private.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/build.make esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/esp_event_private.c.i
 .PHONY : esp_event_private.c.i
 
 esp_event_private.s: esp_event_private.c.s
@@ -244,7 +244,7 @@ esp_event_private.s: esp_event_private.c.s
 
 # target to generate assembly for a file
 esp_event_private.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/build.make esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/esp_event_private.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/build.make esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/esp_event_private.c.s
 .PHONY : esp_event_private.c.s
 
 event_loop_legacy.obj: event_loop_legacy.c.obj
@@ -252,7 +252,7 @@ event_loop_legacy.obj: event_loop_legacy.c.obj
 
 # target to build an object file
 event_loop_legacy.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/build.make esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/event_loop_legacy.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/build.make esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/event_loop_legacy.c.obj
 .PHONY : event_loop_legacy.c.obj
 
 event_loop_legacy.i: event_loop_legacy.c.i
@@ -260,7 +260,7 @@ event_loop_legacy.i: event_loop_legacy.c.i
 
 # target to preprocess a source file
 event_loop_legacy.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/build.make esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/event_loop_legacy.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/build.make esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/event_loop_legacy.c.i
 .PHONY : event_loop_legacy.c.i
 
 event_loop_legacy.s: event_loop_legacy.c.s
@@ -268,7 +268,7 @@ event_loop_legacy.s: event_loop_legacy.c.s
 
 # target to generate assembly for a file
 event_loop_legacy.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/build.make esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/event_loop_legacy.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/build.make esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/event_loop_legacy.c.s
 .PHONY : event_loop_legacy.c.s
 
 event_send.obj: event_send.c.obj
@@ -276,7 +276,7 @@ event_send.obj: event_send.c.obj
 
 # target to build an object file
 event_send.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/build.make esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/event_send.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/build.make esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/event_send.c.obj
 .PHONY : event_send.c.obj
 
 event_send.i: event_send.c.i
@@ -284,7 +284,7 @@ event_send.i: event_send.c.i
 
 # target to preprocess a source file
 event_send.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/build.make esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/event_send.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/build.make esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/event_send.c.i
 .PHONY : event_send.c.i
 
 event_send.s: event_send.c.s
@@ -292,7 +292,7 @@ event_send.s: event_send.c.s
 
 # target to generate assembly for a file
 event_send.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/build.make esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/event_send.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/build.make esp-idf/esp_event/CMakeFiles/__idf_esp_event.dir/event_send.c.s
 .PHONY : event_send.c.s
 
 # Help Target
@@ -334,6 +334,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

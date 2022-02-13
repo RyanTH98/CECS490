@@ -57,10 +57,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/led_blinky
+CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/demo_1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/user/esp/CECS490/led_blinky/build
+CMAKE_BINARY_DIR = /Users/user/esp/CECS490/demo_1/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/led_blinky/build/CMakeFiles /Users/user/esp/CECS490/led_blinky/build/esp-idf/pthread//CMakeFiles/progress.marks
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/pthread/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/led_blinky/build/CMakeFiles 0
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/demo_1/build/CMakeFiles /Users/user/esp/CECS490/demo_1/build/esp-idf/pthread//CMakeFiles/progress.marks
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/pthread/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/demo_1/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/pthread/clean
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/pthread/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/pthread/preinstall
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/pthread/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/pthread/preinstall
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/pthread/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 esp-idf/pthread/CMakeFiles/__idf_pthread.dir/rule:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/pthread/CMakeFiles/__idf_pthread.dir/rule
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/pthread/CMakeFiles/__idf_pthread.dir/rule
 .PHONY : esp-idf/pthread/CMakeFiles/__idf_pthread.dir/rule
 
 # Convenience name for target.
@@ -172,7 +172,7 @@ __idf_pthread: esp-idf/pthread/CMakeFiles/__idf_pthread.dir/rule
 
 # fast build rule for target.
 __idf_pthread/fast:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/pthread/CMakeFiles/__idf_pthread.dir/build.make esp-idf/pthread/CMakeFiles/__idf_pthread.dir/build
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/pthread/CMakeFiles/__idf_pthread.dir/build.make esp-idf/pthread/CMakeFiles/__idf_pthread.dir/build
 .PHONY : __idf_pthread/fast
 
 pthread.obj: pthread.c.obj
@@ -180,7 +180,7 @@ pthread.obj: pthread.c.obj
 
 # target to build an object file
 pthread.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/pthread/CMakeFiles/__idf_pthread.dir/build.make esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/pthread/CMakeFiles/__idf_pthread.dir/build.make esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread.c.obj
 .PHONY : pthread.c.obj
 
 pthread.i: pthread.c.i
@@ -188,7 +188,7 @@ pthread.i: pthread.c.i
 
 # target to preprocess a source file
 pthread.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/pthread/CMakeFiles/__idf_pthread.dir/build.make esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/pthread/CMakeFiles/__idf_pthread.dir/build.make esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread.c.i
 .PHONY : pthread.c.i
 
 pthread.s: pthread.c.s
@@ -196,7 +196,7 @@ pthread.s: pthread.c.s
 
 # target to generate assembly for a file
 pthread.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/pthread/CMakeFiles/__idf_pthread.dir/build.make esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/pthread/CMakeFiles/__idf_pthread.dir/build.make esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread.c.s
 .PHONY : pthread.c.s
 
 pthread_cond_var.obj: pthread_cond_var.c.obj
@@ -204,7 +204,7 @@ pthread_cond_var.obj: pthread_cond_var.c.obj
 
 # target to build an object file
 pthread_cond_var.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/pthread/CMakeFiles/__idf_pthread.dir/build.make esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread_cond_var.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/pthread/CMakeFiles/__idf_pthread.dir/build.make esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread_cond_var.c.obj
 .PHONY : pthread_cond_var.c.obj
 
 pthread_cond_var.i: pthread_cond_var.c.i
@@ -212,7 +212,7 @@ pthread_cond_var.i: pthread_cond_var.c.i
 
 # target to preprocess a source file
 pthread_cond_var.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/pthread/CMakeFiles/__idf_pthread.dir/build.make esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread_cond_var.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/pthread/CMakeFiles/__idf_pthread.dir/build.make esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread_cond_var.c.i
 .PHONY : pthread_cond_var.c.i
 
 pthread_cond_var.s: pthread_cond_var.c.s
@@ -220,7 +220,7 @@ pthread_cond_var.s: pthread_cond_var.c.s
 
 # target to generate assembly for a file
 pthread_cond_var.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/pthread/CMakeFiles/__idf_pthread.dir/build.make esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread_cond_var.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/pthread/CMakeFiles/__idf_pthread.dir/build.make esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread_cond_var.c.s
 .PHONY : pthread_cond_var.c.s
 
 pthread_local_storage.obj: pthread_local_storage.c.obj
@@ -228,7 +228,7 @@ pthread_local_storage.obj: pthread_local_storage.c.obj
 
 # target to build an object file
 pthread_local_storage.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/pthread/CMakeFiles/__idf_pthread.dir/build.make esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread_local_storage.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/pthread/CMakeFiles/__idf_pthread.dir/build.make esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread_local_storage.c.obj
 .PHONY : pthread_local_storage.c.obj
 
 pthread_local_storage.i: pthread_local_storage.c.i
@@ -236,7 +236,7 @@ pthread_local_storage.i: pthread_local_storage.c.i
 
 # target to preprocess a source file
 pthread_local_storage.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/pthread/CMakeFiles/__idf_pthread.dir/build.make esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread_local_storage.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/pthread/CMakeFiles/__idf_pthread.dir/build.make esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread_local_storage.c.i
 .PHONY : pthread_local_storage.c.i
 
 pthread_local_storage.s: pthread_local_storage.c.s
@@ -244,7 +244,7 @@ pthread_local_storage.s: pthread_local_storage.c.s
 
 # target to generate assembly for a file
 pthread_local_storage.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/pthread/CMakeFiles/__idf_pthread.dir/build.make esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread_local_storage.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/pthread/CMakeFiles/__idf_pthread.dir/build.make esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread_local_storage.c.s
 .PHONY : pthread_local_storage.c.s
 
 pthread_rwlock.obj: pthread_rwlock.c.obj
@@ -252,7 +252,7 @@ pthread_rwlock.obj: pthread_rwlock.c.obj
 
 # target to build an object file
 pthread_rwlock.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/pthread/CMakeFiles/__idf_pthread.dir/build.make esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread_rwlock.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/pthread/CMakeFiles/__idf_pthread.dir/build.make esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread_rwlock.c.obj
 .PHONY : pthread_rwlock.c.obj
 
 pthread_rwlock.i: pthread_rwlock.c.i
@@ -260,7 +260,7 @@ pthread_rwlock.i: pthread_rwlock.c.i
 
 # target to preprocess a source file
 pthread_rwlock.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/pthread/CMakeFiles/__idf_pthread.dir/build.make esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread_rwlock.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/pthread/CMakeFiles/__idf_pthread.dir/build.make esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread_rwlock.c.i
 .PHONY : pthread_rwlock.c.i
 
 pthread_rwlock.s: pthread_rwlock.c.s
@@ -268,7 +268,7 @@ pthread_rwlock.s: pthread_rwlock.c.s
 
 # target to generate assembly for a file
 pthread_rwlock.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/pthread/CMakeFiles/__idf_pthread.dir/build.make esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread_rwlock.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/pthread/CMakeFiles/__idf_pthread.dir/build.make esp-idf/pthread/CMakeFiles/__idf_pthread.dir/pthread_rwlock.c.s
 .PHONY : pthread_rwlock.c.s
 
 # Help Target
@@ -307,6 +307,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

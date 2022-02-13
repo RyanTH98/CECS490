@@ -53,10 +53,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/led_blinky
+CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/demo_1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/user/esp/CECS490/led_blinky/build
+CMAKE_BINARY_DIR = /Users/user/esp/CECS490/demo_1/build
 
 # Utility rule file for size.
 
@@ -67,7 +67,7 @@ include CMakeFiles/size.dir/compiler_depend.make
 include CMakeFiles/size.dir/progress.make
 
 CMakeFiles/size: led_blinky.map
-	/Users/user/.espressif/python_env/idf5.0_py3.9_env/bin/python /Users/user/esp/esp-idf/tools/idf_size.py /Users/user/esp/CECS490/led_blinky/build/led_blinky.map
+	/Users/user/.espressif/python_env/idf5.0_py3.9_env/bin/python /Users/user/esp/esp-idf/tools/idf_size.py /Users/user/esp/CECS490/demo_1/build/led_blinky.map
 
 size: CMakeFiles/size
 size: CMakeFiles/size.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/size.dir/clean:
 .PHONY : CMakeFiles/size.dir/clean
 
 CMakeFiles/size.dir/depend:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/CECS490/led_blinky /Users/user/esp/CECS490/led_blinky /Users/user/esp/CECS490/led_blinky/build /Users/user/esp/CECS490/led_blinky/build /Users/user/esp/CECS490/led_blinky/build/CMakeFiles/size.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/CECS490/demo_1 /Users/user/esp/CECS490/demo_1 /Users/user/esp/CECS490/demo_1/build /Users/user/esp/CECS490/demo_1/build /Users/user/esp/CECS490/demo_1/build/CMakeFiles/size.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/size.dir/depend
 

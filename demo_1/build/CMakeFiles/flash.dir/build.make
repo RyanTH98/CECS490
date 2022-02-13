@@ -53,10 +53,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/led_blinky
+CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/demo_1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/user/esp/CECS490/led_blinky/build
+CMAKE_BINARY_DIR = /Users/user/esp/CECS490/demo_1/build
 
 # Utility rule file for flash.
 
@@ -67,7 +67,7 @@ include CMakeFiles/flash.dir/compiler_depend.make
 include CMakeFiles/flash.dir/progress.make
 
 CMakeFiles/flash:
-	cd /Users/user/esp/esp-idf/components/esptool_py && /Applications/CMake.app/Contents/bin/cmake -D IDF_PATH=/Users/user/esp/esp-idf -D "SERIAL_TOOL=/Users/user/.espressif/python_env/idf5.0_py3.9_env/bin/python;;/Users/user/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s2" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/Users/user/esp/CECS490/led_blinky/build -P /Users/user/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+	cd /Users/user/esp/esp-idf/components/esptool_py && /Applications/CMake.app/Contents/bin/cmake -D IDF_PATH=/Users/user/esp/esp-idf -D "SERIAL_TOOL=/Users/user/.espressif/python_env/idf5.0_py3.9_env/bin/python;;/Users/user/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s2" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/Users/user/esp/CECS490/demo_1/build -P /Users/user/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
 
 flash: CMakeFiles/flash
 flash: CMakeFiles/flash.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/flash.dir/clean:
 .PHONY : CMakeFiles/flash.dir/clean
 
 CMakeFiles/flash.dir/depend:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/CECS490/led_blinky /Users/user/esp/CECS490/led_blinky /Users/user/esp/CECS490/led_blinky/build /Users/user/esp/CECS490/led_blinky/build /Users/user/esp/CECS490/led_blinky/build/CMakeFiles/flash.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/CECS490/demo_1 /Users/user/esp/CECS490/demo_1 /Users/user/esp/CECS490/demo_1/build /Users/user/esp/CECS490/demo_1/build /Users/user/esp/CECS490/demo_1/build/CMakeFiles/flash.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/flash.dir/depend
 

@@ -17,7 +17,7 @@ esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/xtensa/x
  /Users/user/esp/esp-idf/components/xtensa/esp32s2/include/xtensa/config/tie.h \
  /Users/user/esp/esp-idf/components/xtensa/include/xtensa/corebits.h \
  /Users/user/esp/esp-idf/components/xtensa/esp32s2/include/xtensa/config/system.h \
- /Users/user/esp/CECS490/led_blinky/build/config/sdkconfig.h \
+ /Users/user/esp/CECS490/demo_1/build/config/sdkconfig.h \
  /Users/user/esp/esp-idf/components/freertos/esp_additions/include/freertos/FreeRTOSConfig.h \
  /Users/user/esp/esp-idf/components/esp_common/include/esp_compiler.h \
  /Users/user/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/FreeRTOSConfig_arch.h \

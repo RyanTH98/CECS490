@@ -60,7 +60,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /Users/user/esp/esp-idf/components/bootloader/subproject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/user/esp/CECS490/led_blinky/build/bootloader
+CMAKE_BINARY_DIR = /Users/user/esp/CECS490/demo_1/build/bootloader
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/led_blinky/build/bootloader/CMakeFiles /Users/user/esp/CECS490/led_blinky/build/bootloader/esp-idf/micro-ecc//CMakeFiles/progress.marks
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/micro-ecc/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/led_blinky/build/bootloader/CMakeFiles 0
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/demo_1/build/bootloader/CMakeFiles /Users/user/esp/CECS490/demo_1/build/bootloader/esp-idf/micro-ecc//CMakeFiles/progress.marks
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/micro-ecc/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/demo_1/build/bootloader/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/micro-ecc/clean
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/micro-ecc/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/micro-ecc/preinstall
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/micro-ecc/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/micro-ecc/preinstall
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/micro-ecc/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/rule:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/rule
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/rule
 .PHONY : esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ __idf_micro-ecc: esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/rule
 
 # fast build rule for target.
 __idf_micro-ecc/fast:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/build.make esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/build
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/build.make esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/build
 .PHONY : __idf_micro-ecc/fast
 
 uECC_verify_antifault.obj: uECC_verify_antifault.c.obj
@@ -135,7 +135,7 @@ uECC_verify_antifault.obj: uECC_verify_antifault.c.obj
 
 # target to build an object file
 uECC_verify_antifault.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/build.make esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/uECC_verify_antifault.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/build.make esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/uECC_verify_antifault.c.obj
 .PHONY : uECC_verify_antifault.c.obj
 
 uECC_verify_antifault.i: uECC_verify_antifault.c.i
@@ -143,7 +143,7 @@ uECC_verify_antifault.i: uECC_verify_antifault.c.i
 
 # target to preprocess a source file
 uECC_verify_antifault.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/build.make esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/uECC_verify_antifault.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/build.make esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/uECC_verify_antifault.c.i
 .PHONY : uECC_verify_antifault.c.i
 
 uECC_verify_antifault.s: uECC_verify_antifault.c.s
@@ -151,7 +151,7 @@ uECC_verify_antifault.s: uECC_verify_antifault.c.s
 
 # target to generate assembly for a file
 uECC_verify_antifault.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/build.make esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/uECC_verify_antifault.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/build.make esp-idf/micro-ecc/CMakeFiles/__idf_micro-ecc.dir/uECC_verify_antifault.c.s
 .PHONY : uECC_verify_antifault.c.s
 
 # Help Target
@@ -177,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

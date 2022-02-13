@@ -57,10 +57,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/led_blinky
+CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/demo_1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/user/esp/CECS490/led_blinky/build
+CMAKE_BINARY_DIR = /Users/user/esp/CECS490/demo_1/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/led_blinky/build/CMakeFiles /Users/user/esp/CECS490/led_blinky/build/esp-idf/vfs//CMakeFiles/progress.marks
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/vfs/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/led_blinky/build/CMakeFiles 0
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/demo_1/build/CMakeFiles /Users/user/esp/CECS490/demo_1/build/esp-idf/vfs//CMakeFiles/progress.marks
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/vfs/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/demo_1/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/vfs/clean
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/vfs/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/vfs/preinstall
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/vfs/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/vfs/preinstall
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/vfs/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 esp-idf/vfs/CMakeFiles/__idf_vfs.dir/rule:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/vfs/CMakeFiles/__idf_vfs.dir/rule
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/vfs/CMakeFiles/__idf_vfs.dir/rule
 .PHONY : esp-idf/vfs/CMakeFiles/__idf_vfs.dir/rule
 
 # Convenience name for target.
@@ -172,7 +172,7 @@ __idf_vfs: esp-idf/vfs/CMakeFiles/__idf_vfs.dir/rule
 
 # fast build rule for target.
 __idf_vfs/fast:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/vfs/CMakeFiles/__idf_vfs.dir/build.make esp-idf/vfs/CMakeFiles/__idf_vfs.dir/build
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/vfs/CMakeFiles/__idf_vfs.dir/build.make esp-idf/vfs/CMakeFiles/__idf_vfs.dir/build
 .PHONY : __idf_vfs/fast
 
 vfs.obj: vfs.c.obj
@@ -180,7 +180,7 @@ vfs.obj: vfs.c.obj
 
 # target to build an object file
 vfs.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/vfs/CMakeFiles/__idf_vfs.dir/build.make esp-idf/vfs/CMakeFiles/__idf_vfs.dir/vfs.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/vfs/CMakeFiles/__idf_vfs.dir/build.make esp-idf/vfs/CMakeFiles/__idf_vfs.dir/vfs.c.obj
 .PHONY : vfs.c.obj
 
 vfs.i: vfs.c.i
@@ -188,7 +188,7 @@ vfs.i: vfs.c.i
 
 # target to preprocess a source file
 vfs.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/vfs/CMakeFiles/__idf_vfs.dir/build.make esp-idf/vfs/CMakeFiles/__idf_vfs.dir/vfs.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/vfs/CMakeFiles/__idf_vfs.dir/build.make esp-idf/vfs/CMakeFiles/__idf_vfs.dir/vfs.c.i
 .PHONY : vfs.c.i
 
 vfs.s: vfs.c.s
@@ -196,7 +196,7 @@ vfs.s: vfs.c.s
 
 # target to generate assembly for a file
 vfs.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/vfs/CMakeFiles/__idf_vfs.dir/build.make esp-idf/vfs/CMakeFiles/__idf_vfs.dir/vfs.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/vfs/CMakeFiles/__idf_vfs.dir/build.make esp-idf/vfs/CMakeFiles/__idf_vfs.dir/vfs.c.s
 .PHONY : vfs.c.s
 
 vfs_console.obj: vfs_console.c.obj
@@ -204,7 +204,7 @@ vfs_console.obj: vfs_console.c.obj
 
 # target to build an object file
 vfs_console.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/vfs/CMakeFiles/__idf_vfs.dir/build.make esp-idf/vfs/CMakeFiles/__idf_vfs.dir/vfs_console.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/vfs/CMakeFiles/__idf_vfs.dir/build.make esp-idf/vfs/CMakeFiles/__idf_vfs.dir/vfs_console.c.obj
 .PHONY : vfs_console.c.obj
 
 vfs_console.i: vfs_console.c.i
@@ -212,7 +212,7 @@ vfs_console.i: vfs_console.c.i
 
 # target to preprocess a source file
 vfs_console.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/vfs/CMakeFiles/__idf_vfs.dir/build.make esp-idf/vfs/CMakeFiles/__idf_vfs.dir/vfs_console.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/vfs/CMakeFiles/__idf_vfs.dir/build.make esp-idf/vfs/CMakeFiles/__idf_vfs.dir/vfs_console.c.i
 .PHONY : vfs_console.c.i
 
 vfs_console.s: vfs_console.c.s
@@ -220,7 +220,7 @@ vfs_console.s: vfs_console.c.s
 
 # target to generate assembly for a file
 vfs_console.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/vfs/CMakeFiles/__idf_vfs.dir/build.make esp-idf/vfs/CMakeFiles/__idf_vfs.dir/vfs_console.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/vfs/CMakeFiles/__idf_vfs.dir/build.make esp-idf/vfs/CMakeFiles/__idf_vfs.dir/vfs_console.c.s
 .PHONY : vfs_console.c.s
 
 vfs_eventfd.obj: vfs_eventfd.c.obj
@@ -228,7 +228,7 @@ vfs_eventfd.obj: vfs_eventfd.c.obj
 
 # target to build an object file
 vfs_eventfd.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/vfs/CMakeFiles/__idf_vfs.dir/build.make esp-idf/vfs/CMakeFiles/__idf_vfs.dir/vfs_eventfd.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/vfs/CMakeFiles/__idf_vfs.dir/build.make esp-idf/vfs/CMakeFiles/__idf_vfs.dir/vfs_eventfd.c.obj
 .PHONY : vfs_eventfd.c.obj
 
 vfs_eventfd.i: vfs_eventfd.c.i
@@ -236,7 +236,7 @@ vfs_eventfd.i: vfs_eventfd.c.i
 
 # target to preprocess a source file
 vfs_eventfd.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/vfs/CMakeFiles/__idf_vfs.dir/build.make esp-idf/vfs/CMakeFiles/__idf_vfs.dir/vfs_eventfd.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/vfs/CMakeFiles/__idf_vfs.dir/build.make esp-idf/vfs/CMakeFiles/__idf_vfs.dir/vfs_eventfd.c.i
 .PHONY : vfs_eventfd.c.i
 
 vfs_eventfd.s: vfs_eventfd.c.s
@@ -244,7 +244,7 @@ vfs_eventfd.s: vfs_eventfd.c.s
 
 # target to generate assembly for a file
 vfs_eventfd.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/vfs/CMakeFiles/__idf_vfs.dir/build.make esp-idf/vfs/CMakeFiles/__idf_vfs.dir/vfs_eventfd.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/vfs/CMakeFiles/__idf_vfs.dir/build.make esp-idf/vfs/CMakeFiles/__idf_vfs.dir/vfs_eventfd.c.s
 .PHONY : vfs_eventfd.c.s
 
 vfs_semihost.obj: vfs_semihost.c.obj
@@ -252,7 +252,7 @@ vfs_semihost.obj: vfs_semihost.c.obj
 
 # target to build an object file
 vfs_semihost.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/vfs/CMakeFiles/__idf_vfs.dir/build.make esp-idf/vfs/CMakeFiles/__idf_vfs.dir/vfs_semihost.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/vfs/CMakeFiles/__idf_vfs.dir/build.make esp-idf/vfs/CMakeFiles/__idf_vfs.dir/vfs_semihost.c.obj
 .PHONY : vfs_semihost.c.obj
 
 vfs_semihost.i: vfs_semihost.c.i
@@ -260,7 +260,7 @@ vfs_semihost.i: vfs_semihost.c.i
 
 # target to preprocess a source file
 vfs_semihost.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/vfs/CMakeFiles/__idf_vfs.dir/build.make esp-idf/vfs/CMakeFiles/__idf_vfs.dir/vfs_semihost.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/vfs/CMakeFiles/__idf_vfs.dir/build.make esp-idf/vfs/CMakeFiles/__idf_vfs.dir/vfs_semihost.c.i
 .PHONY : vfs_semihost.c.i
 
 vfs_semihost.s: vfs_semihost.c.s
@@ -268,7 +268,7 @@ vfs_semihost.s: vfs_semihost.c.s
 
 # target to generate assembly for a file
 vfs_semihost.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/vfs/CMakeFiles/__idf_vfs.dir/build.make esp-idf/vfs/CMakeFiles/__idf_vfs.dir/vfs_semihost.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/vfs/CMakeFiles/__idf_vfs.dir/build.make esp-idf/vfs/CMakeFiles/__idf_vfs.dir/vfs_semihost.c.s
 .PHONY : vfs_semihost.c.s
 
 vfs_uart.obj: vfs_uart.c.obj
@@ -276,7 +276,7 @@ vfs_uart.obj: vfs_uart.c.obj
 
 # target to build an object file
 vfs_uart.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/vfs/CMakeFiles/__idf_vfs.dir/build.make esp-idf/vfs/CMakeFiles/__idf_vfs.dir/vfs_uart.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/vfs/CMakeFiles/__idf_vfs.dir/build.make esp-idf/vfs/CMakeFiles/__idf_vfs.dir/vfs_uart.c.obj
 .PHONY : vfs_uart.c.obj
 
 vfs_uart.i: vfs_uart.c.i
@@ -284,7 +284,7 @@ vfs_uart.i: vfs_uart.c.i
 
 # target to preprocess a source file
 vfs_uart.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/vfs/CMakeFiles/__idf_vfs.dir/build.make esp-idf/vfs/CMakeFiles/__idf_vfs.dir/vfs_uart.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/vfs/CMakeFiles/__idf_vfs.dir/build.make esp-idf/vfs/CMakeFiles/__idf_vfs.dir/vfs_uart.c.i
 .PHONY : vfs_uart.c.i
 
 vfs_uart.s: vfs_uart.c.s
@@ -292,7 +292,7 @@ vfs_uart.s: vfs_uart.c.s
 
 # target to generate assembly for a file
 vfs_uart.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/vfs/CMakeFiles/__idf_vfs.dir/build.make esp-idf/vfs/CMakeFiles/__idf_vfs.dir/vfs_uart.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/vfs/CMakeFiles/__idf_vfs.dir/build.make esp-idf/vfs/CMakeFiles/__idf_vfs.dir/vfs_uart.c.s
 .PHONY : vfs_uart.c.s
 
 # Help Target
@@ -334,6 +334,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

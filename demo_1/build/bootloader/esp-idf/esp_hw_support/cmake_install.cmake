@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/user/esp/CECS490/led_blinky/build/bootloader/esp-idf/esp_hw_support/port/esp32s2/cmake_install.cmake")
+  include("/Users/user/esp/CECS490/demo_1/build/bootloader/esp-idf/esp_hw_support/port/esp32s2/cmake_install.cmake")
 
 endif()
 

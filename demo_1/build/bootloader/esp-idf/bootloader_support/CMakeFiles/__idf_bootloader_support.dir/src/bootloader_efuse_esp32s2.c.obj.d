@@ -1,6 +1,6 @@
 esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_efuse_esp32s2.c.obj: \
  /Users/user/esp/esp-idf/components/bootloader_support/src/bootloader_efuse_esp32s2.c \
- /Users/user/esp/CECS490/led_blinky/build/bootloader/config/sdkconfig.h \
+ /Users/user/esp/CECS490/demo_1/build/bootloader/config/sdkconfig.h \
  /Users/user/esp/esp-idf/components/bootloader_support/include/bootloader_clock.h \
  /Users/user/esp/esp-idf/components/bootloader_support/include/bootloader_common.h \
  /Users/user/esp/esp-idf/components/bootloader_support/include/esp_flash_partitions.h \

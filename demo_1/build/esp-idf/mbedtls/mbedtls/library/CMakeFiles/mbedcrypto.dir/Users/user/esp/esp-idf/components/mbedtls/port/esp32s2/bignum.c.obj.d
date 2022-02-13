@@ -1,7 +1,7 @@
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/Users/user/esp/esp-idf/components/mbedtls/port/esp32s2/bignum.c.obj: \
  /Users/user/esp/esp-idf/components/mbedtls/port/esp32s2/bignum.c \
  /Users/user/esp/esp-idf/components/soc/include/soc/hwcrypto_periph.h \
- /Users/user/esp/CECS490/led_blinky/build/config/sdkconfig.h \
+ /Users/user/esp/CECS490/demo_1/build/config/sdkconfig.h \
  /Users/user/esp/esp-idf/components/soc/esp32s2/include/soc/hwcrypto_reg.h \
  /Users/user/esp/esp-idf/components/soc/esp32s2/include/soc/soc.h \
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/lib/gcc/xtensa-esp32s2-elf/8.4.0/include/stdint.h \

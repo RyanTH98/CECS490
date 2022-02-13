@@ -53,10 +53,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/led_blinky
+CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/demo_1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/user/esp/CECS490/led_blinky/build
+CMAKE_BINARY_DIR = /Users/user/esp/CECS490/demo_1/build
 
 # Utility rule file for menuconfig.
 
@@ -67,11 +67,11 @@ include CMakeFiles/menuconfig.dir/compiler_depend.make
 include CMakeFiles/menuconfig.dir/progress.make
 
 CMakeFiles/menuconfig:
-	/Users/user/.espressif/python_env/idf5.0_py3.9_env/bin/python /Users/user/esp/esp-idf/tools/kconfig_new/prepare_kconfig_files.py --list-separator=semicolon --env-file /Users/user/esp/CECS490/led_blinky/build/config.env
-	/Users/user/.espressif/python_env/idf5.0_py3.9_env/bin/python /Users/user/esp/esp-idf/tools/kconfig_new/confgen.py --list-separator=semicolon --kconfig /Users/user/esp/esp-idf/Kconfig --sdkconfig-rename /Users/user/esp/esp-idf/sdkconfig.rename --config /Users/user/esp/CECS490/led_blinky/sdkconfig --env-file /Users/user/esp/CECS490/led_blinky/build/config.env --env IDF_TARGET=esp32s2 --env IDF_ENV_FPGA= --dont-write-deprecated --output config /Users/user/esp/CECS490/led_blinky/sdkconfig
+	/Users/user/.espressif/python_env/idf5.0_py3.9_env/bin/python /Users/user/esp/esp-idf/tools/kconfig_new/prepare_kconfig_files.py --list-separator=semicolon --env-file /Users/user/esp/CECS490/demo_1/build/config.env
+	/Users/user/.espressif/python_env/idf5.0_py3.9_env/bin/python /Users/user/esp/esp-idf/tools/kconfig_new/confgen.py --list-separator=semicolon --kconfig /Users/user/esp/esp-idf/Kconfig --sdkconfig-rename /Users/user/esp/esp-idf/sdkconfig.rename --config /Users/user/esp/CECS490/demo_1/sdkconfig --env-file /Users/user/esp/CECS490/demo_1/build/config.env --env IDF_TARGET=esp32s2 --env IDF_ENV_FPGA= --dont-write-deprecated --output config /Users/user/esp/CECS490/demo_1/sdkconfig
 	/Users/user/.espressif/python_env/idf5.0_py3.9_env/bin/python /Users/user/esp/esp-idf/tools/check_term.py
-	/Applications/CMake.app/Contents/bin/cmake -E env COMPONENT_KCONFIGS_SOURCE_FILE=/Users/user/esp/CECS490/led_blinky/build/kconfigs.in COMPONENT_KCONFIGS_PROJBUILD_SOURCE_FILE=/Users/user/esp/CECS490/led_blinky/build/kconfigs_projbuild.in KCONFIG_CONFIG=/Users/user/esp/CECS490/led_blinky/sdkconfig IDF_TARGET=esp32s2 IDF_ENV_FPGA= /Users/user/.espressif/python_env/idf5.0_py3.9_env/bin/python -m menuconfig /Users/user/esp/esp-idf/Kconfig
-	/Users/user/.espressif/python_env/idf5.0_py3.9_env/bin/python /Users/user/esp/esp-idf/tools/kconfig_new/confgen.py --list-separator=semicolon --kconfig /Users/user/esp/esp-idf/Kconfig --sdkconfig-rename /Users/user/esp/esp-idf/sdkconfig.rename --config /Users/user/esp/CECS490/led_blinky/sdkconfig --env-file /Users/user/esp/CECS490/led_blinky/build/config.env --env IDF_TARGET=esp32s2 --env IDF_ENV_FPGA= --output config /Users/user/esp/CECS490/led_blinky/sdkconfig
+	/Applications/CMake.app/Contents/bin/cmake -E env COMPONENT_KCONFIGS_SOURCE_FILE=/Users/user/esp/CECS490/demo_1/build/kconfigs.in COMPONENT_KCONFIGS_PROJBUILD_SOURCE_FILE=/Users/user/esp/CECS490/demo_1/build/kconfigs_projbuild.in KCONFIG_CONFIG=/Users/user/esp/CECS490/demo_1/sdkconfig IDF_TARGET=esp32s2 IDF_ENV_FPGA= /Users/user/.espressif/python_env/idf5.0_py3.9_env/bin/python -m menuconfig /Users/user/esp/esp-idf/Kconfig
+	/Users/user/.espressif/python_env/idf5.0_py3.9_env/bin/python /Users/user/esp/esp-idf/tools/kconfig_new/confgen.py --list-separator=semicolon --kconfig /Users/user/esp/esp-idf/Kconfig --sdkconfig-rename /Users/user/esp/esp-idf/sdkconfig.rename --config /Users/user/esp/CECS490/demo_1/sdkconfig --env-file /Users/user/esp/CECS490/demo_1/build/config.env --env IDF_TARGET=esp32s2 --env IDF_ENV_FPGA= --output config /Users/user/esp/CECS490/demo_1/sdkconfig
 
 menuconfig: CMakeFiles/menuconfig
 menuconfig: CMakeFiles/menuconfig.dir/build.make
@@ -86,6 +86,6 @@ CMakeFiles/menuconfig.dir/clean:
 .PHONY : CMakeFiles/menuconfig.dir/clean
 
 CMakeFiles/menuconfig.dir/depend:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/CECS490/led_blinky /Users/user/esp/CECS490/led_blinky /Users/user/esp/CECS490/led_blinky/build /Users/user/esp/CECS490/led_blinky/build /Users/user/esp/CECS490/led_blinky/build/CMakeFiles/menuconfig.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/CECS490/demo_1 /Users/user/esp/CECS490/demo_1 /Users/user/esp/CECS490/demo_1/build /Users/user/esp/CECS490/demo_1/build /Users/user/esp/CECS490/demo_1/build/CMakeFiles/menuconfig.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/menuconfig.dir/depend
 

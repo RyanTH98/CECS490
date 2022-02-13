@@ -56,7 +56,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /Users/user/esp/esp-idf/components/bootloader/subproject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/user/esp/CECS490/led_blinky/build/bootloader
+CMAKE_BINARY_DIR = /Users/user/esp/CECS490/demo_1/build/bootloader
 
 # Include any dependencies generated for this target.
 include esp-idf/hal/CMakeFiles/__idf_hal.dir/depend.make
@@ -72,44 +72,44 @@ include esp-idf/hal/CMakeFiles/__idf_hal.dir/flags.make
 esp-idf/hal/CMakeFiles/__idf_hal.dir/wdt_hal_iram.c.obj: esp-idf/hal/CMakeFiles/__idf_hal.dir/flags.make
 esp-idf/hal/CMakeFiles/__idf_hal.dir/wdt_hal_iram.c.obj: /Users/user/esp/esp-idf/components/hal/wdt_hal_iram.c
 esp-idf/hal/CMakeFiles/__idf_hal.dir/wdt_hal_iram.c.obj: esp-idf/hal/CMakeFiles/__idf_hal.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/bootloader/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/hal/CMakeFiles/__idf_hal.dir/wdt_hal_iram.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader/esp-idf/hal && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/hal/CMakeFiles/__idf_hal.dir/wdt_hal_iram.c.obj -MF CMakeFiles/__idf_hal.dir/wdt_hal_iram.c.obj.d -o CMakeFiles/__idf_hal.dir/wdt_hal_iram.c.obj -c /Users/user/esp/esp-idf/components/hal/wdt_hal_iram.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/bootloader/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/hal/CMakeFiles/__idf_hal.dir/wdt_hal_iram.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader/esp-idf/hal && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/hal/CMakeFiles/__idf_hal.dir/wdt_hal_iram.c.obj -MF CMakeFiles/__idf_hal.dir/wdt_hal_iram.c.obj.d -o CMakeFiles/__idf_hal.dir/wdt_hal_iram.c.obj -c /Users/user/esp/esp-idf/components/hal/wdt_hal_iram.c
 
 esp-idf/hal/CMakeFiles/__idf_hal.dir/wdt_hal_iram.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_hal.dir/wdt_hal_iram.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader/esp-idf/hal && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/hal/wdt_hal_iram.c > CMakeFiles/__idf_hal.dir/wdt_hal_iram.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader/esp-idf/hal && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/hal/wdt_hal_iram.c > CMakeFiles/__idf_hal.dir/wdt_hal_iram.c.i
 
 esp-idf/hal/CMakeFiles/__idf_hal.dir/wdt_hal_iram.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_hal.dir/wdt_hal_iram.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader/esp-idf/hal && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/hal/wdt_hal_iram.c -o CMakeFiles/__idf_hal.dir/wdt_hal_iram.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader/esp-idf/hal && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/hal/wdt_hal_iram.c -o CMakeFiles/__idf_hal.dir/wdt_hal_iram.c.s
 
 esp-idf/hal/CMakeFiles/__idf_hal.dir/mpu_hal.c.obj: esp-idf/hal/CMakeFiles/__idf_hal.dir/flags.make
 esp-idf/hal/CMakeFiles/__idf_hal.dir/mpu_hal.c.obj: /Users/user/esp/esp-idf/components/hal/mpu_hal.c
 esp-idf/hal/CMakeFiles/__idf_hal.dir/mpu_hal.c.obj: esp-idf/hal/CMakeFiles/__idf_hal.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/bootloader/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object esp-idf/hal/CMakeFiles/__idf_hal.dir/mpu_hal.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader/esp-idf/hal && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/hal/CMakeFiles/__idf_hal.dir/mpu_hal.c.obj -MF CMakeFiles/__idf_hal.dir/mpu_hal.c.obj.d -o CMakeFiles/__idf_hal.dir/mpu_hal.c.obj -c /Users/user/esp/esp-idf/components/hal/mpu_hal.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/bootloader/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object esp-idf/hal/CMakeFiles/__idf_hal.dir/mpu_hal.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader/esp-idf/hal && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/hal/CMakeFiles/__idf_hal.dir/mpu_hal.c.obj -MF CMakeFiles/__idf_hal.dir/mpu_hal.c.obj.d -o CMakeFiles/__idf_hal.dir/mpu_hal.c.obj -c /Users/user/esp/esp-idf/components/hal/mpu_hal.c
 
 esp-idf/hal/CMakeFiles/__idf_hal.dir/mpu_hal.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_hal.dir/mpu_hal.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader/esp-idf/hal && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/hal/mpu_hal.c > CMakeFiles/__idf_hal.dir/mpu_hal.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader/esp-idf/hal && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/hal/mpu_hal.c > CMakeFiles/__idf_hal.dir/mpu_hal.c.i
 
 esp-idf/hal/CMakeFiles/__idf_hal.dir/mpu_hal.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_hal.dir/mpu_hal.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader/esp-idf/hal && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/hal/mpu_hal.c -o CMakeFiles/__idf_hal.dir/mpu_hal.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader/esp-idf/hal && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/hal/mpu_hal.c -o CMakeFiles/__idf_hal.dir/mpu_hal.c.s
 
 esp-idf/hal/CMakeFiles/__idf_hal.dir/cpu_hal.c.obj: esp-idf/hal/CMakeFiles/__idf_hal.dir/flags.make
 esp-idf/hal/CMakeFiles/__idf_hal.dir/cpu_hal.c.obj: /Users/user/esp/esp-idf/components/hal/cpu_hal.c
 esp-idf/hal/CMakeFiles/__idf_hal.dir/cpu_hal.c.obj: esp-idf/hal/CMakeFiles/__idf_hal.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/bootloader/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object esp-idf/hal/CMakeFiles/__idf_hal.dir/cpu_hal.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader/esp-idf/hal && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/hal/CMakeFiles/__idf_hal.dir/cpu_hal.c.obj -MF CMakeFiles/__idf_hal.dir/cpu_hal.c.obj.d -o CMakeFiles/__idf_hal.dir/cpu_hal.c.obj -c /Users/user/esp/esp-idf/components/hal/cpu_hal.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/bootloader/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object esp-idf/hal/CMakeFiles/__idf_hal.dir/cpu_hal.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader/esp-idf/hal && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/hal/CMakeFiles/__idf_hal.dir/cpu_hal.c.obj -MF CMakeFiles/__idf_hal.dir/cpu_hal.c.obj.d -o CMakeFiles/__idf_hal.dir/cpu_hal.c.obj -c /Users/user/esp/esp-idf/components/hal/cpu_hal.c
 
 esp-idf/hal/CMakeFiles/__idf_hal.dir/cpu_hal.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_hal.dir/cpu_hal.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader/esp-idf/hal && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/hal/cpu_hal.c > CMakeFiles/__idf_hal.dir/cpu_hal.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader/esp-idf/hal && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/hal/cpu_hal.c > CMakeFiles/__idf_hal.dir/cpu_hal.c.i
 
 esp-idf/hal/CMakeFiles/__idf_hal.dir/cpu_hal.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_hal.dir/cpu_hal.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader/esp-idf/hal && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/hal/cpu_hal.c -o CMakeFiles/__idf_hal.dir/cpu_hal.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader/esp-idf/hal && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/hal/cpu_hal.c -o CMakeFiles/__idf_hal.dir/cpu_hal.c.s
 
 # Object files for target __idf_hal
 __idf_hal_OBJECTS = \
@@ -125,19 +125,19 @@ esp-idf/hal/libhal.a: esp-idf/hal/CMakeFiles/__idf_hal.dir/mpu_hal.c.obj
 esp-idf/hal/libhal.a: esp-idf/hal/CMakeFiles/__idf_hal.dir/cpu_hal.c.obj
 esp-idf/hal/libhal.a: esp-idf/hal/CMakeFiles/__idf_hal.dir/build.make
 esp-idf/hal/libhal.a: esp-idf/hal/CMakeFiles/__idf_hal.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/user/esp/CECS490/led_blinky/build/bootloader/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C static library libhal.a"
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader/esp-idf/hal && $(CMAKE_COMMAND) -P CMakeFiles/__idf_hal.dir/cmake_clean_target.cmake
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader/esp-idf/hal && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/__idf_hal.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/user/esp/CECS490/demo_1/build/bootloader/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C static library libhal.a"
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader/esp-idf/hal && $(CMAKE_COMMAND) -P CMakeFiles/__idf_hal.dir/cmake_clean_target.cmake
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader/esp-idf/hal && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/__idf_hal.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 esp-idf/hal/CMakeFiles/__idf_hal.dir/build: esp-idf/hal/libhal.a
 .PHONY : esp-idf/hal/CMakeFiles/__idf_hal.dir/build
 
 esp-idf/hal/CMakeFiles/__idf_hal.dir/clean:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader/esp-idf/hal && $(CMAKE_COMMAND) -P CMakeFiles/__idf_hal.dir/cmake_clean.cmake
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader/esp-idf/hal && $(CMAKE_COMMAND) -P CMakeFiles/__idf_hal.dir/cmake_clean.cmake
 .PHONY : esp-idf/hal/CMakeFiles/__idf_hal.dir/clean
 
 esp-idf/hal/CMakeFiles/__idf_hal.dir/depend:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/esp-idf/components/bootloader/subproject /Users/user/esp/esp-idf/components/hal /Users/user/esp/CECS490/led_blinky/build/bootloader /Users/user/esp/CECS490/led_blinky/build/bootloader/esp-idf/hal /Users/user/esp/CECS490/led_blinky/build/bootloader/esp-idf/hal/CMakeFiles/__idf_hal.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/esp-idf/components/bootloader/subproject /Users/user/esp/esp-idf/components/hal /Users/user/esp/CECS490/demo_1/build/bootloader /Users/user/esp/CECS490/demo_1/build/bootloader/esp-idf/hal /Users/user/esp/CECS490/demo_1/build/bootloader/esp-idf/hal/CMakeFiles/__idf_hal.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : esp-idf/hal/CMakeFiles/__idf_hal.dir/depend
 

@@ -53,10 +53,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/led_blinky
+CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/demo_1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/user/esp/CECS490/led_blinky/build
+CMAKE_BINARY_DIR = /Users/user/esp/CECS490/demo_1/build
 
 # Include any dependencies generated for this target.
 include esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/depend.make
@@ -72,128 +72,128 @@ include esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/flags.make
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/certs.c.obj: esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/flags.make
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/certs.c.obj: /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/certs.c
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/certs.c.obj: esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/certs.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/certs.c.obj -MF CMakeFiles/mbedx509.dir/certs.c.obj.d -o CMakeFiles/mbedx509.dir/certs.c.obj -c /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/certs.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/certs.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/certs.c.obj -MF CMakeFiles/mbedx509.dir/certs.c.obj.d -o CMakeFiles/mbedx509.dir/certs.c.obj -c /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/certs.c
 
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/certs.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mbedx509.dir/certs.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/certs.c > CMakeFiles/mbedx509.dir/certs.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/certs.c > CMakeFiles/mbedx509.dir/certs.c.i
 
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/certs.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mbedx509.dir/certs.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/certs.c -o CMakeFiles/mbedx509.dir/certs.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/certs.c -o CMakeFiles/mbedx509.dir/certs.c.s
 
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/pkcs11.c.obj: esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/flags.make
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/pkcs11.c.obj: /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/pkcs11.c
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/pkcs11.c.obj: esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/pkcs11.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/pkcs11.c.obj -MF CMakeFiles/mbedx509.dir/pkcs11.c.obj.d -o CMakeFiles/mbedx509.dir/pkcs11.c.obj -c /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/pkcs11.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/pkcs11.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/pkcs11.c.obj -MF CMakeFiles/mbedx509.dir/pkcs11.c.obj.d -o CMakeFiles/mbedx509.dir/pkcs11.c.obj -c /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/pkcs11.c
 
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/pkcs11.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mbedx509.dir/pkcs11.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/pkcs11.c > CMakeFiles/mbedx509.dir/pkcs11.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/pkcs11.c > CMakeFiles/mbedx509.dir/pkcs11.c.i
 
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/pkcs11.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mbedx509.dir/pkcs11.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/pkcs11.c -o CMakeFiles/mbedx509.dir/pkcs11.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/pkcs11.c -o CMakeFiles/mbedx509.dir/pkcs11.c.s
 
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509.c.obj: esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/flags.make
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509.c.obj: /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509.c
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509.c.obj: esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509.c.obj -MF CMakeFiles/mbedx509.dir/x509.c.obj.d -o CMakeFiles/mbedx509.dir/x509.c.obj -c /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509.c.obj -MF CMakeFiles/mbedx509.dir/x509.c.obj.d -o CMakeFiles/mbedx509.dir/x509.c.obj -c /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509.c
 
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mbedx509.dir/x509.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509.c > CMakeFiles/mbedx509.dir/x509.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509.c > CMakeFiles/mbedx509.dir/x509.c.i
 
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mbedx509.dir/x509.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509.c -o CMakeFiles/mbedx509.dir/x509.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509.c -o CMakeFiles/mbedx509.dir/x509.c.s
 
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509_create.c.obj: esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/flags.make
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509_create.c.obj: /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509_create.c
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509_create.c.obj: esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509_create.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509_create.c.obj -MF CMakeFiles/mbedx509.dir/x509_create.c.obj.d -o CMakeFiles/mbedx509.dir/x509_create.c.obj -c /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509_create.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509_create.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509_create.c.obj -MF CMakeFiles/mbedx509.dir/x509_create.c.obj.d -o CMakeFiles/mbedx509.dir/x509_create.c.obj -c /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509_create.c
 
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509_create.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mbedx509.dir/x509_create.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509_create.c > CMakeFiles/mbedx509.dir/x509_create.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509_create.c > CMakeFiles/mbedx509.dir/x509_create.c.i
 
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509_create.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mbedx509.dir/x509_create.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509_create.c -o CMakeFiles/mbedx509.dir/x509_create.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509_create.c -o CMakeFiles/mbedx509.dir/x509_create.c.s
 
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509_crl.c.obj: esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/flags.make
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509_crl.c.obj: /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509_crl.c
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509_crl.c.obj: esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509_crl.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509_crl.c.obj -MF CMakeFiles/mbedx509.dir/x509_crl.c.obj.d -o CMakeFiles/mbedx509.dir/x509_crl.c.obj -c /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509_crl.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509_crl.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509_crl.c.obj -MF CMakeFiles/mbedx509.dir/x509_crl.c.obj.d -o CMakeFiles/mbedx509.dir/x509_crl.c.obj -c /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509_crl.c
 
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509_crl.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mbedx509.dir/x509_crl.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509_crl.c > CMakeFiles/mbedx509.dir/x509_crl.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509_crl.c > CMakeFiles/mbedx509.dir/x509_crl.c.i
 
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509_crl.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mbedx509.dir/x509_crl.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509_crl.c -o CMakeFiles/mbedx509.dir/x509_crl.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509_crl.c -o CMakeFiles/mbedx509.dir/x509_crl.c.s
 
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509_crt.c.obj: esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/flags.make
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509_crt.c.obj: /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509_crt.c
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509_crt.c.obj: esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509_crt.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509_crt.c.obj -MF CMakeFiles/mbedx509.dir/x509_crt.c.obj.d -o CMakeFiles/mbedx509.dir/x509_crt.c.obj -c /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509_crt.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509_crt.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509_crt.c.obj -MF CMakeFiles/mbedx509.dir/x509_crt.c.obj.d -o CMakeFiles/mbedx509.dir/x509_crt.c.obj -c /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509_crt.c
 
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509_crt.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mbedx509.dir/x509_crt.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509_crt.c > CMakeFiles/mbedx509.dir/x509_crt.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509_crt.c > CMakeFiles/mbedx509.dir/x509_crt.c.i
 
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509_crt.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mbedx509.dir/x509_crt.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509_crt.c -o CMakeFiles/mbedx509.dir/x509_crt.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509_crt.c -o CMakeFiles/mbedx509.dir/x509_crt.c.s
 
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509_csr.c.obj: esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/flags.make
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509_csr.c.obj: /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509_csr.c
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509_csr.c.obj: esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509_csr.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509_csr.c.obj -MF CMakeFiles/mbedx509.dir/x509_csr.c.obj.d -o CMakeFiles/mbedx509.dir/x509_csr.c.obj -c /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509_csr.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509_csr.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509_csr.c.obj -MF CMakeFiles/mbedx509.dir/x509_csr.c.obj.d -o CMakeFiles/mbedx509.dir/x509_csr.c.obj -c /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509_csr.c
 
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509_csr.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mbedx509.dir/x509_csr.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509_csr.c > CMakeFiles/mbedx509.dir/x509_csr.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509_csr.c > CMakeFiles/mbedx509.dir/x509_csr.c.i
 
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509_csr.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mbedx509.dir/x509_csr.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509_csr.c -o CMakeFiles/mbedx509.dir/x509_csr.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509_csr.c -o CMakeFiles/mbedx509.dir/x509_csr.c.s
 
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509write_crt.c.obj: esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/flags.make
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509write_crt.c.obj: /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509write_crt.c
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509write_crt.c.obj: esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509write_crt.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509write_crt.c.obj -MF CMakeFiles/mbedx509.dir/x509write_crt.c.obj.d -o CMakeFiles/mbedx509.dir/x509write_crt.c.obj -c /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509write_crt.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509write_crt.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509write_crt.c.obj -MF CMakeFiles/mbedx509.dir/x509write_crt.c.obj.d -o CMakeFiles/mbedx509.dir/x509write_crt.c.obj -c /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509write_crt.c
 
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509write_crt.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mbedx509.dir/x509write_crt.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509write_crt.c > CMakeFiles/mbedx509.dir/x509write_crt.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509write_crt.c > CMakeFiles/mbedx509.dir/x509write_crt.c.i
 
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509write_crt.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mbedx509.dir/x509write_crt.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509write_crt.c -o CMakeFiles/mbedx509.dir/x509write_crt.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509write_crt.c -o CMakeFiles/mbedx509.dir/x509write_crt.c.s
 
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509write_csr.c.obj: esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/flags.make
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509write_csr.c.obj: /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509write_csr.c
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509write_csr.c.obj: esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509write_csr.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509write_csr.c.obj -MF CMakeFiles/mbedx509.dir/x509write_csr.c.obj.d -o CMakeFiles/mbedx509.dir/x509write_csr.c.obj -c /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509write_csr.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509write_csr.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509write_csr.c.obj -MF CMakeFiles/mbedx509.dir/x509write_csr.c.obj.d -o CMakeFiles/mbedx509.dir/x509write_csr.c.obj -c /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509write_csr.c
 
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509write_csr.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mbedx509.dir/x509write_csr.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509write_csr.c > CMakeFiles/mbedx509.dir/x509write_csr.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509write_csr.c > CMakeFiles/mbedx509.dir/x509write_csr.c.i
 
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509write_csr.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mbedx509.dir/x509write_csr.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509write_csr.c -o CMakeFiles/mbedx509.dir/x509write_csr.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/mbedtls/mbedtls/library && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/x509write_csr.c -o CMakeFiles/mbedx509.dir/x509write_csr.c.s
 
 # Object files for target mbedx509
 mbedx509_OBJECTS = \
@@ -221,19 +221,19 @@ esp-idf/mbedtls/mbedtls/library/libmbedx509.a: esp-idf/mbedtls/mbedtls/library/C
 esp-idf/mbedtls/mbedtls/library/libmbedx509.a: esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/x509write_csr.c.obj
 esp-idf/mbedtls/mbedtls/library/libmbedx509.a: esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/build.make
 esp-idf/mbedtls/mbedtls/library/libmbedx509.a: esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX static library libmbedx509.a"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/mbedtls/mbedtls/library && $(CMAKE_COMMAND) -P CMakeFiles/mbedx509.dir/cmake_clean_target.cmake
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/mbedtls/mbedtls/library && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mbedx509.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX static library libmbedx509.a"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/mbedtls/mbedtls/library && $(CMAKE_COMMAND) -P CMakeFiles/mbedx509.dir/cmake_clean_target.cmake
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/mbedtls/mbedtls/library && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mbedx509.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/build: esp-idf/mbedtls/mbedtls/library/libmbedx509.a
 .PHONY : esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/build
 
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/clean:
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/mbedtls/mbedtls/library && $(CMAKE_COMMAND) -P CMakeFiles/mbedx509.dir/cmake_clean.cmake
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/mbedtls/mbedtls/library && $(CMAKE_COMMAND) -P CMakeFiles/mbedx509.dir/cmake_clean.cmake
 .PHONY : esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/clean
 
 esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/depend:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/CECS490/led_blinky /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library /Users/user/esp/CECS490/led_blinky/build /Users/user/esp/CECS490/led_blinky/build/esp-idf/mbedtls/mbedtls/library /Users/user/esp/CECS490/led_blinky/build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/CECS490/demo_1 /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library /Users/user/esp/CECS490/demo_1/build /Users/user/esp/CECS490/demo_1/build/esp-idf/mbedtls/mbedtls/library /Users/user/esp/CECS490/demo_1/build/esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/depend
 

@@ -57,10 +57,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/led_blinky
+CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/demo_1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/user/esp/CECS490/led_blinky/build
+CMAKE_BINARY_DIR = /Users/user/esp/CECS490/demo_1/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/led_blinky/build/CMakeFiles /Users/user/esp/CECS490/led_blinky/build/esp-idf/nvs_flash//CMakeFiles/progress.marks
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/nvs_flash/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/led_blinky/build/CMakeFiles 0
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/demo_1/build/CMakeFiles /Users/user/esp/CECS490/demo_1/build/esp-idf/nvs_flash//CMakeFiles/progress.marks
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/nvs_flash/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/demo_1/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/nvs_flash/clean
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/nvs_flash/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/nvs_flash/preinstall
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/nvs_flash/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/nvs_flash/preinstall
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/nvs_flash/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/rule:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/rule
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/rule
 .PHONY : esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/rule
 
 # Convenience name for target.
@@ -172,7 +172,7 @@ __idf_nvs_flash: esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/rule
 
 # fast build rule for target.
 __idf_nvs_flash/fast:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build
 .PHONY : __idf_nvs_flash/fast
 
 src/nvs_api.obj: src/nvs_api.cpp.obj
@@ -180,7 +180,7 @@ src/nvs_api.obj: src/nvs_api.cpp.obj
 
 # target to build an object file
 src/nvs_api.cpp.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_api.cpp.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_api.cpp.obj
 .PHONY : src/nvs_api.cpp.obj
 
 src/nvs_api.i: src/nvs_api.cpp.i
@@ -188,7 +188,7 @@ src/nvs_api.i: src/nvs_api.cpp.i
 
 # target to preprocess a source file
 src/nvs_api.cpp.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_api.cpp.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_api.cpp.i
 .PHONY : src/nvs_api.cpp.i
 
 src/nvs_api.s: src/nvs_api.cpp.s
@@ -196,7 +196,7 @@ src/nvs_api.s: src/nvs_api.cpp.s
 
 # target to generate assembly for a file
 src/nvs_api.cpp.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_api.cpp.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_api.cpp.s
 .PHONY : src/nvs_api.cpp.s
 
 src/nvs_cxx_api.obj: src/nvs_cxx_api.cpp.obj
@@ -204,7 +204,7 @@ src/nvs_cxx_api.obj: src/nvs_cxx_api.cpp.obj
 
 # target to build an object file
 src/nvs_cxx_api.cpp.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_cxx_api.cpp.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_cxx_api.cpp.obj
 .PHONY : src/nvs_cxx_api.cpp.obj
 
 src/nvs_cxx_api.i: src/nvs_cxx_api.cpp.i
@@ -212,7 +212,7 @@ src/nvs_cxx_api.i: src/nvs_cxx_api.cpp.i
 
 # target to preprocess a source file
 src/nvs_cxx_api.cpp.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_cxx_api.cpp.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_cxx_api.cpp.i
 .PHONY : src/nvs_cxx_api.cpp.i
 
 src/nvs_cxx_api.s: src/nvs_cxx_api.cpp.s
@@ -220,7 +220,7 @@ src/nvs_cxx_api.s: src/nvs_cxx_api.cpp.s
 
 # target to generate assembly for a file
 src/nvs_cxx_api.cpp.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_cxx_api.cpp.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_cxx_api.cpp.s
 .PHONY : src/nvs_cxx_api.cpp.s
 
 src/nvs_handle_locked.obj: src/nvs_handle_locked.cpp.obj
@@ -228,7 +228,7 @@ src/nvs_handle_locked.obj: src/nvs_handle_locked.cpp.obj
 
 # target to build an object file
 src/nvs_handle_locked.cpp.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_handle_locked.cpp.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_handle_locked.cpp.obj
 .PHONY : src/nvs_handle_locked.cpp.obj
 
 src/nvs_handle_locked.i: src/nvs_handle_locked.cpp.i
@@ -236,7 +236,7 @@ src/nvs_handle_locked.i: src/nvs_handle_locked.cpp.i
 
 # target to preprocess a source file
 src/nvs_handle_locked.cpp.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_handle_locked.cpp.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_handle_locked.cpp.i
 .PHONY : src/nvs_handle_locked.cpp.i
 
 src/nvs_handle_locked.s: src/nvs_handle_locked.cpp.s
@@ -244,7 +244,7 @@ src/nvs_handle_locked.s: src/nvs_handle_locked.cpp.s
 
 # target to generate assembly for a file
 src/nvs_handle_locked.cpp.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_handle_locked.cpp.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_handle_locked.cpp.s
 .PHONY : src/nvs_handle_locked.cpp.s
 
 src/nvs_handle_simple.obj: src/nvs_handle_simple.cpp.obj
@@ -252,7 +252,7 @@ src/nvs_handle_simple.obj: src/nvs_handle_simple.cpp.obj
 
 # target to build an object file
 src/nvs_handle_simple.cpp.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_handle_simple.cpp.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_handle_simple.cpp.obj
 .PHONY : src/nvs_handle_simple.cpp.obj
 
 src/nvs_handle_simple.i: src/nvs_handle_simple.cpp.i
@@ -260,7 +260,7 @@ src/nvs_handle_simple.i: src/nvs_handle_simple.cpp.i
 
 # target to preprocess a source file
 src/nvs_handle_simple.cpp.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_handle_simple.cpp.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_handle_simple.cpp.i
 .PHONY : src/nvs_handle_simple.cpp.i
 
 src/nvs_handle_simple.s: src/nvs_handle_simple.cpp.s
@@ -268,7 +268,7 @@ src/nvs_handle_simple.s: src/nvs_handle_simple.cpp.s
 
 # target to generate assembly for a file
 src/nvs_handle_simple.cpp.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_handle_simple.cpp.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_handle_simple.cpp.s
 .PHONY : src/nvs_handle_simple.cpp.s
 
 src/nvs_item_hash_list.obj: src/nvs_item_hash_list.cpp.obj
@@ -276,7 +276,7 @@ src/nvs_item_hash_list.obj: src/nvs_item_hash_list.cpp.obj
 
 # target to build an object file
 src/nvs_item_hash_list.cpp.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_item_hash_list.cpp.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_item_hash_list.cpp.obj
 .PHONY : src/nvs_item_hash_list.cpp.obj
 
 src/nvs_item_hash_list.i: src/nvs_item_hash_list.cpp.i
@@ -284,7 +284,7 @@ src/nvs_item_hash_list.i: src/nvs_item_hash_list.cpp.i
 
 # target to preprocess a source file
 src/nvs_item_hash_list.cpp.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_item_hash_list.cpp.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_item_hash_list.cpp.i
 .PHONY : src/nvs_item_hash_list.cpp.i
 
 src/nvs_item_hash_list.s: src/nvs_item_hash_list.cpp.s
@@ -292,7 +292,7 @@ src/nvs_item_hash_list.s: src/nvs_item_hash_list.cpp.s
 
 # target to generate assembly for a file
 src/nvs_item_hash_list.cpp.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_item_hash_list.cpp.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_item_hash_list.cpp.s
 .PHONY : src/nvs_item_hash_list.cpp.s
 
 src/nvs_page.obj: src/nvs_page.cpp.obj
@@ -300,7 +300,7 @@ src/nvs_page.obj: src/nvs_page.cpp.obj
 
 # target to build an object file
 src/nvs_page.cpp.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_page.cpp.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_page.cpp.obj
 .PHONY : src/nvs_page.cpp.obj
 
 src/nvs_page.i: src/nvs_page.cpp.i
@@ -308,7 +308,7 @@ src/nvs_page.i: src/nvs_page.cpp.i
 
 # target to preprocess a source file
 src/nvs_page.cpp.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_page.cpp.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_page.cpp.i
 .PHONY : src/nvs_page.cpp.i
 
 src/nvs_page.s: src/nvs_page.cpp.s
@@ -316,7 +316,7 @@ src/nvs_page.s: src/nvs_page.cpp.s
 
 # target to generate assembly for a file
 src/nvs_page.cpp.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_page.cpp.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_page.cpp.s
 .PHONY : src/nvs_page.cpp.s
 
 src/nvs_pagemanager.obj: src/nvs_pagemanager.cpp.obj
@@ -324,7 +324,7 @@ src/nvs_pagemanager.obj: src/nvs_pagemanager.cpp.obj
 
 # target to build an object file
 src/nvs_pagemanager.cpp.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_pagemanager.cpp.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_pagemanager.cpp.obj
 .PHONY : src/nvs_pagemanager.cpp.obj
 
 src/nvs_pagemanager.i: src/nvs_pagemanager.cpp.i
@@ -332,7 +332,7 @@ src/nvs_pagemanager.i: src/nvs_pagemanager.cpp.i
 
 # target to preprocess a source file
 src/nvs_pagemanager.cpp.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_pagemanager.cpp.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_pagemanager.cpp.i
 .PHONY : src/nvs_pagemanager.cpp.i
 
 src/nvs_pagemanager.s: src/nvs_pagemanager.cpp.s
@@ -340,7 +340,7 @@ src/nvs_pagemanager.s: src/nvs_pagemanager.cpp.s
 
 # target to generate assembly for a file
 src/nvs_pagemanager.cpp.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_pagemanager.cpp.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_pagemanager.cpp.s
 .PHONY : src/nvs_pagemanager.cpp.s
 
 src/nvs_partition.obj: src/nvs_partition.cpp.obj
@@ -348,7 +348,7 @@ src/nvs_partition.obj: src/nvs_partition.cpp.obj
 
 # target to build an object file
 src/nvs_partition.cpp.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_partition.cpp.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_partition.cpp.obj
 .PHONY : src/nvs_partition.cpp.obj
 
 src/nvs_partition.i: src/nvs_partition.cpp.i
@@ -356,7 +356,7 @@ src/nvs_partition.i: src/nvs_partition.cpp.i
 
 # target to preprocess a source file
 src/nvs_partition.cpp.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_partition.cpp.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_partition.cpp.i
 .PHONY : src/nvs_partition.cpp.i
 
 src/nvs_partition.s: src/nvs_partition.cpp.s
@@ -364,7 +364,7 @@ src/nvs_partition.s: src/nvs_partition.cpp.s
 
 # target to generate assembly for a file
 src/nvs_partition.cpp.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_partition.cpp.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_partition.cpp.s
 .PHONY : src/nvs_partition.cpp.s
 
 src/nvs_partition_lookup.obj: src/nvs_partition_lookup.cpp.obj
@@ -372,7 +372,7 @@ src/nvs_partition_lookup.obj: src/nvs_partition_lookup.cpp.obj
 
 # target to build an object file
 src/nvs_partition_lookup.cpp.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_partition_lookup.cpp.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_partition_lookup.cpp.obj
 .PHONY : src/nvs_partition_lookup.cpp.obj
 
 src/nvs_partition_lookup.i: src/nvs_partition_lookup.cpp.i
@@ -380,7 +380,7 @@ src/nvs_partition_lookup.i: src/nvs_partition_lookup.cpp.i
 
 # target to preprocess a source file
 src/nvs_partition_lookup.cpp.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_partition_lookup.cpp.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_partition_lookup.cpp.i
 .PHONY : src/nvs_partition_lookup.cpp.i
 
 src/nvs_partition_lookup.s: src/nvs_partition_lookup.cpp.s
@@ -388,7 +388,7 @@ src/nvs_partition_lookup.s: src/nvs_partition_lookup.cpp.s
 
 # target to generate assembly for a file
 src/nvs_partition_lookup.cpp.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_partition_lookup.cpp.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_partition_lookup.cpp.s
 .PHONY : src/nvs_partition_lookup.cpp.s
 
 src/nvs_partition_manager.obj: src/nvs_partition_manager.cpp.obj
@@ -396,7 +396,7 @@ src/nvs_partition_manager.obj: src/nvs_partition_manager.cpp.obj
 
 # target to build an object file
 src/nvs_partition_manager.cpp.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_partition_manager.cpp.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_partition_manager.cpp.obj
 .PHONY : src/nvs_partition_manager.cpp.obj
 
 src/nvs_partition_manager.i: src/nvs_partition_manager.cpp.i
@@ -404,7 +404,7 @@ src/nvs_partition_manager.i: src/nvs_partition_manager.cpp.i
 
 # target to preprocess a source file
 src/nvs_partition_manager.cpp.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_partition_manager.cpp.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_partition_manager.cpp.i
 .PHONY : src/nvs_partition_manager.cpp.i
 
 src/nvs_partition_manager.s: src/nvs_partition_manager.cpp.s
@@ -412,7 +412,7 @@ src/nvs_partition_manager.s: src/nvs_partition_manager.cpp.s
 
 # target to generate assembly for a file
 src/nvs_partition_manager.cpp.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_partition_manager.cpp.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_partition_manager.cpp.s
 .PHONY : src/nvs_partition_manager.cpp.s
 
 src/nvs_storage.obj: src/nvs_storage.cpp.obj
@@ -420,7 +420,7 @@ src/nvs_storage.obj: src/nvs_storage.cpp.obj
 
 # target to build an object file
 src/nvs_storage.cpp.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_storage.cpp.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_storage.cpp.obj
 .PHONY : src/nvs_storage.cpp.obj
 
 src/nvs_storage.i: src/nvs_storage.cpp.i
@@ -428,7 +428,7 @@ src/nvs_storage.i: src/nvs_storage.cpp.i
 
 # target to preprocess a source file
 src/nvs_storage.cpp.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_storage.cpp.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_storage.cpp.i
 .PHONY : src/nvs_storage.cpp.i
 
 src/nvs_storage.s: src/nvs_storage.cpp.s
@@ -436,7 +436,7 @@ src/nvs_storage.s: src/nvs_storage.cpp.s
 
 # target to generate assembly for a file
 src/nvs_storage.cpp.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_storage.cpp.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_storage.cpp.s
 .PHONY : src/nvs_storage.cpp.s
 
 src/nvs_types.obj: src/nvs_types.cpp.obj
@@ -444,7 +444,7 @@ src/nvs_types.obj: src/nvs_types.cpp.obj
 
 # target to build an object file
 src/nvs_types.cpp.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_types.cpp.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_types.cpp.obj
 .PHONY : src/nvs_types.cpp.obj
 
 src/nvs_types.i: src/nvs_types.cpp.i
@@ -452,7 +452,7 @@ src/nvs_types.i: src/nvs_types.cpp.i
 
 # target to preprocess a source file
 src/nvs_types.cpp.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_types.cpp.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_types.cpp.i
 .PHONY : src/nvs_types.cpp.i
 
 src/nvs_types.s: src/nvs_types.cpp.s
@@ -460,7 +460,7 @@ src/nvs_types.s: src/nvs_types.cpp.s
 
 # target to generate assembly for a file
 src/nvs_types.cpp.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_types.cpp.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/build.make esp-idf/nvs_flash/CMakeFiles/__idf_nvs_flash.dir/src/nvs_types.cpp.s
 .PHONY : src/nvs_types.cpp.s
 
 # Help Target
@@ -523,6 +523,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

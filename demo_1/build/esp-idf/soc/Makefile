@@ -57,10 +57,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/led_blinky
+CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/demo_1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/user/esp/CECS490/led_blinky/build
+CMAKE_BINARY_DIR = /Users/user/esp/CECS490/demo_1/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/led_blinky/build/CMakeFiles /Users/user/esp/CECS490/led_blinky/build/esp-idf/soc//CMakeFiles/progress.marks
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/soc/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/led_blinky/build/CMakeFiles 0
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/demo_1/build/CMakeFiles /Users/user/esp/CECS490/demo_1/build/esp-idf/soc//CMakeFiles/progress.marks
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/soc/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/demo_1/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/soc/clean
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/soc/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/soc/preinstall
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/soc/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/soc/preinstall
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/soc/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 esp-idf/soc/CMakeFiles/__idf_soc.dir/rule:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/soc/CMakeFiles/__idf_soc.dir/rule
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/soc/CMakeFiles/__idf_soc.dir/rule
 .PHONY : esp-idf/soc/CMakeFiles/__idf_soc.dir/rule
 
 # Convenience name for target.
@@ -172,7 +172,7 @@ __idf_soc: esp-idf/soc/CMakeFiles/__idf_soc.dir/rule
 
 # fast build rule for target.
 __idf_soc/fast:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/build
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/build
 .PHONY : __idf_soc/fast
 
 esp32s2/adc_periph.obj: esp32s2/adc_periph.c.obj
@@ -180,7 +180,7 @@ esp32s2/adc_periph.obj: esp32s2/adc_periph.c.obj
 
 # target to build an object file
 esp32s2/adc_periph.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/adc_periph.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/adc_periph.c.obj
 .PHONY : esp32s2/adc_periph.c.obj
 
 esp32s2/adc_periph.i: esp32s2/adc_periph.c.i
@@ -188,7 +188,7 @@ esp32s2/adc_periph.i: esp32s2/adc_periph.c.i
 
 # target to preprocess a source file
 esp32s2/adc_periph.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/adc_periph.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/adc_periph.c.i
 .PHONY : esp32s2/adc_periph.c.i
 
 esp32s2/adc_periph.s: esp32s2/adc_periph.c.s
@@ -196,7 +196,7 @@ esp32s2/adc_periph.s: esp32s2/adc_periph.c.s
 
 # target to generate assembly for a file
 esp32s2/adc_periph.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/adc_periph.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/adc_periph.c.s
 .PHONY : esp32s2/adc_periph.c.s
 
 esp32s2/dac_periph.obj: esp32s2/dac_periph.c.obj
@@ -204,7 +204,7 @@ esp32s2/dac_periph.obj: esp32s2/dac_periph.c.obj
 
 # target to build an object file
 esp32s2/dac_periph.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/dac_periph.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/dac_periph.c.obj
 .PHONY : esp32s2/dac_periph.c.obj
 
 esp32s2/dac_periph.i: esp32s2/dac_periph.c.i
@@ -212,7 +212,7 @@ esp32s2/dac_periph.i: esp32s2/dac_periph.c.i
 
 # target to preprocess a source file
 esp32s2/dac_periph.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/dac_periph.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/dac_periph.c.i
 .PHONY : esp32s2/dac_periph.c.i
 
 esp32s2/dac_periph.s: esp32s2/dac_periph.c.s
@@ -220,7 +220,7 @@ esp32s2/dac_periph.s: esp32s2/dac_periph.c.s
 
 # target to generate assembly for a file
 esp32s2/dac_periph.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/dac_periph.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/dac_periph.c.s
 .PHONY : esp32s2/dac_periph.c.s
 
 esp32s2/dedic_gpio_periph.obj: esp32s2/dedic_gpio_periph.c.obj
@@ -228,7 +228,7 @@ esp32s2/dedic_gpio_periph.obj: esp32s2/dedic_gpio_periph.c.obj
 
 # target to build an object file
 esp32s2/dedic_gpio_periph.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/dedic_gpio_periph.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/dedic_gpio_periph.c.obj
 .PHONY : esp32s2/dedic_gpio_periph.c.obj
 
 esp32s2/dedic_gpio_periph.i: esp32s2/dedic_gpio_periph.c.i
@@ -236,7 +236,7 @@ esp32s2/dedic_gpio_periph.i: esp32s2/dedic_gpio_periph.c.i
 
 # target to preprocess a source file
 esp32s2/dedic_gpio_periph.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/dedic_gpio_periph.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/dedic_gpio_periph.c.i
 .PHONY : esp32s2/dedic_gpio_periph.c.i
 
 esp32s2/dedic_gpio_periph.s: esp32s2/dedic_gpio_periph.c.s
@@ -244,7 +244,7 @@ esp32s2/dedic_gpio_periph.s: esp32s2/dedic_gpio_periph.c.s
 
 # target to generate assembly for a file
 esp32s2/dedic_gpio_periph.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/dedic_gpio_periph.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/dedic_gpio_periph.c.s
 .PHONY : esp32s2/dedic_gpio_periph.c.s
 
 esp32s2/gpio_periph.obj: esp32s2/gpio_periph.c.obj
@@ -252,7 +252,7 @@ esp32s2/gpio_periph.obj: esp32s2/gpio_periph.c.obj
 
 # target to build an object file
 esp32s2/gpio_periph.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/gpio_periph.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/gpio_periph.c.obj
 .PHONY : esp32s2/gpio_periph.c.obj
 
 esp32s2/gpio_periph.i: esp32s2/gpio_periph.c.i
@@ -260,7 +260,7 @@ esp32s2/gpio_periph.i: esp32s2/gpio_periph.c.i
 
 # target to preprocess a source file
 esp32s2/gpio_periph.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/gpio_periph.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/gpio_periph.c.i
 .PHONY : esp32s2/gpio_periph.c.i
 
 esp32s2/gpio_periph.s: esp32s2/gpio_periph.c.s
@@ -268,7 +268,7 @@ esp32s2/gpio_periph.s: esp32s2/gpio_periph.c.s
 
 # target to generate assembly for a file
 esp32s2/gpio_periph.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/gpio_periph.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/gpio_periph.c.s
 .PHONY : esp32s2/gpio_periph.c.s
 
 esp32s2/i2c_periph.obj: esp32s2/i2c_periph.c.obj
@@ -276,7 +276,7 @@ esp32s2/i2c_periph.obj: esp32s2/i2c_periph.c.obj
 
 # target to build an object file
 esp32s2/i2c_periph.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/i2c_periph.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/i2c_periph.c.obj
 .PHONY : esp32s2/i2c_periph.c.obj
 
 esp32s2/i2c_periph.i: esp32s2/i2c_periph.c.i
@@ -284,7 +284,7 @@ esp32s2/i2c_periph.i: esp32s2/i2c_periph.c.i
 
 # target to preprocess a source file
 esp32s2/i2c_periph.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/i2c_periph.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/i2c_periph.c.i
 .PHONY : esp32s2/i2c_periph.c.i
 
 esp32s2/i2c_periph.s: esp32s2/i2c_periph.c.s
@@ -292,7 +292,7 @@ esp32s2/i2c_periph.s: esp32s2/i2c_periph.c.s
 
 # target to generate assembly for a file
 esp32s2/i2c_periph.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/i2c_periph.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/i2c_periph.c.s
 .PHONY : esp32s2/i2c_periph.c.s
 
 esp32s2/i2s_periph.obj: esp32s2/i2s_periph.c.obj
@@ -300,7 +300,7 @@ esp32s2/i2s_periph.obj: esp32s2/i2s_periph.c.obj
 
 # target to build an object file
 esp32s2/i2s_periph.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/i2s_periph.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/i2s_periph.c.obj
 .PHONY : esp32s2/i2s_periph.c.obj
 
 esp32s2/i2s_periph.i: esp32s2/i2s_periph.c.i
@@ -308,7 +308,7 @@ esp32s2/i2s_periph.i: esp32s2/i2s_periph.c.i
 
 # target to preprocess a source file
 esp32s2/i2s_periph.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/i2s_periph.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/i2s_periph.c.i
 .PHONY : esp32s2/i2s_periph.c.i
 
 esp32s2/i2s_periph.s: esp32s2/i2s_periph.c.s
@@ -316,7 +316,7 @@ esp32s2/i2s_periph.s: esp32s2/i2s_periph.c.s
 
 # target to generate assembly for a file
 esp32s2/i2s_periph.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/i2s_periph.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/i2s_periph.c.s
 .PHONY : esp32s2/i2s_periph.c.s
 
 esp32s2/interrupts.obj: esp32s2/interrupts.c.obj
@@ -324,7 +324,7 @@ esp32s2/interrupts.obj: esp32s2/interrupts.c.obj
 
 # target to build an object file
 esp32s2/interrupts.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/interrupts.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/interrupts.c.obj
 .PHONY : esp32s2/interrupts.c.obj
 
 esp32s2/interrupts.i: esp32s2/interrupts.c.i
@@ -332,7 +332,7 @@ esp32s2/interrupts.i: esp32s2/interrupts.c.i
 
 # target to preprocess a source file
 esp32s2/interrupts.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/interrupts.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/interrupts.c.i
 .PHONY : esp32s2/interrupts.c.i
 
 esp32s2/interrupts.s: esp32s2/interrupts.c.s
@@ -340,7 +340,7 @@ esp32s2/interrupts.s: esp32s2/interrupts.c.s
 
 # target to generate assembly for a file
 esp32s2/interrupts.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/interrupts.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/interrupts.c.s
 .PHONY : esp32s2/interrupts.c.s
 
 esp32s2/lcd_periph.obj: esp32s2/lcd_periph.c.obj
@@ -348,7 +348,7 @@ esp32s2/lcd_periph.obj: esp32s2/lcd_periph.c.obj
 
 # target to build an object file
 esp32s2/lcd_periph.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/lcd_periph.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/lcd_periph.c.obj
 .PHONY : esp32s2/lcd_periph.c.obj
 
 esp32s2/lcd_periph.i: esp32s2/lcd_periph.c.i
@@ -356,7 +356,7 @@ esp32s2/lcd_periph.i: esp32s2/lcd_periph.c.i
 
 # target to preprocess a source file
 esp32s2/lcd_periph.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/lcd_periph.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/lcd_periph.c.i
 .PHONY : esp32s2/lcd_periph.c.i
 
 esp32s2/lcd_periph.s: esp32s2/lcd_periph.c.s
@@ -364,7 +364,7 @@ esp32s2/lcd_periph.s: esp32s2/lcd_periph.c.s
 
 # target to generate assembly for a file
 esp32s2/lcd_periph.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/lcd_periph.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/lcd_periph.c.s
 .PHONY : esp32s2/lcd_periph.c.s
 
 esp32s2/ledc_periph.obj: esp32s2/ledc_periph.c.obj
@@ -372,7 +372,7 @@ esp32s2/ledc_periph.obj: esp32s2/ledc_periph.c.obj
 
 # target to build an object file
 esp32s2/ledc_periph.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/ledc_periph.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/ledc_periph.c.obj
 .PHONY : esp32s2/ledc_periph.c.obj
 
 esp32s2/ledc_periph.i: esp32s2/ledc_periph.c.i
@@ -380,7 +380,7 @@ esp32s2/ledc_periph.i: esp32s2/ledc_periph.c.i
 
 # target to preprocess a source file
 esp32s2/ledc_periph.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/ledc_periph.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/ledc_periph.c.i
 .PHONY : esp32s2/ledc_periph.c.i
 
 esp32s2/ledc_periph.s: esp32s2/ledc_periph.c.s
@@ -388,7 +388,7 @@ esp32s2/ledc_periph.s: esp32s2/ledc_periph.c.s
 
 # target to generate assembly for a file
 esp32s2/ledc_periph.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/ledc_periph.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/ledc_periph.c.s
 .PHONY : esp32s2/ledc_periph.c.s
 
 esp32s2/pcnt_periph.obj: esp32s2/pcnt_periph.c.obj
@@ -396,7 +396,7 @@ esp32s2/pcnt_periph.obj: esp32s2/pcnt_periph.c.obj
 
 # target to build an object file
 esp32s2/pcnt_periph.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/pcnt_periph.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/pcnt_periph.c.obj
 .PHONY : esp32s2/pcnt_periph.c.obj
 
 esp32s2/pcnt_periph.i: esp32s2/pcnt_periph.c.i
@@ -404,7 +404,7 @@ esp32s2/pcnt_periph.i: esp32s2/pcnt_periph.c.i
 
 # target to preprocess a source file
 esp32s2/pcnt_periph.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/pcnt_periph.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/pcnt_periph.c.i
 .PHONY : esp32s2/pcnt_periph.c.i
 
 esp32s2/pcnt_periph.s: esp32s2/pcnt_periph.c.s
@@ -412,7 +412,7 @@ esp32s2/pcnt_periph.s: esp32s2/pcnt_periph.c.s
 
 # target to generate assembly for a file
 esp32s2/pcnt_periph.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/pcnt_periph.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/pcnt_periph.c.s
 .PHONY : esp32s2/pcnt_periph.c.s
 
 esp32s2/rmt_periph.obj: esp32s2/rmt_periph.c.obj
@@ -420,7 +420,7 @@ esp32s2/rmt_periph.obj: esp32s2/rmt_periph.c.obj
 
 # target to build an object file
 esp32s2/rmt_periph.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/rmt_periph.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/rmt_periph.c.obj
 .PHONY : esp32s2/rmt_periph.c.obj
 
 esp32s2/rmt_periph.i: esp32s2/rmt_periph.c.i
@@ -428,7 +428,7 @@ esp32s2/rmt_periph.i: esp32s2/rmt_periph.c.i
 
 # target to preprocess a source file
 esp32s2/rmt_periph.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/rmt_periph.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/rmt_periph.c.i
 .PHONY : esp32s2/rmt_periph.c.i
 
 esp32s2/rmt_periph.s: esp32s2/rmt_periph.c.s
@@ -436,7 +436,7 @@ esp32s2/rmt_periph.s: esp32s2/rmt_periph.c.s
 
 # target to generate assembly for a file
 esp32s2/rmt_periph.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/rmt_periph.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/rmt_periph.c.s
 .PHONY : esp32s2/rmt_periph.c.s
 
 esp32s2/rtc_io_periph.obj: esp32s2/rtc_io_periph.c.obj
@@ -444,7 +444,7 @@ esp32s2/rtc_io_periph.obj: esp32s2/rtc_io_periph.c.obj
 
 # target to build an object file
 esp32s2/rtc_io_periph.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/rtc_io_periph.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/rtc_io_periph.c.obj
 .PHONY : esp32s2/rtc_io_periph.c.obj
 
 esp32s2/rtc_io_periph.i: esp32s2/rtc_io_periph.c.i
@@ -452,7 +452,7 @@ esp32s2/rtc_io_periph.i: esp32s2/rtc_io_periph.c.i
 
 # target to preprocess a source file
 esp32s2/rtc_io_periph.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/rtc_io_periph.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/rtc_io_periph.c.i
 .PHONY : esp32s2/rtc_io_periph.c.i
 
 esp32s2/rtc_io_periph.s: esp32s2/rtc_io_periph.c.s
@@ -460,7 +460,7 @@ esp32s2/rtc_io_periph.s: esp32s2/rtc_io_periph.c.s
 
 # target to generate assembly for a file
 esp32s2/rtc_io_periph.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/rtc_io_periph.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/rtc_io_periph.c.s
 .PHONY : esp32s2/rtc_io_periph.c.s
 
 esp32s2/sigmadelta_periph.obj: esp32s2/sigmadelta_periph.c.obj
@@ -468,7 +468,7 @@ esp32s2/sigmadelta_periph.obj: esp32s2/sigmadelta_periph.c.obj
 
 # target to build an object file
 esp32s2/sigmadelta_periph.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/sigmadelta_periph.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/sigmadelta_periph.c.obj
 .PHONY : esp32s2/sigmadelta_periph.c.obj
 
 esp32s2/sigmadelta_periph.i: esp32s2/sigmadelta_periph.c.i
@@ -476,7 +476,7 @@ esp32s2/sigmadelta_periph.i: esp32s2/sigmadelta_periph.c.i
 
 # target to preprocess a source file
 esp32s2/sigmadelta_periph.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/sigmadelta_periph.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/sigmadelta_periph.c.i
 .PHONY : esp32s2/sigmadelta_periph.c.i
 
 esp32s2/sigmadelta_periph.s: esp32s2/sigmadelta_periph.c.s
@@ -484,7 +484,7 @@ esp32s2/sigmadelta_periph.s: esp32s2/sigmadelta_periph.c.s
 
 # target to generate assembly for a file
 esp32s2/sigmadelta_periph.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/sigmadelta_periph.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/sigmadelta_periph.c.s
 .PHONY : esp32s2/sigmadelta_periph.c.s
 
 esp32s2/spi_periph.obj: esp32s2/spi_periph.c.obj
@@ -492,7 +492,7 @@ esp32s2/spi_periph.obj: esp32s2/spi_periph.c.obj
 
 # target to build an object file
 esp32s2/spi_periph.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/spi_periph.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/spi_periph.c.obj
 .PHONY : esp32s2/spi_periph.c.obj
 
 esp32s2/spi_periph.i: esp32s2/spi_periph.c.i
@@ -500,7 +500,7 @@ esp32s2/spi_periph.i: esp32s2/spi_periph.c.i
 
 # target to preprocess a source file
 esp32s2/spi_periph.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/spi_periph.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/spi_periph.c.i
 .PHONY : esp32s2/spi_periph.c.i
 
 esp32s2/spi_periph.s: esp32s2/spi_periph.c.s
@@ -508,7 +508,7 @@ esp32s2/spi_periph.s: esp32s2/spi_periph.c.s
 
 # target to generate assembly for a file
 esp32s2/spi_periph.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/spi_periph.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/spi_periph.c.s
 .PHONY : esp32s2/spi_periph.c.s
 
 esp32s2/timer_periph.obj: esp32s2/timer_periph.c.obj
@@ -516,7 +516,7 @@ esp32s2/timer_periph.obj: esp32s2/timer_periph.c.obj
 
 # target to build an object file
 esp32s2/timer_periph.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/timer_periph.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/timer_periph.c.obj
 .PHONY : esp32s2/timer_periph.c.obj
 
 esp32s2/timer_periph.i: esp32s2/timer_periph.c.i
@@ -524,7 +524,7 @@ esp32s2/timer_periph.i: esp32s2/timer_periph.c.i
 
 # target to preprocess a source file
 esp32s2/timer_periph.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/timer_periph.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/timer_periph.c.i
 .PHONY : esp32s2/timer_periph.c.i
 
 esp32s2/timer_periph.s: esp32s2/timer_periph.c.s
@@ -532,7 +532,7 @@ esp32s2/timer_periph.s: esp32s2/timer_periph.c.s
 
 # target to generate assembly for a file
 esp32s2/timer_periph.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/timer_periph.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/timer_periph.c.s
 .PHONY : esp32s2/timer_periph.c.s
 
 esp32s2/touch_sensor_periph.obj: esp32s2/touch_sensor_periph.c.obj
@@ -540,7 +540,7 @@ esp32s2/touch_sensor_periph.obj: esp32s2/touch_sensor_periph.c.obj
 
 # target to build an object file
 esp32s2/touch_sensor_periph.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/touch_sensor_periph.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/touch_sensor_periph.c.obj
 .PHONY : esp32s2/touch_sensor_periph.c.obj
 
 esp32s2/touch_sensor_periph.i: esp32s2/touch_sensor_periph.c.i
@@ -548,7 +548,7 @@ esp32s2/touch_sensor_periph.i: esp32s2/touch_sensor_periph.c.i
 
 # target to preprocess a source file
 esp32s2/touch_sensor_periph.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/touch_sensor_periph.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/touch_sensor_periph.c.i
 .PHONY : esp32s2/touch_sensor_periph.c.i
 
 esp32s2/touch_sensor_periph.s: esp32s2/touch_sensor_periph.c.s
@@ -556,7 +556,7 @@ esp32s2/touch_sensor_periph.s: esp32s2/touch_sensor_periph.c.s
 
 # target to generate assembly for a file
 esp32s2/touch_sensor_periph.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/touch_sensor_periph.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/touch_sensor_periph.c.s
 .PHONY : esp32s2/touch_sensor_periph.c.s
 
 esp32s2/uart_periph.obj: esp32s2/uart_periph.c.obj
@@ -564,7 +564,7 @@ esp32s2/uart_periph.obj: esp32s2/uart_periph.c.obj
 
 # target to build an object file
 esp32s2/uart_periph.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/uart_periph.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/uart_periph.c.obj
 .PHONY : esp32s2/uart_periph.c.obj
 
 esp32s2/uart_periph.i: esp32s2/uart_periph.c.i
@@ -572,7 +572,7 @@ esp32s2/uart_periph.i: esp32s2/uart_periph.c.i
 
 # target to preprocess a source file
 esp32s2/uart_periph.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/uart_periph.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/uart_periph.c.i
 .PHONY : esp32s2/uart_periph.c.i
 
 esp32s2/uart_periph.s: esp32s2/uart_periph.c.s
@@ -580,7 +580,7 @@ esp32s2/uart_periph.s: esp32s2/uart_periph.c.s
 
 # target to generate assembly for a file
 esp32s2/uart_periph.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/uart_periph.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/uart_periph.c.s
 .PHONY : esp32s2/uart_periph.c.s
 
 esp32s2/usb_periph.obj: esp32s2/usb_periph.c.obj
@@ -588,7 +588,7 @@ esp32s2/usb_periph.obj: esp32s2/usb_periph.c.obj
 
 # target to build an object file
 esp32s2/usb_periph.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/usb_periph.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/usb_periph.c.obj
 .PHONY : esp32s2/usb_periph.c.obj
 
 esp32s2/usb_periph.i: esp32s2/usb_periph.c.i
@@ -596,7 +596,7 @@ esp32s2/usb_periph.i: esp32s2/usb_periph.c.i
 
 # target to preprocess a source file
 esp32s2/usb_periph.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/usb_periph.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/usb_periph.c.i
 .PHONY : esp32s2/usb_periph.c.i
 
 esp32s2/usb_periph.s: esp32s2/usb_periph.c.s
@@ -604,7 +604,7 @@ esp32s2/usb_periph.s: esp32s2/usb_periph.c.s
 
 # target to generate assembly for a file
 esp32s2/usb_periph.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/usb_periph.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/usb_periph.c.s
 .PHONY : esp32s2/usb_periph.c.s
 
 esp32s2/usb_phy_periph.obj: esp32s2/usb_phy_periph.c.obj
@@ -612,7 +612,7 @@ esp32s2/usb_phy_periph.obj: esp32s2/usb_phy_periph.c.obj
 
 # target to build an object file
 esp32s2/usb_phy_periph.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/usb_phy_periph.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/usb_phy_periph.c.obj
 .PHONY : esp32s2/usb_phy_periph.c.obj
 
 esp32s2/usb_phy_periph.i: esp32s2/usb_phy_periph.c.i
@@ -620,7 +620,7 @@ esp32s2/usb_phy_periph.i: esp32s2/usb_phy_periph.c.i
 
 # target to preprocess a source file
 esp32s2/usb_phy_periph.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/usb_phy_periph.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/usb_phy_periph.c.i
 .PHONY : esp32s2/usb_phy_periph.c.i
 
 esp32s2/usb_phy_periph.s: esp32s2/usb_phy_periph.c.s
@@ -628,7 +628,7 @@ esp32s2/usb_phy_periph.s: esp32s2/usb_phy_periph.c.s
 
 # target to generate assembly for a file
 esp32s2/usb_phy_periph.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/usb_phy_periph.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/esp32s2/usb_phy_periph.c.s
 .PHONY : esp32s2/usb_phy_periph.c.s
 
 lldesc.obj: lldesc.c.obj
@@ -636,7 +636,7 @@ lldesc.obj: lldesc.c.obj
 
 # target to build an object file
 lldesc.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/lldesc.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/lldesc.c.obj
 .PHONY : lldesc.c.obj
 
 lldesc.i: lldesc.c.i
@@ -644,7 +644,7 @@ lldesc.i: lldesc.c.i
 
 # target to preprocess a source file
 lldesc.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/lldesc.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/lldesc.c.i
 .PHONY : lldesc.c.i
 
 lldesc.s: lldesc.c.s
@@ -652,7 +652,7 @@ lldesc.s: lldesc.c.s
 
 # target to generate assembly for a file
 lldesc.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/lldesc.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/soc/CMakeFiles/__idf_soc.dir/build.make esp-idf/soc/CMakeFiles/__idf_soc.dir/lldesc.c.s
 .PHONY : lldesc.c.s
 
 # Help Target
@@ -739,6 +739,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

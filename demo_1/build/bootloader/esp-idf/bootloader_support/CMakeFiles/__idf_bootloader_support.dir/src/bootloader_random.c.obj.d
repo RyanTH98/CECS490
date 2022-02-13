@@ -1,6 +1,6 @@
 esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_random.c.obj: \
  /Users/user/esp/esp-idf/components/bootloader_support/src/bootloader_random.c \
- /Users/user/esp/CECS490/led_blinky/build/bootloader/config/sdkconfig.h \
+ /Users/user/esp/CECS490/demo_1/build/bootloader/config/sdkconfig.h \
  /Users/user/esp/esp-idf/components/bootloader_support/include/bootloader_random.h \
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/lib/gcc/xtensa-esp32s2-elf/8.4.0/include/stddef.h \
  /Users/user/esp/esp-idf/components/hal/include/hal/cpu_hal.h \

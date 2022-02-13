@@ -53,10 +53,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/led_blinky
+CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/demo_1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/user/esp/CECS490/led_blinky/build
+CMAKE_BINARY_DIR = /Users/user/esp/CECS490/demo_1/build
 
 # Utility rule file for efuse_custom_table.
 
@@ -67,7 +67,7 @@ include esp-idf/efuse/CMakeFiles/efuse_custom_table.dir/compiler_depend.make
 include esp-idf/efuse/CMakeFiles/efuse_custom_table.dir/progress.make
 
 esp-idf/efuse/CMakeFiles/efuse_custom_table:
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/efuse && /Applications/CMake.app/Contents/bin/cmake -E echo Warning:\ Command\ "efuse_custom_table"\ is\ deprecated\ and\ will\ be\ removed\ in\ the\ next\ major\ release.\ \ \ \ \ \ \ \ \ Please\ use\ "efuse-custom-table"\ instead.
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/efuse && /Applications/CMake.app/Contents/bin/cmake -E echo Warning:\ Command\ "efuse_custom_table"\ is\ deprecated\ and\ will\ be\ removed\ in\ the\ next\ major\ release.\ \ \ \ \ \ \ \ \ Please\ use\ "efuse-custom-table"\ instead.
 
 efuse_custom_table: esp-idf/efuse/CMakeFiles/efuse_custom_table
 efuse_custom_table: esp-idf/efuse/CMakeFiles/efuse_custom_table.dir/build.make
@@ -78,10 +78,10 @@ esp-idf/efuse/CMakeFiles/efuse_custom_table.dir/build: efuse_custom_table
 .PHONY : esp-idf/efuse/CMakeFiles/efuse_custom_table.dir/build
 
 esp-idf/efuse/CMakeFiles/efuse_custom_table.dir/clean:
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/efuse && $(CMAKE_COMMAND) -P CMakeFiles/efuse_custom_table.dir/cmake_clean.cmake
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/efuse && $(CMAKE_COMMAND) -P CMakeFiles/efuse_custom_table.dir/cmake_clean.cmake
 .PHONY : esp-idf/efuse/CMakeFiles/efuse_custom_table.dir/clean
 
 esp-idf/efuse/CMakeFiles/efuse_custom_table.dir/depend:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/CECS490/led_blinky /Users/user/esp/esp-idf/components/efuse /Users/user/esp/CECS490/led_blinky/build /Users/user/esp/CECS490/led_blinky/build/esp-idf/efuse /Users/user/esp/CECS490/led_blinky/build/esp-idf/efuse/CMakeFiles/efuse_custom_table.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/CECS490/demo_1 /Users/user/esp/esp-idf/components/efuse /Users/user/esp/CECS490/demo_1/build /Users/user/esp/CECS490/demo_1/build/esp-idf/efuse /Users/user/esp/CECS490/demo_1/build/esp-idf/efuse/CMakeFiles/efuse_custom_table.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : esp-idf/efuse/CMakeFiles/efuse_custom_table.dir/depend
 

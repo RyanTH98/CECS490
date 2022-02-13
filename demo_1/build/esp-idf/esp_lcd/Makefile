@@ -57,10 +57,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/led_blinky
+CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/demo_1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/user/esp/CECS490/led_blinky/build
+CMAKE_BINARY_DIR = /Users/user/esp/CECS490/demo_1/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/led_blinky/build/CMakeFiles /Users/user/esp/CECS490/led_blinky/build/esp-idf/esp_lcd//CMakeFiles/progress.marks
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_lcd/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/led_blinky/build/CMakeFiles 0
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/demo_1/build/CMakeFiles /Users/user/esp/CECS490/demo_1/build/esp-idf/esp_lcd//CMakeFiles/progress.marks
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_lcd/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/demo_1/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_lcd/clean
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_lcd/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_lcd/preinstall
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_lcd/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_lcd/preinstall
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_lcd/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/rule:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/rule
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/rule
 .PHONY : esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/rule
 
 # Convenience name for target.
@@ -172,7 +172,7 @@ __idf_esp_lcd: esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/rule
 
 # fast build rule for target.
 __idf_esp_lcd/fast:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build
 .PHONY : __idf_esp_lcd/fast
 
 src/esp_lcd_common.obj: src/esp_lcd_common.c.obj
@@ -180,7 +180,7 @@ src/esp_lcd_common.obj: src/esp_lcd_common.c.obj
 
 # target to build an object file
 src/esp_lcd_common.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_common.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_common.c.obj
 .PHONY : src/esp_lcd_common.c.obj
 
 src/esp_lcd_common.i: src/esp_lcd_common.c.i
@@ -188,7 +188,7 @@ src/esp_lcd_common.i: src/esp_lcd_common.c.i
 
 # target to preprocess a source file
 src/esp_lcd_common.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_common.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_common.c.i
 .PHONY : src/esp_lcd_common.c.i
 
 src/esp_lcd_common.s: src/esp_lcd_common.c.s
@@ -196,7 +196,7 @@ src/esp_lcd_common.s: src/esp_lcd_common.c.s
 
 # target to generate assembly for a file
 src/esp_lcd_common.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_common.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_common.c.s
 .PHONY : src/esp_lcd_common.c.s
 
 src/esp_lcd_panel_io.obj: src/esp_lcd_panel_io.c.obj
@@ -204,7 +204,7 @@ src/esp_lcd_panel_io.obj: src/esp_lcd_panel_io.c.obj
 
 # target to build an object file
 src/esp_lcd_panel_io.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io.c.obj
 .PHONY : src/esp_lcd_panel_io.c.obj
 
 src/esp_lcd_panel_io.i: src/esp_lcd_panel_io.c.i
@@ -212,7 +212,7 @@ src/esp_lcd_panel_io.i: src/esp_lcd_panel_io.c.i
 
 # target to preprocess a source file
 src/esp_lcd_panel_io.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io.c.i
 .PHONY : src/esp_lcd_panel_io.c.i
 
 src/esp_lcd_panel_io.s: src/esp_lcd_panel_io.c.s
@@ -220,7 +220,7 @@ src/esp_lcd_panel_io.s: src/esp_lcd_panel_io.c.s
 
 # target to generate assembly for a file
 src/esp_lcd_panel_io.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io.c.s
 .PHONY : src/esp_lcd_panel_io.c.s
 
 src/esp_lcd_panel_io_i2c.obj: src/esp_lcd_panel_io_i2c.c.obj
@@ -228,7 +228,7 @@ src/esp_lcd_panel_io_i2c.obj: src/esp_lcd_panel_io_i2c.c.obj
 
 # target to build an object file
 src/esp_lcd_panel_io_i2c.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io_i2c.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io_i2c.c.obj
 .PHONY : src/esp_lcd_panel_io_i2c.c.obj
 
 src/esp_lcd_panel_io_i2c.i: src/esp_lcd_panel_io_i2c.c.i
@@ -236,7 +236,7 @@ src/esp_lcd_panel_io_i2c.i: src/esp_lcd_panel_io_i2c.c.i
 
 # target to preprocess a source file
 src/esp_lcd_panel_io_i2c.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io_i2c.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io_i2c.c.i
 .PHONY : src/esp_lcd_panel_io_i2c.c.i
 
 src/esp_lcd_panel_io_i2c.s: src/esp_lcd_panel_io_i2c.c.s
@@ -244,7 +244,7 @@ src/esp_lcd_panel_io_i2c.s: src/esp_lcd_panel_io_i2c.c.s
 
 # target to generate assembly for a file
 src/esp_lcd_panel_io_i2c.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io_i2c.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io_i2c.c.s
 .PHONY : src/esp_lcd_panel_io_i2c.c.s
 
 src/esp_lcd_panel_io_i2s.obj: src/esp_lcd_panel_io_i2s.c.obj
@@ -252,7 +252,7 @@ src/esp_lcd_panel_io_i2s.obj: src/esp_lcd_panel_io_i2s.c.obj
 
 # target to build an object file
 src/esp_lcd_panel_io_i2s.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io_i2s.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io_i2s.c.obj
 .PHONY : src/esp_lcd_panel_io_i2s.c.obj
 
 src/esp_lcd_panel_io_i2s.i: src/esp_lcd_panel_io_i2s.c.i
@@ -260,7 +260,7 @@ src/esp_lcd_panel_io_i2s.i: src/esp_lcd_panel_io_i2s.c.i
 
 # target to preprocess a source file
 src/esp_lcd_panel_io_i2s.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io_i2s.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io_i2s.c.i
 .PHONY : src/esp_lcd_panel_io_i2s.c.i
 
 src/esp_lcd_panel_io_i2s.s: src/esp_lcd_panel_io_i2s.c.s
@@ -268,7 +268,7 @@ src/esp_lcd_panel_io_i2s.s: src/esp_lcd_panel_io_i2s.c.s
 
 # target to generate assembly for a file
 src/esp_lcd_panel_io_i2s.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io_i2s.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io_i2s.c.s
 .PHONY : src/esp_lcd_panel_io_i2s.c.s
 
 src/esp_lcd_panel_io_i80.obj: src/esp_lcd_panel_io_i80.c.obj
@@ -276,7 +276,7 @@ src/esp_lcd_panel_io_i80.obj: src/esp_lcd_panel_io_i80.c.obj
 
 # target to build an object file
 src/esp_lcd_panel_io_i80.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io_i80.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io_i80.c.obj
 .PHONY : src/esp_lcd_panel_io_i80.c.obj
 
 src/esp_lcd_panel_io_i80.i: src/esp_lcd_panel_io_i80.c.i
@@ -284,7 +284,7 @@ src/esp_lcd_panel_io_i80.i: src/esp_lcd_panel_io_i80.c.i
 
 # target to preprocess a source file
 src/esp_lcd_panel_io_i80.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io_i80.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io_i80.c.i
 .PHONY : src/esp_lcd_panel_io_i80.c.i
 
 src/esp_lcd_panel_io_i80.s: src/esp_lcd_panel_io_i80.c.s
@@ -292,7 +292,7 @@ src/esp_lcd_panel_io_i80.s: src/esp_lcd_panel_io_i80.c.s
 
 # target to generate assembly for a file
 src/esp_lcd_panel_io_i80.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io_i80.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io_i80.c.s
 .PHONY : src/esp_lcd_panel_io_i80.c.s
 
 src/esp_lcd_panel_io_spi.obj: src/esp_lcd_panel_io_spi.c.obj
@@ -300,7 +300,7 @@ src/esp_lcd_panel_io_spi.obj: src/esp_lcd_panel_io_spi.c.obj
 
 # target to build an object file
 src/esp_lcd_panel_io_spi.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io_spi.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io_spi.c.obj
 .PHONY : src/esp_lcd_panel_io_spi.c.obj
 
 src/esp_lcd_panel_io_spi.i: src/esp_lcd_panel_io_spi.c.i
@@ -308,7 +308,7 @@ src/esp_lcd_panel_io_spi.i: src/esp_lcd_panel_io_spi.c.i
 
 # target to preprocess a source file
 src/esp_lcd_panel_io_spi.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io_spi.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io_spi.c.i
 .PHONY : src/esp_lcd_panel_io_spi.c.i
 
 src/esp_lcd_panel_io_spi.s: src/esp_lcd_panel_io_spi.c.s
@@ -316,7 +316,7 @@ src/esp_lcd_panel_io_spi.s: src/esp_lcd_panel_io_spi.c.s
 
 # target to generate assembly for a file
 src/esp_lcd_panel_io_spi.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io_spi.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io_spi.c.s
 .PHONY : src/esp_lcd_panel_io_spi.c.s
 
 src/esp_lcd_panel_nt35510.obj: src/esp_lcd_panel_nt35510.c.obj
@@ -324,7 +324,7 @@ src/esp_lcd_panel_nt35510.obj: src/esp_lcd_panel_nt35510.c.obj
 
 # target to build an object file
 src/esp_lcd_panel_nt35510.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_nt35510.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_nt35510.c.obj
 .PHONY : src/esp_lcd_panel_nt35510.c.obj
 
 src/esp_lcd_panel_nt35510.i: src/esp_lcd_panel_nt35510.c.i
@@ -332,7 +332,7 @@ src/esp_lcd_panel_nt35510.i: src/esp_lcd_panel_nt35510.c.i
 
 # target to preprocess a source file
 src/esp_lcd_panel_nt35510.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_nt35510.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_nt35510.c.i
 .PHONY : src/esp_lcd_panel_nt35510.c.i
 
 src/esp_lcd_panel_nt35510.s: src/esp_lcd_panel_nt35510.c.s
@@ -340,7 +340,7 @@ src/esp_lcd_panel_nt35510.s: src/esp_lcd_panel_nt35510.c.s
 
 # target to generate assembly for a file
 src/esp_lcd_panel_nt35510.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_nt35510.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_nt35510.c.s
 .PHONY : src/esp_lcd_panel_nt35510.c.s
 
 src/esp_lcd_panel_ops.obj: src/esp_lcd_panel_ops.c.obj
@@ -348,7 +348,7 @@ src/esp_lcd_panel_ops.obj: src/esp_lcd_panel_ops.c.obj
 
 # target to build an object file
 src/esp_lcd_panel_ops.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_ops.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_ops.c.obj
 .PHONY : src/esp_lcd_panel_ops.c.obj
 
 src/esp_lcd_panel_ops.i: src/esp_lcd_panel_ops.c.i
@@ -356,7 +356,7 @@ src/esp_lcd_panel_ops.i: src/esp_lcd_panel_ops.c.i
 
 # target to preprocess a source file
 src/esp_lcd_panel_ops.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_ops.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_ops.c.i
 .PHONY : src/esp_lcd_panel_ops.c.i
 
 src/esp_lcd_panel_ops.s: src/esp_lcd_panel_ops.c.s
@@ -364,7 +364,7 @@ src/esp_lcd_panel_ops.s: src/esp_lcd_panel_ops.c.s
 
 # target to generate assembly for a file
 src/esp_lcd_panel_ops.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_ops.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_ops.c.s
 .PHONY : src/esp_lcd_panel_ops.c.s
 
 src/esp_lcd_panel_ssd1306.obj: src/esp_lcd_panel_ssd1306.c.obj
@@ -372,7 +372,7 @@ src/esp_lcd_panel_ssd1306.obj: src/esp_lcd_panel_ssd1306.c.obj
 
 # target to build an object file
 src/esp_lcd_panel_ssd1306.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_ssd1306.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_ssd1306.c.obj
 .PHONY : src/esp_lcd_panel_ssd1306.c.obj
 
 src/esp_lcd_panel_ssd1306.i: src/esp_lcd_panel_ssd1306.c.i
@@ -380,7 +380,7 @@ src/esp_lcd_panel_ssd1306.i: src/esp_lcd_panel_ssd1306.c.i
 
 # target to preprocess a source file
 src/esp_lcd_panel_ssd1306.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_ssd1306.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_ssd1306.c.i
 .PHONY : src/esp_lcd_panel_ssd1306.c.i
 
 src/esp_lcd_panel_ssd1306.s: src/esp_lcd_panel_ssd1306.c.s
@@ -388,7 +388,7 @@ src/esp_lcd_panel_ssd1306.s: src/esp_lcd_panel_ssd1306.c.s
 
 # target to generate assembly for a file
 src/esp_lcd_panel_ssd1306.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_ssd1306.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_ssd1306.c.s
 .PHONY : src/esp_lcd_panel_ssd1306.c.s
 
 src/esp_lcd_panel_st7789.obj: src/esp_lcd_panel_st7789.c.obj
@@ -396,7 +396,7 @@ src/esp_lcd_panel_st7789.obj: src/esp_lcd_panel_st7789.c.obj
 
 # target to build an object file
 src/esp_lcd_panel_st7789.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_st7789.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_st7789.c.obj
 .PHONY : src/esp_lcd_panel_st7789.c.obj
 
 src/esp_lcd_panel_st7789.i: src/esp_lcd_panel_st7789.c.i
@@ -404,7 +404,7 @@ src/esp_lcd_panel_st7789.i: src/esp_lcd_panel_st7789.c.i
 
 # target to preprocess a source file
 src/esp_lcd_panel_st7789.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_st7789.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_st7789.c.i
 .PHONY : src/esp_lcd_panel_st7789.c.i
 
 src/esp_lcd_panel_st7789.s: src/esp_lcd_panel_st7789.c.s
@@ -412,7 +412,7 @@ src/esp_lcd_panel_st7789.s: src/esp_lcd_panel_st7789.c.s
 
 # target to generate assembly for a file
 src/esp_lcd_panel_st7789.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_st7789.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_st7789.c.s
 .PHONY : src/esp_lcd_panel_st7789.c.s
 
 src/esp_lcd_rgb_panel.obj: src/esp_lcd_rgb_panel.c.obj
@@ -420,7 +420,7 @@ src/esp_lcd_rgb_panel.obj: src/esp_lcd_rgb_panel.c.obj
 
 # target to build an object file
 src/esp_lcd_rgb_panel.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_rgb_panel.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_rgb_panel.c.obj
 .PHONY : src/esp_lcd_rgb_panel.c.obj
 
 src/esp_lcd_rgb_panel.i: src/esp_lcd_rgb_panel.c.i
@@ -428,7 +428,7 @@ src/esp_lcd_rgb_panel.i: src/esp_lcd_rgb_panel.c.i
 
 # target to preprocess a source file
 src/esp_lcd_rgb_panel.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_rgb_panel.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_rgb_panel.c.i
 .PHONY : src/esp_lcd_rgb_panel.c.i
 
 src/esp_lcd_rgb_panel.s: src/esp_lcd_rgb_panel.c.s
@@ -436,7 +436,7 @@ src/esp_lcd_rgb_panel.s: src/esp_lcd_rgb_panel.c.s
 
 # target to generate assembly for a file
 src/esp_lcd_rgb_panel.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_rgb_panel.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/build.make esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_rgb_panel.c.s
 .PHONY : src/esp_lcd_rgb_panel.c.s
 
 # Help Target
@@ -496,6 +496,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

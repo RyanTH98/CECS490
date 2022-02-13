@@ -56,7 +56,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /Users/user/esp/esp-idf/components/bootloader/subproject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/user/esp/CECS490/led_blinky/build/bootloader
+CMAKE_BINARY_DIR = /Users/user/esp/CECS490/demo_1/build/bootloader
 
 # Utility rule file for show-efuse-table.
 
@@ -67,7 +67,7 @@ include esp-idf/efuse/CMakeFiles/show-efuse-table.dir/compiler_depend.make
 include esp-idf/efuse/CMakeFiles/show-efuse-table.dir/progress.make
 
 esp-idf/efuse/CMakeFiles/show-efuse-table:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader/esp-idf/efuse && /Users/user/.espressif/python_env/idf5.0_py3.9_env/bin/python /Users/user/esp/esp-idf/components/efuse/efuse_table_gen.py /Users/user/esp/esp-idf/components/efuse/esp32s2/esp_efuse_table.csv -t esp32s2 --max_blk_len 256 --info
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader/esp-idf/efuse && /Users/user/.espressif/python_env/idf5.0_py3.9_env/bin/python /Users/user/esp/esp-idf/components/efuse/efuse_table_gen.py /Users/user/esp/esp-idf/components/efuse/esp32s2/esp_efuse_table.csv -t esp32s2 --max_blk_len 256 --info
 
 show-efuse-table: esp-idf/efuse/CMakeFiles/show-efuse-table
 show-efuse-table: esp-idf/efuse/CMakeFiles/show-efuse-table.dir/build.make
@@ -78,10 +78,10 @@ esp-idf/efuse/CMakeFiles/show-efuse-table.dir/build: show-efuse-table
 .PHONY : esp-idf/efuse/CMakeFiles/show-efuse-table.dir/build
 
 esp-idf/efuse/CMakeFiles/show-efuse-table.dir/clean:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader/esp-idf/efuse && $(CMAKE_COMMAND) -P CMakeFiles/show-efuse-table.dir/cmake_clean.cmake
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader/esp-idf/efuse && $(CMAKE_COMMAND) -P CMakeFiles/show-efuse-table.dir/cmake_clean.cmake
 .PHONY : esp-idf/efuse/CMakeFiles/show-efuse-table.dir/clean
 
 esp-idf/efuse/CMakeFiles/show-efuse-table.dir/depend:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/esp-idf/components/bootloader/subproject /Users/user/esp/esp-idf/components/efuse /Users/user/esp/CECS490/led_blinky/build/bootloader /Users/user/esp/CECS490/led_blinky/build/bootloader/esp-idf/efuse /Users/user/esp/CECS490/led_blinky/build/bootloader/esp-idf/efuse/CMakeFiles/show-efuse-table.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/esp-idf/components/bootloader/subproject /Users/user/esp/esp-idf/components/efuse /Users/user/esp/CECS490/demo_1/build/bootloader /Users/user/esp/CECS490/demo_1/build/bootloader/esp-idf/efuse /Users/user/esp/CECS490/demo_1/build/bootloader/esp-idf/efuse/CMakeFiles/show-efuse-table.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : esp-idf/efuse/CMakeFiles/show-efuse-table.dir/depend
 

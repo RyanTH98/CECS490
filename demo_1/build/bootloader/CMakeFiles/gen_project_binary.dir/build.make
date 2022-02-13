@@ -56,7 +56,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /Users/user/esp/esp-idf/components/bootloader/subproject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/user/esp/CECS490/led_blinky/build/bootloader
+CMAKE_BINARY_DIR = /Users/user/esp/CECS490/demo_1/build/bootloader
 
 # Utility rule file for gen_project_binary.
 
@@ -69,10 +69,10 @@ include CMakeFiles/gen_project_binary.dir/progress.make
 CMakeFiles/gen_project_binary: .bin_timestamp
 
 .bin_timestamp: bootloader.elf
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/user/esp/CECS490/led_blinky/build/bootloader/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating binary image from built executable"
-	/Users/user/.espressif/python_env/idf5.0_py3.9_env/bin/python /Users/user/esp/esp-idf/components/esptool_py/esptool/esptool.py --chip esp32s2 elf2image --flash_mode dio --flash_freq 80m --flash_size 2MB -o /Users/user/esp/CECS490/led_blinky/build/bootloader/bootloader.bin /Users/user/esp/CECS490/led_blinky/build/bootloader/bootloader.elf
-	/Applications/CMake.app/Contents/bin/cmake -E echo "Generated /Users/user/esp/CECS490/led_blinky/build/bootloader/bootloader.bin"
-	/Applications/CMake.app/Contents/bin/cmake -E md5sum /Users/user/esp/CECS490/led_blinky/build/bootloader/bootloader.bin > /Users/user/esp/CECS490/led_blinky/build/bootloader/.bin_timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/user/esp/CECS490/demo_1/build/bootloader/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating binary image from built executable"
+	/Users/user/.espressif/python_env/idf5.0_py3.9_env/bin/python /Users/user/esp/esp-idf/components/esptool_py/esptool/esptool.py --chip esp32s2 elf2image --flash_mode dio --flash_freq 80m --flash_size 2MB -o /Users/user/esp/CECS490/demo_1/build/bootloader/bootloader.bin /Users/user/esp/CECS490/demo_1/build/bootloader/bootloader.elf
+	/Applications/CMake.app/Contents/bin/cmake -E echo "Generated /Users/user/esp/CECS490/demo_1/build/bootloader/bootloader.bin"
+	/Applications/CMake.app/Contents/bin/cmake -E md5sum /Users/user/esp/CECS490/demo_1/build/bootloader/bootloader.bin > /Users/user/esp/CECS490/demo_1/build/bootloader/.bin_timestamp
 
 gen_project_binary: .bin_timestamp
 gen_project_binary: CMakeFiles/gen_project_binary
@@ -88,6 +88,6 @@ CMakeFiles/gen_project_binary.dir/clean:
 .PHONY : CMakeFiles/gen_project_binary.dir/clean
 
 CMakeFiles/gen_project_binary.dir/depend:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/esp-idf/components/bootloader/subproject /Users/user/esp/esp-idf/components/bootloader/subproject /Users/user/esp/CECS490/led_blinky/build/bootloader /Users/user/esp/CECS490/led_blinky/build/bootloader /Users/user/esp/CECS490/led_blinky/build/bootloader/CMakeFiles/gen_project_binary.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/esp-idf/components/bootloader/subproject /Users/user/esp/esp-idf/components/bootloader/subproject /Users/user/esp/CECS490/demo_1/build/bootloader /Users/user/esp/CECS490/demo_1/build/bootloader /Users/user/esp/CECS490/demo_1/build/bootloader/CMakeFiles/gen_project_binary.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/gen_project_binary.dir/depend
 

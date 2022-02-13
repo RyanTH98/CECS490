@@ -53,10 +53,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/led_blinky
+CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/demo_1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/user/esp/CECS490/led_blinky/build
+CMAKE_BINARY_DIR = /Users/user/esp/CECS490/demo_1/build
 
 # Utility rule file for partition_table_bin.
 
@@ -71,12 +71,12 @@ esp-idf/partition_table/CMakeFiles/partition_table_bin: partition_table/partitio
 
 partition_table/partition-table.bin: /Users/user/esp/esp-idf/components/partition_table/partitions_singleapp.csv
 partition_table/partition-table.bin: /Users/user/esp/esp-idf/components/partition_table/gen_esp32part.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ../../partition_table/partition-table.bin"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/partition_table && /Users/user/.espressif/python_env/idf5.0_py3.9_env/bin/python /Users/user/esp/esp-idf/components/partition_table/gen_esp32part.py -q --offset 0x8000 --flash-size 2MB /Users/user/esp/esp-idf/components/partition_table/partitions_singleapp.csv /Users/user/esp/CECS490/led_blinky/build/partition_table/partition-table.bin
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/partition_table && /Applications/CMake.app/Contents/bin/cmake -E echo "Partition table binary generated. Contents:"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/partition_table && /Applications/CMake.app/Contents/bin/cmake -E echo "*******************************************************************************"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/partition_table && /Users/user/.espressif/python_env/idf5.0_py3.9_env/bin/python /Users/user/esp/esp-idf/components/partition_table/gen_esp32part.py -q --offset 0x8000 --flash-size 2MB /Users/user/esp/CECS490/led_blinky/build/partition_table/partition-table.bin
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/partition_table && /Applications/CMake.app/Contents/bin/cmake -E echo "*******************************************************************************"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ../../partition_table/partition-table.bin"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/partition_table && /Users/user/.espressif/python_env/idf5.0_py3.9_env/bin/python /Users/user/esp/esp-idf/components/partition_table/gen_esp32part.py -q --offset 0x8000 --flash-size 2MB /Users/user/esp/esp-idf/components/partition_table/partitions_singleapp.csv /Users/user/esp/CECS490/demo_1/build/partition_table/partition-table.bin
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/partition_table && /Applications/CMake.app/Contents/bin/cmake -E echo "Partition table binary generated. Contents:"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/partition_table && /Applications/CMake.app/Contents/bin/cmake -E echo "*******************************************************************************"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/partition_table && /Users/user/.espressif/python_env/idf5.0_py3.9_env/bin/python /Users/user/esp/esp-idf/components/partition_table/gen_esp32part.py -q --offset 0x8000 --flash-size 2MB /Users/user/esp/CECS490/demo_1/build/partition_table/partition-table.bin
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/partition_table && /Applications/CMake.app/Contents/bin/cmake -E echo "*******************************************************************************"
 
 partition_table_bin: esp-idf/partition_table/CMakeFiles/partition_table_bin
 partition_table_bin: partition_table/partition-table.bin
@@ -88,10 +88,10 @@ esp-idf/partition_table/CMakeFiles/partition_table_bin.dir/build: partition_tabl
 .PHONY : esp-idf/partition_table/CMakeFiles/partition_table_bin.dir/build
 
 esp-idf/partition_table/CMakeFiles/partition_table_bin.dir/clean:
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/partition_table && $(CMAKE_COMMAND) -P CMakeFiles/partition_table_bin.dir/cmake_clean.cmake
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/partition_table && $(CMAKE_COMMAND) -P CMakeFiles/partition_table_bin.dir/cmake_clean.cmake
 .PHONY : esp-idf/partition_table/CMakeFiles/partition_table_bin.dir/clean
 
 esp-idf/partition_table/CMakeFiles/partition_table_bin.dir/depend:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/CECS490/led_blinky /Users/user/esp/esp-idf/components/partition_table /Users/user/esp/CECS490/led_blinky/build /Users/user/esp/CECS490/led_blinky/build/esp-idf/partition_table /Users/user/esp/CECS490/led_blinky/build/esp-idf/partition_table/CMakeFiles/partition_table_bin.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/CECS490/demo_1 /Users/user/esp/esp-idf/components/partition_table /Users/user/esp/CECS490/demo_1/build /Users/user/esp/CECS490/demo_1/build/esp-idf/partition_table /Users/user/esp/CECS490/demo_1/build/esp-idf/partition_table/CMakeFiles/partition_table_bin.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : esp-idf/partition_table/CMakeFiles/partition_table_bin.dir/depend
 

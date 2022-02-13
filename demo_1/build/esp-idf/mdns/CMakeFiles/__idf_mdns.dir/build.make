@@ -53,10 +53,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/led_blinky
+CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/demo_1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/user/esp/CECS490/led_blinky/build
+CMAKE_BINARY_DIR = /Users/user/esp/CECS490/demo_1/build
 
 # Include any dependencies generated for this target.
 include esp-idf/mdns/CMakeFiles/__idf_mdns.dir/depend.make
@@ -72,44 +72,44 @@ include esp-idf/mdns/CMakeFiles/__idf_mdns.dir/flags.make
 esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns.c.obj: esp-idf/mdns/CMakeFiles/__idf_mdns.dir/flags.make
 esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns.c.obj: /Users/user/esp/esp-idf/components/mdns/mdns.c
 esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns.c.obj: esp-idf/mdns/CMakeFiles/__idf_mdns.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/mdns && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns.c.obj -MF CMakeFiles/__idf_mdns.dir/mdns.c.obj.d -o CMakeFiles/__idf_mdns.dir/mdns.c.obj -c /Users/user/esp/esp-idf/components/mdns/mdns.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/mdns && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns.c.obj -MF CMakeFiles/__idf_mdns.dir/mdns.c.obj.d -o CMakeFiles/__idf_mdns.dir/mdns.c.obj -c /Users/user/esp/esp-idf/components/mdns/mdns.c
 
 esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_mdns.dir/mdns.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/mdns && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/mdns/mdns.c > CMakeFiles/__idf_mdns.dir/mdns.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/mdns && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/mdns/mdns.c > CMakeFiles/__idf_mdns.dir/mdns.c.i
 
 esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_mdns.dir/mdns.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/mdns && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/mdns/mdns.c -o CMakeFiles/__idf_mdns.dir/mdns.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/mdns && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/mdns/mdns.c -o CMakeFiles/__idf_mdns.dir/mdns.c.s
 
 esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns_networking_lwip.c.obj: esp-idf/mdns/CMakeFiles/__idf_mdns.dir/flags.make
 esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns_networking_lwip.c.obj: /Users/user/esp/esp-idf/components/mdns/mdns_networking_lwip.c
 esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns_networking_lwip.c.obj: esp-idf/mdns/CMakeFiles/__idf_mdns.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns_networking_lwip.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/mdns && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns_networking_lwip.c.obj -MF CMakeFiles/__idf_mdns.dir/mdns_networking_lwip.c.obj.d -o CMakeFiles/__idf_mdns.dir/mdns_networking_lwip.c.obj -c /Users/user/esp/esp-idf/components/mdns/mdns_networking_lwip.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns_networking_lwip.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/mdns && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns_networking_lwip.c.obj -MF CMakeFiles/__idf_mdns.dir/mdns_networking_lwip.c.obj.d -o CMakeFiles/__idf_mdns.dir/mdns_networking_lwip.c.obj -c /Users/user/esp/esp-idf/components/mdns/mdns_networking_lwip.c
 
 esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns_networking_lwip.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_mdns.dir/mdns_networking_lwip.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/mdns && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/mdns/mdns_networking_lwip.c > CMakeFiles/__idf_mdns.dir/mdns_networking_lwip.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/mdns && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/mdns/mdns_networking_lwip.c > CMakeFiles/__idf_mdns.dir/mdns_networking_lwip.c.i
 
 esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns_networking_lwip.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_mdns.dir/mdns_networking_lwip.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/mdns && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/mdns/mdns_networking_lwip.c -o CMakeFiles/__idf_mdns.dir/mdns_networking_lwip.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/mdns && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/mdns/mdns_networking_lwip.c -o CMakeFiles/__idf_mdns.dir/mdns_networking_lwip.c.s
 
 esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns_console.c.obj: esp-idf/mdns/CMakeFiles/__idf_mdns.dir/flags.make
 esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns_console.c.obj: /Users/user/esp/esp-idf/components/mdns/mdns_console.c
 esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns_console.c.obj: esp-idf/mdns/CMakeFiles/__idf_mdns.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns_console.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/mdns && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns_console.c.obj -MF CMakeFiles/__idf_mdns.dir/mdns_console.c.obj.d -o CMakeFiles/__idf_mdns.dir/mdns_console.c.obj -c /Users/user/esp/esp-idf/components/mdns/mdns_console.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns_console.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/mdns && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns_console.c.obj -MF CMakeFiles/__idf_mdns.dir/mdns_console.c.obj.d -o CMakeFiles/__idf_mdns.dir/mdns_console.c.obj -c /Users/user/esp/esp-idf/components/mdns/mdns_console.c
 
 esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns_console.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_mdns.dir/mdns_console.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/mdns && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/mdns/mdns_console.c > CMakeFiles/__idf_mdns.dir/mdns_console.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/mdns && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/mdns/mdns_console.c > CMakeFiles/__idf_mdns.dir/mdns_console.c.i
 
 esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns_console.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_mdns.dir/mdns_console.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/mdns && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/mdns/mdns_console.c -o CMakeFiles/__idf_mdns.dir/mdns_console.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/mdns && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/mdns/mdns_console.c -o CMakeFiles/__idf_mdns.dir/mdns_console.c.s
 
 # Object files for target __idf_mdns
 __idf_mdns_OBJECTS = \
@@ -125,19 +125,19 @@ esp-idf/mdns/libmdns.a: esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns_networking_l
 esp-idf/mdns/libmdns.a: esp-idf/mdns/CMakeFiles/__idf_mdns.dir/mdns_console.c.obj
 esp-idf/mdns/libmdns.a: esp-idf/mdns/CMakeFiles/__idf_mdns.dir/build.make
 esp-idf/mdns/libmdns.a: esp-idf/mdns/CMakeFiles/__idf_mdns.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C static library libmdns.a"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/mdns && $(CMAKE_COMMAND) -P CMakeFiles/__idf_mdns.dir/cmake_clean_target.cmake
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/mdns && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/__idf_mdns.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C static library libmdns.a"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/mdns && $(CMAKE_COMMAND) -P CMakeFiles/__idf_mdns.dir/cmake_clean_target.cmake
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/mdns && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/__idf_mdns.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 esp-idf/mdns/CMakeFiles/__idf_mdns.dir/build: esp-idf/mdns/libmdns.a
 .PHONY : esp-idf/mdns/CMakeFiles/__idf_mdns.dir/build
 
 esp-idf/mdns/CMakeFiles/__idf_mdns.dir/clean:
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/mdns && $(CMAKE_COMMAND) -P CMakeFiles/__idf_mdns.dir/cmake_clean.cmake
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/mdns && $(CMAKE_COMMAND) -P CMakeFiles/__idf_mdns.dir/cmake_clean.cmake
 .PHONY : esp-idf/mdns/CMakeFiles/__idf_mdns.dir/clean
 
 esp-idf/mdns/CMakeFiles/__idf_mdns.dir/depend:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/CECS490/led_blinky /Users/user/esp/esp-idf/components/mdns /Users/user/esp/CECS490/led_blinky/build /Users/user/esp/CECS490/led_blinky/build/esp-idf/mdns /Users/user/esp/CECS490/led_blinky/build/esp-idf/mdns/CMakeFiles/__idf_mdns.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/CECS490/demo_1 /Users/user/esp/esp-idf/components/mdns /Users/user/esp/CECS490/demo_1/build /Users/user/esp/CECS490/demo_1/build/esp-idf/mdns /Users/user/esp/CECS490/demo_1/build/esp-idf/mdns/CMakeFiles/__idf_mdns.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : esp-idf/mdns/CMakeFiles/__idf_mdns.dir/depend
 

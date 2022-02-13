@@ -53,10 +53,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/led_blinky
+CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/demo_1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/user/esp/CECS490/led_blinky/build
+CMAKE_BINARY_DIR = /Users/user/esp/CECS490/demo_1/build
 
 # Utility rule file for encrypted-bootloader-flash.
 
@@ -67,9 +67,9 @@ include esp-idf/bootloader/CMakeFiles/encrypted-bootloader-flash.dir/compiler_de
 include esp-idf/bootloader/CMakeFiles/encrypted-bootloader-flash.dir/progress.make
 
 esp-idf/bootloader/CMakeFiles/encrypted-bootloader-flash:
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/bootloader && /Applications/CMake.app/Contents/bin/cmake -E echo "Error: The target encrypted-bootloader-flash requires"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/bootloader && /Applications/CMake.app/Contents/bin/cmake -E echo "CONFIG_SECURE_FLASH_ENCRYPTION_MODE_DEVELOPMENT to be enabled."
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/bootloader && /Applications/CMake.app/Contents/bin/cmake -E env "FAIL_MESSAGE=Failed executing target (see errors on lines above)" /Applications/CMake.app/Contents/bin/cmake -P /Users/user/esp/esp-idf/tools/cmake/scripts/fail.cmake
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/bootloader && /Applications/CMake.app/Contents/bin/cmake -E echo "Error: The target encrypted-bootloader-flash requires"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/bootloader && /Applications/CMake.app/Contents/bin/cmake -E echo "CONFIG_SECURE_FLASH_ENCRYPTION_MODE_DEVELOPMENT to be enabled."
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/bootloader && /Applications/CMake.app/Contents/bin/cmake -E env "FAIL_MESSAGE=Failed executing target (see errors on lines above)" /Applications/CMake.app/Contents/bin/cmake -P /Users/user/esp/esp-idf/tools/cmake/scripts/fail.cmake
 
 encrypted-bootloader-flash: esp-idf/bootloader/CMakeFiles/encrypted-bootloader-flash
 encrypted-bootloader-flash: esp-idf/bootloader/CMakeFiles/encrypted-bootloader-flash.dir/build.make
@@ -80,10 +80,10 @@ esp-idf/bootloader/CMakeFiles/encrypted-bootloader-flash.dir/build: encrypted-bo
 .PHONY : esp-idf/bootloader/CMakeFiles/encrypted-bootloader-flash.dir/build
 
 esp-idf/bootloader/CMakeFiles/encrypted-bootloader-flash.dir/clean:
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/bootloader && $(CMAKE_COMMAND) -P CMakeFiles/encrypted-bootloader-flash.dir/cmake_clean.cmake
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/bootloader && $(CMAKE_COMMAND) -P CMakeFiles/encrypted-bootloader-flash.dir/cmake_clean.cmake
 .PHONY : esp-idf/bootloader/CMakeFiles/encrypted-bootloader-flash.dir/clean
 
 esp-idf/bootloader/CMakeFiles/encrypted-bootloader-flash.dir/depend:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/CECS490/led_blinky /Users/user/esp/esp-idf/components/bootloader /Users/user/esp/CECS490/led_blinky/build /Users/user/esp/CECS490/led_blinky/build/esp-idf/bootloader /Users/user/esp/CECS490/led_blinky/build/esp-idf/bootloader/CMakeFiles/encrypted-bootloader-flash.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/CECS490/demo_1 /Users/user/esp/esp-idf/components/bootloader /Users/user/esp/CECS490/demo_1/build /Users/user/esp/CECS490/demo_1/build/esp-idf/bootloader /Users/user/esp/CECS490/demo_1/build/esp-idf/bootloader/CMakeFiles/encrypted-bootloader-flash.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : esp-idf/bootloader/CMakeFiles/encrypted-bootloader-flash.dir/depend
 

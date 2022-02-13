@@ -53,10 +53,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/led_blinky
+CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/demo_1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/user/esp/CECS490/led_blinky/build
+CMAKE_BINARY_DIR = /Users/user/esp/CECS490/demo_1/build
 
 # Utility rule file for __ldgen_output_sections.ld.
 
@@ -164,9 +164,9 @@ esp-idf/esp_system/ld/sections.ld: esp-idf/touch_element/libtouch_element.a
 esp-idf/esp_system/ld/sections.ld: esp-idf/ulp/libulp.a
 esp-idf/esp_system/ld/sections.ld: esp-idf/wifi_provisioning/libwifi_provisioning.a
 esp-idf/esp_system/ld/sections.ld: esp-idf/main/libmain.a
-esp-idf/esp_system/ld/sections.ld: /Users/user/esp/CECS490/led_blinky/sdkconfig
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ld/sections.ld"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/esp_system && /Users/user/.espressif/python_env/idf5.0_py3.9_env/bin/python /Users/user/esp/esp-idf/tools/ldgen/ldgen.py --config /Users/user/esp/CECS490/led_blinky/sdkconfig --fragments-list "/Users/user/esp/esp-idf/components/esp_ringbuf/linker.lf;/Users/user/esp/esp-idf/components/driver/linker.lf;/Users/user/esp/esp-idf/components/esp_pm/linker.lf;/Users/user/esp/esp-idf/components/spi_flash/linker.lf;/Users/user/esp/esp-idf/components/esp_phy/linker.lf;/Users/user/esp/esp-idf/components/esp_system/linker.lf;/Users/user/esp/esp-idf/components/esp_system/app.lf;/Users/user/esp/esp-idf/components/esp_rom/linker.lf;/Users/user/esp/esp-idf/components/hal/linker.lf;/Users/user/esp/esp-idf/components/esp_event/linker.lf;/Users/user/esp/esp-idf/components/esp_wifi/linker.lf;/Users/user/esp/esp-idf/components/lwip/linker.lf;/Users/user/esp/esp-idf/components/log/linker.lf;/Users/user/esp/esp-idf/components/heap/linker.lf;/Users/user/esp/esp-idf/components/soc/linker.lf;/Users/user/esp/esp-idf/components/esp_hw_support/linker.lf;/Users/user/esp/esp-idf/components/xtensa/linker.lf;/Users/user/esp/esp-idf/components/esp_common/common.lf;/Users/user/esp/esp-idf/components/esp_common/soc.lf;/Users/user/esp/esp-idf/components/freertos/linker.lf;/Users/user/esp/esp-idf/components/newlib/newlib.lf;/Users/user/esp/esp-idf/components/newlib/system_libs.lf;/Users/user/esp/esp-idf/components/app_trace/linker.lf;/Users/user/esp/esp-idf/components/bt/linker.lf;/Users/user/esp/esp-idf/components/esp_gdbstub/linker.lf;/Users/user/esp/esp-idf/components/espcoredump/linker.lf" --input /Users/user/esp/esp-idf/components/esp_system/ld/esp32s2/sections.ld.in --output /Users/user/esp/CECS490/led_blinky/build/esp-idf/esp_system/ld/sections.ld --kconfig /Users/user/esp/esp-idf/Kconfig --env-file /Users/user/esp/CECS490/led_blinky/build/config.env --libraries-file /Users/user/esp/CECS490/led_blinky/build/ldgen_libraries --objdump /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-objdump
+esp-idf/esp_system/ld/sections.ld: /Users/user/esp/CECS490/demo_1/sdkconfig
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ld/sections.ld"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/esp_system && /Users/user/.espressif/python_env/idf5.0_py3.9_env/bin/python /Users/user/esp/esp-idf/tools/ldgen/ldgen.py --config /Users/user/esp/CECS490/demo_1/sdkconfig --fragments-list "/Users/user/esp/esp-idf/components/esp_ringbuf/linker.lf;/Users/user/esp/esp-idf/components/driver/linker.lf;/Users/user/esp/esp-idf/components/esp_pm/linker.lf;/Users/user/esp/esp-idf/components/spi_flash/linker.lf;/Users/user/esp/esp-idf/components/esp_phy/linker.lf;/Users/user/esp/esp-idf/components/esp_system/linker.lf;/Users/user/esp/esp-idf/components/esp_system/app.lf;/Users/user/esp/esp-idf/components/esp_rom/linker.lf;/Users/user/esp/esp-idf/components/hal/linker.lf;/Users/user/esp/esp-idf/components/esp_event/linker.lf;/Users/user/esp/esp-idf/components/esp_wifi/linker.lf;/Users/user/esp/esp-idf/components/lwip/linker.lf;/Users/user/esp/esp-idf/components/log/linker.lf;/Users/user/esp/esp-idf/components/heap/linker.lf;/Users/user/esp/esp-idf/components/soc/linker.lf;/Users/user/esp/esp-idf/components/esp_hw_support/linker.lf;/Users/user/esp/esp-idf/components/xtensa/linker.lf;/Users/user/esp/esp-idf/components/esp_common/common.lf;/Users/user/esp/esp-idf/components/esp_common/soc.lf;/Users/user/esp/esp-idf/components/freertos/linker.lf;/Users/user/esp/esp-idf/components/newlib/newlib.lf;/Users/user/esp/esp-idf/components/newlib/system_libs.lf;/Users/user/esp/esp-idf/components/app_trace/linker.lf;/Users/user/esp/esp-idf/components/bt/linker.lf;/Users/user/esp/esp-idf/components/esp_gdbstub/linker.lf;/Users/user/esp/esp-idf/components/espcoredump/linker.lf" --input /Users/user/esp/esp-idf/components/esp_system/ld/esp32s2/sections.ld.in --output /Users/user/esp/CECS490/demo_1/build/esp-idf/esp_system/ld/sections.ld --kconfig /Users/user/esp/esp-idf/Kconfig --env-file /Users/user/esp/CECS490/demo_1/build/config.env --libraries-file /Users/user/esp/CECS490/demo_1/build/ldgen_libraries --objdump /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-objdump
 
 __ldgen_output_sections.ld: esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld
 __ldgen_output_sections.ld: esp-idf/esp_system/ld/sections.ld
@@ -178,10 +178,10 @@ esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/build: __ldgen_outp
 .PHONY : esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/build
 
 esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/clean:
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/esp_system && $(CMAKE_COMMAND) -P CMakeFiles/__ldgen_output_sections.ld.dir/cmake_clean.cmake
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/esp_system && $(CMAKE_COMMAND) -P CMakeFiles/__ldgen_output_sections.ld.dir/cmake_clean.cmake
 .PHONY : esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/clean
 
 esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/depend:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/CECS490/led_blinky /Users/user/esp/esp-idf/components/esp_system /Users/user/esp/CECS490/led_blinky/build /Users/user/esp/CECS490/led_blinky/build/esp-idf/esp_system /Users/user/esp/CECS490/led_blinky/build/esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/CECS490/demo_1 /Users/user/esp/esp-idf/components/esp_system /Users/user/esp/CECS490/demo_1/build /Users/user/esp/CECS490/demo_1/build/esp-idf/esp_system /Users/user/esp/CECS490/demo_1/build/esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : esp-idf/esp_system/CMakeFiles/__ldgen_output_sections.ld.dir/depend
 

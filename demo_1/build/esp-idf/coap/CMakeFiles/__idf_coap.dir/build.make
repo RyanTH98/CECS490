@@ -53,10 +53,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/led_blinky
+CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/demo_1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/user/esp/CECS490/led_blinky/build
+CMAKE_BINARY_DIR = /Users/user/esp/CECS490/demo_1/build
 
 # Include any dependencies generated for this target.
 include esp-idf/coap/CMakeFiles/__idf_coap.dir/depend.make
@@ -72,338 +72,338 @@ include esp-idf/coap/CMakeFiles/__idf_coap.dir/flags.make
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/address.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/flags.make
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/address.c.obj: /Users/user/esp/esp-idf/components/coap/libcoap/src/address.c
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/address.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/address.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/address.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/address.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/address.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/address.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/address.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/address.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/address.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/address.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/address.c
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/address.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_coap.dir/libcoap/src/address.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/address.c > CMakeFiles/__idf_coap.dir/libcoap/src/address.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/address.c > CMakeFiles/__idf_coap.dir/libcoap/src/address.c.i
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/address.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_coap.dir/libcoap/src/address.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/address.c -o CMakeFiles/__idf_coap.dir/libcoap/src/address.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/address.c -o CMakeFiles/__idf_coap.dir/libcoap/src/address.c.s
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/async.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/flags.make
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/async.c.obj: /Users/user/esp/esp-idf/components/coap/libcoap/src/async.c
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/async.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/async.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/async.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/async.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/async.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/async.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/async.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/async.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/async.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/async.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/async.c
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/async.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_coap.dir/libcoap/src/async.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/async.c > CMakeFiles/__idf_coap.dir/libcoap/src/async.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/async.c > CMakeFiles/__idf_coap.dir/libcoap/src/async.c.i
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/async.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_coap.dir/libcoap/src/async.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/async.c -o CMakeFiles/__idf_coap.dir/libcoap/src/async.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/async.c -o CMakeFiles/__idf_coap.dir/libcoap/src/async.c.s
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/block.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/flags.make
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/block.c.obj: /Users/user/esp/esp-idf/components/coap/libcoap/src/block.c
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/block.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/block.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/block.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/block.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/block.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/block.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/block.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/block.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/block.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/block.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/block.c
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/block.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_coap.dir/libcoap/src/block.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/block.c > CMakeFiles/__idf_coap.dir/libcoap/src/block.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/block.c > CMakeFiles/__idf_coap.dir/libcoap/src/block.c.i
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/block.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_coap.dir/libcoap/src/block.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/block.c -o CMakeFiles/__idf_coap.dir/libcoap/src/block.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/block.c -o CMakeFiles/__idf_coap.dir/libcoap/src/block.c.s
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_asn1.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/flags.make
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_asn1.c.obj: /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_asn1.c
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_asn1.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_asn1.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_asn1.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/coap_asn1.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_asn1.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_asn1.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_asn1.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_asn1.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/coap_asn1.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_asn1.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_asn1.c
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_asn1.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_coap.dir/libcoap/src/coap_asn1.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_asn1.c > CMakeFiles/__idf_coap.dir/libcoap/src/coap_asn1.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_asn1.c > CMakeFiles/__idf_coap.dir/libcoap/src/coap_asn1.c.i
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_asn1.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_coap.dir/libcoap/src/coap_asn1.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_asn1.c -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_asn1.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_asn1.c -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_asn1.c.s
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_cache.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/flags.make
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_cache.c.obj: /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_cache.c
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_cache.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_cache.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_cache.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/coap_cache.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_cache.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_cache.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_cache.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_cache.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/coap_cache.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_cache.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_cache.c
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_cache.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_coap.dir/libcoap/src/coap_cache.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_cache.c > CMakeFiles/__idf_coap.dir/libcoap/src/coap_cache.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_cache.c > CMakeFiles/__idf_coap.dir/libcoap/src/coap_cache.c.i
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_cache.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_coap.dir/libcoap/src/coap_cache.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_cache.c -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_cache.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_cache.c -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_cache.c.s
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_debug.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/flags.make
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_debug.c.obj: /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_debug.c
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_debug.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_debug.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_debug.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/coap_debug.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_debug.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_debug.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_debug.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_debug.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/coap_debug.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_debug.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_debug.c
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_debug.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_coap.dir/libcoap/src/coap_debug.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_debug.c > CMakeFiles/__idf_coap.dir/libcoap/src/coap_debug.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_debug.c > CMakeFiles/__idf_coap.dir/libcoap/src/coap_debug.c.i
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_debug.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_coap.dir/libcoap/src/coap_debug.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_debug.c -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_debug.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_debug.c -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_debug.c.s
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_event.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/flags.make
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_event.c.obj: /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_event.c
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_event.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_event.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_event.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/coap_event.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_event.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_event.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_event.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_event.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/coap_event.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_event.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_event.c
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_event.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_coap.dir/libcoap/src/coap_event.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_event.c > CMakeFiles/__idf_coap.dir/libcoap/src/coap_event.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_event.c > CMakeFiles/__idf_coap.dir/libcoap/src/coap_event.c.i
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_event.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_coap.dir/libcoap/src/coap_event.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_event.c -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_event.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_event.c -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_event.c.s
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_hashkey.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/flags.make
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_hashkey.c.obj: /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_hashkey.c
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_hashkey.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_hashkey.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_hashkey.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/coap_hashkey.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_hashkey.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_hashkey.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_hashkey.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_hashkey.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/coap_hashkey.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_hashkey.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_hashkey.c
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_hashkey.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_coap.dir/libcoap/src/coap_hashkey.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_hashkey.c > CMakeFiles/__idf_coap.dir/libcoap/src/coap_hashkey.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_hashkey.c > CMakeFiles/__idf_coap.dir/libcoap/src/coap_hashkey.c.i
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_hashkey.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_coap.dir/libcoap/src/coap_hashkey.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_hashkey.c -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_hashkey.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_hashkey.c -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_hashkey.c.s
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_io.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/flags.make
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_io.c.obj: /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_io.c
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_io.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_io.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_io.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/coap_io.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_io.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_io.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_io.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_io.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/coap_io.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_io.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_io.c
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_io.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_coap.dir/libcoap/src/coap_io.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_io.c > CMakeFiles/__idf_coap.dir/libcoap/src/coap_io.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_io.c > CMakeFiles/__idf_coap.dir/libcoap/src/coap_io.c.i
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_io.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_coap.dir/libcoap/src/coap_io.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_io.c -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_io.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_io.c -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_io.c.s
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_mbedtls.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/flags.make
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_mbedtls.c.obj: /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_mbedtls.c
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_mbedtls.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_mbedtls.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_mbedtls.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/coap_mbedtls.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_mbedtls.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_mbedtls.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_mbedtls.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_mbedtls.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/coap_mbedtls.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_mbedtls.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_mbedtls.c
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_mbedtls.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_coap.dir/libcoap/src/coap_mbedtls.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_mbedtls.c > CMakeFiles/__idf_coap.dir/libcoap/src/coap_mbedtls.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_mbedtls.c > CMakeFiles/__idf_coap.dir/libcoap/src/coap_mbedtls.c.i
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_mbedtls.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_coap.dir/libcoap/src/coap_mbedtls.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_mbedtls.c -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_mbedtls.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_mbedtls.c -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_mbedtls.c.s
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_notls.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/flags.make
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_notls.c.obj: /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_notls.c
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_notls.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_notls.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_notls.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/coap_notls.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_notls.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_notls.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_notls.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_notls.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/coap_notls.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_notls.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_notls.c
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_notls.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_coap.dir/libcoap/src/coap_notls.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_notls.c > CMakeFiles/__idf_coap.dir/libcoap/src/coap_notls.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_notls.c > CMakeFiles/__idf_coap.dir/libcoap/src/coap_notls.c.i
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_notls.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_coap.dir/libcoap/src/coap_notls.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_notls.c -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_notls.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_notls.c -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_notls.c.s
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_prng.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/flags.make
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_prng.c.obj: /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_prng.c
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_prng.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_prng.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_prng.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/coap_prng.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_prng.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_prng.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_prng.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_prng.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/coap_prng.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_prng.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_prng.c
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_prng.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_coap.dir/libcoap/src/coap_prng.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_prng.c > CMakeFiles/__idf_coap.dir/libcoap/src/coap_prng.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_prng.c > CMakeFiles/__idf_coap.dir/libcoap/src/coap_prng.c.i
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_prng.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_coap.dir/libcoap/src/coap_prng.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_prng.c -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_prng.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_prng.c -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_prng.c.s
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_session.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/flags.make
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_session.c.obj: /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_session.c
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_session.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_session.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_session.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/coap_session.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_session.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_session.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_session.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_session.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/coap_session.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_session.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_session.c
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_session.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_coap.dir/libcoap/src/coap_session.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_session.c > CMakeFiles/__idf_coap.dir/libcoap/src/coap_session.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_session.c > CMakeFiles/__idf_coap.dir/libcoap/src/coap_session.c.i
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_session.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_coap.dir/libcoap/src/coap_session.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_session.c -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_session.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_session.c -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_session.c.s
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_tcp.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/flags.make
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_tcp.c.obj: /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_tcp.c
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_tcp.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_tcp.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_tcp.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/coap_tcp.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_tcp.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_tcp.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_tcp.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_tcp.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/coap_tcp.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_tcp.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_tcp.c
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_tcp.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_coap.dir/libcoap/src/coap_tcp.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_tcp.c > CMakeFiles/__idf_coap.dir/libcoap/src/coap_tcp.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_tcp.c > CMakeFiles/__idf_coap.dir/libcoap/src/coap_tcp.c.i
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_tcp.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_coap.dir/libcoap/src/coap_tcp.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_tcp.c -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_tcp.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_tcp.c -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_tcp.c.s
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_time.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/flags.make
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_time.c.obj: /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_time.c
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_time.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_time.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_time.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/coap_time.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_time.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_time.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_time.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_time.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/coap_time.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_time.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_time.c
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_time.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_coap.dir/libcoap/src/coap_time.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_time.c > CMakeFiles/__idf_coap.dir/libcoap/src/coap_time.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_time.c > CMakeFiles/__idf_coap.dir/libcoap/src/coap_time.c.i
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_time.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_coap.dir/libcoap/src/coap_time.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_time.c -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_time.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/coap_time.c -o CMakeFiles/__idf_coap.dir/libcoap/src/coap_time.c.s
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/encode.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/flags.make
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/encode.c.obj: /Users/user/esp/esp-idf/components/coap/libcoap/src/encode.c
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/encode.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/encode.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/encode.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/encode.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/encode.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/encode.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/encode.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/encode.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/encode.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/encode.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/encode.c
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/encode.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_coap.dir/libcoap/src/encode.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/encode.c > CMakeFiles/__idf_coap.dir/libcoap/src/encode.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/encode.c > CMakeFiles/__idf_coap.dir/libcoap/src/encode.c.i
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/encode.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_coap.dir/libcoap/src/encode.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/encode.c -o CMakeFiles/__idf_coap.dir/libcoap/src/encode.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/encode.c -o CMakeFiles/__idf_coap.dir/libcoap/src/encode.c.s
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/mem.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/flags.make
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/mem.c.obj: /Users/user/esp/esp-idf/components/coap/libcoap/src/mem.c
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/mem.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/mem.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/mem.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/mem.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/mem.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/mem.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/mem.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/mem.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/mem.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/mem.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/mem.c
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/mem.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_coap.dir/libcoap/src/mem.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/mem.c > CMakeFiles/__idf_coap.dir/libcoap/src/mem.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/mem.c > CMakeFiles/__idf_coap.dir/libcoap/src/mem.c.i
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/mem.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_coap.dir/libcoap/src/mem.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/mem.c -o CMakeFiles/__idf_coap.dir/libcoap/src/mem.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/mem.c -o CMakeFiles/__idf_coap.dir/libcoap/src/mem.c.s
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/net.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/flags.make
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/net.c.obj: /Users/user/esp/esp-idf/components/coap/libcoap/src/net.c
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/net.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/net.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/net.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/net.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/net.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/net.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/net.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/net.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/net.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/net.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/net.c
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/net.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_coap.dir/libcoap/src/net.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/net.c > CMakeFiles/__idf_coap.dir/libcoap/src/net.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/net.c > CMakeFiles/__idf_coap.dir/libcoap/src/net.c.i
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/net.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_coap.dir/libcoap/src/net.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/net.c -o CMakeFiles/__idf_coap.dir/libcoap/src/net.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/net.c -o CMakeFiles/__idf_coap.dir/libcoap/src/net.c.s
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/option.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/flags.make
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/option.c.obj: /Users/user/esp/esp-idf/components/coap/libcoap/src/option.c
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/option.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/option.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/option.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/option.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/option.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/option.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/option.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/option.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/option.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/option.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/option.c
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/option.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_coap.dir/libcoap/src/option.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/option.c > CMakeFiles/__idf_coap.dir/libcoap/src/option.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/option.c > CMakeFiles/__idf_coap.dir/libcoap/src/option.c.i
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/option.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_coap.dir/libcoap/src/option.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/option.c -o CMakeFiles/__idf_coap.dir/libcoap/src/option.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/option.c -o CMakeFiles/__idf_coap.dir/libcoap/src/option.c.s
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/pdu.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/flags.make
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/pdu.c.obj: /Users/user/esp/esp-idf/components/coap/libcoap/src/pdu.c
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/pdu.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/pdu.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/pdu.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/pdu.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/pdu.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/pdu.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/pdu.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/pdu.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/pdu.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/pdu.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/pdu.c
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/pdu.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_coap.dir/libcoap/src/pdu.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/pdu.c > CMakeFiles/__idf_coap.dir/libcoap/src/pdu.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/pdu.c > CMakeFiles/__idf_coap.dir/libcoap/src/pdu.c.i
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/pdu.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_coap.dir/libcoap/src/pdu.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/pdu.c -o CMakeFiles/__idf_coap.dir/libcoap/src/pdu.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/pdu.c -o CMakeFiles/__idf_coap.dir/libcoap/src/pdu.c.s
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/resource.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/flags.make
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/resource.c.obj: /Users/user/esp/esp-idf/components/coap/libcoap/src/resource.c
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/resource.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/resource.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/resource.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/resource.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/resource.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/resource.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/resource.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/resource.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/resource.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/resource.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/resource.c
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/resource.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_coap.dir/libcoap/src/resource.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/resource.c > CMakeFiles/__idf_coap.dir/libcoap/src/resource.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/resource.c > CMakeFiles/__idf_coap.dir/libcoap/src/resource.c.i
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/resource.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_coap.dir/libcoap/src/resource.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/resource.c -o CMakeFiles/__idf_coap.dir/libcoap/src/resource.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/resource.c -o CMakeFiles/__idf_coap.dir/libcoap/src/resource.c.s
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/str.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/flags.make
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/str.c.obj: /Users/user/esp/esp-idf/components/coap/libcoap/src/str.c
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/str.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/str.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/str.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/str.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/str.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/str.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/str.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/str.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/str.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/str.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/str.c
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/str.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_coap.dir/libcoap/src/str.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/str.c > CMakeFiles/__idf_coap.dir/libcoap/src/str.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/str.c > CMakeFiles/__idf_coap.dir/libcoap/src/str.c.i
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/str.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_coap.dir/libcoap/src/str.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/str.c -o CMakeFiles/__idf_coap.dir/libcoap/src/str.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/str.c -o CMakeFiles/__idf_coap.dir/libcoap/src/str.c.s
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/subscribe.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/flags.make
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/subscribe.c.obj: /Users/user/esp/esp-idf/components/coap/libcoap/src/subscribe.c
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/subscribe.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/subscribe.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/subscribe.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/subscribe.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/subscribe.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/subscribe.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/subscribe.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/subscribe.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/subscribe.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/subscribe.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/subscribe.c
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/subscribe.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_coap.dir/libcoap/src/subscribe.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/subscribe.c > CMakeFiles/__idf_coap.dir/libcoap/src/subscribe.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/subscribe.c > CMakeFiles/__idf_coap.dir/libcoap/src/subscribe.c.i
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/subscribe.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_coap.dir/libcoap/src/subscribe.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/subscribe.c -o CMakeFiles/__idf_coap.dir/libcoap/src/subscribe.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/subscribe.c -o CMakeFiles/__idf_coap.dir/libcoap/src/subscribe.c.s
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/uri.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/flags.make
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/uri.c.obj: /Users/user/esp/esp-idf/components/coap/libcoap/src/uri.c
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/uri.c.obj: esp-idf/coap/CMakeFiles/__idf_coap.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/uri.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/uri.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/uri.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/uri.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/uri.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/uri.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/uri.c.obj -MF CMakeFiles/__idf_coap.dir/libcoap/src/uri.c.obj.d -o CMakeFiles/__idf_coap.dir/libcoap/src/uri.c.obj -c /Users/user/esp/esp-idf/components/coap/libcoap/src/uri.c
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/uri.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_coap.dir/libcoap/src/uri.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/uri.c > CMakeFiles/__idf_coap.dir/libcoap/src/uri.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/coap/libcoap/src/uri.c > CMakeFiles/__idf_coap.dir/libcoap/src/uri.c.i
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/uri.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_coap.dir/libcoap/src/uri.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/uri.c -o CMakeFiles/__idf_coap.dir/libcoap/src/uri.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/coap/libcoap/src/uri.c -o CMakeFiles/__idf_coap.dir/libcoap/src/uri.c.s
 
 # Object files for target __idf_coap
 __idf_coap_OBJECTS = \
@@ -461,19 +461,19 @@ esp-idf/coap/libcoap.a: esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/subsc
 esp-idf/coap/libcoap.a: esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/uri.c.obj
 esp-idf/coap/libcoap.a: esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make
 esp-idf/coap/libcoap.a: esp-idf/coap/CMakeFiles/__idf_coap.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Linking C static library libcoap.a"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && $(CMAKE_COMMAND) -P CMakeFiles/__idf_coap.dir/cmake_clean_target.cmake
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/__idf_coap.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Linking C static library libcoap.a"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && $(CMAKE_COMMAND) -P CMakeFiles/__idf_coap.dir/cmake_clean_target.cmake
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/__idf_coap.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 esp-idf/coap/CMakeFiles/__idf_coap.dir/build: esp-idf/coap/libcoap.a
 .PHONY : esp-idf/coap/CMakeFiles/__idf_coap.dir/build
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/clean:
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap && $(CMAKE_COMMAND) -P CMakeFiles/__idf_coap.dir/cmake_clean.cmake
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/coap && $(CMAKE_COMMAND) -P CMakeFiles/__idf_coap.dir/cmake_clean.cmake
 .PHONY : esp-idf/coap/CMakeFiles/__idf_coap.dir/clean
 
 esp-idf/coap/CMakeFiles/__idf_coap.dir/depend:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/CECS490/led_blinky /Users/user/esp/esp-idf/components/coap /Users/user/esp/CECS490/led_blinky/build /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap/CMakeFiles/__idf_coap.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/CECS490/demo_1 /Users/user/esp/esp-idf/components/coap /Users/user/esp/CECS490/demo_1/build /Users/user/esp/CECS490/demo_1/build/esp-idf/coap /Users/user/esp/CECS490/demo_1/build/esp-idf/coap/CMakeFiles/__idf_coap.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : esp-idf/coap/CMakeFiles/__idf_coap.dir/depend
 

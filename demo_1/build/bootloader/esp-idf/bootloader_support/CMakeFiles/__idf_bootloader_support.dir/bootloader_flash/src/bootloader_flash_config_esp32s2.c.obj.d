@@ -2,7 +2,7 @@ esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_fl
  /Users/user/esp/esp-idf/components/bootloader_support/bootloader_flash/src/bootloader_flash_config_esp32s2.c \
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/lib/gcc/xtensa-esp32s2-elf/8.4.0/include/stdbool.h \
  /Users/user/esp/esp-idf/components/newlib/platform_include/assert.h \
- /Users/user/esp/CECS490/led_blinky/build/bootloader/config/sdkconfig.h \
+ /Users/user/esp/CECS490/demo_1/build/bootloader/config/sdkconfig.h \
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/stdlib.h \
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/machine/ieeefp.h \
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/_ansi.h \

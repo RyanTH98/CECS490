@@ -53,10 +53,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/led_blinky
+CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/demo_1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/user/esp/CECS490/led_blinky/build
+CMAKE_BINARY_DIR = /Users/user/esp/CECS490/demo_1/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/led_blinky.elf.dir/depend.make
@@ -70,22 +70,22 @@ include CMakeFiles/led_blinky.elf.dir/progress.make
 include CMakeFiles/led_blinky.elf.dir/flags.make
 
 project_elf_src_esp32s2.c:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating project_elf_src_esp32s2.c"
-	/Applications/CMake.app/Contents/bin/cmake -E touch /Users/user/esp/CECS490/led_blinky/build/project_elf_src_esp32s2.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating project_elf_src_esp32s2.c"
+	/Applications/CMake.app/Contents/bin/cmake -E touch /Users/user/esp/CECS490/demo_1/build/project_elf_src_esp32s2.c
 
 CMakeFiles/led_blinky.elf.dir/project_elf_src_esp32s2.c.obj: CMakeFiles/led_blinky.elf.dir/flags.make
 CMakeFiles/led_blinky.elf.dir/project_elf_src_esp32s2.c.obj: project_elf_src_esp32s2.c
 CMakeFiles/led_blinky.elf.dir/project_elf_src_esp32s2.c.obj: CMakeFiles/led_blinky.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/led_blinky.elf.dir/project_elf_src_esp32s2.c.obj"
-	/Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/led_blinky.elf.dir/project_elf_src_esp32s2.c.obj -MF CMakeFiles/led_blinky.elf.dir/project_elf_src_esp32s2.c.obj.d -o CMakeFiles/led_blinky.elf.dir/project_elf_src_esp32s2.c.obj -c /Users/user/esp/CECS490/led_blinky/build/project_elf_src_esp32s2.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/led_blinky.elf.dir/project_elf_src_esp32s2.c.obj"
+	/Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/led_blinky.elf.dir/project_elf_src_esp32s2.c.obj -MF CMakeFiles/led_blinky.elf.dir/project_elf_src_esp32s2.c.obj.d -o CMakeFiles/led_blinky.elf.dir/project_elf_src_esp32s2.c.obj -c /Users/user/esp/CECS490/demo_1/build/project_elf_src_esp32s2.c
 
 CMakeFiles/led_blinky.elf.dir/project_elf_src_esp32s2.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/led_blinky.elf.dir/project_elf_src_esp32s2.c.i"
-	/Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/CECS490/led_blinky/build/project_elf_src_esp32s2.c > CMakeFiles/led_blinky.elf.dir/project_elf_src_esp32s2.c.i
+	/Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/CECS490/demo_1/build/project_elf_src_esp32s2.c > CMakeFiles/led_blinky.elf.dir/project_elf_src_esp32s2.c.i
 
 CMakeFiles/led_blinky.elf.dir/project_elf_src_esp32s2.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/led_blinky.elf.dir/project_elf_src_esp32s2.c.s"
-	/Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/CECS490/led_blinky/build/project_elf_src_esp32s2.c -o CMakeFiles/led_blinky.elf.dir/project_elf_src_esp32s2.c.s
+	/Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/CECS490/demo_1/build/project_elf_src_esp32s2.c -o CMakeFiles/led_blinky.elf.dir/project_elf_src_esp32s2.c.s
 
 # Object files for target led_blinky.elf
 led_blinky_elf_OBJECTS = \
@@ -523,7 +523,7 @@ led_blinky.elf: /Users/user/esp/esp-idf/components/esp_rom/esp32s2/ld/esp32s2.ro
 led_blinky.elf: /Users/user/esp/esp-idf/components/esp_rom/esp32s2/ld/esp32s2.rom.newlib-time.ld
 led_blinky.elf: /Users/user/esp/esp-idf/components/soc/esp32s2/ld/esp32s2.peripherals.ld
 led_blinky.elf: CMakeFiles/led_blinky.elf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable led_blinky.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable led_blinky.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/led_blinky.elf.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -535,6 +535,6 @@ CMakeFiles/led_blinky.elf.dir/clean:
 .PHONY : CMakeFiles/led_blinky.elf.dir/clean
 
 CMakeFiles/led_blinky.elf.dir/depend: project_elf_src_esp32s2.c
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/CECS490/led_blinky /Users/user/esp/CECS490/led_blinky /Users/user/esp/CECS490/led_blinky/build /Users/user/esp/CECS490/led_blinky/build /Users/user/esp/CECS490/led_blinky/build/CMakeFiles/led_blinky.elf.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/CECS490/demo_1 /Users/user/esp/CECS490/demo_1 /Users/user/esp/CECS490/demo_1/build /Users/user/esp/CECS490/demo_1/build /Users/user/esp/CECS490/demo_1/build/CMakeFiles/led_blinky.elf.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/led_blinky.elf.dir/depend
 

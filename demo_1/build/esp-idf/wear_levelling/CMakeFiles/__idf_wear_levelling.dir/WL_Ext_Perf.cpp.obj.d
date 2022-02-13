@@ -27,7 +27,7 @@ esp-idf/wear_levelling/CMakeFiles/__idf_wear_levelling.dir/WL_Ext_Perf.cpp.obj: 
  /Users/user/esp/esp-idf/components/newlib/platform_include/sys/lock.h \
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/sys/lock.h \
  /Users/user/esp/esp-idf/components/newlib/platform_include/assert.h \
- /Users/user/esp/CECS490/led_blinky/build/config/sdkconfig.h \
+ /Users/user/esp/CECS490/demo_1/build/config/sdkconfig.h \
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/include/c++/8.4.0/stdlib.h \
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/include/c++/8.4.0/cstdlib \
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/include/c++/8.4.0/xtensa-esp32s2-elf/no-rtti/bits/c++config.h \

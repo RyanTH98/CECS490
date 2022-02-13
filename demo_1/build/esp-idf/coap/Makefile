@@ -57,10 +57,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/led_blinky
+CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/demo_1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/user/esp/CECS490/led_blinky/build
+CMAKE_BINARY_DIR = /Users/user/esp/CECS490/demo_1/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/led_blinky/build/CMakeFiles /Users/user/esp/CECS490/led_blinky/build/esp-idf/coap//CMakeFiles/progress.marks
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/coap/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/led_blinky/build/CMakeFiles 0
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/demo_1/build/CMakeFiles /Users/user/esp/CECS490/demo_1/build/esp-idf/coap//CMakeFiles/progress.marks
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/coap/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/demo_1/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/coap/clean
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/coap/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/coap/preinstall
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/coap/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/coap/preinstall
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/coap/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 esp-idf/coap/CMakeFiles/__idf_coap.dir/rule:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/coap/CMakeFiles/__idf_coap.dir/rule
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/coap/CMakeFiles/__idf_coap.dir/rule
 .PHONY : esp-idf/coap/CMakeFiles/__idf_coap.dir/rule
 
 # Convenience name for target.
@@ -172,7 +172,7 @@ __idf_coap: esp-idf/coap/CMakeFiles/__idf_coap.dir/rule
 
 # fast build rule for target.
 __idf_coap/fast:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/build
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/build
 .PHONY : __idf_coap/fast
 
 libcoap/src/address.obj: libcoap/src/address.c.obj
@@ -180,7 +180,7 @@ libcoap/src/address.obj: libcoap/src/address.c.obj
 
 # target to build an object file
 libcoap/src/address.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/address.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/address.c.obj
 .PHONY : libcoap/src/address.c.obj
 
 libcoap/src/address.i: libcoap/src/address.c.i
@@ -188,7 +188,7 @@ libcoap/src/address.i: libcoap/src/address.c.i
 
 # target to preprocess a source file
 libcoap/src/address.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/address.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/address.c.i
 .PHONY : libcoap/src/address.c.i
 
 libcoap/src/address.s: libcoap/src/address.c.s
@@ -196,7 +196,7 @@ libcoap/src/address.s: libcoap/src/address.c.s
 
 # target to generate assembly for a file
 libcoap/src/address.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/address.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/address.c.s
 .PHONY : libcoap/src/address.c.s
 
 libcoap/src/async.obj: libcoap/src/async.c.obj
@@ -204,7 +204,7 @@ libcoap/src/async.obj: libcoap/src/async.c.obj
 
 # target to build an object file
 libcoap/src/async.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/async.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/async.c.obj
 .PHONY : libcoap/src/async.c.obj
 
 libcoap/src/async.i: libcoap/src/async.c.i
@@ -212,7 +212,7 @@ libcoap/src/async.i: libcoap/src/async.c.i
 
 # target to preprocess a source file
 libcoap/src/async.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/async.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/async.c.i
 .PHONY : libcoap/src/async.c.i
 
 libcoap/src/async.s: libcoap/src/async.c.s
@@ -220,7 +220,7 @@ libcoap/src/async.s: libcoap/src/async.c.s
 
 # target to generate assembly for a file
 libcoap/src/async.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/async.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/async.c.s
 .PHONY : libcoap/src/async.c.s
 
 libcoap/src/block.obj: libcoap/src/block.c.obj
@@ -228,7 +228,7 @@ libcoap/src/block.obj: libcoap/src/block.c.obj
 
 # target to build an object file
 libcoap/src/block.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/block.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/block.c.obj
 .PHONY : libcoap/src/block.c.obj
 
 libcoap/src/block.i: libcoap/src/block.c.i
@@ -236,7 +236,7 @@ libcoap/src/block.i: libcoap/src/block.c.i
 
 # target to preprocess a source file
 libcoap/src/block.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/block.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/block.c.i
 .PHONY : libcoap/src/block.c.i
 
 libcoap/src/block.s: libcoap/src/block.c.s
@@ -244,7 +244,7 @@ libcoap/src/block.s: libcoap/src/block.c.s
 
 # target to generate assembly for a file
 libcoap/src/block.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/block.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/block.c.s
 .PHONY : libcoap/src/block.c.s
 
 libcoap/src/coap_asn1.obj: libcoap/src/coap_asn1.c.obj
@@ -252,7 +252,7 @@ libcoap/src/coap_asn1.obj: libcoap/src/coap_asn1.c.obj
 
 # target to build an object file
 libcoap/src/coap_asn1.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_asn1.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_asn1.c.obj
 .PHONY : libcoap/src/coap_asn1.c.obj
 
 libcoap/src/coap_asn1.i: libcoap/src/coap_asn1.c.i
@@ -260,7 +260,7 @@ libcoap/src/coap_asn1.i: libcoap/src/coap_asn1.c.i
 
 # target to preprocess a source file
 libcoap/src/coap_asn1.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_asn1.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_asn1.c.i
 .PHONY : libcoap/src/coap_asn1.c.i
 
 libcoap/src/coap_asn1.s: libcoap/src/coap_asn1.c.s
@@ -268,7 +268,7 @@ libcoap/src/coap_asn1.s: libcoap/src/coap_asn1.c.s
 
 # target to generate assembly for a file
 libcoap/src/coap_asn1.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_asn1.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_asn1.c.s
 .PHONY : libcoap/src/coap_asn1.c.s
 
 libcoap/src/coap_cache.obj: libcoap/src/coap_cache.c.obj
@@ -276,7 +276,7 @@ libcoap/src/coap_cache.obj: libcoap/src/coap_cache.c.obj
 
 # target to build an object file
 libcoap/src/coap_cache.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_cache.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_cache.c.obj
 .PHONY : libcoap/src/coap_cache.c.obj
 
 libcoap/src/coap_cache.i: libcoap/src/coap_cache.c.i
@@ -284,7 +284,7 @@ libcoap/src/coap_cache.i: libcoap/src/coap_cache.c.i
 
 # target to preprocess a source file
 libcoap/src/coap_cache.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_cache.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_cache.c.i
 .PHONY : libcoap/src/coap_cache.c.i
 
 libcoap/src/coap_cache.s: libcoap/src/coap_cache.c.s
@@ -292,7 +292,7 @@ libcoap/src/coap_cache.s: libcoap/src/coap_cache.c.s
 
 # target to generate assembly for a file
 libcoap/src/coap_cache.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_cache.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_cache.c.s
 .PHONY : libcoap/src/coap_cache.c.s
 
 libcoap/src/coap_debug.obj: libcoap/src/coap_debug.c.obj
@@ -300,7 +300,7 @@ libcoap/src/coap_debug.obj: libcoap/src/coap_debug.c.obj
 
 # target to build an object file
 libcoap/src/coap_debug.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_debug.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_debug.c.obj
 .PHONY : libcoap/src/coap_debug.c.obj
 
 libcoap/src/coap_debug.i: libcoap/src/coap_debug.c.i
@@ -308,7 +308,7 @@ libcoap/src/coap_debug.i: libcoap/src/coap_debug.c.i
 
 # target to preprocess a source file
 libcoap/src/coap_debug.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_debug.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_debug.c.i
 .PHONY : libcoap/src/coap_debug.c.i
 
 libcoap/src/coap_debug.s: libcoap/src/coap_debug.c.s
@@ -316,7 +316,7 @@ libcoap/src/coap_debug.s: libcoap/src/coap_debug.c.s
 
 # target to generate assembly for a file
 libcoap/src/coap_debug.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_debug.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_debug.c.s
 .PHONY : libcoap/src/coap_debug.c.s
 
 libcoap/src/coap_event.obj: libcoap/src/coap_event.c.obj
@@ -324,7 +324,7 @@ libcoap/src/coap_event.obj: libcoap/src/coap_event.c.obj
 
 # target to build an object file
 libcoap/src/coap_event.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_event.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_event.c.obj
 .PHONY : libcoap/src/coap_event.c.obj
 
 libcoap/src/coap_event.i: libcoap/src/coap_event.c.i
@@ -332,7 +332,7 @@ libcoap/src/coap_event.i: libcoap/src/coap_event.c.i
 
 # target to preprocess a source file
 libcoap/src/coap_event.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_event.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_event.c.i
 .PHONY : libcoap/src/coap_event.c.i
 
 libcoap/src/coap_event.s: libcoap/src/coap_event.c.s
@@ -340,7 +340,7 @@ libcoap/src/coap_event.s: libcoap/src/coap_event.c.s
 
 # target to generate assembly for a file
 libcoap/src/coap_event.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_event.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_event.c.s
 .PHONY : libcoap/src/coap_event.c.s
 
 libcoap/src/coap_hashkey.obj: libcoap/src/coap_hashkey.c.obj
@@ -348,7 +348,7 @@ libcoap/src/coap_hashkey.obj: libcoap/src/coap_hashkey.c.obj
 
 # target to build an object file
 libcoap/src/coap_hashkey.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_hashkey.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_hashkey.c.obj
 .PHONY : libcoap/src/coap_hashkey.c.obj
 
 libcoap/src/coap_hashkey.i: libcoap/src/coap_hashkey.c.i
@@ -356,7 +356,7 @@ libcoap/src/coap_hashkey.i: libcoap/src/coap_hashkey.c.i
 
 # target to preprocess a source file
 libcoap/src/coap_hashkey.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_hashkey.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_hashkey.c.i
 .PHONY : libcoap/src/coap_hashkey.c.i
 
 libcoap/src/coap_hashkey.s: libcoap/src/coap_hashkey.c.s
@@ -364,7 +364,7 @@ libcoap/src/coap_hashkey.s: libcoap/src/coap_hashkey.c.s
 
 # target to generate assembly for a file
 libcoap/src/coap_hashkey.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_hashkey.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_hashkey.c.s
 .PHONY : libcoap/src/coap_hashkey.c.s
 
 libcoap/src/coap_io.obj: libcoap/src/coap_io.c.obj
@@ -372,7 +372,7 @@ libcoap/src/coap_io.obj: libcoap/src/coap_io.c.obj
 
 # target to build an object file
 libcoap/src/coap_io.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_io.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_io.c.obj
 .PHONY : libcoap/src/coap_io.c.obj
 
 libcoap/src/coap_io.i: libcoap/src/coap_io.c.i
@@ -380,7 +380,7 @@ libcoap/src/coap_io.i: libcoap/src/coap_io.c.i
 
 # target to preprocess a source file
 libcoap/src/coap_io.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_io.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_io.c.i
 .PHONY : libcoap/src/coap_io.c.i
 
 libcoap/src/coap_io.s: libcoap/src/coap_io.c.s
@@ -388,7 +388,7 @@ libcoap/src/coap_io.s: libcoap/src/coap_io.c.s
 
 # target to generate assembly for a file
 libcoap/src/coap_io.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_io.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_io.c.s
 .PHONY : libcoap/src/coap_io.c.s
 
 libcoap/src/coap_mbedtls.obj: libcoap/src/coap_mbedtls.c.obj
@@ -396,7 +396,7 @@ libcoap/src/coap_mbedtls.obj: libcoap/src/coap_mbedtls.c.obj
 
 # target to build an object file
 libcoap/src/coap_mbedtls.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_mbedtls.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_mbedtls.c.obj
 .PHONY : libcoap/src/coap_mbedtls.c.obj
 
 libcoap/src/coap_mbedtls.i: libcoap/src/coap_mbedtls.c.i
@@ -404,7 +404,7 @@ libcoap/src/coap_mbedtls.i: libcoap/src/coap_mbedtls.c.i
 
 # target to preprocess a source file
 libcoap/src/coap_mbedtls.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_mbedtls.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_mbedtls.c.i
 .PHONY : libcoap/src/coap_mbedtls.c.i
 
 libcoap/src/coap_mbedtls.s: libcoap/src/coap_mbedtls.c.s
@@ -412,7 +412,7 @@ libcoap/src/coap_mbedtls.s: libcoap/src/coap_mbedtls.c.s
 
 # target to generate assembly for a file
 libcoap/src/coap_mbedtls.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_mbedtls.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_mbedtls.c.s
 .PHONY : libcoap/src/coap_mbedtls.c.s
 
 libcoap/src/coap_notls.obj: libcoap/src/coap_notls.c.obj
@@ -420,7 +420,7 @@ libcoap/src/coap_notls.obj: libcoap/src/coap_notls.c.obj
 
 # target to build an object file
 libcoap/src/coap_notls.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_notls.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_notls.c.obj
 .PHONY : libcoap/src/coap_notls.c.obj
 
 libcoap/src/coap_notls.i: libcoap/src/coap_notls.c.i
@@ -428,7 +428,7 @@ libcoap/src/coap_notls.i: libcoap/src/coap_notls.c.i
 
 # target to preprocess a source file
 libcoap/src/coap_notls.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_notls.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_notls.c.i
 .PHONY : libcoap/src/coap_notls.c.i
 
 libcoap/src/coap_notls.s: libcoap/src/coap_notls.c.s
@@ -436,7 +436,7 @@ libcoap/src/coap_notls.s: libcoap/src/coap_notls.c.s
 
 # target to generate assembly for a file
 libcoap/src/coap_notls.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_notls.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_notls.c.s
 .PHONY : libcoap/src/coap_notls.c.s
 
 libcoap/src/coap_prng.obj: libcoap/src/coap_prng.c.obj
@@ -444,7 +444,7 @@ libcoap/src/coap_prng.obj: libcoap/src/coap_prng.c.obj
 
 # target to build an object file
 libcoap/src/coap_prng.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_prng.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_prng.c.obj
 .PHONY : libcoap/src/coap_prng.c.obj
 
 libcoap/src/coap_prng.i: libcoap/src/coap_prng.c.i
@@ -452,7 +452,7 @@ libcoap/src/coap_prng.i: libcoap/src/coap_prng.c.i
 
 # target to preprocess a source file
 libcoap/src/coap_prng.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_prng.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_prng.c.i
 .PHONY : libcoap/src/coap_prng.c.i
 
 libcoap/src/coap_prng.s: libcoap/src/coap_prng.c.s
@@ -460,7 +460,7 @@ libcoap/src/coap_prng.s: libcoap/src/coap_prng.c.s
 
 # target to generate assembly for a file
 libcoap/src/coap_prng.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_prng.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_prng.c.s
 .PHONY : libcoap/src/coap_prng.c.s
 
 libcoap/src/coap_session.obj: libcoap/src/coap_session.c.obj
@@ -468,7 +468,7 @@ libcoap/src/coap_session.obj: libcoap/src/coap_session.c.obj
 
 # target to build an object file
 libcoap/src/coap_session.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_session.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_session.c.obj
 .PHONY : libcoap/src/coap_session.c.obj
 
 libcoap/src/coap_session.i: libcoap/src/coap_session.c.i
@@ -476,7 +476,7 @@ libcoap/src/coap_session.i: libcoap/src/coap_session.c.i
 
 # target to preprocess a source file
 libcoap/src/coap_session.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_session.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_session.c.i
 .PHONY : libcoap/src/coap_session.c.i
 
 libcoap/src/coap_session.s: libcoap/src/coap_session.c.s
@@ -484,7 +484,7 @@ libcoap/src/coap_session.s: libcoap/src/coap_session.c.s
 
 # target to generate assembly for a file
 libcoap/src/coap_session.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_session.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_session.c.s
 .PHONY : libcoap/src/coap_session.c.s
 
 libcoap/src/coap_tcp.obj: libcoap/src/coap_tcp.c.obj
@@ -492,7 +492,7 @@ libcoap/src/coap_tcp.obj: libcoap/src/coap_tcp.c.obj
 
 # target to build an object file
 libcoap/src/coap_tcp.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_tcp.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_tcp.c.obj
 .PHONY : libcoap/src/coap_tcp.c.obj
 
 libcoap/src/coap_tcp.i: libcoap/src/coap_tcp.c.i
@@ -500,7 +500,7 @@ libcoap/src/coap_tcp.i: libcoap/src/coap_tcp.c.i
 
 # target to preprocess a source file
 libcoap/src/coap_tcp.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_tcp.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_tcp.c.i
 .PHONY : libcoap/src/coap_tcp.c.i
 
 libcoap/src/coap_tcp.s: libcoap/src/coap_tcp.c.s
@@ -508,7 +508,7 @@ libcoap/src/coap_tcp.s: libcoap/src/coap_tcp.c.s
 
 # target to generate assembly for a file
 libcoap/src/coap_tcp.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_tcp.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_tcp.c.s
 .PHONY : libcoap/src/coap_tcp.c.s
 
 libcoap/src/coap_time.obj: libcoap/src/coap_time.c.obj
@@ -516,7 +516,7 @@ libcoap/src/coap_time.obj: libcoap/src/coap_time.c.obj
 
 # target to build an object file
 libcoap/src/coap_time.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_time.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_time.c.obj
 .PHONY : libcoap/src/coap_time.c.obj
 
 libcoap/src/coap_time.i: libcoap/src/coap_time.c.i
@@ -524,7 +524,7 @@ libcoap/src/coap_time.i: libcoap/src/coap_time.c.i
 
 # target to preprocess a source file
 libcoap/src/coap_time.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_time.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_time.c.i
 .PHONY : libcoap/src/coap_time.c.i
 
 libcoap/src/coap_time.s: libcoap/src/coap_time.c.s
@@ -532,7 +532,7 @@ libcoap/src/coap_time.s: libcoap/src/coap_time.c.s
 
 # target to generate assembly for a file
 libcoap/src/coap_time.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_time.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/coap_time.c.s
 .PHONY : libcoap/src/coap_time.c.s
 
 libcoap/src/encode.obj: libcoap/src/encode.c.obj
@@ -540,7 +540,7 @@ libcoap/src/encode.obj: libcoap/src/encode.c.obj
 
 # target to build an object file
 libcoap/src/encode.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/encode.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/encode.c.obj
 .PHONY : libcoap/src/encode.c.obj
 
 libcoap/src/encode.i: libcoap/src/encode.c.i
@@ -548,7 +548,7 @@ libcoap/src/encode.i: libcoap/src/encode.c.i
 
 # target to preprocess a source file
 libcoap/src/encode.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/encode.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/encode.c.i
 .PHONY : libcoap/src/encode.c.i
 
 libcoap/src/encode.s: libcoap/src/encode.c.s
@@ -556,7 +556,7 @@ libcoap/src/encode.s: libcoap/src/encode.c.s
 
 # target to generate assembly for a file
 libcoap/src/encode.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/encode.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/encode.c.s
 .PHONY : libcoap/src/encode.c.s
 
 libcoap/src/mem.obj: libcoap/src/mem.c.obj
@@ -564,7 +564,7 @@ libcoap/src/mem.obj: libcoap/src/mem.c.obj
 
 # target to build an object file
 libcoap/src/mem.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/mem.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/mem.c.obj
 .PHONY : libcoap/src/mem.c.obj
 
 libcoap/src/mem.i: libcoap/src/mem.c.i
@@ -572,7 +572,7 @@ libcoap/src/mem.i: libcoap/src/mem.c.i
 
 # target to preprocess a source file
 libcoap/src/mem.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/mem.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/mem.c.i
 .PHONY : libcoap/src/mem.c.i
 
 libcoap/src/mem.s: libcoap/src/mem.c.s
@@ -580,7 +580,7 @@ libcoap/src/mem.s: libcoap/src/mem.c.s
 
 # target to generate assembly for a file
 libcoap/src/mem.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/mem.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/mem.c.s
 .PHONY : libcoap/src/mem.c.s
 
 libcoap/src/net.obj: libcoap/src/net.c.obj
@@ -588,7 +588,7 @@ libcoap/src/net.obj: libcoap/src/net.c.obj
 
 # target to build an object file
 libcoap/src/net.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/net.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/net.c.obj
 .PHONY : libcoap/src/net.c.obj
 
 libcoap/src/net.i: libcoap/src/net.c.i
@@ -596,7 +596,7 @@ libcoap/src/net.i: libcoap/src/net.c.i
 
 # target to preprocess a source file
 libcoap/src/net.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/net.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/net.c.i
 .PHONY : libcoap/src/net.c.i
 
 libcoap/src/net.s: libcoap/src/net.c.s
@@ -604,7 +604,7 @@ libcoap/src/net.s: libcoap/src/net.c.s
 
 # target to generate assembly for a file
 libcoap/src/net.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/net.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/net.c.s
 .PHONY : libcoap/src/net.c.s
 
 libcoap/src/option.obj: libcoap/src/option.c.obj
@@ -612,7 +612,7 @@ libcoap/src/option.obj: libcoap/src/option.c.obj
 
 # target to build an object file
 libcoap/src/option.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/option.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/option.c.obj
 .PHONY : libcoap/src/option.c.obj
 
 libcoap/src/option.i: libcoap/src/option.c.i
@@ -620,7 +620,7 @@ libcoap/src/option.i: libcoap/src/option.c.i
 
 # target to preprocess a source file
 libcoap/src/option.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/option.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/option.c.i
 .PHONY : libcoap/src/option.c.i
 
 libcoap/src/option.s: libcoap/src/option.c.s
@@ -628,7 +628,7 @@ libcoap/src/option.s: libcoap/src/option.c.s
 
 # target to generate assembly for a file
 libcoap/src/option.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/option.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/option.c.s
 .PHONY : libcoap/src/option.c.s
 
 libcoap/src/pdu.obj: libcoap/src/pdu.c.obj
@@ -636,7 +636,7 @@ libcoap/src/pdu.obj: libcoap/src/pdu.c.obj
 
 # target to build an object file
 libcoap/src/pdu.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/pdu.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/pdu.c.obj
 .PHONY : libcoap/src/pdu.c.obj
 
 libcoap/src/pdu.i: libcoap/src/pdu.c.i
@@ -644,7 +644,7 @@ libcoap/src/pdu.i: libcoap/src/pdu.c.i
 
 # target to preprocess a source file
 libcoap/src/pdu.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/pdu.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/pdu.c.i
 .PHONY : libcoap/src/pdu.c.i
 
 libcoap/src/pdu.s: libcoap/src/pdu.c.s
@@ -652,7 +652,7 @@ libcoap/src/pdu.s: libcoap/src/pdu.c.s
 
 # target to generate assembly for a file
 libcoap/src/pdu.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/pdu.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/pdu.c.s
 .PHONY : libcoap/src/pdu.c.s
 
 libcoap/src/resource.obj: libcoap/src/resource.c.obj
@@ -660,7 +660,7 @@ libcoap/src/resource.obj: libcoap/src/resource.c.obj
 
 # target to build an object file
 libcoap/src/resource.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/resource.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/resource.c.obj
 .PHONY : libcoap/src/resource.c.obj
 
 libcoap/src/resource.i: libcoap/src/resource.c.i
@@ -668,7 +668,7 @@ libcoap/src/resource.i: libcoap/src/resource.c.i
 
 # target to preprocess a source file
 libcoap/src/resource.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/resource.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/resource.c.i
 .PHONY : libcoap/src/resource.c.i
 
 libcoap/src/resource.s: libcoap/src/resource.c.s
@@ -676,7 +676,7 @@ libcoap/src/resource.s: libcoap/src/resource.c.s
 
 # target to generate assembly for a file
 libcoap/src/resource.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/resource.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/resource.c.s
 .PHONY : libcoap/src/resource.c.s
 
 libcoap/src/str.obj: libcoap/src/str.c.obj
@@ -684,7 +684,7 @@ libcoap/src/str.obj: libcoap/src/str.c.obj
 
 # target to build an object file
 libcoap/src/str.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/str.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/str.c.obj
 .PHONY : libcoap/src/str.c.obj
 
 libcoap/src/str.i: libcoap/src/str.c.i
@@ -692,7 +692,7 @@ libcoap/src/str.i: libcoap/src/str.c.i
 
 # target to preprocess a source file
 libcoap/src/str.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/str.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/str.c.i
 .PHONY : libcoap/src/str.c.i
 
 libcoap/src/str.s: libcoap/src/str.c.s
@@ -700,7 +700,7 @@ libcoap/src/str.s: libcoap/src/str.c.s
 
 # target to generate assembly for a file
 libcoap/src/str.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/str.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/str.c.s
 .PHONY : libcoap/src/str.c.s
 
 libcoap/src/subscribe.obj: libcoap/src/subscribe.c.obj
@@ -708,7 +708,7 @@ libcoap/src/subscribe.obj: libcoap/src/subscribe.c.obj
 
 # target to build an object file
 libcoap/src/subscribe.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/subscribe.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/subscribe.c.obj
 .PHONY : libcoap/src/subscribe.c.obj
 
 libcoap/src/subscribe.i: libcoap/src/subscribe.c.i
@@ -716,7 +716,7 @@ libcoap/src/subscribe.i: libcoap/src/subscribe.c.i
 
 # target to preprocess a source file
 libcoap/src/subscribe.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/subscribe.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/subscribe.c.i
 .PHONY : libcoap/src/subscribe.c.i
 
 libcoap/src/subscribe.s: libcoap/src/subscribe.c.s
@@ -724,7 +724,7 @@ libcoap/src/subscribe.s: libcoap/src/subscribe.c.s
 
 # target to generate assembly for a file
 libcoap/src/subscribe.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/subscribe.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/subscribe.c.s
 .PHONY : libcoap/src/subscribe.c.s
 
 libcoap/src/uri.obj: libcoap/src/uri.c.obj
@@ -732,7 +732,7 @@ libcoap/src/uri.obj: libcoap/src/uri.c.obj
 
 # target to build an object file
 libcoap/src/uri.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/uri.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/uri.c.obj
 .PHONY : libcoap/src/uri.c.obj
 
 libcoap/src/uri.i: libcoap/src/uri.c.i
@@ -740,7 +740,7 @@ libcoap/src/uri.i: libcoap/src/uri.c.i
 
 # target to preprocess a source file
 libcoap/src/uri.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/uri.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/uri.c.i
 .PHONY : libcoap/src/uri.c.i
 
 libcoap/src/uri.s: libcoap/src/uri.c.s
@@ -748,7 +748,7 @@ libcoap/src/uri.s: libcoap/src/uri.c.s
 
 # target to generate assembly for a file
 libcoap/src/uri.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/uri.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/coap/CMakeFiles/__idf_coap.dir/build.make esp-idf/coap/CMakeFiles/__idf_coap.dir/libcoap/src/uri.c.s
 .PHONY : libcoap/src/uri.c.s
 
 # Help Target
@@ -847,6 +847,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

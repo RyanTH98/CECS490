@@ -23,4 +23,4 @@ esp-idf/esp_gdbstub/CMakeFiles/__idf_esp_gdbstub.dir/src/packet.c.obj: \
  /Users/user/esp/esp-idf/components/xtensa/include/xtensa/xtensa-versions.h \
  /Users/user/esp/esp-idf/components/xtensa/esp32s2/include/xtensa/config/core-isa.h \
  /Users/user/esp/esp-idf/components/xtensa/esp32s2/include/xtensa/config/core-matmap.h \
- /Users/user/esp/CECS490/led_blinky/build/config/sdkconfig.h
+ /Users/user/esp/CECS490/demo_1/build/config/sdkconfig.h

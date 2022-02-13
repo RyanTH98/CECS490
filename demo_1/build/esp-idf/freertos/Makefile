@@ -57,10 +57,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/led_blinky
+CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/demo_1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/user/esp/CECS490/led_blinky/build
+CMAKE_BINARY_DIR = /Users/user/esp/CECS490/demo_1/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/led_blinky/build/CMakeFiles /Users/user/esp/CECS490/led_blinky/build/esp-idf/freertos//CMakeFiles/progress.marks
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/freertos/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/led_blinky/build/CMakeFiles 0
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/demo_1/build/CMakeFiles /Users/user/esp/CECS490/demo_1/build/esp-idf/freertos//CMakeFiles/progress.marks
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/freertos/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/demo_1/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/freertos/clean
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/freertos/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/freertos/preinstall
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/freertos/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/freertos/preinstall
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/freertos/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 esp-idf/freertos/CMakeFiles/__idf_freertos.dir/rule:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/freertos/CMakeFiles/__idf_freertos.dir/rule
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/freertos/CMakeFiles/__idf_freertos.dir/rule
 .PHONY : esp-idf/freertos/CMakeFiles/__idf_freertos.dir/rule
 
 # Convenience name for target.
@@ -172,7 +172,7 @@ __idf_freertos: esp-idf/freertos/CMakeFiles/__idf_freertos.dir/rule
 
 # fast build rule for target.
 __idf_freertos/fast:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build
 .PHONY : __idf_freertos/fast
 
 FreeRTOS-Kernel/croutine.obj: FreeRTOS-Kernel/croutine.c.obj
@@ -180,7 +180,7 @@ FreeRTOS-Kernel/croutine.obj: FreeRTOS-Kernel/croutine.c.obj
 
 # target to build an object file
 FreeRTOS-Kernel/croutine.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/croutine.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/croutine.c.obj
 .PHONY : FreeRTOS-Kernel/croutine.c.obj
 
 FreeRTOS-Kernel/croutine.i: FreeRTOS-Kernel/croutine.c.i
@@ -188,7 +188,7 @@ FreeRTOS-Kernel/croutine.i: FreeRTOS-Kernel/croutine.c.i
 
 # target to preprocess a source file
 FreeRTOS-Kernel/croutine.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/croutine.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/croutine.c.i
 .PHONY : FreeRTOS-Kernel/croutine.c.i
 
 FreeRTOS-Kernel/croutine.s: FreeRTOS-Kernel/croutine.c.s
@@ -196,7 +196,7 @@ FreeRTOS-Kernel/croutine.s: FreeRTOS-Kernel/croutine.c.s
 
 # target to generate assembly for a file
 FreeRTOS-Kernel/croutine.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/croutine.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/croutine.c.s
 .PHONY : FreeRTOS-Kernel/croutine.c.s
 
 FreeRTOS-Kernel/event_groups.obj: FreeRTOS-Kernel/event_groups.c.obj
@@ -204,7 +204,7 @@ FreeRTOS-Kernel/event_groups.obj: FreeRTOS-Kernel/event_groups.c.obj
 
 # target to build an object file
 FreeRTOS-Kernel/event_groups.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/event_groups.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/event_groups.c.obj
 .PHONY : FreeRTOS-Kernel/event_groups.c.obj
 
 FreeRTOS-Kernel/event_groups.i: FreeRTOS-Kernel/event_groups.c.i
@@ -212,7 +212,7 @@ FreeRTOS-Kernel/event_groups.i: FreeRTOS-Kernel/event_groups.c.i
 
 # target to preprocess a source file
 FreeRTOS-Kernel/event_groups.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/event_groups.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/event_groups.c.i
 .PHONY : FreeRTOS-Kernel/event_groups.c.i
 
 FreeRTOS-Kernel/event_groups.s: FreeRTOS-Kernel/event_groups.c.s
@@ -220,7 +220,7 @@ FreeRTOS-Kernel/event_groups.s: FreeRTOS-Kernel/event_groups.c.s
 
 # target to generate assembly for a file
 FreeRTOS-Kernel/event_groups.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/event_groups.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/event_groups.c.s
 .PHONY : FreeRTOS-Kernel/event_groups.c.s
 
 FreeRTOS-Kernel/list.obj: FreeRTOS-Kernel/list.c.obj
@@ -228,7 +228,7 @@ FreeRTOS-Kernel/list.obj: FreeRTOS-Kernel/list.c.obj
 
 # target to build an object file
 FreeRTOS-Kernel/list.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/list.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/list.c.obj
 .PHONY : FreeRTOS-Kernel/list.c.obj
 
 FreeRTOS-Kernel/list.i: FreeRTOS-Kernel/list.c.i
@@ -236,7 +236,7 @@ FreeRTOS-Kernel/list.i: FreeRTOS-Kernel/list.c.i
 
 # target to preprocess a source file
 FreeRTOS-Kernel/list.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/list.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/list.c.i
 .PHONY : FreeRTOS-Kernel/list.c.i
 
 FreeRTOS-Kernel/list.s: FreeRTOS-Kernel/list.c.s
@@ -244,7 +244,7 @@ FreeRTOS-Kernel/list.s: FreeRTOS-Kernel/list.c.s
 
 # target to generate assembly for a file
 FreeRTOS-Kernel/list.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/list.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/list.c.s
 .PHONY : FreeRTOS-Kernel/list.c.s
 
 FreeRTOS-Kernel/portable/port_common.obj: FreeRTOS-Kernel/portable/port_common.c.obj
@@ -252,7 +252,7 @@ FreeRTOS-Kernel/portable/port_common.obj: FreeRTOS-Kernel/portable/port_common.c
 
 # target to build an object file
 FreeRTOS-Kernel/portable/port_common.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/port_common.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/port_common.c.obj
 .PHONY : FreeRTOS-Kernel/portable/port_common.c.obj
 
 FreeRTOS-Kernel/portable/port_common.i: FreeRTOS-Kernel/portable/port_common.c.i
@@ -260,7 +260,7 @@ FreeRTOS-Kernel/portable/port_common.i: FreeRTOS-Kernel/portable/port_common.c.i
 
 # target to preprocess a source file
 FreeRTOS-Kernel/portable/port_common.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/port_common.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/port_common.c.i
 .PHONY : FreeRTOS-Kernel/portable/port_common.c.i
 
 FreeRTOS-Kernel/portable/port_common.s: FreeRTOS-Kernel/portable/port_common.c.s
@@ -268,7 +268,7 @@ FreeRTOS-Kernel/portable/port_common.s: FreeRTOS-Kernel/portable/port_common.c.s
 
 # target to generate assembly for a file
 FreeRTOS-Kernel/portable/port_common.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/port_common.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/port_common.c.s
 .PHONY : FreeRTOS-Kernel/portable/port_common.c.s
 
 FreeRTOS-Kernel/portable/port_systick.obj: FreeRTOS-Kernel/portable/port_systick.c.obj
@@ -276,7 +276,7 @@ FreeRTOS-Kernel/portable/port_systick.obj: FreeRTOS-Kernel/portable/port_systick
 
 # target to build an object file
 FreeRTOS-Kernel/portable/port_systick.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/port_systick.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/port_systick.c.obj
 .PHONY : FreeRTOS-Kernel/portable/port_systick.c.obj
 
 FreeRTOS-Kernel/portable/port_systick.i: FreeRTOS-Kernel/portable/port_systick.c.i
@@ -284,7 +284,7 @@ FreeRTOS-Kernel/portable/port_systick.i: FreeRTOS-Kernel/portable/port_systick.c
 
 # target to preprocess a source file
 FreeRTOS-Kernel/portable/port_systick.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/port_systick.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/port_systick.c.i
 .PHONY : FreeRTOS-Kernel/portable/port_systick.c.i
 
 FreeRTOS-Kernel/portable/port_systick.s: FreeRTOS-Kernel/portable/port_systick.c.s
@@ -292,7 +292,7 @@ FreeRTOS-Kernel/portable/port_systick.s: FreeRTOS-Kernel/portable/port_systick.c
 
 # target to generate assembly for a file
 FreeRTOS-Kernel/portable/port_systick.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/port_systick.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/port_systick.c.s
 .PHONY : FreeRTOS-Kernel/portable/port_systick.c.s
 
 FreeRTOS-Kernel/portable/xtensa/port.obj: FreeRTOS-Kernel/portable/xtensa/port.c.obj
@@ -300,7 +300,7 @@ FreeRTOS-Kernel/portable/xtensa/port.obj: FreeRTOS-Kernel/portable/xtensa/port.c
 
 # target to build an object file
 FreeRTOS-Kernel/portable/xtensa/port.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/xtensa/port.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/xtensa/port.c.obj
 .PHONY : FreeRTOS-Kernel/portable/xtensa/port.c.obj
 
 FreeRTOS-Kernel/portable/xtensa/port.i: FreeRTOS-Kernel/portable/xtensa/port.c.i
@@ -308,7 +308,7 @@ FreeRTOS-Kernel/portable/xtensa/port.i: FreeRTOS-Kernel/portable/xtensa/port.c.i
 
 # target to preprocess a source file
 FreeRTOS-Kernel/portable/xtensa/port.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/xtensa/port.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/xtensa/port.c.i
 .PHONY : FreeRTOS-Kernel/portable/xtensa/port.c.i
 
 FreeRTOS-Kernel/portable/xtensa/port.s: FreeRTOS-Kernel/portable/xtensa/port.c.s
@@ -316,7 +316,7 @@ FreeRTOS-Kernel/portable/xtensa/port.s: FreeRTOS-Kernel/portable/xtensa/port.c.s
 
 # target to generate assembly for a file
 FreeRTOS-Kernel/portable/xtensa/port.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/xtensa/port.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/xtensa/port.c.s
 .PHONY : FreeRTOS-Kernel/portable/xtensa/port.c.s
 
 FreeRTOS-Kernel/portable/xtensa/portasm.obj: FreeRTOS-Kernel/portable/xtensa/portasm.S.obj
@@ -324,7 +324,7 @@ FreeRTOS-Kernel/portable/xtensa/portasm.obj: FreeRTOS-Kernel/portable/xtensa/por
 
 # target to build an object file
 FreeRTOS-Kernel/portable/xtensa/portasm.S.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/xtensa/portasm.S.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/xtensa/portasm.S.obj
 .PHONY : FreeRTOS-Kernel/portable/xtensa/portasm.S.obj
 
 FreeRTOS-Kernel/portable/xtensa/xtensa_context.obj: FreeRTOS-Kernel/portable/xtensa/xtensa_context.S.obj
@@ -332,7 +332,7 @@ FreeRTOS-Kernel/portable/xtensa/xtensa_context.obj: FreeRTOS-Kernel/portable/xte
 
 # target to build an object file
 FreeRTOS-Kernel/portable/xtensa/xtensa_context.S.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/xtensa/xtensa_context.S.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/xtensa/xtensa_context.S.obj
 .PHONY : FreeRTOS-Kernel/portable/xtensa/xtensa_context.S.obj
 
 FreeRTOS-Kernel/portable/xtensa/xtensa_init.obj: FreeRTOS-Kernel/portable/xtensa/xtensa_init.c.obj
@@ -340,7 +340,7 @@ FreeRTOS-Kernel/portable/xtensa/xtensa_init.obj: FreeRTOS-Kernel/portable/xtensa
 
 # target to build an object file
 FreeRTOS-Kernel/portable/xtensa/xtensa_init.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/xtensa/xtensa_init.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/xtensa/xtensa_init.c.obj
 .PHONY : FreeRTOS-Kernel/portable/xtensa/xtensa_init.c.obj
 
 FreeRTOS-Kernel/portable/xtensa/xtensa_init.i: FreeRTOS-Kernel/portable/xtensa/xtensa_init.c.i
@@ -348,7 +348,7 @@ FreeRTOS-Kernel/portable/xtensa/xtensa_init.i: FreeRTOS-Kernel/portable/xtensa/x
 
 # target to preprocess a source file
 FreeRTOS-Kernel/portable/xtensa/xtensa_init.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/xtensa/xtensa_init.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/xtensa/xtensa_init.c.i
 .PHONY : FreeRTOS-Kernel/portable/xtensa/xtensa_init.c.i
 
 FreeRTOS-Kernel/portable/xtensa/xtensa_init.s: FreeRTOS-Kernel/portable/xtensa/xtensa_init.c.s
@@ -356,7 +356,7 @@ FreeRTOS-Kernel/portable/xtensa/xtensa_init.s: FreeRTOS-Kernel/portable/xtensa/x
 
 # target to generate assembly for a file
 FreeRTOS-Kernel/portable/xtensa/xtensa_init.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/xtensa/xtensa_init.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/xtensa/xtensa_init.c.s
 .PHONY : FreeRTOS-Kernel/portable/xtensa/xtensa_init.c.s
 
 FreeRTOS-Kernel/portable/xtensa/xtensa_overlay_os_hook.obj: FreeRTOS-Kernel/portable/xtensa/xtensa_overlay_os_hook.c.obj
@@ -364,7 +364,7 @@ FreeRTOS-Kernel/portable/xtensa/xtensa_overlay_os_hook.obj: FreeRTOS-Kernel/port
 
 # target to build an object file
 FreeRTOS-Kernel/portable/xtensa/xtensa_overlay_os_hook.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/xtensa/xtensa_overlay_os_hook.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/xtensa/xtensa_overlay_os_hook.c.obj
 .PHONY : FreeRTOS-Kernel/portable/xtensa/xtensa_overlay_os_hook.c.obj
 
 FreeRTOS-Kernel/portable/xtensa/xtensa_overlay_os_hook.i: FreeRTOS-Kernel/portable/xtensa/xtensa_overlay_os_hook.c.i
@@ -372,7 +372,7 @@ FreeRTOS-Kernel/portable/xtensa/xtensa_overlay_os_hook.i: FreeRTOS-Kernel/portab
 
 # target to preprocess a source file
 FreeRTOS-Kernel/portable/xtensa/xtensa_overlay_os_hook.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/xtensa/xtensa_overlay_os_hook.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/xtensa/xtensa_overlay_os_hook.c.i
 .PHONY : FreeRTOS-Kernel/portable/xtensa/xtensa_overlay_os_hook.c.i
 
 FreeRTOS-Kernel/portable/xtensa/xtensa_overlay_os_hook.s: FreeRTOS-Kernel/portable/xtensa/xtensa_overlay_os_hook.c.s
@@ -380,7 +380,7 @@ FreeRTOS-Kernel/portable/xtensa/xtensa_overlay_os_hook.s: FreeRTOS-Kernel/portab
 
 # target to generate assembly for a file
 FreeRTOS-Kernel/portable/xtensa/xtensa_overlay_os_hook.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/xtensa/xtensa_overlay_os_hook.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/xtensa/xtensa_overlay_os_hook.c.s
 .PHONY : FreeRTOS-Kernel/portable/xtensa/xtensa_overlay_os_hook.c.s
 
 FreeRTOS-Kernel/portable/xtensa/xtensa_vector_defaults.obj: FreeRTOS-Kernel/portable/xtensa/xtensa_vector_defaults.S.obj
@@ -388,7 +388,7 @@ FreeRTOS-Kernel/portable/xtensa/xtensa_vector_defaults.obj: FreeRTOS-Kernel/port
 
 # target to build an object file
 FreeRTOS-Kernel/portable/xtensa/xtensa_vector_defaults.S.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/xtensa/xtensa_vector_defaults.S.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/xtensa/xtensa_vector_defaults.S.obj
 .PHONY : FreeRTOS-Kernel/portable/xtensa/xtensa_vector_defaults.S.obj
 
 FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.obj: FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S.obj
@@ -396,7 +396,7 @@ FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.obj: FreeRTOS-Kernel/portable/xte
 
 # target to build an object file
 FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S.obj
 .PHONY : FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S.obj
 
 FreeRTOS-Kernel/queue.obj: FreeRTOS-Kernel/queue.c.obj
@@ -404,7 +404,7 @@ FreeRTOS-Kernel/queue.obj: FreeRTOS-Kernel/queue.c.obj
 
 # target to build an object file
 FreeRTOS-Kernel/queue.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/queue.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/queue.c.obj
 .PHONY : FreeRTOS-Kernel/queue.c.obj
 
 FreeRTOS-Kernel/queue.i: FreeRTOS-Kernel/queue.c.i
@@ -412,7 +412,7 @@ FreeRTOS-Kernel/queue.i: FreeRTOS-Kernel/queue.c.i
 
 # target to preprocess a source file
 FreeRTOS-Kernel/queue.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/queue.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/queue.c.i
 .PHONY : FreeRTOS-Kernel/queue.c.i
 
 FreeRTOS-Kernel/queue.s: FreeRTOS-Kernel/queue.c.s
@@ -420,7 +420,7 @@ FreeRTOS-Kernel/queue.s: FreeRTOS-Kernel/queue.c.s
 
 # target to generate assembly for a file
 FreeRTOS-Kernel/queue.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/queue.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/queue.c.s
 .PHONY : FreeRTOS-Kernel/queue.c.s
 
 FreeRTOS-Kernel/stream_buffer.obj: FreeRTOS-Kernel/stream_buffer.c.obj
@@ -428,7 +428,7 @@ FreeRTOS-Kernel/stream_buffer.obj: FreeRTOS-Kernel/stream_buffer.c.obj
 
 # target to build an object file
 FreeRTOS-Kernel/stream_buffer.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/stream_buffer.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/stream_buffer.c.obj
 .PHONY : FreeRTOS-Kernel/stream_buffer.c.obj
 
 FreeRTOS-Kernel/stream_buffer.i: FreeRTOS-Kernel/stream_buffer.c.i
@@ -436,7 +436,7 @@ FreeRTOS-Kernel/stream_buffer.i: FreeRTOS-Kernel/stream_buffer.c.i
 
 # target to preprocess a source file
 FreeRTOS-Kernel/stream_buffer.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/stream_buffer.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/stream_buffer.c.i
 .PHONY : FreeRTOS-Kernel/stream_buffer.c.i
 
 FreeRTOS-Kernel/stream_buffer.s: FreeRTOS-Kernel/stream_buffer.c.s
@@ -444,7 +444,7 @@ FreeRTOS-Kernel/stream_buffer.s: FreeRTOS-Kernel/stream_buffer.c.s
 
 # target to generate assembly for a file
 FreeRTOS-Kernel/stream_buffer.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/stream_buffer.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/stream_buffer.c.s
 .PHONY : FreeRTOS-Kernel/stream_buffer.c.s
 
 FreeRTOS-Kernel/tasks.obj: FreeRTOS-Kernel/tasks.c.obj
@@ -452,7 +452,7 @@ FreeRTOS-Kernel/tasks.obj: FreeRTOS-Kernel/tasks.c.obj
 
 # target to build an object file
 FreeRTOS-Kernel/tasks.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/tasks.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/tasks.c.obj
 .PHONY : FreeRTOS-Kernel/tasks.c.obj
 
 FreeRTOS-Kernel/tasks.i: FreeRTOS-Kernel/tasks.c.i
@@ -460,7 +460,7 @@ FreeRTOS-Kernel/tasks.i: FreeRTOS-Kernel/tasks.c.i
 
 # target to preprocess a source file
 FreeRTOS-Kernel/tasks.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/tasks.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/tasks.c.i
 .PHONY : FreeRTOS-Kernel/tasks.c.i
 
 FreeRTOS-Kernel/tasks.s: FreeRTOS-Kernel/tasks.c.s
@@ -468,7 +468,7 @@ FreeRTOS-Kernel/tasks.s: FreeRTOS-Kernel/tasks.c.s
 
 # target to generate assembly for a file
 FreeRTOS-Kernel/tasks.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/tasks.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/tasks.c.s
 .PHONY : FreeRTOS-Kernel/tasks.c.s
 
 FreeRTOS-Kernel/timers.obj: FreeRTOS-Kernel/timers.c.obj
@@ -476,7 +476,7 @@ FreeRTOS-Kernel/timers.obj: FreeRTOS-Kernel/timers.c.obj
 
 # target to build an object file
 FreeRTOS-Kernel/timers.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/timers.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/timers.c.obj
 .PHONY : FreeRTOS-Kernel/timers.c.obj
 
 FreeRTOS-Kernel/timers.i: FreeRTOS-Kernel/timers.c.i
@@ -484,7 +484,7 @@ FreeRTOS-Kernel/timers.i: FreeRTOS-Kernel/timers.c.i
 
 # target to preprocess a source file
 FreeRTOS-Kernel/timers.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/timers.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/timers.c.i
 .PHONY : FreeRTOS-Kernel/timers.c.i
 
 FreeRTOS-Kernel/timers.s: FreeRTOS-Kernel/timers.c.s
@@ -492,7 +492,7 @@ FreeRTOS-Kernel/timers.s: FreeRTOS-Kernel/timers.c.s
 
 # target to generate assembly for a file
 FreeRTOS-Kernel/timers.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/timers.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-Kernel/timers.c.s
 .PHONY : FreeRTOS-Kernel/timers.c.s
 
 FreeRTOS-openocd.obj: FreeRTOS-openocd.c.obj
@@ -500,7 +500,7 @@ FreeRTOS-openocd.obj: FreeRTOS-openocd.c.obj
 
 # target to build an object file
 FreeRTOS-openocd.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-openocd.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-openocd.c.obj
 .PHONY : FreeRTOS-openocd.c.obj
 
 FreeRTOS-openocd.i: FreeRTOS-openocd.c.i
@@ -508,7 +508,7 @@ FreeRTOS-openocd.i: FreeRTOS-openocd.c.i
 
 # target to preprocess a source file
 FreeRTOS-openocd.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-openocd.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-openocd.c.i
 .PHONY : FreeRTOS-openocd.c.i
 
 FreeRTOS-openocd.s: FreeRTOS-openocd.c.s
@@ -516,7 +516,7 @@ FreeRTOS-openocd.s: FreeRTOS-openocd.c.s
 
 # target to generate assembly for a file
 FreeRTOS-openocd.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-openocd.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/FreeRTOS-openocd.c.s
 .PHONY : FreeRTOS-openocd.c.s
 
 esp_additions/freertos_v8_compat.obj: esp_additions/freertos_v8_compat.c.obj
@@ -524,7 +524,7 @@ esp_additions/freertos_v8_compat.obj: esp_additions/freertos_v8_compat.c.obj
 
 # target to build an object file
 esp_additions/freertos_v8_compat.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/esp_additions/freertos_v8_compat.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/esp_additions/freertos_v8_compat.c.obj
 .PHONY : esp_additions/freertos_v8_compat.c.obj
 
 esp_additions/freertos_v8_compat.i: esp_additions/freertos_v8_compat.c.i
@@ -532,7 +532,7 @@ esp_additions/freertos_v8_compat.i: esp_additions/freertos_v8_compat.c.i
 
 # target to preprocess a source file
 esp_additions/freertos_v8_compat.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/esp_additions/freertos_v8_compat.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/esp_additions/freertos_v8_compat.c.i
 .PHONY : esp_additions/freertos_v8_compat.c.i
 
 esp_additions/freertos_v8_compat.s: esp_additions/freertos_v8_compat.c.s
@@ -540,7 +540,7 @@ esp_additions/freertos_v8_compat.s: esp_additions/freertos_v8_compat.c.s
 
 # target to generate assembly for a file
 esp_additions/freertos_v8_compat.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/esp_additions/freertos_v8_compat.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/esp_additions/freertos_v8_compat.c.s
 .PHONY : esp_additions/freertos_v8_compat.c.s
 
 esp_additions/task_snapshot.obj: esp_additions/task_snapshot.c.obj
@@ -548,7 +548,7 @@ esp_additions/task_snapshot.obj: esp_additions/task_snapshot.c.obj
 
 # target to build an object file
 esp_additions/task_snapshot.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/esp_additions/task_snapshot.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/esp_additions/task_snapshot.c.obj
 .PHONY : esp_additions/task_snapshot.c.obj
 
 esp_additions/task_snapshot.i: esp_additions/task_snapshot.c.i
@@ -556,7 +556,7 @@ esp_additions/task_snapshot.i: esp_additions/task_snapshot.c.i
 
 # target to preprocess a source file
 esp_additions/task_snapshot.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/esp_additions/task_snapshot.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/esp_additions/task_snapshot.c.i
 .PHONY : esp_additions/task_snapshot.c.i
 
 esp_additions/task_snapshot.s: esp_additions/task_snapshot.c.s
@@ -564,7 +564,7 @@ esp_additions/task_snapshot.s: esp_additions/task_snapshot.c.s
 
 # target to generate assembly for a file
 esp_additions/task_snapshot.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/esp_additions/task_snapshot.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/freertos/CMakeFiles/__idf_freertos.dir/build.make esp-idf/freertos/CMakeFiles/__idf_freertos.dir/esp_additions/task_snapshot.c.s
 .PHONY : esp_additions/task_snapshot.c.s
 
 # Help Target
@@ -640,6 +640,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

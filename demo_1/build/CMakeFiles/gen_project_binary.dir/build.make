@@ -53,10 +53,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/led_blinky
+CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/demo_1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/user/esp/CECS490/led_blinky/build
+CMAKE_BINARY_DIR = /Users/user/esp/CECS490/demo_1/build
 
 # Utility rule file for gen_project_binary.
 
@@ -69,10 +69,10 @@ include CMakeFiles/gen_project_binary.dir/progress.make
 CMakeFiles/gen_project_binary: .bin_timestamp
 
 .bin_timestamp: led_blinky.elf
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating binary image from built executable"
-	/Users/user/.espressif/python_env/idf5.0_py3.9_env/bin/python /Users/user/esp/esp-idf/components/esptool_py/esptool/esptool.py --chip esp32s2 elf2image --flash_mode dio --flash_freq 80m --flash_size 2MB --elf-sha256-offset 0xb0 -o /Users/user/esp/CECS490/led_blinky/build/led_blinky.bin /Users/user/esp/CECS490/led_blinky/build/led_blinky.elf
-	/Applications/CMake.app/Contents/bin/cmake -E echo "Generated /Users/user/esp/CECS490/led_blinky/build/led_blinky.bin"
-	/Applications/CMake.app/Contents/bin/cmake -E md5sum /Users/user/esp/CECS490/led_blinky/build/led_blinky.bin > /Users/user/esp/CECS490/led_blinky/build/.bin_timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating binary image from built executable"
+	/Users/user/.espressif/python_env/idf5.0_py3.9_env/bin/python /Users/user/esp/esp-idf/components/esptool_py/esptool/esptool.py --chip esp32s2 elf2image --flash_mode dio --flash_freq 80m --flash_size 2MB --elf-sha256-offset 0xb0 -o /Users/user/esp/CECS490/demo_1/build/led_blinky.bin /Users/user/esp/CECS490/demo_1/build/led_blinky.elf
+	/Applications/CMake.app/Contents/bin/cmake -E echo "Generated /Users/user/esp/CECS490/demo_1/build/led_blinky.bin"
+	/Applications/CMake.app/Contents/bin/cmake -E md5sum /Users/user/esp/CECS490/demo_1/build/led_blinky.bin > /Users/user/esp/CECS490/demo_1/build/.bin_timestamp
 
 gen_project_binary: .bin_timestamp
 gen_project_binary: CMakeFiles/gen_project_binary
@@ -88,6 +88,6 @@ CMakeFiles/gen_project_binary.dir/clean:
 .PHONY : CMakeFiles/gen_project_binary.dir/clean
 
 CMakeFiles/gen_project_binary.dir/depend:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/CECS490/led_blinky /Users/user/esp/CECS490/led_blinky /Users/user/esp/CECS490/led_blinky/build /Users/user/esp/CECS490/led_blinky/build /Users/user/esp/CECS490/led_blinky/build/CMakeFiles/gen_project_binary.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/CECS490/demo_1 /Users/user/esp/CECS490/demo_1 /Users/user/esp/CECS490/demo_1/build /Users/user/esp/CECS490/demo_1/build /Users/user/esp/CECS490/demo_1/build/CMakeFiles/gen_project_binary.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/gen_project_binary.dir/depend
 

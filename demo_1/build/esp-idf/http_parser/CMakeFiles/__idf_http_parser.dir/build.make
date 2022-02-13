@@ -53,10 +53,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/led_blinky
+CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/demo_1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/user/esp/CECS490/led_blinky/build
+CMAKE_BINARY_DIR = /Users/user/esp/CECS490/demo_1/build
 
 # Include any dependencies generated for this target.
 include esp-idf/http_parser/CMakeFiles/__idf_http_parser.dir/depend.make
@@ -72,16 +72,16 @@ include esp-idf/http_parser/CMakeFiles/__idf_http_parser.dir/flags.make
 esp-idf/http_parser/CMakeFiles/__idf_http_parser.dir/http_parser.c.obj: esp-idf/http_parser/CMakeFiles/__idf_http_parser.dir/flags.make
 esp-idf/http_parser/CMakeFiles/__idf_http_parser.dir/http_parser.c.obj: /Users/user/esp/esp-idf/components/http_parser/http_parser.c
 esp-idf/http_parser/CMakeFiles/__idf_http_parser.dir/http_parser.c.obj: esp-idf/http_parser/CMakeFiles/__idf_http_parser.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/http_parser/CMakeFiles/__idf_http_parser.dir/http_parser.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/http_parser && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/http_parser/CMakeFiles/__idf_http_parser.dir/http_parser.c.obj -MF CMakeFiles/__idf_http_parser.dir/http_parser.c.obj.d -o CMakeFiles/__idf_http_parser.dir/http_parser.c.obj -c /Users/user/esp/esp-idf/components/http_parser/http_parser.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/http_parser/CMakeFiles/__idf_http_parser.dir/http_parser.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/http_parser && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/http_parser/CMakeFiles/__idf_http_parser.dir/http_parser.c.obj -MF CMakeFiles/__idf_http_parser.dir/http_parser.c.obj.d -o CMakeFiles/__idf_http_parser.dir/http_parser.c.obj -c /Users/user/esp/esp-idf/components/http_parser/http_parser.c
 
 esp-idf/http_parser/CMakeFiles/__idf_http_parser.dir/http_parser.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_http_parser.dir/http_parser.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/http_parser && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/http_parser/http_parser.c > CMakeFiles/__idf_http_parser.dir/http_parser.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/http_parser && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/http_parser/http_parser.c > CMakeFiles/__idf_http_parser.dir/http_parser.c.i
 
 esp-idf/http_parser/CMakeFiles/__idf_http_parser.dir/http_parser.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_http_parser.dir/http_parser.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/http_parser && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/http_parser/http_parser.c -o CMakeFiles/__idf_http_parser.dir/http_parser.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/http_parser && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/http_parser/http_parser.c -o CMakeFiles/__idf_http_parser.dir/http_parser.c.s
 
 # Object files for target __idf_http_parser
 __idf_http_parser_OBJECTS = \
@@ -93,19 +93,19 @@ __idf_http_parser_EXTERNAL_OBJECTS =
 esp-idf/http_parser/libhttp_parser.a: esp-idf/http_parser/CMakeFiles/__idf_http_parser.dir/http_parser.c.obj
 esp-idf/http_parser/libhttp_parser.a: esp-idf/http_parser/CMakeFiles/__idf_http_parser.dir/build.make
 esp-idf/http_parser/libhttp_parser.a: esp-idf/http_parser/CMakeFiles/__idf_http_parser.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libhttp_parser.a"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/http_parser && $(CMAKE_COMMAND) -P CMakeFiles/__idf_http_parser.dir/cmake_clean_target.cmake
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/http_parser && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/__idf_http_parser.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libhttp_parser.a"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/http_parser && $(CMAKE_COMMAND) -P CMakeFiles/__idf_http_parser.dir/cmake_clean_target.cmake
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/http_parser && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/__idf_http_parser.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 esp-idf/http_parser/CMakeFiles/__idf_http_parser.dir/build: esp-idf/http_parser/libhttp_parser.a
 .PHONY : esp-idf/http_parser/CMakeFiles/__idf_http_parser.dir/build
 
 esp-idf/http_parser/CMakeFiles/__idf_http_parser.dir/clean:
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/http_parser && $(CMAKE_COMMAND) -P CMakeFiles/__idf_http_parser.dir/cmake_clean.cmake
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/http_parser && $(CMAKE_COMMAND) -P CMakeFiles/__idf_http_parser.dir/cmake_clean.cmake
 .PHONY : esp-idf/http_parser/CMakeFiles/__idf_http_parser.dir/clean
 
 esp-idf/http_parser/CMakeFiles/__idf_http_parser.dir/depend:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/CECS490/led_blinky /Users/user/esp/esp-idf/components/http_parser /Users/user/esp/CECS490/led_blinky/build /Users/user/esp/CECS490/led_blinky/build/esp-idf/http_parser /Users/user/esp/CECS490/led_blinky/build/esp-idf/http_parser/CMakeFiles/__idf_http_parser.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/CECS490/demo_1 /Users/user/esp/esp-idf/components/http_parser /Users/user/esp/CECS490/demo_1/build /Users/user/esp/CECS490/demo_1/build/esp-idf/http_parser /Users/user/esp/CECS490/demo_1/build/esp-idf/http_parser/CMakeFiles/__idf_http_parser.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : esp-idf/http_parser/CMakeFiles/__idf_http_parser.dir/depend
 

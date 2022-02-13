@@ -60,7 +60,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /Users/user/esp/esp-idf/components/bootloader/subproject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/user/esp/CECS490/led_blinky/build/bootloader
+CMAKE_BINARY_DIR = /Users/user/esp/CECS490/demo_1/build/bootloader
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/led_blinky/build/bootloader/CMakeFiles /Users/user/esp/CECS490/led_blinky/build/bootloader/esp-idf/log//CMakeFiles/progress.marks
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/log/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/led_blinky/build/bootloader/CMakeFiles 0
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/demo_1/build/bootloader/CMakeFiles /Users/user/esp/CECS490/demo_1/build/bootloader/esp-idf/log//CMakeFiles/progress.marks
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/log/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/demo_1/build/bootloader/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/log/clean
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/log/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/log/preinstall
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/log/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/log/preinstall
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/log/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 esp-idf/log/CMakeFiles/__idf_log.dir/rule:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/log/CMakeFiles/__idf_log.dir/rule
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/log/CMakeFiles/__idf_log.dir/rule
 .PHONY : esp-idf/log/CMakeFiles/__idf_log.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ __idf_log: esp-idf/log/CMakeFiles/__idf_log.dir/rule
 
 # fast build rule for target.
 __idf_log/fast:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/log/CMakeFiles/__idf_log.dir/build.make esp-idf/log/CMakeFiles/__idf_log.dir/build
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/log/CMakeFiles/__idf_log.dir/build.make esp-idf/log/CMakeFiles/__idf_log.dir/build
 .PHONY : __idf_log/fast
 
 log.obj: log.c.obj
@@ -135,7 +135,7 @@ log.obj: log.c.obj
 
 # target to build an object file
 log.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/log/CMakeFiles/__idf_log.dir/build.make esp-idf/log/CMakeFiles/__idf_log.dir/log.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/log/CMakeFiles/__idf_log.dir/build.make esp-idf/log/CMakeFiles/__idf_log.dir/log.c.obj
 .PHONY : log.c.obj
 
 log.i: log.c.i
@@ -143,7 +143,7 @@ log.i: log.c.i
 
 # target to preprocess a source file
 log.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/log/CMakeFiles/__idf_log.dir/build.make esp-idf/log/CMakeFiles/__idf_log.dir/log.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/log/CMakeFiles/__idf_log.dir/build.make esp-idf/log/CMakeFiles/__idf_log.dir/log.c.i
 .PHONY : log.c.i
 
 log.s: log.c.s
@@ -151,7 +151,7 @@ log.s: log.c.s
 
 # target to generate assembly for a file
 log.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/log/CMakeFiles/__idf_log.dir/build.make esp-idf/log/CMakeFiles/__idf_log.dir/log.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/log/CMakeFiles/__idf_log.dir/build.make esp-idf/log/CMakeFiles/__idf_log.dir/log.c.s
 .PHONY : log.c.s
 
 log_buffers.obj: log_buffers.c.obj
@@ -159,7 +159,7 @@ log_buffers.obj: log_buffers.c.obj
 
 # target to build an object file
 log_buffers.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/log/CMakeFiles/__idf_log.dir/build.make esp-idf/log/CMakeFiles/__idf_log.dir/log_buffers.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/log/CMakeFiles/__idf_log.dir/build.make esp-idf/log/CMakeFiles/__idf_log.dir/log_buffers.c.obj
 .PHONY : log_buffers.c.obj
 
 log_buffers.i: log_buffers.c.i
@@ -167,7 +167,7 @@ log_buffers.i: log_buffers.c.i
 
 # target to preprocess a source file
 log_buffers.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/log/CMakeFiles/__idf_log.dir/build.make esp-idf/log/CMakeFiles/__idf_log.dir/log_buffers.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/log/CMakeFiles/__idf_log.dir/build.make esp-idf/log/CMakeFiles/__idf_log.dir/log_buffers.c.i
 .PHONY : log_buffers.c.i
 
 log_buffers.s: log_buffers.c.s
@@ -175,7 +175,7 @@ log_buffers.s: log_buffers.c.s
 
 # target to generate assembly for a file
 log_buffers.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/log/CMakeFiles/__idf_log.dir/build.make esp-idf/log/CMakeFiles/__idf_log.dir/log_buffers.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/log/CMakeFiles/__idf_log.dir/build.make esp-idf/log/CMakeFiles/__idf_log.dir/log_buffers.c.s
 .PHONY : log_buffers.c.s
 
 log_noos.obj: log_noos.c.obj
@@ -183,7 +183,7 @@ log_noos.obj: log_noos.c.obj
 
 # target to build an object file
 log_noos.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/log/CMakeFiles/__idf_log.dir/build.make esp-idf/log/CMakeFiles/__idf_log.dir/log_noos.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/log/CMakeFiles/__idf_log.dir/build.make esp-idf/log/CMakeFiles/__idf_log.dir/log_noos.c.obj
 .PHONY : log_noos.c.obj
 
 log_noos.i: log_noos.c.i
@@ -191,7 +191,7 @@ log_noos.i: log_noos.c.i
 
 # target to preprocess a source file
 log_noos.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/log/CMakeFiles/__idf_log.dir/build.make esp-idf/log/CMakeFiles/__idf_log.dir/log_noos.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/log/CMakeFiles/__idf_log.dir/build.make esp-idf/log/CMakeFiles/__idf_log.dir/log_noos.c.i
 .PHONY : log_noos.c.i
 
 log_noos.s: log_noos.c.s
@@ -199,7 +199,7 @@ log_noos.s: log_noos.c.s
 
 # target to generate assembly for a file
 log_noos.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/log/CMakeFiles/__idf_log.dir/build.make esp-idf/log/CMakeFiles/__idf_log.dir/log_noos.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/log/CMakeFiles/__idf_log.dir/build.make esp-idf/log/CMakeFiles/__idf_log.dir/log_noos.c.s
 .PHONY : log_noos.c.s
 
 # Help Target
@@ -231,6 +231,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

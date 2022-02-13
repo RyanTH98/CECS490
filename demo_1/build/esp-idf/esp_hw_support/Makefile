@@ -57,10 +57,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/led_blinky
+CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/demo_1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/user/esp/CECS490/led_blinky/build
+CMAKE_BINARY_DIR = /Users/user/esp/CECS490/demo_1/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/led_blinky/build/CMakeFiles /Users/user/esp/CECS490/led_blinky/build/esp-idf/esp_hw_support//CMakeFiles/progress.marks
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_hw_support/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/led_blinky/build/CMakeFiles 0
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/demo_1/build/CMakeFiles /Users/user/esp/CECS490/demo_1/build/esp-idf/esp_hw_support//CMakeFiles/progress.marks
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_hw_support/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/demo_1/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_hw_support/clean
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_hw_support/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_hw_support/preinstall
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_hw_support/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_hw_support/preinstall
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_hw_support/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/rule:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/rule
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/rule
 .PHONY : esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/rule
 
 # Convenience name for target.
@@ -172,7 +172,7 @@ __idf_esp_hw_support: esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir
 
 # fast build rule for target.
 __idf_esp_hw_support/fast:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build
 .PHONY : __idf_esp_hw_support/fast
 
 clk_ctrl_os.obj: clk_ctrl_os.c.obj
@@ -180,7 +180,7 @@ clk_ctrl_os.obj: clk_ctrl_os.c.obj
 
 # target to build an object file
 clk_ctrl_os.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/clk_ctrl_os.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/clk_ctrl_os.c.obj
 .PHONY : clk_ctrl_os.c.obj
 
 clk_ctrl_os.i: clk_ctrl_os.c.i
@@ -188,7 +188,7 @@ clk_ctrl_os.i: clk_ctrl_os.c.i
 
 # target to preprocess a source file
 clk_ctrl_os.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/clk_ctrl_os.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/clk_ctrl_os.c.i
 .PHONY : clk_ctrl_os.c.i
 
 clk_ctrl_os.s: clk_ctrl_os.c.s
@@ -196,7 +196,7 @@ clk_ctrl_os.s: clk_ctrl_os.c.s
 
 # target to generate assembly for a file
 clk_ctrl_os.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/clk_ctrl_os.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/clk_ctrl_os.c.s
 .PHONY : clk_ctrl_os.c.s
 
 compare_set.obj: compare_set.c.obj
@@ -204,7 +204,7 @@ compare_set.obj: compare_set.c.obj
 
 # target to build an object file
 compare_set.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/compare_set.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/compare_set.c.obj
 .PHONY : compare_set.c.obj
 
 compare_set.i: compare_set.c.i
@@ -212,7 +212,7 @@ compare_set.i: compare_set.c.i
 
 # target to preprocess a source file
 compare_set.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/compare_set.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/compare_set.c.i
 .PHONY : compare_set.c.i
 
 compare_set.s: compare_set.c.s
@@ -220,7 +220,7 @@ compare_set.s: compare_set.c.s
 
 # target to generate assembly for a file
 compare_set.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/compare_set.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/compare_set.c.s
 .PHONY : compare_set.c.s
 
 cpu_util.obj: cpu_util.c.obj
@@ -228,7 +228,7 @@ cpu_util.obj: cpu_util.c.obj
 
 # target to build an object file
 cpu_util.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/cpu_util.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/cpu_util.c.obj
 .PHONY : cpu_util.c.obj
 
 cpu_util.i: cpu_util.c.i
@@ -236,7 +236,7 @@ cpu_util.i: cpu_util.c.i
 
 # target to preprocess a source file
 cpu_util.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/cpu_util.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/cpu_util.c.i
 .PHONY : cpu_util.c.i
 
 cpu_util.s: cpu_util.c.s
@@ -244,7 +244,7 @@ cpu_util.s: cpu_util.c.s
 
 # target to generate assembly for a file
 cpu_util.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/cpu_util.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/cpu_util.c.s
 .PHONY : cpu_util.c.s
 
 esp_async_memcpy.obj: esp_async_memcpy.c.obj
@@ -252,7 +252,7 @@ esp_async_memcpy.obj: esp_async_memcpy.c.obj
 
 # target to build an object file
 esp_async_memcpy.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/esp_async_memcpy.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/esp_async_memcpy.c.obj
 .PHONY : esp_async_memcpy.c.obj
 
 esp_async_memcpy.i: esp_async_memcpy.c.i
@@ -260,7 +260,7 @@ esp_async_memcpy.i: esp_async_memcpy.c.i
 
 # target to preprocess a source file
 esp_async_memcpy.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/esp_async_memcpy.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/esp_async_memcpy.c.i
 .PHONY : esp_async_memcpy.c.i
 
 esp_async_memcpy.s: esp_async_memcpy.c.s
@@ -268,7 +268,7 @@ esp_async_memcpy.s: esp_async_memcpy.c.s
 
 # target to generate assembly for a file
 esp_async_memcpy.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/esp_async_memcpy.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/esp_async_memcpy.c.s
 .PHONY : esp_async_memcpy.c.s
 
 esp_clk.obj: esp_clk.c.obj
@@ -276,7 +276,7 @@ esp_clk.obj: esp_clk.c.obj
 
 # target to build an object file
 esp_clk.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/esp_clk.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/esp_clk.c.obj
 .PHONY : esp_clk.c.obj
 
 esp_clk.i: esp_clk.c.i
@@ -284,7 +284,7 @@ esp_clk.i: esp_clk.c.i
 
 # target to preprocess a source file
 esp_clk.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/esp_clk.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/esp_clk.c.i
 .PHONY : esp_clk.c.i
 
 esp_clk.s: esp_clk.c.s
@@ -292,7 +292,7 @@ esp_clk.s: esp_clk.c.s
 
 # target to generate assembly for a file
 esp_clk.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/esp_clk.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/esp_clk.c.s
 .PHONY : esp_clk.c.s
 
 hw_random.obj: hw_random.c.obj
@@ -300,7 +300,7 @@ hw_random.obj: hw_random.c.obj
 
 # target to build an object file
 hw_random.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/hw_random.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/hw_random.c.obj
 .PHONY : hw_random.c.obj
 
 hw_random.i: hw_random.c.i
@@ -308,7 +308,7 @@ hw_random.i: hw_random.c.i
 
 # target to preprocess a source file
 hw_random.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/hw_random.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/hw_random.c.i
 .PHONY : hw_random.c.i
 
 hw_random.s: hw_random.c.s
@@ -316,7 +316,7 @@ hw_random.s: hw_random.c.s
 
 # target to generate assembly for a file
 hw_random.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/hw_random.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/hw_random.c.s
 .PHONY : hw_random.c.s
 
 intr_alloc.obj: intr_alloc.c.obj
@@ -324,7 +324,7 @@ intr_alloc.obj: intr_alloc.c.obj
 
 # target to build an object file
 intr_alloc.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/intr_alloc.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/intr_alloc.c.obj
 .PHONY : intr_alloc.c.obj
 
 intr_alloc.i: intr_alloc.c.i
@@ -332,7 +332,7 @@ intr_alloc.i: intr_alloc.c.i
 
 # target to preprocess a source file
 intr_alloc.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/intr_alloc.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/intr_alloc.c.i
 .PHONY : intr_alloc.c.i
 
 intr_alloc.s: intr_alloc.c.s
@@ -340,7 +340,7 @@ intr_alloc.s: intr_alloc.c.s
 
 # target to generate assembly for a file
 intr_alloc.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/intr_alloc.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/intr_alloc.c.s
 .PHONY : intr_alloc.c.s
 
 mac_addr.obj: mac_addr.c.obj
@@ -348,7 +348,7 @@ mac_addr.obj: mac_addr.c.obj
 
 # target to build an object file
 mac_addr.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/mac_addr.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/mac_addr.c.obj
 .PHONY : mac_addr.c.obj
 
 mac_addr.i: mac_addr.c.i
@@ -356,7 +356,7 @@ mac_addr.i: mac_addr.c.i
 
 # target to preprocess a source file
 mac_addr.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/mac_addr.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/mac_addr.c.i
 .PHONY : mac_addr.c.i
 
 mac_addr.s: mac_addr.c.s
@@ -364,7 +364,7 @@ mac_addr.s: mac_addr.c.s
 
 # target to generate assembly for a file
 mac_addr.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/mac_addr.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/mac_addr.c.s
 .PHONY : mac_addr.c.s
 
 port/esp32s2/async_memcpy_impl_cp_dma.obj: port/esp32s2/async_memcpy_impl_cp_dma.c.obj
@@ -372,7 +372,7 @@ port/esp32s2/async_memcpy_impl_cp_dma.obj: port/esp32s2/async_memcpy_impl_cp_dma
 
 # target to build an object file
 port/esp32s2/async_memcpy_impl_cp_dma.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/async_memcpy_impl_cp_dma.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/async_memcpy_impl_cp_dma.c.obj
 .PHONY : port/esp32s2/async_memcpy_impl_cp_dma.c.obj
 
 port/esp32s2/async_memcpy_impl_cp_dma.i: port/esp32s2/async_memcpy_impl_cp_dma.c.i
@@ -380,7 +380,7 @@ port/esp32s2/async_memcpy_impl_cp_dma.i: port/esp32s2/async_memcpy_impl_cp_dma.c
 
 # target to preprocess a source file
 port/esp32s2/async_memcpy_impl_cp_dma.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/async_memcpy_impl_cp_dma.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/async_memcpy_impl_cp_dma.c.i
 .PHONY : port/esp32s2/async_memcpy_impl_cp_dma.c.i
 
 port/esp32s2/async_memcpy_impl_cp_dma.s: port/esp32s2/async_memcpy_impl_cp_dma.c.s
@@ -388,7 +388,7 @@ port/esp32s2/async_memcpy_impl_cp_dma.s: port/esp32s2/async_memcpy_impl_cp_dma.c
 
 # target to generate assembly for a file
 port/esp32s2/async_memcpy_impl_cp_dma.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/async_memcpy_impl_cp_dma.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/async_memcpy_impl_cp_dma.c.s
 .PHONY : port/esp32s2/async_memcpy_impl_cp_dma.c.s
 
 port/esp32s2/chip_info.obj: port/esp32s2/chip_info.c.obj
@@ -396,7 +396,7 @@ port/esp32s2/chip_info.obj: port/esp32s2/chip_info.c.obj
 
 # target to build an object file
 port/esp32s2/chip_info.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/chip_info.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/chip_info.c.obj
 .PHONY : port/esp32s2/chip_info.c.obj
 
 port/esp32s2/chip_info.i: port/esp32s2/chip_info.c.i
@@ -404,7 +404,7 @@ port/esp32s2/chip_info.i: port/esp32s2/chip_info.c.i
 
 # target to preprocess a source file
 port/esp32s2/chip_info.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/chip_info.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/chip_info.c.i
 .PHONY : port/esp32s2/chip_info.c.i
 
 port/esp32s2/chip_info.s: port/esp32s2/chip_info.c.s
@@ -412,7 +412,7 @@ port/esp32s2/chip_info.s: port/esp32s2/chip_info.c.s
 
 # target to generate assembly for a file
 port/esp32s2/chip_info.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/chip_info.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/chip_info.c.s
 .PHONY : port/esp32s2/chip_info.c.s
 
 port/esp32s2/dport_access.obj: port/esp32s2/dport_access.c.obj
@@ -420,7 +420,7 @@ port/esp32s2/dport_access.obj: port/esp32s2/dport_access.c.obj
 
 # target to build an object file
 port/esp32s2/dport_access.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/dport_access.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/dport_access.c.obj
 .PHONY : port/esp32s2/dport_access.c.obj
 
 port/esp32s2/dport_access.i: port/esp32s2/dport_access.c.i
@@ -428,7 +428,7 @@ port/esp32s2/dport_access.i: port/esp32s2/dport_access.c.i
 
 # target to preprocess a source file
 port/esp32s2/dport_access.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/dport_access.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/dport_access.c.i
 .PHONY : port/esp32s2/dport_access.c.i
 
 port/esp32s2/dport_access.s: port/esp32s2/dport_access.c.s
@@ -436,7 +436,7 @@ port/esp32s2/dport_access.s: port/esp32s2/dport_access.c.s
 
 # target to generate assembly for a file
 port/esp32s2/dport_access.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/dport_access.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/dport_access.c.s
 .PHONY : port/esp32s2/dport_access.c.s
 
 port/esp32s2/esp_crypto_lock.obj: port/esp32s2/esp_crypto_lock.c.obj
@@ -444,7 +444,7 @@ port/esp32s2/esp_crypto_lock.obj: port/esp32s2/esp_crypto_lock.c.obj
 
 # target to build an object file
 port/esp32s2/esp_crypto_lock.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/esp_crypto_lock.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/esp_crypto_lock.c.obj
 .PHONY : port/esp32s2/esp_crypto_lock.c.obj
 
 port/esp32s2/esp_crypto_lock.i: port/esp32s2/esp_crypto_lock.c.i
@@ -452,7 +452,7 @@ port/esp32s2/esp_crypto_lock.i: port/esp32s2/esp_crypto_lock.c.i
 
 # target to preprocess a source file
 port/esp32s2/esp_crypto_lock.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/esp_crypto_lock.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/esp_crypto_lock.c.i
 .PHONY : port/esp32s2/esp_crypto_lock.c.i
 
 port/esp32s2/esp_crypto_lock.s: port/esp32s2/esp_crypto_lock.c.s
@@ -460,7 +460,7 @@ port/esp32s2/esp_crypto_lock.s: port/esp32s2/esp_crypto_lock.c.s
 
 # target to generate assembly for a file
 port/esp32s2/esp_crypto_lock.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/esp_crypto_lock.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/esp_crypto_lock.c.s
 .PHONY : port/esp32s2/esp_crypto_lock.c.s
 
 port/esp32s2/esp_ds.obj: port/esp32s2/esp_ds.c.obj
@@ -468,7 +468,7 @@ port/esp32s2/esp_ds.obj: port/esp32s2/esp_ds.c.obj
 
 # target to build an object file
 port/esp32s2/esp_ds.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/esp_ds.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/esp_ds.c.obj
 .PHONY : port/esp32s2/esp_ds.c.obj
 
 port/esp32s2/esp_ds.i: port/esp32s2/esp_ds.c.i
@@ -476,7 +476,7 @@ port/esp32s2/esp_ds.i: port/esp32s2/esp_ds.c.i
 
 # target to preprocess a source file
 port/esp32s2/esp_ds.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/esp_ds.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/esp_ds.c.i
 .PHONY : port/esp32s2/esp_ds.c.i
 
 port/esp32s2/esp_ds.s: port/esp32s2/esp_ds.c.s
@@ -484,7 +484,7 @@ port/esp32s2/esp_ds.s: port/esp32s2/esp_ds.c.s
 
 # target to generate assembly for a file
 port/esp32s2/esp_ds.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/esp_ds.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/esp_ds.c.s
 .PHONY : port/esp32s2/esp_ds.c.s
 
 port/esp32s2/esp_hmac.obj: port/esp32s2/esp_hmac.c.obj
@@ -492,7 +492,7 @@ port/esp32s2/esp_hmac.obj: port/esp32s2/esp_hmac.c.obj
 
 # target to build an object file
 port/esp32s2/esp_hmac.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/esp_hmac.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/esp_hmac.c.obj
 .PHONY : port/esp32s2/esp_hmac.c.obj
 
 port/esp32s2/esp_hmac.i: port/esp32s2/esp_hmac.c.i
@@ -500,7 +500,7 @@ port/esp32s2/esp_hmac.i: port/esp32s2/esp_hmac.c.i
 
 # target to preprocess a source file
 port/esp32s2/esp_hmac.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/esp_hmac.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/esp_hmac.c.i
 .PHONY : port/esp32s2/esp_hmac.c.i
 
 port/esp32s2/esp_hmac.s: port/esp32s2/esp_hmac.c.s
@@ -508,7 +508,7 @@ port/esp32s2/esp_hmac.s: port/esp32s2/esp_hmac.c.s
 
 # target to generate assembly for a file
 port/esp32s2/esp_hmac.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/esp_hmac.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/esp_hmac.c.s
 .PHONY : port/esp32s2/esp_hmac.c.s
 
 port/esp32s2/memprot.obj: port/esp32s2/memprot.c.obj
@@ -516,7 +516,7 @@ port/esp32s2/memprot.obj: port/esp32s2/memprot.c.obj
 
 # target to build an object file
 port/esp32s2/memprot.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/memprot.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/memprot.c.obj
 .PHONY : port/esp32s2/memprot.c.obj
 
 port/esp32s2/memprot.i: port/esp32s2/memprot.c.i
@@ -524,7 +524,7 @@ port/esp32s2/memprot.i: port/esp32s2/memprot.c.i
 
 # target to preprocess a source file
 port/esp32s2/memprot.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/memprot.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/memprot.c.i
 .PHONY : port/esp32s2/memprot.c.i
 
 port/esp32s2/memprot.s: port/esp32s2/memprot.c.s
@@ -532,7 +532,7 @@ port/esp32s2/memprot.s: port/esp32s2/memprot.c.s
 
 # target to generate assembly for a file
 port/esp32s2/memprot.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/memprot.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/memprot.c.s
 .PHONY : port/esp32s2/memprot.c.s
 
 port/esp32s2/mmu_psram.obj: port/esp32s2/mmu_psram.c.obj
@@ -540,7 +540,7 @@ port/esp32s2/mmu_psram.obj: port/esp32s2/mmu_psram.c.obj
 
 # target to build an object file
 port/esp32s2/mmu_psram.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/mmu_psram.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/mmu_psram.c.obj
 .PHONY : port/esp32s2/mmu_psram.c.obj
 
 port/esp32s2/mmu_psram.i: port/esp32s2/mmu_psram.c.i
@@ -548,7 +548,7 @@ port/esp32s2/mmu_psram.i: port/esp32s2/mmu_psram.c.i
 
 # target to preprocess a source file
 port/esp32s2/mmu_psram.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/mmu_psram.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/mmu_psram.c.i
 .PHONY : port/esp32s2/mmu_psram.c.i
 
 port/esp32s2/mmu_psram.s: port/esp32s2/mmu_psram.c.s
@@ -556,7 +556,7 @@ port/esp32s2/mmu_psram.s: port/esp32s2/mmu_psram.c.s
 
 # target to generate assembly for a file
 port/esp32s2/mmu_psram.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/mmu_psram.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/mmu_psram.c.s
 .PHONY : port/esp32s2/mmu_psram.c.s
 
 port/esp32s2/regi2c_ctrl.obj: port/esp32s2/regi2c_ctrl.c.obj
@@ -564,7 +564,7 @@ port/esp32s2/regi2c_ctrl.obj: port/esp32s2/regi2c_ctrl.c.obj
 
 # target to build an object file
 port/esp32s2/regi2c_ctrl.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/regi2c_ctrl.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/regi2c_ctrl.c.obj
 .PHONY : port/esp32s2/regi2c_ctrl.c.obj
 
 port/esp32s2/regi2c_ctrl.i: port/esp32s2/regi2c_ctrl.c.i
@@ -572,7 +572,7 @@ port/esp32s2/regi2c_ctrl.i: port/esp32s2/regi2c_ctrl.c.i
 
 # target to preprocess a source file
 port/esp32s2/regi2c_ctrl.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/regi2c_ctrl.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/regi2c_ctrl.c.i
 .PHONY : port/esp32s2/regi2c_ctrl.c.i
 
 port/esp32s2/regi2c_ctrl.s: port/esp32s2/regi2c_ctrl.c.s
@@ -580,7 +580,7 @@ port/esp32s2/regi2c_ctrl.s: port/esp32s2/regi2c_ctrl.c.s
 
 # target to generate assembly for a file
 port/esp32s2/regi2c_ctrl.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/regi2c_ctrl.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/regi2c_ctrl.c.s
 .PHONY : port/esp32s2/regi2c_ctrl.c.s
 
 port/esp32s2/rtc_clk.obj: port/esp32s2/rtc_clk.c.obj
@@ -588,7 +588,7 @@ port/esp32s2/rtc_clk.obj: port/esp32s2/rtc_clk.c.obj
 
 # target to build an object file
 port/esp32s2/rtc_clk.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_clk.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_clk.c.obj
 .PHONY : port/esp32s2/rtc_clk.c.obj
 
 port/esp32s2/rtc_clk.i: port/esp32s2/rtc_clk.c.i
@@ -596,7 +596,7 @@ port/esp32s2/rtc_clk.i: port/esp32s2/rtc_clk.c.i
 
 # target to preprocess a source file
 port/esp32s2/rtc_clk.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_clk.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_clk.c.i
 .PHONY : port/esp32s2/rtc_clk.c.i
 
 port/esp32s2/rtc_clk.s: port/esp32s2/rtc_clk.c.s
@@ -604,7 +604,7 @@ port/esp32s2/rtc_clk.s: port/esp32s2/rtc_clk.c.s
 
 # target to generate assembly for a file
 port/esp32s2/rtc_clk.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_clk.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_clk.c.s
 .PHONY : port/esp32s2/rtc_clk.c.s
 
 port/esp32s2/rtc_clk_init.obj: port/esp32s2/rtc_clk_init.c.obj
@@ -612,7 +612,7 @@ port/esp32s2/rtc_clk_init.obj: port/esp32s2/rtc_clk_init.c.obj
 
 # target to build an object file
 port/esp32s2/rtc_clk_init.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_clk_init.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_clk_init.c.obj
 .PHONY : port/esp32s2/rtc_clk_init.c.obj
 
 port/esp32s2/rtc_clk_init.i: port/esp32s2/rtc_clk_init.c.i
@@ -620,7 +620,7 @@ port/esp32s2/rtc_clk_init.i: port/esp32s2/rtc_clk_init.c.i
 
 # target to preprocess a source file
 port/esp32s2/rtc_clk_init.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_clk_init.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_clk_init.c.i
 .PHONY : port/esp32s2/rtc_clk_init.c.i
 
 port/esp32s2/rtc_clk_init.s: port/esp32s2/rtc_clk_init.c.s
@@ -628,7 +628,7 @@ port/esp32s2/rtc_clk_init.s: port/esp32s2/rtc_clk_init.c.s
 
 # target to generate assembly for a file
 port/esp32s2/rtc_clk_init.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_clk_init.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_clk_init.c.s
 .PHONY : port/esp32s2/rtc_clk_init.c.s
 
 port/esp32s2/rtc_init.obj: port/esp32s2/rtc_init.c.obj
@@ -636,7 +636,7 @@ port/esp32s2/rtc_init.obj: port/esp32s2/rtc_init.c.obj
 
 # target to build an object file
 port/esp32s2/rtc_init.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_init.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_init.c.obj
 .PHONY : port/esp32s2/rtc_init.c.obj
 
 port/esp32s2/rtc_init.i: port/esp32s2/rtc_init.c.i
@@ -644,7 +644,7 @@ port/esp32s2/rtc_init.i: port/esp32s2/rtc_init.c.i
 
 # target to preprocess a source file
 port/esp32s2/rtc_init.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_init.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_init.c.i
 .PHONY : port/esp32s2/rtc_init.c.i
 
 port/esp32s2/rtc_init.s: port/esp32s2/rtc_init.c.s
@@ -652,7 +652,7 @@ port/esp32s2/rtc_init.s: port/esp32s2/rtc_init.c.s
 
 # target to generate assembly for a file
 port/esp32s2/rtc_init.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_init.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_init.c.s
 .PHONY : port/esp32s2/rtc_init.c.s
 
 port/esp32s2/rtc_pm.obj: port/esp32s2/rtc_pm.c.obj
@@ -660,7 +660,7 @@ port/esp32s2/rtc_pm.obj: port/esp32s2/rtc_pm.c.obj
 
 # target to build an object file
 port/esp32s2/rtc_pm.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_pm.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_pm.c.obj
 .PHONY : port/esp32s2/rtc_pm.c.obj
 
 port/esp32s2/rtc_pm.i: port/esp32s2/rtc_pm.c.i
@@ -668,7 +668,7 @@ port/esp32s2/rtc_pm.i: port/esp32s2/rtc_pm.c.i
 
 # target to preprocess a source file
 port/esp32s2/rtc_pm.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_pm.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_pm.c.i
 .PHONY : port/esp32s2/rtc_pm.c.i
 
 port/esp32s2/rtc_pm.s: port/esp32s2/rtc_pm.c.s
@@ -676,7 +676,7 @@ port/esp32s2/rtc_pm.s: port/esp32s2/rtc_pm.c.s
 
 # target to generate assembly for a file
 port/esp32s2/rtc_pm.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_pm.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_pm.c.s
 .PHONY : port/esp32s2/rtc_pm.c.s
 
 port/esp32s2/rtc_sleep.obj: port/esp32s2/rtc_sleep.c.obj
@@ -684,7 +684,7 @@ port/esp32s2/rtc_sleep.obj: port/esp32s2/rtc_sleep.c.obj
 
 # target to build an object file
 port/esp32s2/rtc_sleep.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_sleep.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_sleep.c.obj
 .PHONY : port/esp32s2/rtc_sleep.c.obj
 
 port/esp32s2/rtc_sleep.i: port/esp32s2/rtc_sleep.c.i
@@ -692,7 +692,7 @@ port/esp32s2/rtc_sleep.i: port/esp32s2/rtc_sleep.c.i
 
 # target to preprocess a source file
 port/esp32s2/rtc_sleep.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_sleep.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_sleep.c.i
 .PHONY : port/esp32s2/rtc_sleep.c.i
 
 port/esp32s2/rtc_sleep.s: port/esp32s2/rtc_sleep.c.s
@@ -700,7 +700,7 @@ port/esp32s2/rtc_sleep.s: port/esp32s2/rtc_sleep.c.s
 
 # target to generate assembly for a file
 port/esp32s2/rtc_sleep.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_sleep.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_sleep.c.s
 .PHONY : port/esp32s2/rtc_sleep.c.s
 
 port/esp32s2/rtc_time.obj: port/esp32s2/rtc_time.c.obj
@@ -708,7 +708,7 @@ port/esp32s2/rtc_time.obj: port/esp32s2/rtc_time.c.obj
 
 # target to build an object file
 port/esp32s2/rtc_time.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_time.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_time.c.obj
 .PHONY : port/esp32s2/rtc_time.c.obj
 
 port/esp32s2/rtc_time.i: port/esp32s2/rtc_time.c.i
@@ -716,7 +716,7 @@ port/esp32s2/rtc_time.i: port/esp32s2/rtc_time.c.i
 
 # target to preprocess a source file
 port/esp32s2/rtc_time.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_time.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_time.c.i
 .PHONY : port/esp32s2/rtc_time.c.i
 
 port/esp32s2/rtc_time.s: port/esp32s2/rtc_time.c.s
@@ -724,7 +724,7 @@ port/esp32s2/rtc_time.s: port/esp32s2/rtc_time.c.s
 
 # target to generate assembly for a file
 port/esp32s2/rtc_time.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_time.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_time.c.s
 .PHONY : port/esp32s2/rtc_time.c.s
 
 port/esp32s2/rtc_wdt.obj: port/esp32s2/rtc_wdt.c.obj
@@ -732,7 +732,7 @@ port/esp32s2/rtc_wdt.obj: port/esp32s2/rtc_wdt.c.obj
 
 # target to build an object file
 port/esp32s2/rtc_wdt.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_wdt.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_wdt.c.obj
 .PHONY : port/esp32s2/rtc_wdt.c.obj
 
 port/esp32s2/rtc_wdt.i: port/esp32s2/rtc_wdt.c.i
@@ -740,7 +740,7 @@ port/esp32s2/rtc_wdt.i: port/esp32s2/rtc_wdt.c.i
 
 # target to preprocess a source file
 port/esp32s2/rtc_wdt.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_wdt.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_wdt.c.i
 .PHONY : port/esp32s2/rtc_wdt.c.i
 
 port/esp32s2/rtc_wdt.s: port/esp32s2/rtc_wdt.c.s
@@ -748,7 +748,7 @@ port/esp32s2/rtc_wdt.s: port/esp32s2/rtc_wdt.c.s
 
 # target to generate assembly for a file
 port/esp32s2/rtc_wdt.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_wdt.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_wdt.c.s
 .PHONY : port/esp32s2/rtc_wdt.c.s
 
 port/esp32s2/spiram.obj: port/esp32s2/spiram.c.obj
@@ -756,7 +756,7 @@ port/esp32s2/spiram.obj: port/esp32s2/spiram.c.obj
 
 # target to build an object file
 port/esp32s2/spiram.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/spiram.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/spiram.c.obj
 .PHONY : port/esp32s2/spiram.c.obj
 
 port/esp32s2/spiram.i: port/esp32s2/spiram.c.i
@@ -764,7 +764,7 @@ port/esp32s2/spiram.i: port/esp32s2/spiram.c.i
 
 # target to preprocess a source file
 port/esp32s2/spiram.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/spiram.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/spiram.c.i
 .PHONY : port/esp32s2/spiram.c.i
 
 port/esp32s2/spiram.s: port/esp32s2/spiram.c.s
@@ -772,7 +772,7 @@ port/esp32s2/spiram.s: port/esp32s2/spiram.c.s
 
 # target to generate assembly for a file
 port/esp32s2/spiram.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/spiram.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/spiram.c.s
 .PHONY : port/esp32s2/spiram.c.s
 
 port/esp32s2/spiram_psram.obj: port/esp32s2/spiram_psram.c.obj
@@ -780,7 +780,7 @@ port/esp32s2/spiram_psram.obj: port/esp32s2/spiram_psram.c.obj
 
 # target to build an object file
 port/esp32s2/spiram_psram.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/spiram_psram.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/spiram_psram.c.obj
 .PHONY : port/esp32s2/spiram_psram.c.obj
 
 port/esp32s2/spiram_psram.i: port/esp32s2/spiram_psram.c.i
@@ -788,7 +788,7 @@ port/esp32s2/spiram_psram.i: port/esp32s2/spiram_psram.c.i
 
 # target to preprocess a source file
 port/esp32s2/spiram_psram.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/spiram_psram.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/spiram_psram.c.i
 .PHONY : port/esp32s2/spiram_psram.c.i
 
 port/esp32s2/spiram_psram.s: port/esp32s2/spiram_psram.c.s
@@ -796,7 +796,7 @@ port/esp32s2/spiram_psram.s: port/esp32s2/spiram_psram.c.s
 
 # target to generate assembly for a file
 port/esp32s2/spiram_psram.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/spiram_psram.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/spiram_psram.c.s
 .PHONY : port/esp32s2/spiram_psram.c.s
 
 regi2c_ctrl.obj: regi2c_ctrl.c.obj
@@ -804,7 +804,7 @@ regi2c_ctrl.obj: regi2c_ctrl.c.obj
 
 # target to build an object file
 regi2c_ctrl.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/regi2c_ctrl.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/regi2c_ctrl.c.obj
 .PHONY : regi2c_ctrl.c.obj
 
 regi2c_ctrl.i: regi2c_ctrl.c.i
@@ -812,7 +812,7 @@ regi2c_ctrl.i: regi2c_ctrl.c.i
 
 # target to preprocess a source file
 regi2c_ctrl.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/regi2c_ctrl.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/regi2c_ctrl.c.i
 .PHONY : regi2c_ctrl.c.i
 
 regi2c_ctrl.s: regi2c_ctrl.c.s
@@ -820,7 +820,7 @@ regi2c_ctrl.s: regi2c_ctrl.c.s
 
 # target to generate assembly for a file
 regi2c_ctrl.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/regi2c_ctrl.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/regi2c_ctrl.c.s
 .PHONY : regi2c_ctrl.c.s
 
 sleep_gpio.obj: sleep_gpio.c.obj
@@ -828,7 +828,7 @@ sleep_gpio.obj: sleep_gpio.c.obj
 
 # target to build an object file
 sleep_gpio.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/sleep_gpio.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/sleep_gpio.c.obj
 .PHONY : sleep_gpio.c.obj
 
 sleep_gpio.i: sleep_gpio.c.i
@@ -836,7 +836,7 @@ sleep_gpio.i: sleep_gpio.c.i
 
 # target to preprocess a source file
 sleep_gpio.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/sleep_gpio.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/sleep_gpio.c.i
 .PHONY : sleep_gpio.c.i
 
 sleep_gpio.s: sleep_gpio.c.s
@@ -844,7 +844,7 @@ sleep_gpio.s: sleep_gpio.c.s
 
 # target to generate assembly for a file
 sleep_gpio.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/sleep_gpio.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/sleep_gpio.c.s
 .PHONY : sleep_gpio.c.s
 
 sleep_mac_bb.obj: sleep_mac_bb.c.obj
@@ -852,7 +852,7 @@ sleep_mac_bb.obj: sleep_mac_bb.c.obj
 
 # target to build an object file
 sleep_mac_bb.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/sleep_mac_bb.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/sleep_mac_bb.c.obj
 .PHONY : sleep_mac_bb.c.obj
 
 sleep_mac_bb.i: sleep_mac_bb.c.i
@@ -860,7 +860,7 @@ sleep_mac_bb.i: sleep_mac_bb.c.i
 
 # target to preprocess a source file
 sleep_mac_bb.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/sleep_mac_bb.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/sleep_mac_bb.c.i
 .PHONY : sleep_mac_bb.c.i
 
 sleep_mac_bb.s: sleep_mac_bb.c.s
@@ -868,7 +868,7 @@ sleep_mac_bb.s: sleep_mac_bb.c.s
 
 # target to generate assembly for a file
 sleep_mac_bb.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/sleep_mac_bb.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/sleep_mac_bb.c.s
 .PHONY : sleep_mac_bb.c.s
 
 sleep_modes.obj: sleep_modes.c.obj
@@ -876,7 +876,7 @@ sleep_modes.obj: sleep_modes.c.obj
 
 # target to build an object file
 sleep_modes.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/sleep_modes.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/sleep_modes.c.obj
 .PHONY : sleep_modes.c.obj
 
 sleep_modes.i: sleep_modes.c.i
@@ -884,7 +884,7 @@ sleep_modes.i: sleep_modes.c.i
 
 # target to preprocess a source file
 sleep_modes.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/sleep_modes.c.i
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/sleep_modes.c.i
 .PHONY : sleep_modes.c.i
 
 sleep_modes.s: sleep_modes.c.s
@@ -892,7 +892,7 @@ sleep_modes.s: sleep_modes.c.s
 
 # target to generate assembly for a file
 sleep_modes.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/sleep_modes.c.s
+	cd /Users/user/esp/CECS490/demo_1/build && $(MAKE) $(MAKESILENT) -f esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/build.make esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/sleep_modes.c.s
 .PHONY : sleep_modes.c.s
 
 # Help Target
@@ -1009,6 +1009,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -2,7 +2,7 @@ esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedx509.dir/pkcs11.c.obj: \
  /Users/user/esp/esp-idf/components/mbedtls/mbedtls/library/pkcs11.c \
  /Users/user/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/pkcs11.h \
  /Users/user/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h \
- /Users/user/esp/CECS490/led_blinky/build/config/sdkconfig.h \
+ /Users/user/esp/CECS490/demo_1/build/config/sdkconfig.h \
  /Users/user/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/config.h \
  /Users/user/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h \
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/lib/gcc/xtensa-esp32s2-elf/8.4.0/include-fixed/limits.h \

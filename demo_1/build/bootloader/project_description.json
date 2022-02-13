@@ -1,8 +1,8 @@
 {
     "project_name":       "bootloader",
     "project_path":       "/Users/user/esp/esp-idf/components/bootloader/subproject",
-    "build_dir":          "/Users/user/esp/CECS490/led_blinky/build/bootloader",
-    "config_file":        "/Users/user/esp/CECS490/led_blinky/sdkconfig",
+    "build_dir":          "/Users/user/esp/CECS490/demo_1/build/bootloader",
+    "config_file":        "/Users/user/esp/CECS490/demo_1/sdkconfig",
     "config_defaults":    "",
     "app_elf":            "bootloader.elf",
     "app_bin":            "bootloader.bin",

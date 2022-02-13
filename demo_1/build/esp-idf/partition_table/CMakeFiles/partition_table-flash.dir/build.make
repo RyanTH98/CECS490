@@ -53,10 +53,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/led_blinky
+CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/demo_1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/user/esp/CECS490/led_blinky/build
+CMAKE_BINARY_DIR = /Users/user/esp/CECS490/demo_1/build
 
 # Utility rule file for partition_table-flash.
 
@@ -67,7 +67,7 @@ include esp-idf/partition_table/CMakeFiles/partition_table-flash.dir/compiler_de
 include esp-idf/partition_table/CMakeFiles/partition_table-flash.dir/progress.make
 
 esp-idf/partition_table/CMakeFiles/partition_table-flash:
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/partition_table && /Applications/CMake.app/Contents/bin/cmake -E echo Warning:\ Command\ "partition_table-flash"\ is\ deprecated\ and\ will\ be\ removed\ in\ the\ next\ major\ release.\ \ \ \ \ \ \ \ \ Please\ use\ "partition-table-flash"\ instead.
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/partition_table && /Applications/CMake.app/Contents/bin/cmake -E echo Warning:\ Command\ "partition_table-flash"\ is\ deprecated\ and\ will\ be\ removed\ in\ the\ next\ major\ release.\ \ \ \ \ \ \ \ \ Please\ use\ "partition-table-flash"\ instead.
 
 partition_table-flash: esp-idf/partition_table/CMakeFiles/partition_table-flash
 partition_table-flash: esp-idf/partition_table/CMakeFiles/partition_table-flash.dir/build.make
@@ -78,10 +78,10 @@ esp-idf/partition_table/CMakeFiles/partition_table-flash.dir/build: partition_ta
 .PHONY : esp-idf/partition_table/CMakeFiles/partition_table-flash.dir/build
 
 esp-idf/partition_table/CMakeFiles/partition_table-flash.dir/clean:
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/partition_table && $(CMAKE_COMMAND) -P CMakeFiles/partition_table-flash.dir/cmake_clean.cmake
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/partition_table && $(CMAKE_COMMAND) -P CMakeFiles/partition_table-flash.dir/cmake_clean.cmake
 .PHONY : esp-idf/partition_table/CMakeFiles/partition_table-flash.dir/clean
 
 esp-idf/partition_table/CMakeFiles/partition_table-flash.dir/depend:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/CECS490/led_blinky /Users/user/esp/esp-idf/components/partition_table /Users/user/esp/CECS490/led_blinky/build /Users/user/esp/CECS490/led_blinky/build/esp-idf/partition_table /Users/user/esp/CECS490/led_blinky/build/esp-idf/partition_table/CMakeFiles/partition_table-flash.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/CECS490/demo_1 /Users/user/esp/esp-idf/components/partition_table /Users/user/esp/CECS490/demo_1/build /Users/user/esp/CECS490/demo_1/build/esp-idf/partition_table /Users/user/esp/CECS490/demo_1/build/esp-idf/partition_table/CMakeFiles/partition_table-flash.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : esp-idf/partition_table/CMakeFiles/partition_table-flash.dir/depend
 

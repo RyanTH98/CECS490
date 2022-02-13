@@ -53,10 +53,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/led_blinky
+CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/demo_1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/user/esp/CECS490/led_blinky/build
+CMAKE_BINARY_DIR = /Users/user/esp/CECS490/demo_1/build
 
 # Utility rule file for partition-table-flash.
 
@@ -67,7 +67,7 @@ include esp-idf/partition_table/CMakeFiles/partition-table-flash.dir/compiler_de
 include esp-idf/partition_table/CMakeFiles/partition-table-flash.dir/progress.make
 
 esp-idf/partition_table/CMakeFiles/partition-table-flash:
-	cd /Users/user/esp/esp-idf/components/partition_table && /Applications/CMake.app/Contents/bin/cmake -D IDF_PATH=/Users/user/esp/esp-idf -D "SERIAL_TOOL=/Users/user/.espressif/python_env/idf5.0_py3.9_env/bin/python;;/Users/user/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s2" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@partition-table-flash_args" -D WORKING_DIRECTORY=/Users/user/esp/CECS490/led_blinky/build -P /Users/user/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+	cd /Users/user/esp/esp-idf/components/partition_table && /Applications/CMake.app/Contents/bin/cmake -D IDF_PATH=/Users/user/esp/esp-idf -D "SERIAL_TOOL=/Users/user/.espressif/python_env/idf5.0_py3.9_env/bin/python;;/Users/user/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s2" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@partition-table-flash_args" -D WORKING_DIRECTORY=/Users/user/esp/CECS490/demo_1/build -P /Users/user/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
 
 partition-table-flash: esp-idf/partition_table/CMakeFiles/partition-table-flash
 partition-table-flash: esp-idf/partition_table/CMakeFiles/partition-table-flash.dir/build.make
@@ -78,10 +78,10 @@ esp-idf/partition_table/CMakeFiles/partition-table-flash.dir/build: partition-ta
 .PHONY : esp-idf/partition_table/CMakeFiles/partition-table-flash.dir/build
 
 esp-idf/partition_table/CMakeFiles/partition-table-flash.dir/clean:
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/partition_table && $(CMAKE_COMMAND) -P CMakeFiles/partition-table-flash.dir/cmake_clean.cmake
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/partition_table && $(CMAKE_COMMAND) -P CMakeFiles/partition-table-flash.dir/cmake_clean.cmake
 .PHONY : esp-idf/partition_table/CMakeFiles/partition-table-flash.dir/clean
 
 esp-idf/partition_table/CMakeFiles/partition-table-flash.dir/depend:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/CECS490/led_blinky /Users/user/esp/esp-idf/components/partition_table /Users/user/esp/CECS490/led_blinky/build /Users/user/esp/CECS490/led_blinky/build/esp-idf/partition_table /Users/user/esp/CECS490/led_blinky/build/esp-idf/partition_table/CMakeFiles/partition-table-flash.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/CECS490/demo_1 /Users/user/esp/esp-idf/components/partition_table /Users/user/esp/CECS490/demo_1/build /Users/user/esp/CECS490/demo_1/build/esp-idf/partition_table /Users/user/esp/CECS490/demo_1/build/esp-idf/partition_table/CMakeFiles/partition-table-flash.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : esp-idf/partition_table/CMakeFiles/partition-table-flash.dir/depend
 

@@ -14,7 +14,7 @@ esp-idf/openssl/CMakeFiles/__idf_openssl.dir/platform/ssl_port.c.obj: \
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/lib/gcc/xtensa-esp32s2-elf/8.4.0/include/stdbool.h \
  /Users/user/esp/esp-idf/components/log/include/esp_log.h \
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/lib/gcc/xtensa-esp32s2-elf/8.4.0/include/stdarg.h \
- /Users/user/esp/CECS490/led_blinky/build/config/sdkconfig.h \
+ /Users/user/esp/CECS490/demo_1/build/config/sdkconfig.h \
  /Users/user/esp/esp-idf/components/esp_rom/include/esp_rom_sys.h \
  /Users/user/esp/esp-idf/components/soc/esp32s2/include/soc/reset_reasons.h \
  /Users/user/esp/esp-idf/components/esp_rom/include/esp32s2/rom/ets_sys.h \

@@ -13,7 +13,7 @@ esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/clk_ctrl_os.c.obj
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/sys/_intsup.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/sys/_stdint.h
  /Users/user/esp/esp-idf/components/freertos/esp_additions/include/freertos/FreeRTOSConfig.h
- /Users/user/esp/CECS490/led_blinky/build/config/sdkconfig.h
+ /Users/user/esp/CECS490/demo_1/build/config/sdkconfig.h
  /Users/user/esp/esp-idf/components/esp_common/include/esp_compiler.h
  /Users/user/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/FreeRTOSConfig_arch.h
  /Users/user/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/xtensa_config.h
@@ -146,7 +146,7 @@ esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/compare_set.c.obj
  /Users/user/esp/esp-idf/components/newlib/platform_include/sys/lock.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/sys/lock.h
  /Users/user/esp/esp-idf/components/newlib/platform_include/assert.h
- /Users/user/esp/CECS490/led_blinky/build/config/sdkconfig.h
+ /Users/user/esp/CECS490/demo_1/build/config/sdkconfig.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/stdlib.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/machine/stdlib.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/alloca.h
@@ -192,7 +192,7 @@ esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/compare_set.c.obj
 esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/cpu_util.c.obj
  /Users/user/esp/esp-idf/components/esp_hw_support/cpu_util.c
  /Users/user/esp/esp-idf/components/esp_common/include/esp_attr.h
- /Users/user/esp/CECS490/led_blinky/build/config/sdkconfig.h
+ /Users/user/esp/CECS490/demo_1/build/config/sdkconfig.h
  /Users/user/esp/esp-idf/components/esp_hw_support/include/esp_cpu.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/lib/gcc/xtensa-esp32s2-elf/8.4.0/include/stdint.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/stdint.h
@@ -294,7 +294,7 @@ esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/esp_async_memcpy.c.ob
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/sys/_intsup.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/sys/_stdint.h
  /Users/user/esp/esp-idf/components/freertos/esp_additions/include/freertos/FreeRTOSConfig.h
- /Users/user/esp/CECS490/led_blinky/build/config/sdkconfig.h
+ /Users/user/esp/CECS490/demo_1/build/config/sdkconfig.h
  /Users/user/esp/esp-idf/components/esp_common/include/esp_compiler.h
  /Users/user/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/FreeRTOSConfig_arch.h
  /Users/user/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/xtensa_config.h
@@ -421,7 +421,7 @@ esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/esp_clk.c.obj
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/sys/lock.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/_ansi.h
  /Users/user/esp/esp-idf/components/esp_common/include/esp_attr.h
- /Users/user/esp/CECS490/led_blinky/build/config/sdkconfig.h
+ /Users/user/esp/CECS490/demo_1/build/config/sdkconfig.h
  /Users/user/esp/esp-idf/components/soc/esp32s2/include/soc/rtc.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/lib/gcc/xtensa-esp32s2-elf/8.4.0/include/stdbool.h
  /Users/user/esp/esp-idf/components/soc/esp32s2/include/soc/soc.h
@@ -470,7 +470,7 @@ esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/hw_random.c.obj
  /Users/user/esp/esp-idf/components/newlib/platform_include/sys/lock.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/sys/lock.h
  /Users/user/esp/esp-idf/components/newlib/platform_include/assert.h
- /Users/user/esp/CECS490/led_blinky/build/config/sdkconfig.h
+ /Users/user/esp/CECS490/demo_1/build/config/sdkconfig.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/stdlib.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/sys/cdefs.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/machine/stdlib.h
@@ -547,7 +547,7 @@ esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/intr_alloc.c.obj
  /Users/user/esp/esp-idf/components/newlib/platform_include/sys/lock.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/sys/lock.h
  /Users/user/esp/esp-idf/components/newlib/platform_include/assert.h
- /Users/user/esp/CECS490/led_blinky/build/config/sdkconfig.h
+ /Users/user/esp/CECS490/demo_1/build/config/sdkconfig.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/stdlib.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/machine/stdlib.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/alloca.h
@@ -662,7 +662,7 @@ esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/mac_addr.c.obj
  /Users/user/esp/esp-idf/components/newlib/platform_include/sys/lock.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/sys/lock.h
  /Users/user/esp/esp-idf/components/newlib/platform_include/assert.h
- /Users/user/esp/CECS490/led_blinky/build/config/sdkconfig.h
+ /Users/user/esp/CECS490/demo_1/build/config/sdkconfig.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/stdlib.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/sys/cdefs.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/machine/stdlib.h
@@ -729,7 +729,7 @@ esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/async_me
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/sys/_intsup.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/sys/_stdint.h
  /Users/user/esp/esp-idf/components/freertos/esp_additions/include/freertos/FreeRTOSConfig.h
- /Users/user/esp/CECS490/led_blinky/build/config/sdkconfig.h
+ /Users/user/esp/CECS490/demo_1/build/config/sdkconfig.h
  /Users/user/esp/esp-idf/components/esp_common/include/esp_compiler.h
  /Users/user/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/FreeRTOSConfig_arch.h
  /Users/user/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/xtensa_config.h
@@ -857,7 +857,7 @@ esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/chip_inf
  /Users/user/esp/esp-idf/components/newlib/platform_include/sys/lock.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/sys/lock.h
  /Users/user/esp/esp-idf/components/newlib/platform_include/assert.h
- /Users/user/esp/CECS490/led_blinky/build/config/sdkconfig.h
+ /Users/user/esp/CECS490/demo_1/build/config/sdkconfig.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/stdlib.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/sys/cdefs.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/machine/stdlib.h
@@ -929,7 +929,7 @@ esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/dport_ac
  /Users/user/esp/esp-idf/components/newlib/platform_include/sys/lock.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/sys/lock.h
  /Users/user/esp/esp-idf/components/newlib/platform_include/assert.h
- /Users/user/esp/CECS490/led_blinky/build/config/sdkconfig.h
+ /Users/user/esp/CECS490/demo_1/build/config/sdkconfig.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/stdlib.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/sys/cdefs.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/machine/stdlib.h
@@ -974,7 +974,7 @@ esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/esp_ds.c
  /Users/user/esp/esp-idf/components/newlib/platform_include/sys/lock.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/sys/lock.h
  /Users/user/esp/esp-idf/components/newlib/platform_include/assert.h
- /Users/user/esp/CECS490/led_blinky/build/config/sdkconfig.h
+ /Users/user/esp/CECS490/demo_1/build/config/sdkconfig.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/lib/gcc/xtensa-esp32s2-elf/8.4.0/include/stdint.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/stdint.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/sys/_intsup.h
@@ -1100,7 +1100,7 @@ esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/esp_hmac
  /Users/user/esp/esp-idf/components/newlib/platform_include/sys/lock.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/sys/lock.h
  /Users/user/esp/esp-idf/components/newlib/platform_include/assert.h
- /Users/user/esp/CECS490/led_blinky/build/config/sdkconfig.h
+ /Users/user/esp/CECS490/demo_1/build/config/sdkconfig.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/stdlib.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/sys/cdefs.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/machine/stdlib.h
@@ -1176,7 +1176,7 @@ esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/memprot.
  /Users/user/esp/esp-idf/components/newlib/platform_include/sys/lock.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/sys/lock.h
  /Users/user/esp/esp-idf/components/newlib/platform_include/assert.h
- /Users/user/esp/CECS490/led_blinky/build/config/sdkconfig.h
+ /Users/user/esp/CECS490/demo_1/build/config/sdkconfig.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/stdlib.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/machine/stdlib.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/alloca.h
@@ -1256,7 +1256,7 @@ esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/mmu_psra
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/machine/_endian.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/machine/param.h
  /Users/user/esp/esp-idf/components/esp_common/include/esp_attr.h
- /Users/user/esp/CECS490/led_blinky/build/config/sdkconfig.h
+ /Users/user/esp/CECS490/demo_1/build/config/sdkconfig.h
  /Users/user/esp/esp-idf/components/log/include/esp_log.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/lib/gcc/xtensa-esp32s2-elf/8.4.0/include/stdint.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/stdint.h
@@ -1315,7 +1315,7 @@ esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/regi2c_c
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/sys/_stdint.h
  /Users/user/esp/esp-idf/components/esp_common/include/esp_assert.h
  /Users/user/esp/esp-idf/components/newlib/platform_include/assert.h
- /Users/user/esp/CECS490/led_blinky/build/config/sdkconfig.h
+ /Users/user/esp/CECS490/demo_1/build/config/sdkconfig.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/stdlib.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/machine/ieeefp.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/_ansi.h
@@ -1357,7 +1357,7 @@ esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_clk.
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/sys/_stdint.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/lib/gcc/xtensa-esp32s2-elf/8.4.0/include/stddef.h
  /Users/user/esp/esp-idf/components/newlib/platform_include/assert.h
- /Users/user/esp/CECS490/led_blinky/build/config/sdkconfig.h
+ /Users/user/esp/CECS490/demo_1/build/config/sdkconfig.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/stdlib.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/machine/ieeefp.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/_ansi.h
@@ -1434,7 +1434,7 @@ esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_clk_
  /Users/user/esp/esp-idf/components/newlib/platform_include/sys/lock.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/sys/lock.h
  /Users/user/esp/esp-idf/components/newlib/platform_include/assert.h
- /Users/user/esp/CECS490/led_blinky/build/config/sdkconfig.h
+ /Users/user/esp/CECS490/demo_1/build/config/sdkconfig.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/assert.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/sys/cdefs.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/machine/stdlib.h
@@ -1517,7 +1517,7 @@ esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_init
  /Users/user/esp/esp-idf/components/soc/esp32s2/include/soc/soc.h
  /Users/user/esp/esp-idf/components/esp_common/include/esp_assert.h
  /Users/user/esp/esp-idf/components/newlib/platform_include/assert.h
- /Users/user/esp/CECS490/led_blinky/build/config/sdkconfig.h
+ /Users/user/esp/CECS490/demo_1/build/config/sdkconfig.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/stdlib.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/machine/ieeefp.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/_ansi.h
@@ -1599,7 +1599,7 @@ esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_pm.c
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/sys/_intsup.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/sys/_stdint.h
  /Users/user/esp/esp-idf/components/newlib/platform_include/assert.h
- /Users/user/esp/CECS490/led_blinky/build/config/sdkconfig.h
+ /Users/user/esp/CECS490/demo_1/build/config/sdkconfig.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/stdlib.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/machine/ieeefp.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/_ansi.h
@@ -1640,7 +1640,7 @@ esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_slee
  /Users/user/esp/esp-idf/components/soc/esp32s2/include/soc/soc.h
  /Users/user/esp/esp-idf/components/esp_common/include/esp_assert.h
  /Users/user/esp/esp-idf/components/newlib/platform_include/assert.h
- /Users/user/esp/CECS490/led_blinky/build/config/sdkconfig.h
+ /Users/user/esp/CECS490/demo_1/build/config/sdkconfig.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/stdlib.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/machine/ieeefp.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/_ansi.h
@@ -1693,7 +1693,7 @@ esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_time
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/sys/_intsup.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/sys/_stdint.h
  /Users/user/esp/esp-idf/components/esp_rom/include/esp_rom_sys.h
- /Users/user/esp/CECS490/led_blinky/build/config/sdkconfig.h
+ /Users/user/esp/CECS490/demo_1/build/config/sdkconfig.h
  /Users/user/esp/esp-idf/components/soc/esp32s2/include/soc/reset_reasons.h
  /Users/user/esp/esp-idf/components/soc/esp32s2/include/soc/rtc.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/lib/gcc/xtensa-esp32s2-elf/8.4.0/include/stdbool.h
@@ -1740,7 +1740,7 @@ esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/rtc_wdt.
  /Users/user/esp/esp-idf/components/soc/esp32s2/include/soc/soc.h
  /Users/user/esp/esp-idf/components/esp_common/include/esp_assert.h
  /Users/user/esp/esp-idf/components/newlib/platform_include/assert.h
- /Users/user/esp/CECS490/led_blinky/build/config/sdkconfig.h
+ /Users/user/esp/CECS490/demo_1/build/config/sdkconfig.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/stdlib.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/machine/ieeefp.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/_ansi.h
@@ -1808,7 +1808,7 @@ esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/spiram.c
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/machine/_types.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/machine/_endian.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/machine/param.h
- /Users/user/esp/CECS490/led_blinky/build/config/sdkconfig.h
+ /Users/user/esp/CECS490/demo_1/build/config/sdkconfig.h
  /Users/user/esp/esp-idf/components/esp_common/include/esp_attr.h
  /Users/user/esp/esp-idf/components/esp_common/include/esp_err.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/lib/gcc/xtensa-esp32s2-elf/8.4.0/include/stdint.h
@@ -1911,7 +1911,7 @@ esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/spiram.c
 
 esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/port/esp32s2/spiram_psram.c.obj
  /Users/user/esp/esp-idf/components/esp_hw_support/port/esp32s2/spiram_psram.c
- /Users/user/esp/CECS490/led_blinky/build/config/sdkconfig.h
+ /Users/user/esp/CECS490/demo_1/build/config/sdkconfig.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/string.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/_ansi.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/newlib.h
@@ -2081,7 +2081,7 @@ esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/regi2c_ctrl.c.obj
  /Users/user/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/lib/gcc/xtensa-esp32s2-elf/8.4.0/include/stddef.h
  /Users/user/esp/esp-idf/components/freertos/esp_additions/include/freertos/FreeRTOSConfig.h
- /Users/user/esp/CECS490/led_blinky/build/config/sdkconfig.h
+ /Users/user/esp/CECS490/demo_1/build/config/sdkconfig.h
  /Users/user/esp/esp-idf/components/esp_common/include/esp_compiler.h
  /Users/user/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/FreeRTOSConfig_arch.h
  /Users/user/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/xtensa_config.h
@@ -2202,7 +2202,7 @@ esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/sleep_gpio.c.obj
  /Users/user/esp/esp-idf/components/newlib/platform_include/sys/lock.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/sys/lock.h
  /Users/user/esp/esp-idf/components/newlib/platform_include/assert.h
- /Users/user/esp/CECS490/led_blinky/build/config/sdkconfig.h
+ /Users/user/esp/CECS490/demo_1/build/config/sdkconfig.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/stdlib.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/sys/cdefs.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/machine/stdlib.h
@@ -2287,7 +2287,7 @@ esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/sleep_mac_bb.c.obj
  /Users/user/esp/esp-idf/components/newlib/platform_include/sys/lock.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/sys/lock.h
  /Users/user/esp/esp-idf/components/newlib/platform_include/assert.h
- /Users/user/esp/CECS490/led_blinky/build/config/sdkconfig.h
+ /Users/user/esp/CECS490/demo_1/build/config/sdkconfig.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/stdlib.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/sys/cdefs.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/machine/stdlib.h
@@ -2349,7 +2349,7 @@ esp-idf/esp_hw_support/CMakeFiles/__idf_esp_hw_support.dir/sleep_modes.c.obj
  /Users/user/esp/esp-idf/components/newlib/platform_include/sys/lock.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/sys/lock.h
  /Users/user/esp/esp-idf/components/newlib/platform_include/assert.h
- /Users/user/esp/CECS490/led_blinky/build/config/sdkconfig.h
+ /Users/user/esp/CECS490/demo_1/build/config/sdkconfig.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/stdlib.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/sys/cdefs.h
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/xtensa-esp32s2-elf/sys-include/machine/stdlib.h

@@ -53,10 +53,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/led_blinky
+CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/demo_1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/user/esp/CECS490/led_blinky/build
+CMAKE_BINARY_DIR = /Users/user/esp/CECS490/demo_1/build
 
 # Utility rule file for save-defconfig.
 
@@ -67,8 +67,8 @@ include CMakeFiles/save-defconfig.dir/compiler_depend.make
 include CMakeFiles/save-defconfig.dir/progress.make
 
 CMakeFiles/save-defconfig:
-	/Users/user/.espressif/python_env/idf5.0_py3.9_env/bin/python /Users/user/esp/esp-idf/tools/kconfig_new/prepare_kconfig_files.py --list-separator=semicolon --env-file /Users/user/esp/CECS490/led_blinky/build/config.env
-	/Users/user/.espressif/python_env/idf5.0_py3.9_env/bin/python /Users/user/esp/esp-idf/tools/kconfig_new/confgen.py --list-separator=semicolon --kconfig /Users/user/esp/esp-idf/Kconfig --sdkconfig-rename /Users/user/esp/esp-idf/sdkconfig.rename --config /Users/user/esp/CECS490/led_blinky/sdkconfig --env-file /Users/user/esp/CECS490/led_blinky/build/config.env --dont-write-deprecated --output savedefconfig /Users/user/esp/CECS490/led_blinky/sdkconfig.defaults
+	/Users/user/.espressif/python_env/idf5.0_py3.9_env/bin/python /Users/user/esp/esp-idf/tools/kconfig_new/prepare_kconfig_files.py --list-separator=semicolon --env-file /Users/user/esp/CECS490/demo_1/build/config.env
+	/Users/user/.espressif/python_env/idf5.0_py3.9_env/bin/python /Users/user/esp/esp-idf/tools/kconfig_new/confgen.py --list-separator=semicolon --kconfig /Users/user/esp/esp-idf/Kconfig --sdkconfig-rename /Users/user/esp/esp-idf/sdkconfig.rename --config /Users/user/esp/CECS490/demo_1/sdkconfig --env-file /Users/user/esp/CECS490/demo_1/build/config.env --dont-write-deprecated --output savedefconfig /Users/user/esp/CECS490/demo_1/sdkconfig.defaults
 
 save-defconfig: CMakeFiles/save-defconfig
 save-defconfig: CMakeFiles/save-defconfig.dir/build.make
@@ -83,6 +83,6 @@ CMakeFiles/save-defconfig.dir/clean:
 .PHONY : CMakeFiles/save-defconfig.dir/clean
 
 CMakeFiles/save-defconfig.dir/depend:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/CECS490/led_blinky /Users/user/esp/CECS490/led_blinky /Users/user/esp/CECS490/led_blinky/build /Users/user/esp/CECS490/led_blinky/build /Users/user/esp/CECS490/led_blinky/build/CMakeFiles/save-defconfig.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/CECS490/demo_1 /Users/user/esp/CECS490/demo_1 /Users/user/esp/CECS490/demo_1/build /Users/user/esp/CECS490/demo_1/build /Users/user/esp/CECS490/demo_1/build/CMakeFiles/save-defconfig.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/save-defconfig.dir/depend
 

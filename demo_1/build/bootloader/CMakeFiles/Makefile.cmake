@@ -111,7 +111,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/git-data/grabRef.cmake"
   "config/sdkconfig.cmake"
   "config/sdkconfig.h"
-  "/Users/user/esp/CECS490/led_blinky/sdkconfig"
+  "/Users/user/esp/CECS490/demo_1/sdkconfig"
   "/Users/user/esp/esp-idf/.git/HEAD"
   "/Users/user/esp/esp-idf/.git/modules/components/asio/asio/HEAD"
   "/Users/user/esp/esp-idf/.git/modules/components/bootloader/subproject/components/micro-ecc/micro-ecc/HEAD"

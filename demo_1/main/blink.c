@@ -25,9 +25,9 @@
 #define output 0
 
 int input_pins[]  = { muxOut };
-int output_pins[] = { muxA, muxB, muxC, decA0, decA1, decA2, out0, out1,   out2, out3 };
+int output_pins[] = { muxA, muxB, muxC, decA0, decA1, decA2, out0, out1, out2, out3 };
 
-long binary_out[];
+long binary_out[64];
 
 const int scan_delay = 1;
 
@@ -51,7 +51,7 @@ void delay(int duration) { vTaskDelay(duration / portTICK_PERIOD_MS); }
 void init(void) { set(input); set(output); }
 
 void scan(void) {
-    int index = 0;
+    short int index = 0;
     
     gpio_set_level(decA0, 0);
     gpio_set_level(muxA,  0);
@@ -81,42 +81,16 @@ void scan(void) {
 }
 
 void set(int direction) {
-    int pin;
-    int size  = 0;
-    int state = 0;
-    int input_size  = sizeof(input_pins)  / sizeof(input_pins[0]);
-    int output_size = sizeof(output_pins) / sizeof(output_pins[0]);
-    
-    if (direction == input) {
-        state = input;
-        size  = input_size;
-    } else if (direction == output) {
-        state = output;
-        size  = output_size;
-    };
+    char pin;
+    char size  = (direction ? sizeof(input_pins ) : sizeof(output_pins)) / sizeof(int);
     
     for (int i = 0; i < size; i++) {
-        state == input ? (pin = input_pins[i]) : (pin = output_pins[i]);
+        pin = direction ? input_pins[i] : output_pins[i];
         
         gpio_reset_pin(pin);
-        
-        if (state == input)
-            gpio_set_direction(pin, GPIO_MODE_INPUT);
-        else if (state == output)
-            gpio_set_direction(pin, GPIO_MODE_OUTPUT);
+        gpio_set_direction(pin, ( direction ? GPIO_MODE_INPUT : GPIO_MODE_OUTPUT ));
     }
 }
-
-
-
-
-
-
-
-//void instatiate_pins(void) {
-//
-//}
-
 
 
 

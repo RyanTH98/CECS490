@@ -1,6 +1,6 @@
 esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_console.c.obj: \
  /Users/user/esp/esp-idf/components/bootloader_support/src/bootloader_console.c \
- /Users/user/esp/CECS490/led_blinky/build/bootloader/config/sdkconfig.h \
+ /Users/user/esp/CECS490/demo_1/build/bootloader/config/sdkconfig.h \
  /Users/user/esp/esp-idf/components/bootloader_support/include_bootloader/bootloader_console.h \
  /Users/user/esp/esp-idf/components/soc/include/soc/uart_periph.h \
  /Users/user/esp/esp-idf/components/soc/esp32s2/include/soc/soc_caps.h \

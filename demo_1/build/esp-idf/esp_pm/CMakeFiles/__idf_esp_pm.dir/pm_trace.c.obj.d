@@ -1,7 +1,7 @@
 esp-idf/esp_pm/CMakeFiles/__idf_esp_pm.dir/pm_trace.c.obj: \
  /Users/user/esp/esp-idf/components/esp_pm/pm_trace.c \
  /Users/user/esp/esp-idf/components/esp_pm/include/esp_private/pm_trace.h \
- /Users/user/esp/CECS490/led_blinky/build/config/sdkconfig.h \
+ /Users/user/esp/CECS490/demo_1/build/config/sdkconfig.h \
  /Users/user/esp/esp-idf/components/driver/include/driver/gpio.h \
  /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/lib/gcc/xtensa-esp32s2-elf/8.4.0/include/stdbool.h \
  /Users/user/esp/esp-idf/components/esp_common/include/esp_err.h \

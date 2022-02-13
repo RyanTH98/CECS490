@@ -27,7 +27,7 @@ esp-idf/hal/CMakeFiles/__idf_hal.dir/systimer_hal.c.obj: \
  /Users/user/esp/esp-idf/components/hal/include/hal/systimer_types.h \
  /Users/user/esp/esp-idf/components/hal/esp32s2/include/hal/systimer_ll.h \
  /Users/user/esp/esp-idf/components/hal/platform_port/include/hal/assert.h \
- /Users/user/esp/CECS490/led_blinky/build/config/sdkconfig.h \
+ /Users/user/esp/CECS490/demo_1/build/config/sdkconfig.h \
  /Users/user/esp/esp-idf/components/hal/esp32s2/include/hal/clk_gate_ll.h \
  /Users/user/esp/esp-idf/components/esp_common/include/esp_attr.h \
  /Users/user/esp/esp-idf/components/soc/esp32s2/include/soc/periph_defs.h \

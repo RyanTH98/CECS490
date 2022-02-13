@@ -60,7 +60,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /Users/user/esp/esp-idf/components/bootloader/subproject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/user/esp/CECS490/led_blinky/build/bootloader
+CMAKE_BINARY_DIR = /Users/user/esp/CECS490/demo_1/build/bootloader
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/led_blinky/build/bootloader/CMakeFiles /Users/user/esp/CECS490/led_blinky/build/bootloader/esp-idf/bootloader_support//CMakeFiles/progress.marks
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/bootloader_support/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/led_blinky/build/bootloader/CMakeFiles 0
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/demo_1/build/bootloader/CMakeFiles /Users/user/esp/CECS490/demo_1/build/bootloader/esp-idf/bootloader_support//CMakeFiles/progress.marks
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/bootloader_support/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/user/esp/CECS490/demo_1/build/bootloader/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/bootloader_support/clean
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/bootloader_support/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/bootloader_support/preinstall
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/bootloader_support/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/bootloader_support/preinstall
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/bootloader_support/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/rule:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/rule
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/rule
 .PHONY : esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ __idf_bootloader_support: esp-idf/bootloader_support/CMakeFiles/__idf_bootloader
 
 # fast build rule for target.
 __idf_bootloader_support/fast:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build
 .PHONY : __idf_bootloader_support/fast
 
 bootloader_flash/src/bootloader_flash.obj: bootloader_flash/src/bootloader_flash.c.obj
@@ -135,7 +135,7 @@ bootloader_flash/src/bootloader_flash.obj: bootloader_flash/src/bootloader_flash
 
 # target to build an object file
 bootloader_flash/src/bootloader_flash.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_flash/src/bootloader_flash.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_flash/src/bootloader_flash.c.obj
 .PHONY : bootloader_flash/src/bootloader_flash.c.obj
 
 bootloader_flash/src/bootloader_flash.i: bootloader_flash/src/bootloader_flash.c.i
@@ -143,7 +143,7 @@ bootloader_flash/src/bootloader_flash.i: bootloader_flash/src/bootloader_flash.c
 
 # target to preprocess a source file
 bootloader_flash/src/bootloader_flash.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_flash/src/bootloader_flash.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_flash/src/bootloader_flash.c.i
 .PHONY : bootloader_flash/src/bootloader_flash.c.i
 
 bootloader_flash/src/bootloader_flash.s: bootloader_flash/src/bootloader_flash.c.s
@@ -151,7 +151,7 @@ bootloader_flash/src/bootloader_flash.s: bootloader_flash/src/bootloader_flash.c
 
 # target to generate assembly for a file
 bootloader_flash/src/bootloader_flash.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_flash/src/bootloader_flash.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_flash/src/bootloader_flash.c.s
 .PHONY : bootloader_flash/src/bootloader_flash.c.s
 
 bootloader_flash/src/bootloader_flash_config_esp32s2.obj: bootloader_flash/src/bootloader_flash_config_esp32s2.c.obj
@@ -159,7 +159,7 @@ bootloader_flash/src/bootloader_flash_config_esp32s2.obj: bootloader_flash/src/b
 
 # target to build an object file
 bootloader_flash/src/bootloader_flash_config_esp32s2.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_flash/src/bootloader_flash_config_esp32s2.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_flash/src/bootloader_flash_config_esp32s2.c.obj
 .PHONY : bootloader_flash/src/bootloader_flash_config_esp32s2.c.obj
 
 bootloader_flash/src/bootloader_flash_config_esp32s2.i: bootloader_flash/src/bootloader_flash_config_esp32s2.c.i
@@ -167,7 +167,7 @@ bootloader_flash/src/bootloader_flash_config_esp32s2.i: bootloader_flash/src/boo
 
 # target to preprocess a source file
 bootloader_flash/src/bootloader_flash_config_esp32s2.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_flash/src/bootloader_flash_config_esp32s2.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_flash/src/bootloader_flash_config_esp32s2.c.i
 .PHONY : bootloader_flash/src/bootloader_flash_config_esp32s2.c.i
 
 bootloader_flash/src/bootloader_flash_config_esp32s2.s: bootloader_flash/src/bootloader_flash_config_esp32s2.c.s
@@ -175,7 +175,7 @@ bootloader_flash/src/bootloader_flash_config_esp32s2.s: bootloader_flash/src/boo
 
 # target to generate assembly for a file
 bootloader_flash/src/bootloader_flash_config_esp32s2.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_flash/src/bootloader_flash_config_esp32s2.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_flash/src/bootloader_flash_config_esp32s2.c.s
 .PHONY : bootloader_flash/src/bootloader_flash_config_esp32s2.c.s
 
 bootloader_flash/src/flash_qio_mode.obj: bootloader_flash/src/flash_qio_mode.c.obj
@@ -183,7 +183,7 @@ bootloader_flash/src/flash_qio_mode.obj: bootloader_flash/src/flash_qio_mode.c.o
 
 # target to build an object file
 bootloader_flash/src/flash_qio_mode.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_flash/src/flash_qio_mode.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_flash/src/flash_qio_mode.c.obj
 .PHONY : bootloader_flash/src/flash_qio_mode.c.obj
 
 bootloader_flash/src/flash_qio_mode.i: bootloader_flash/src/flash_qio_mode.c.i
@@ -191,7 +191,7 @@ bootloader_flash/src/flash_qio_mode.i: bootloader_flash/src/flash_qio_mode.c.i
 
 # target to preprocess a source file
 bootloader_flash/src/flash_qio_mode.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_flash/src/flash_qio_mode.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_flash/src/flash_qio_mode.c.i
 .PHONY : bootloader_flash/src/flash_qio_mode.c.i
 
 bootloader_flash/src/flash_qio_mode.s: bootloader_flash/src/flash_qio_mode.c.s
@@ -199,7 +199,7 @@ bootloader_flash/src/flash_qio_mode.s: bootloader_flash/src/flash_qio_mode.c.s
 
 # target to generate assembly for a file
 bootloader_flash/src/flash_qio_mode.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_flash/src/flash_qio_mode.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/bootloader_flash/src/flash_qio_mode.c.s
 .PHONY : bootloader_flash/src/flash_qio_mode.c.s
 
 src/bootloader_clock_init.obj: src/bootloader_clock_init.c.obj
@@ -207,7 +207,7 @@ src/bootloader_clock_init.obj: src/bootloader_clock_init.c.obj
 
 # target to build an object file
 src/bootloader_clock_init.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_clock_init.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_clock_init.c.obj
 .PHONY : src/bootloader_clock_init.c.obj
 
 src/bootloader_clock_init.i: src/bootloader_clock_init.c.i
@@ -215,7 +215,7 @@ src/bootloader_clock_init.i: src/bootloader_clock_init.c.i
 
 # target to preprocess a source file
 src/bootloader_clock_init.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_clock_init.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_clock_init.c.i
 .PHONY : src/bootloader_clock_init.c.i
 
 src/bootloader_clock_init.s: src/bootloader_clock_init.c.s
@@ -223,7 +223,7 @@ src/bootloader_clock_init.s: src/bootloader_clock_init.c.s
 
 # target to generate assembly for a file
 src/bootloader_clock_init.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_clock_init.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_clock_init.c.s
 .PHONY : src/bootloader_clock_init.c.s
 
 src/bootloader_clock_loader.obj: src/bootloader_clock_loader.c.obj
@@ -231,7 +231,7 @@ src/bootloader_clock_loader.obj: src/bootloader_clock_loader.c.obj
 
 # target to build an object file
 src/bootloader_clock_loader.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_clock_loader.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_clock_loader.c.obj
 .PHONY : src/bootloader_clock_loader.c.obj
 
 src/bootloader_clock_loader.i: src/bootloader_clock_loader.c.i
@@ -239,7 +239,7 @@ src/bootloader_clock_loader.i: src/bootloader_clock_loader.c.i
 
 # target to preprocess a source file
 src/bootloader_clock_loader.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_clock_loader.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_clock_loader.c.i
 .PHONY : src/bootloader_clock_loader.c.i
 
 src/bootloader_clock_loader.s: src/bootloader_clock_loader.c.s
@@ -247,7 +247,7 @@ src/bootloader_clock_loader.s: src/bootloader_clock_loader.c.s
 
 # target to generate assembly for a file
 src/bootloader_clock_loader.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_clock_loader.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_clock_loader.c.s
 .PHONY : src/bootloader_clock_loader.c.s
 
 src/bootloader_common.obj: src/bootloader_common.c.obj
@@ -255,7 +255,7 @@ src/bootloader_common.obj: src/bootloader_common.c.obj
 
 # target to build an object file
 src/bootloader_common.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_common.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_common.c.obj
 .PHONY : src/bootloader_common.c.obj
 
 src/bootloader_common.i: src/bootloader_common.c.i
@@ -263,7 +263,7 @@ src/bootloader_common.i: src/bootloader_common.c.i
 
 # target to preprocess a source file
 src/bootloader_common.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_common.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_common.c.i
 .PHONY : src/bootloader_common.c.i
 
 src/bootloader_common.s: src/bootloader_common.c.s
@@ -271,7 +271,7 @@ src/bootloader_common.s: src/bootloader_common.c.s
 
 # target to generate assembly for a file
 src/bootloader_common.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_common.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_common.c.s
 .PHONY : src/bootloader_common.c.s
 
 src/bootloader_common_loader.obj: src/bootloader_common_loader.c.obj
@@ -279,7 +279,7 @@ src/bootloader_common_loader.obj: src/bootloader_common_loader.c.obj
 
 # target to build an object file
 src/bootloader_common_loader.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_common_loader.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_common_loader.c.obj
 .PHONY : src/bootloader_common_loader.c.obj
 
 src/bootloader_common_loader.i: src/bootloader_common_loader.c.i
@@ -287,7 +287,7 @@ src/bootloader_common_loader.i: src/bootloader_common_loader.c.i
 
 # target to preprocess a source file
 src/bootloader_common_loader.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_common_loader.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_common_loader.c.i
 .PHONY : src/bootloader_common_loader.c.i
 
 src/bootloader_common_loader.s: src/bootloader_common_loader.c.s
@@ -295,7 +295,7 @@ src/bootloader_common_loader.s: src/bootloader_common_loader.c.s
 
 # target to generate assembly for a file
 src/bootloader_common_loader.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_common_loader.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_common_loader.c.s
 .PHONY : src/bootloader_common_loader.c.s
 
 src/bootloader_console.obj: src/bootloader_console.c.obj
@@ -303,7 +303,7 @@ src/bootloader_console.obj: src/bootloader_console.c.obj
 
 # target to build an object file
 src/bootloader_console.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_console.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_console.c.obj
 .PHONY : src/bootloader_console.c.obj
 
 src/bootloader_console.i: src/bootloader_console.c.i
@@ -311,7 +311,7 @@ src/bootloader_console.i: src/bootloader_console.c.i
 
 # target to preprocess a source file
 src/bootloader_console.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_console.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_console.c.i
 .PHONY : src/bootloader_console.c.i
 
 src/bootloader_console.s: src/bootloader_console.c.s
@@ -319,7 +319,7 @@ src/bootloader_console.s: src/bootloader_console.c.s
 
 # target to generate assembly for a file
 src/bootloader_console.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_console.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_console.c.s
 .PHONY : src/bootloader_console.c.s
 
 src/bootloader_console_loader.obj: src/bootloader_console_loader.c.obj
@@ -327,7 +327,7 @@ src/bootloader_console_loader.obj: src/bootloader_console_loader.c.obj
 
 # target to build an object file
 src/bootloader_console_loader.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_console_loader.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_console_loader.c.obj
 .PHONY : src/bootloader_console_loader.c.obj
 
 src/bootloader_console_loader.i: src/bootloader_console_loader.c.i
@@ -335,7 +335,7 @@ src/bootloader_console_loader.i: src/bootloader_console_loader.c.i
 
 # target to preprocess a source file
 src/bootloader_console_loader.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_console_loader.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_console_loader.c.i
 .PHONY : src/bootloader_console_loader.c.i
 
 src/bootloader_console_loader.s: src/bootloader_console_loader.c.s
@@ -343,7 +343,7 @@ src/bootloader_console_loader.s: src/bootloader_console_loader.c.s
 
 # target to generate assembly for a file
 src/bootloader_console_loader.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_console_loader.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_console_loader.c.s
 .PHONY : src/bootloader_console_loader.c.s
 
 src/bootloader_efuse_esp32s2.obj: src/bootloader_efuse_esp32s2.c.obj
@@ -351,7 +351,7 @@ src/bootloader_efuse_esp32s2.obj: src/bootloader_efuse_esp32s2.c.obj
 
 # target to build an object file
 src/bootloader_efuse_esp32s2.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_efuse_esp32s2.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_efuse_esp32s2.c.obj
 .PHONY : src/bootloader_efuse_esp32s2.c.obj
 
 src/bootloader_efuse_esp32s2.i: src/bootloader_efuse_esp32s2.c.i
@@ -359,7 +359,7 @@ src/bootloader_efuse_esp32s2.i: src/bootloader_efuse_esp32s2.c.i
 
 # target to preprocess a source file
 src/bootloader_efuse_esp32s2.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_efuse_esp32s2.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_efuse_esp32s2.c.i
 .PHONY : src/bootloader_efuse_esp32s2.c.i
 
 src/bootloader_efuse_esp32s2.s: src/bootloader_efuse_esp32s2.c.s
@@ -367,7 +367,7 @@ src/bootloader_efuse_esp32s2.s: src/bootloader_efuse_esp32s2.c.s
 
 # target to generate assembly for a file
 src/bootloader_efuse_esp32s2.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_efuse_esp32s2.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_efuse_esp32s2.c.s
 .PHONY : src/bootloader_efuse_esp32s2.c.s
 
 src/bootloader_init.obj: src/bootloader_init.c.obj
@@ -375,7 +375,7 @@ src/bootloader_init.obj: src/bootloader_init.c.obj
 
 # target to build an object file
 src/bootloader_init.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_init.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_init.c.obj
 .PHONY : src/bootloader_init.c.obj
 
 src/bootloader_init.i: src/bootloader_init.c.i
@@ -383,7 +383,7 @@ src/bootloader_init.i: src/bootloader_init.c.i
 
 # target to preprocess a source file
 src/bootloader_init.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_init.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_init.c.i
 .PHONY : src/bootloader_init.c.i
 
 src/bootloader_init.s: src/bootloader_init.c.s
@@ -391,7 +391,7 @@ src/bootloader_init.s: src/bootloader_init.c.s
 
 # target to generate assembly for a file
 src/bootloader_init.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_init.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_init.c.s
 .PHONY : src/bootloader_init.c.s
 
 src/bootloader_mem.obj: src/bootloader_mem.c.obj
@@ -399,7 +399,7 @@ src/bootloader_mem.obj: src/bootloader_mem.c.obj
 
 # target to build an object file
 src/bootloader_mem.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_mem.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_mem.c.obj
 .PHONY : src/bootloader_mem.c.obj
 
 src/bootloader_mem.i: src/bootloader_mem.c.i
@@ -407,7 +407,7 @@ src/bootloader_mem.i: src/bootloader_mem.c.i
 
 # target to preprocess a source file
 src/bootloader_mem.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_mem.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_mem.c.i
 .PHONY : src/bootloader_mem.c.i
 
 src/bootloader_mem.s: src/bootloader_mem.c.s
@@ -415,7 +415,7 @@ src/bootloader_mem.s: src/bootloader_mem.c.s
 
 # target to generate assembly for a file
 src/bootloader_mem.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_mem.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_mem.c.s
 .PHONY : src/bootloader_mem.c.s
 
 src/bootloader_panic.obj: src/bootloader_panic.c.obj
@@ -423,7 +423,7 @@ src/bootloader_panic.obj: src/bootloader_panic.c.obj
 
 # target to build an object file
 src/bootloader_panic.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_panic.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_panic.c.obj
 .PHONY : src/bootloader_panic.c.obj
 
 src/bootloader_panic.i: src/bootloader_panic.c.i
@@ -431,7 +431,7 @@ src/bootloader_panic.i: src/bootloader_panic.c.i
 
 # target to preprocess a source file
 src/bootloader_panic.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_panic.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_panic.c.i
 .PHONY : src/bootloader_panic.c.i
 
 src/bootloader_panic.s: src/bootloader_panic.c.s
@@ -439,7 +439,7 @@ src/bootloader_panic.s: src/bootloader_panic.c.s
 
 # target to generate assembly for a file
 src/bootloader_panic.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_panic.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_panic.c.s
 .PHONY : src/bootloader_panic.c.s
 
 src/bootloader_random.obj: src/bootloader_random.c.obj
@@ -447,7 +447,7 @@ src/bootloader_random.obj: src/bootloader_random.c.obj
 
 # target to build an object file
 src/bootloader_random.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_random.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_random.c.obj
 .PHONY : src/bootloader_random.c.obj
 
 src/bootloader_random.i: src/bootloader_random.c.i
@@ -455,7 +455,7 @@ src/bootloader_random.i: src/bootloader_random.c.i
 
 # target to preprocess a source file
 src/bootloader_random.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_random.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_random.c.i
 .PHONY : src/bootloader_random.c.i
 
 src/bootloader_random.s: src/bootloader_random.c.s
@@ -463,7 +463,7 @@ src/bootloader_random.s: src/bootloader_random.c.s
 
 # target to generate assembly for a file
 src/bootloader_random.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_random.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_random.c.s
 .PHONY : src/bootloader_random.c.s
 
 src/bootloader_random_esp32s2.obj: src/bootloader_random_esp32s2.c.obj
@@ -471,7 +471,7 @@ src/bootloader_random_esp32s2.obj: src/bootloader_random_esp32s2.c.obj
 
 # target to build an object file
 src/bootloader_random_esp32s2.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_random_esp32s2.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_random_esp32s2.c.obj
 .PHONY : src/bootloader_random_esp32s2.c.obj
 
 src/bootloader_random_esp32s2.i: src/bootloader_random_esp32s2.c.i
@@ -479,7 +479,7 @@ src/bootloader_random_esp32s2.i: src/bootloader_random_esp32s2.c.i
 
 # target to preprocess a source file
 src/bootloader_random_esp32s2.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_random_esp32s2.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_random_esp32s2.c.i
 .PHONY : src/bootloader_random_esp32s2.c.i
 
 src/bootloader_random_esp32s2.s: src/bootloader_random_esp32s2.c.s
@@ -487,7 +487,7 @@ src/bootloader_random_esp32s2.s: src/bootloader_random_esp32s2.c.s
 
 # target to generate assembly for a file
 src/bootloader_random_esp32s2.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_random_esp32s2.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_random_esp32s2.c.s
 .PHONY : src/bootloader_random_esp32s2.c.s
 
 src/bootloader_utility.obj: src/bootloader_utility.c.obj
@@ -495,7 +495,7 @@ src/bootloader_utility.obj: src/bootloader_utility.c.obj
 
 # target to build an object file
 src/bootloader_utility.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_utility.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_utility.c.obj
 .PHONY : src/bootloader_utility.c.obj
 
 src/bootloader_utility.i: src/bootloader_utility.c.i
@@ -503,7 +503,7 @@ src/bootloader_utility.i: src/bootloader_utility.c.i
 
 # target to preprocess a source file
 src/bootloader_utility.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_utility.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_utility.c.i
 .PHONY : src/bootloader_utility.c.i
 
 src/bootloader_utility.s: src/bootloader_utility.c.s
@@ -511,7 +511,7 @@ src/bootloader_utility.s: src/bootloader_utility.c.s
 
 # target to generate assembly for a file
 src/bootloader_utility.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_utility.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/bootloader_utility.c.s
 .PHONY : src/bootloader_utility.c.s
 
 src/esp32s2/bootloader_esp32s2.obj: src/esp32s2/bootloader_esp32s2.c.obj
@@ -519,7 +519,7 @@ src/esp32s2/bootloader_esp32s2.obj: src/esp32s2/bootloader_esp32s2.c.obj
 
 # target to build an object file
 src/esp32s2/bootloader_esp32s2.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32s2/bootloader_esp32s2.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32s2/bootloader_esp32s2.c.obj
 .PHONY : src/esp32s2/bootloader_esp32s2.c.obj
 
 src/esp32s2/bootloader_esp32s2.i: src/esp32s2/bootloader_esp32s2.c.i
@@ -527,7 +527,7 @@ src/esp32s2/bootloader_esp32s2.i: src/esp32s2/bootloader_esp32s2.c.i
 
 # target to preprocess a source file
 src/esp32s2/bootloader_esp32s2.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32s2/bootloader_esp32s2.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32s2/bootloader_esp32s2.c.i
 .PHONY : src/esp32s2/bootloader_esp32s2.c.i
 
 src/esp32s2/bootloader_esp32s2.s: src/esp32s2/bootloader_esp32s2.c.s
@@ -535,7 +535,7 @@ src/esp32s2/bootloader_esp32s2.s: src/esp32s2/bootloader_esp32s2.c.s
 
 # target to generate assembly for a file
 src/esp32s2/bootloader_esp32s2.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32s2/bootloader_esp32s2.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32s2/bootloader_esp32s2.c.s
 .PHONY : src/esp32s2/bootloader_esp32s2.c.s
 
 src/esp32s2/bootloader_sha.obj: src/esp32s2/bootloader_sha.c.obj
@@ -543,7 +543,7 @@ src/esp32s2/bootloader_sha.obj: src/esp32s2/bootloader_sha.c.obj
 
 # target to build an object file
 src/esp32s2/bootloader_sha.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32s2/bootloader_sha.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32s2/bootloader_sha.c.obj
 .PHONY : src/esp32s2/bootloader_sha.c.obj
 
 src/esp32s2/bootloader_sha.i: src/esp32s2/bootloader_sha.c.i
@@ -551,7 +551,7 @@ src/esp32s2/bootloader_sha.i: src/esp32s2/bootloader_sha.c.i
 
 # target to preprocess a source file
 src/esp32s2/bootloader_sha.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32s2/bootloader_sha.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32s2/bootloader_sha.c.i
 .PHONY : src/esp32s2/bootloader_sha.c.i
 
 src/esp32s2/bootloader_sha.s: src/esp32s2/bootloader_sha.c.s
@@ -559,7 +559,7 @@ src/esp32s2/bootloader_sha.s: src/esp32s2/bootloader_sha.c.s
 
 # target to generate assembly for a file
 src/esp32s2/bootloader_sha.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32s2/bootloader_sha.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32s2/bootloader_sha.c.s
 .PHONY : src/esp32s2/bootloader_sha.c.s
 
 src/esp32s2/bootloader_soc.obj: src/esp32s2/bootloader_soc.c.obj
@@ -567,7 +567,7 @@ src/esp32s2/bootloader_soc.obj: src/esp32s2/bootloader_soc.c.obj
 
 # target to build an object file
 src/esp32s2/bootloader_soc.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32s2/bootloader_soc.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32s2/bootloader_soc.c.obj
 .PHONY : src/esp32s2/bootloader_soc.c.obj
 
 src/esp32s2/bootloader_soc.i: src/esp32s2/bootloader_soc.c.i
@@ -575,7 +575,7 @@ src/esp32s2/bootloader_soc.i: src/esp32s2/bootloader_soc.c.i
 
 # target to preprocess a source file
 src/esp32s2/bootloader_soc.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32s2/bootloader_soc.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32s2/bootloader_soc.c.i
 .PHONY : src/esp32s2/bootloader_soc.c.i
 
 src/esp32s2/bootloader_soc.s: src/esp32s2/bootloader_soc.c.s
@@ -583,7 +583,7 @@ src/esp32s2/bootloader_soc.s: src/esp32s2/bootloader_soc.c.s
 
 # target to generate assembly for a file
 src/esp32s2/bootloader_soc.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32s2/bootloader_soc.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp32s2/bootloader_soc.c.s
 .PHONY : src/esp32s2/bootloader_soc.c.s
 
 src/esp_image_format.obj: src/esp_image_format.c.obj
@@ -591,7 +591,7 @@ src/esp_image_format.obj: src/esp_image_format.c.obj
 
 # target to build an object file
 src/esp_image_format.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp_image_format.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp_image_format.c.obj
 .PHONY : src/esp_image_format.c.obj
 
 src/esp_image_format.i: src/esp_image_format.c.i
@@ -599,7 +599,7 @@ src/esp_image_format.i: src/esp_image_format.c.i
 
 # target to preprocess a source file
 src/esp_image_format.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp_image_format.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp_image_format.c.i
 .PHONY : src/esp_image_format.c.i
 
 src/esp_image_format.s: src/esp_image_format.c.s
@@ -607,7 +607,7 @@ src/esp_image_format.s: src/esp_image_format.c.s
 
 # target to generate assembly for a file
 src/esp_image_format.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp_image_format.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/esp_image_format.c.s
 .PHONY : src/esp_image_format.c.s
 
 src/flash_encrypt.obj: src/flash_encrypt.c.obj
@@ -615,7 +615,7 @@ src/flash_encrypt.obj: src/flash_encrypt.c.obj
 
 # target to build an object file
 src/flash_encrypt.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_encrypt.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_encrypt.c.obj
 .PHONY : src/flash_encrypt.c.obj
 
 src/flash_encrypt.i: src/flash_encrypt.c.i
@@ -623,7 +623,7 @@ src/flash_encrypt.i: src/flash_encrypt.c.i
 
 # target to preprocess a source file
 src/flash_encrypt.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_encrypt.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_encrypt.c.i
 .PHONY : src/flash_encrypt.c.i
 
 src/flash_encrypt.s: src/flash_encrypt.c.s
@@ -631,7 +631,7 @@ src/flash_encrypt.s: src/flash_encrypt.c.s
 
 # target to generate assembly for a file
 src/flash_encrypt.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_encrypt.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_encrypt.c.s
 .PHONY : src/flash_encrypt.c.s
 
 src/flash_partitions.obj: src/flash_partitions.c.obj
@@ -639,7 +639,7 @@ src/flash_partitions.obj: src/flash_partitions.c.obj
 
 # target to build an object file
 src/flash_partitions.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_partitions.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_partitions.c.obj
 .PHONY : src/flash_partitions.c.obj
 
 src/flash_partitions.i: src/flash_partitions.c.i
@@ -647,7 +647,7 @@ src/flash_partitions.i: src/flash_partitions.c.i
 
 # target to preprocess a source file
 src/flash_partitions.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_partitions.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_partitions.c.i
 .PHONY : src/flash_partitions.c.i
 
 src/flash_partitions.s: src/flash_partitions.c.s
@@ -655,7 +655,7 @@ src/flash_partitions.s: src/flash_partitions.c.s
 
 # target to generate assembly for a file
 src/flash_partitions.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_partitions.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/flash_partitions.c.s
 .PHONY : src/flash_partitions.c.s
 
 src/secure_boot.obj: src/secure_boot.c.obj
@@ -663,7 +663,7 @@ src/secure_boot.obj: src/secure_boot.c.obj
 
 # target to build an object file
 src/secure_boot.c.obj:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/secure_boot.c.obj
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/secure_boot.c.obj
 .PHONY : src/secure_boot.c.obj
 
 src/secure_boot.i: src/secure_boot.c.i
@@ -671,7 +671,7 @@ src/secure_boot.i: src/secure_boot.c.i
 
 # target to preprocess a source file
 src/secure_boot.c.i:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/secure_boot.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/secure_boot.c.i
 .PHONY : src/secure_boot.c.i
 
 src/secure_boot.s: src/secure_boot.c.s
@@ -679,7 +679,7 @@ src/secure_boot.s: src/secure_boot.c.s
 
 # target to generate assembly for a file
 src/secure_boot.c.s:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/secure_boot.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(MAKE) $(MAKESILENT) -f esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/build.make esp-idf/bootloader_support/CMakeFiles/__idf_bootloader_support.dir/src/secure_boot.c.s
 .PHONY : src/secure_boot.c.s
 
 # Help Target
@@ -771,6 +771,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/user/esp/CECS490/led_blinky/build/bootloader && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/user/esp/CECS490/demo_1/build/bootloader && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

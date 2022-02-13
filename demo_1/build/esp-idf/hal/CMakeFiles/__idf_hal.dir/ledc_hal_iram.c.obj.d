@@ -1,7 +1,7 @@
 esp-idf/hal/CMakeFiles/__idf_hal.dir/ledc_hal_iram.c.obj: \
  /Users/user/esp/esp-idf/components/hal/ledc_hal_iram.c \
  /Users/user/esp/esp-idf/components/esp_common/include/esp_attr.h \
- /Users/user/esp/CECS490/led_blinky/build/config/sdkconfig.h \
+ /Users/user/esp/CECS490/demo_1/build/config/sdkconfig.h \
  /Users/user/esp/esp-idf/components/hal/include/hal/ledc_hal.h \
  /Users/user/esp/esp-idf/components/hal/esp32s2/include/hal/ledc_ll.h \
  /Users/user/esp/esp-idf/components/hal/include/hal/ledc_types.h \

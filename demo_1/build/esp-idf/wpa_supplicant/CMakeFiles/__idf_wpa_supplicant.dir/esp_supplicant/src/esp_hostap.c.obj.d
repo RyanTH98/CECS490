@@ -1,6 +1,6 @@
 esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/esp_hostap.c.obj: \
  /Users/user/esp/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_hostap.c \
- /Users/user/esp/CECS490/led_blinky/build/config/sdkconfig.h \
+ /Users/user/esp/CECS490/demo_1/build/config/sdkconfig.h \
  /Users/user/esp/esp-idf/components/wpa_supplicant/src/utils/includes.h \
  /Users/user/esp/esp-idf/components/wpa_supplicant/port/include/supplicant_opt.h \
  /Users/user/esp/esp-idf/components/esp_rom/include/esp32s2/rom/ets_sys.h \

@@ -53,10 +53,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/led_blinky
+CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/demo_1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/user/esp/CECS490/led_blinky/build
+CMAKE_BINARY_DIR = /Users/user/esp/CECS490/demo_1/build
 
 # Include any dependencies generated for this target.
 include esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/depend.make
@@ -72,44 +72,44 @@ include esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/flags.make
 esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth.c.obj: esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/flags.make
 esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth.c.obj: /Users/user/esp/esp-idf/components/esp_eth/src/esp_eth.c
 esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth.c.obj: esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/esp_eth && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -std=gnu11 -MD -MT esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth.c.obj -MF CMakeFiles/__idf_esp_eth.dir/src/esp_eth.c.obj.d -o CMakeFiles/__idf_esp_eth.dir/src/esp_eth.c.obj -c /Users/user/esp/esp-idf/components/esp_eth/src/esp_eth.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/esp_eth && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -std=gnu11 -MD -MT esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth.c.obj -MF CMakeFiles/__idf_esp_eth.dir/src/esp_eth.c.obj.d -o CMakeFiles/__idf_esp_eth.dir/src/esp_eth.c.obj -c /Users/user/esp/esp-idf/components/esp_eth/src/esp_eth.c
 
 esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_esp_eth.dir/src/esp_eth.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/esp_eth && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -std=gnu11 -E /Users/user/esp/esp-idf/components/esp_eth/src/esp_eth.c > CMakeFiles/__idf_esp_eth.dir/src/esp_eth.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/esp_eth && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -std=gnu11 -E /Users/user/esp/esp-idf/components/esp_eth/src/esp_eth.c > CMakeFiles/__idf_esp_eth.dir/src/esp_eth.c.i
 
 esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_esp_eth.dir/src/esp_eth.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/esp_eth && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -std=gnu11 -S /Users/user/esp/esp-idf/components/esp_eth/src/esp_eth.c -o CMakeFiles/__idf_esp_eth.dir/src/esp_eth.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/esp_eth && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -std=gnu11 -S /Users/user/esp/esp-idf/components/esp_eth/src/esp_eth.c -o CMakeFiles/__idf_esp_eth.dir/src/esp_eth.c.s
 
 esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth_phy.c.obj: esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/flags.make
 esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth_phy.c.obj: /Users/user/esp/esp-idf/components/esp_eth/src/esp_eth_phy.c
 esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth_phy.c.obj: esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth_phy.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/esp_eth && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth_phy.c.obj -MF CMakeFiles/__idf_esp_eth.dir/src/esp_eth_phy.c.obj.d -o CMakeFiles/__idf_esp_eth.dir/src/esp_eth_phy.c.obj -c /Users/user/esp/esp-idf/components/esp_eth/src/esp_eth_phy.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth_phy.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/esp_eth && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth_phy.c.obj -MF CMakeFiles/__idf_esp_eth.dir/src/esp_eth_phy.c.obj.d -o CMakeFiles/__idf_esp_eth.dir/src/esp_eth_phy.c.obj -c /Users/user/esp/esp-idf/components/esp_eth/src/esp_eth_phy.c
 
 esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth_phy.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_esp_eth.dir/src/esp_eth_phy.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/esp_eth && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/esp_eth/src/esp_eth_phy.c > CMakeFiles/__idf_esp_eth.dir/src/esp_eth_phy.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/esp_eth && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/esp_eth/src/esp_eth_phy.c > CMakeFiles/__idf_esp_eth.dir/src/esp_eth_phy.c.i
 
 esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth_phy.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_esp_eth.dir/src/esp_eth_phy.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/esp_eth && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/esp_eth/src/esp_eth_phy.c -o CMakeFiles/__idf_esp_eth.dir/src/esp_eth_phy.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/esp_eth && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/esp_eth/src/esp_eth_phy.c -o CMakeFiles/__idf_esp_eth.dir/src/esp_eth_phy.c.s
 
 esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth_netif_glue.c.obj: esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/flags.make
 esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth_netif_glue.c.obj: /Users/user/esp/esp-idf/components/esp_eth/src/esp_eth_netif_glue.c
 esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth_netif_glue.c.obj: esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth_netif_glue.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/esp_eth && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth_netif_glue.c.obj -MF CMakeFiles/__idf_esp_eth.dir/src/esp_eth_netif_glue.c.obj.d -o CMakeFiles/__idf_esp_eth.dir/src/esp_eth_netif_glue.c.obj -c /Users/user/esp/esp-idf/components/esp_eth/src/esp_eth_netif_glue.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth_netif_glue.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/esp_eth && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth_netif_glue.c.obj -MF CMakeFiles/__idf_esp_eth.dir/src/esp_eth_netif_glue.c.obj.d -o CMakeFiles/__idf_esp_eth.dir/src/esp_eth_netif_glue.c.obj -c /Users/user/esp/esp-idf/components/esp_eth/src/esp_eth_netif_glue.c
 
 esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth_netif_glue.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_esp_eth.dir/src/esp_eth_netif_glue.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/esp_eth && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/esp_eth/src/esp_eth_netif_glue.c > CMakeFiles/__idf_esp_eth.dir/src/esp_eth_netif_glue.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/esp_eth && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/esp_eth/src/esp_eth_netif_glue.c > CMakeFiles/__idf_esp_eth.dir/src/esp_eth_netif_glue.c.i
 
 esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth_netif_glue.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_esp_eth.dir/src/esp_eth_netif_glue.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/esp_eth && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/esp_eth/src/esp_eth_netif_glue.c -o CMakeFiles/__idf_esp_eth.dir/src/esp_eth_netif_glue.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/esp_eth && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/esp_eth/src/esp_eth_netif_glue.c -o CMakeFiles/__idf_esp_eth.dir/src/esp_eth_netif_glue.c.s
 
 # Object files for target __idf_esp_eth
 __idf_esp_eth_OBJECTS = \
@@ -125,19 +125,19 @@ esp-idf/esp_eth/libesp_eth.a: esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/e
 esp-idf/esp_eth/libesp_eth.a: esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth_netif_glue.c.obj
 esp-idf/esp_eth/libesp_eth.a: esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/build.make
 esp-idf/esp_eth/libesp_eth.a: esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C static library libesp_eth.a"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/esp_eth && $(CMAKE_COMMAND) -P CMakeFiles/__idf_esp_eth.dir/cmake_clean_target.cmake
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/esp_eth && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/__idf_esp_eth.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C static library libesp_eth.a"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/esp_eth && $(CMAKE_COMMAND) -P CMakeFiles/__idf_esp_eth.dir/cmake_clean_target.cmake
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/esp_eth && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/__idf_esp_eth.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/build: esp-idf/esp_eth/libesp_eth.a
 .PHONY : esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/build
 
 esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/clean:
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/esp_eth && $(CMAKE_COMMAND) -P CMakeFiles/__idf_esp_eth.dir/cmake_clean.cmake
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/esp_eth && $(CMAKE_COMMAND) -P CMakeFiles/__idf_esp_eth.dir/cmake_clean.cmake
 .PHONY : esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/clean
 
 esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/depend:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/CECS490/led_blinky /Users/user/esp/esp-idf/components/esp_eth /Users/user/esp/CECS490/led_blinky/build /Users/user/esp/CECS490/led_blinky/build/esp-idf/esp_eth /Users/user/esp/CECS490/led_blinky/build/esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/CECS490/demo_1 /Users/user/esp/esp-idf/components/esp_eth /Users/user/esp/CECS490/demo_1/build /Users/user/esp/CECS490/demo_1/build/esp-idf/esp_eth /Users/user/esp/CECS490/demo_1/build/esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/depend
 

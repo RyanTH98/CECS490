@@ -53,10 +53,10 @@ RM = /Applications/CMake.app/Contents/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/led_blinky
+CMAKE_SOURCE_DIR = /Users/user/esp/CECS490/demo_1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/user/esp/CECS490/led_blinky/build
+CMAKE_BINARY_DIR = /Users/user/esp/CECS490/demo_1/build
 
 # Include any dependencies generated for this target.
 include esp-idf/usb/CMakeFiles/__idf_usb.dir/depend.make
@@ -72,100 +72,100 @@ include esp-idf/usb/CMakeFiles/__idf_usb.dir/flags.make
 esp-idf/usb/CMakeFiles/__idf_usb.dir/hcd.c.obj: esp-idf/usb/CMakeFiles/__idf_usb.dir/flags.make
 esp-idf/usb/CMakeFiles/__idf_usb.dir/hcd.c.obj: /Users/user/esp/esp-idf/components/usb/hcd.c
 esp-idf/usb/CMakeFiles/__idf_usb.dir/hcd.c.obj: esp-idf/usb/CMakeFiles/__idf_usb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/usb/CMakeFiles/__idf_usb.dir/hcd.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/usb && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/usb/CMakeFiles/__idf_usb.dir/hcd.c.obj -MF CMakeFiles/__idf_usb.dir/hcd.c.obj.d -o CMakeFiles/__idf_usb.dir/hcd.c.obj -c /Users/user/esp/esp-idf/components/usb/hcd.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object esp-idf/usb/CMakeFiles/__idf_usb.dir/hcd.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/usb && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/usb/CMakeFiles/__idf_usb.dir/hcd.c.obj -MF CMakeFiles/__idf_usb.dir/hcd.c.obj.d -o CMakeFiles/__idf_usb.dir/hcd.c.obj -c /Users/user/esp/esp-idf/components/usb/hcd.c
 
 esp-idf/usb/CMakeFiles/__idf_usb.dir/hcd.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_usb.dir/hcd.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/usb && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/usb/hcd.c > CMakeFiles/__idf_usb.dir/hcd.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/usb && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/usb/hcd.c > CMakeFiles/__idf_usb.dir/hcd.c.i
 
 esp-idf/usb/CMakeFiles/__idf_usb.dir/hcd.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_usb.dir/hcd.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/usb && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/usb/hcd.c -o CMakeFiles/__idf_usb.dir/hcd.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/usb && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/usb/hcd.c -o CMakeFiles/__idf_usb.dir/hcd.c.s
 
 esp-idf/usb/CMakeFiles/__idf_usb.dir/hub.c.obj: esp-idf/usb/CMakeFiles/__idf_usb.dir/flags.make
 esp-idf/usb/CMakeFiles/__idf_usb.dir/hub.c.obj: /Users/user/esp/esp-idf/components/usb/hub.c
 esp-idf/usb/CMakeFiles/__idf_usb.dir/hub.c.obj: esp-idf/usb/CMakeFiles/__idf_usb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object esp-idf/usb/CMakeFiles/__idf_usb.dir/hub.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/usb && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/usb/CMakeFiles/__idf_usb.dir/hub.c.obj -MF CMakeFiles/__idf_usb.dir/hub.c.obj.d -o CMakeFiles/__idf_usb.dir/hub.c.obj -c /Users/user/esp/esp-idf/components/usb/hub.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object esp-idf/usb/CMakeFiles/__idf_usb.dir/hub.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/usb && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/usb/CMakeFiles/__idf_usb.dir/hub.c.obj -MF CMakeFiles/__idf_usb.dir/hub.c.obj.d -o CMakeFiles/__idf_usb.dir/hub.c.obj -c /Users/user/esp/esp-idf/components/usb/hub.c
 
 esp-idf/usb/CMakeFiles/__idf_usb.dir/hub.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_usb.dir/hub.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/usb && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/usb/hub.c > CMakeFiles/__idf_usb.dir/hub.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/usb && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/usb/hub.c > CMakeFiles/__idf_usb.dir/hub.c.i
 
 esp-idf/usb/CMakeFiles/__idf_usb.dir/hub.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_usb.dir/hub.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/usb && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/usb/hub.c -o CMakeFiles/__idf_usb.dir/hub.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/usb && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/usb/hub.c -o CMakeFiles/__idf_usb.dir/hub.c.s
 
 esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_helpers.c.obj: esp-idf/usb/CMakeFiles/__idf_usb.dir/flags.make
 esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_helpers.c.obj: /Users/user/esp/esp-idf/components/usb/usb_helpers.c
 esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_helpers.c.obj: esp-idf/usb/CMakeFiles/__idf_usb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_helpers.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/usb && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_helpers.c.obj -MF CMakeFiles/__idf_usb.dir/usb_helpers.c.obj.d -o CMakeFiles/__idf_usb.dir/usb_helpers.c.obj -c /Users/user/esp/esp-idf/components/usb/usb_helpers.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_helpers.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/usb && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_helpers.c.obj -MF CMakeFiles/__idf_usb.dir/usb_helpers.c.obj.d -o CMakeFiles/__idf_usb.dir/usb_helpers.c.obj -c /Users/user/esp/esp-idf/components/usb/usb_helpers.c
 
 esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_helpers.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_usb.dir/usb_helpers.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/usb && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/usb/usb_helpers.c > CMakeFiles/__idf_usb.dir/usb_helpers.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/usb && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/usb/usb_helpers.c > CMakeFiles/__idf_usb.dir/usb_helpers.c.i
 
 esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_helpers.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_usb.dir/usb_helpers.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/usb && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/usb/usb_helpers.c -o CMakeFiles/__idf_usb.dir/usb_helpers.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/usb && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/usb/usb_helpers.c -o CMakeFiles/__idf_usb.dir/usb_helpers.c.s
 
 esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_host.c.obj: esp-idf/usb/CMakeFiles/__idf_usb.dir/flags.make
 esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_host.c.obj: /Users/user/esp/esp-idf/components/usb/usb_host.c
 esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_host.c.obj: esp-idf/usb/CMakeFiles/__idf_usb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_host.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/usb && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_host.c.obj -MF CMakeFiles/__idf_usb.dir/usb_host.c.obj.d -o CMakeFiles/__idf_usb.dir/usb_host.c.obj -c /Users/user/esp/esp-idf/components/usb/usb_host.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_host.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/usb && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_host.c.obj -MF CMakeFiles/__idf_usb.dir/usb_host.c.obj.d -o CMakeFiles/__idf_usb.dir/usb_host.c.obj -c /Users/user/esp/esp-idf/components/usb/usb_host.c
 
 esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_host.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_usb.dir/usb_host.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/usb && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/usb/usb_host.c > CMakeFiles/__idf_usb.dir/usb_host.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/usb && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/usb/usb_host.c > CMakeFiles/__idf_usb.dir/usb_host.c.i
 
 esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_host.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_usb.dir/usb_host.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/usb && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/usb/usb_host.c -o CMakeFiles/__idf_usb.dir/usb_host.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/usb && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/usb/usb_host.c -o CMakeFiles/__idf_usb.dir/usb_host.c.s
 
 esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_private.c.obj: esp-idf/usb/CMakeFiles/__idf_usb.dir/flags.make
 esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_private.c.obj: /Users/user/esp/esp-idf/components/usb/usb_private.c
 esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_private.c.obj: esp-idf/usb/CMakeFiles/__idf_usb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_private.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/usb && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_private.c.obj -MF CMakeFiles/__idf_usb.dir/usb_private.c.obj.d -o CMakeFiles/__idf_usb.dir/usb_private.c.obj -c /Users/user/esp/esp-idf/components/usb/usb_private.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_private.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/usb && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_private.c.obj -MF CMakeFiles/__idf_usb.dir/usb_private.c.obj.d -o CMakeFiles/__idf_usb.dir/usb_private.c.obj -c /Users/user/esp/esp-idf/components/usb/usb_private.c
 
 esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_private.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_usb.dir/usb_private.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/usb && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/usb/usb_private.c > CMakeFiles/__idf_usb.dir/usb_private.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/usb && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/usb/usb_private.c > CMakeFiles/__idf_usb.dir/usb_private.c.i
 
 esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_private.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_usb.dir/usb_private.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/usb && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/usb/usb_private.c -o CMakeFiles/__idf_usb.dir/usb_private.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/usb && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/usb/usb_private.c -o CMakeFiles/__idf_usb.dir/usb_private.c.s
 
 esp-idf/usb/CMakeFiles/__idf_usb.dir/usbh.c.obj: esp-idf/usb/CMakeFiles/__idf_usb.dir/flags.make
 esp-idf/usb/CMakeFiles/__idf_usb.dir/usbh.c.obj: /Users/user/esp/esp-idf/components/usb/usbh.c
 esp-idf/usb/CMakeFiles/__idf_usb.dir/usbh.c.obj: esp-idf/usb/CMakeFiles/__idf_usb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object esp-idf/usb/CMakeFiles/__idf_usb.dir/usbh.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/usb && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/usb/CMakeFiles/__idf_usb.dir/usbh.c.obj -MF CMakeFiles/__idf_usb.dir/usbh.c.obj.d -o CMakeFiles/__idf_usb.dir/usbh.c.obj -c /Users/user/esp/esp-idf/components/usb/usbh.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object esp-idf/usb/CMakeFiles/__idf_usb.dir/usbh.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/usb && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/usb/CMakeFiles/__idf_usb.dir/usbh.c.obj -MF CMakeFiles/__idf_usb.dir/usbh.c.obj.d -o CMakeFiles/__idf_usb.dir/usbh.c.obj -c /Users/user/esp/esp-idf/components/usb/usbh.c
 
 esp-idf/usb/CMakeFiles/__idf_usb.dir/usbh.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_usb.dir/usbh.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/usb && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/usb/usbh.c > CMakeFiles/__idf_usb.dir/usbh.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/usb && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/usb/usbh.c > CMakeFiles/__idf_usb.dir/usbh.c.i
 
 esp-idf/usb/CMakeFiles/__idf_usb.dir/usbh.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_usb.dir/usbh.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/usb && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/usb/usbh.c -o CMakeFiles/__idf_usb.dir/usbh.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/usb && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/usb/usbh.c -o CMakeFiles/__idf_usb.dir/usbh.c.s
 
 esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_phy.c.obj: esp-idf/usb/CMakeFiles/__idf_usb.dir/flags.make
 esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_phy.c.obj: /Users/user/esp/esp-idf/components/usb/usb_phy.c
 esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_phy.c.obj: esp-idf/usb/CMakeFiles/__idf_usb.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_phy.c.obj"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/usb && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_phy.c.obj -MF CMakeFiles/__idf_usb.dir/usb_phy.c.obj.d -o CMakeFiles/__idf_usb.dir/usb_phy.c.obj -c /Users/user/esp/esp-idf/components/usb/usb_phy.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_phy.c.obj"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/usb && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_phy.c.obj -MF CMakeFiles/__idf_usb.dir/usb_phy.c.obj.d -o CMakeFiles/__idf_usb.dir/usb_phy.c.obj -c /Users/user/esp/esp-idf/components/usb/usb_phy.c
 
 esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_phy.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/__idf_usb.dir/usb_phy.c.i"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/usb && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/usb/usb_phy.c > CMakeFiles/__idf_usb.dir/usb_phy.c.i
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/usb && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/user/esp/esp-idf/components/usb/usb_phy.c > CMakeFiles/__idf_usb.dir/usb_phy.c.i
 
 esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_phy.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/__idf_usb.dir/usb_phy.c.s"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/usb && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/usb/usb_phy.c -o CMakeFiles/__idf_usb.dir/usb_phy.c.s
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/usb && /Users/user/.espressif/tools/xtensa-esp32s2-elf/esp-2021r2-8.4.0/xtensa-esp32s2-elf/bin/xtensa-esp32s2-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/user/esp/esp-idf/components/usb/usb_phy.c -o CMakeFiles/__idf_usb.dir/usb_phy.c.s
 
 # Object files for target __idf_usb
 __idf_usb_OBJECTS = \
@@ -189,19 +189,19 @@ esp-idf/usb/libusb.a: esp-idf/usb/CMakeFiles/__idf_usb.dir/usbh.c.obj
 esp-idf/usb/libusb.a: esp-idf/usb/CMakeFiles/__idf_usb.dir/usb_phy.c.obj
 esp-idf/usb/libusb.a: esp-idf/usb/CMakeFiles/__idf_usb.dir/build.make
 esp-idf/usb/libusb.a: esp-idf/usb/CMakeFiles/__idf_usb.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/user/esp/CECS490/led_blinky/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C static library libusb.a"
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/usb && $(CMAKE_COMMAND) -P CMakeFiles/__idf_usb.dir/cmake_clean_target.cmake
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/usb && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/__idf_usb.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/user/esp/CECS490/demo_1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking C static library libusb.a"
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/usb && $(CMAKE_COMMAND) -P CMakeFiles/__idf_usb.dir/cmake_clean_target.cmake
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/usb && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/__idf_usb.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 esp-idf/usb/CMakeFiles/__idf_usb.dir/build: esp-idf/usb/libusb.a
 .PHONY : esp-idf/usb/CMakeFiles/__idf_usb.dir/build
 
 esp-idf/usb/CMakeFiles/__idf_usb.dir/clean:
-	cd /Users/user/esp/CECS490/led_blinky/build/esp-idf/usb && $(CMAKE_COMMAND) -P CMakeFiles/__idf_usb.dir/cmake_clean.cmake
+	cd /Users/user/esp/CECS490/demo_1/build/esp-idf/usb && $(CMAKE_COMMAND) -P CMakeFiles/__idf_usb.dir/cmake_clean.cmake
 .PHONY : esp-idf/usb/CMakeFiles/__idf_usb.dir/clean
 
 esp-idf/usb/CMakeFiles/__idf_usb.dir/depend:
-	cd /Users/user/esp/CECS490/led_blinky/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/CECS490/led_blinky /Users/user/esp/esp-idf/components/usb /Users/user/esp/CECS490/led_blinky/build /Users/user/esp/CECS490/led_blinky/build/esp-idf/usb /Users/user/esp/CECS490/led_blinky/build/esp-idf/usb/CMakeFiles/__idf_usb.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/user/esp/CECS490/demo_1/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/user/esp/CECS490/demo_1 /Users/user/esp/esp-idf/components/usb /Users/user/esp/CECS490/demo_1/build /Users/user/esp/CECS490/demo_1/build/esp-idf/usb /Users/user/esp/CECS490/demo_1/build/esp-idf/usb/CMakeFiles/__idf_usb.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : esp-idf/usb/CMakeFiles/__idf_usb.dir/depend
 
