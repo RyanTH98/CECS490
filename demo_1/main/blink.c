@@ -24,63 +24,65 @@
 #define input  1
 #define output 0
 
+#define matrix_size 2 //2x2 matix
+
 int input_pins[]  = { muxOut };
 int output_pins[] = { muxA, muxB, muxC, decA0, decA1, decA2, out0, out1, out2, out3 };
+int decoder_sel[] = { decA0, decA1, decA2 };
+int multiplexor_sel[] = { muxA, muxB, muxC};
 
 long binary_out[64];
 
 const int scan_delay = 1;
 
-void set   (int);
+void Set   (int);
 void delay (int);
-void init  (void);
-void scan  (void);
+void GPIO_Init  (int);
+void Scan_Hall  (void);
+
+void LED_Output (void);
 
 //long decimalToBinary(int decimalNum);
 
 void app_main(void) {
-    init();
+    	GPIO_Init(input);
+	GPIO_Init(output);
     
-    while(1) {
-        scan();
-    }
+    	while(1) {
+        	Scan_Hall();
+		LED_Output();
+    	}
 }
 
 void delay(int duration) { vTaskDelay(duration / portTICK_PERIOD_MS); }
 
-void init(void) { set(input); set(output); }
-
-void scan(void) {
-    short int index = 0;
-    
-    gpio_set_level(decA0, 0);
-    gpio_set_level(muxA,  0);
-    delay(1);
-    binary_out[index] =  !gpio_get_level(muxOut);
-    gpio_set_level(out3, !gpio_get_level(muxOut));
-    index++;
-    
-    gpio_set_level(muxA,  1);
-    delay(1);
-    binary_out[index] =  !gpio_get_level(muxOut);
-    gpio_set_level(out0, !gpio_get_level(muxOut));
-    index++;
-    
-    
-    gpio_set_level(decA0, 1);
-    gpio_set_level(muxA,  0);
-    delay(1);
-    binary_out[index] =  !gpio_get_level(muxOut);
-    gpio_set_level(out1, !gpio_get_level(muxOut));
-    index++;
-                
-    gpio_set_level(muxA,  1);
-    delay(1);
-    binary_out[index] =  !gpio_get_level(muxOut);
-    gpio_set_level(out2, !gpio_get_level(muxOut));
+void LED_Output(void){	
+	gpio_set_level(out0, binary_out[0]);
+	gpio_set_level(out1, binary_out[1]);
+	gpio_set_level(out2, binary_out[2]);
+	gpio_set_level(out3, binary_out[3]);
 }
 
-void set(int direction) {
+void Scan_Hall(void) {
+	unsigned short column;
+	unsigned short row;
+	for(unsigned short i = 0; i < matrix_size * matrix_size; i++){
+		row = i % matrix_size;
+		column = i / matrix_size;
+
+   		gpio_set_level(muxA, row & 0x01);
+   		gpio_set_level(muxB, (row>>1)&0x01);
+   		gpio_set_level(muxC, (row>>2)&0x01);
+   		gpio_set_level(decA0, column&0x01);
+   		gpio_set_level(decA1, (column>>1)&0x01);
+   		gpio_set_level(decA2, (column>>2)&0x01);
+    		
+		delay(1);
+    		binary_out[i] =  !gpio_get_level(muxOut);
+	}
+}
+
+void GPIO_Init(int direction) {
     char pin;
     char size  = (direction ? sizeof(input_pins ) : sizeof(output_pins)) / sizeof(int);
     
