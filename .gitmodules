@@ -1,3 +1,6 @@
 [submodule "demo_1/components/arduino"]
 	path = demo_1/components/arduino
 	url = https://github.com/espressif/arduino-esp32.git
+[submodule "pin_test/components/arduino"]
+	path = pin_test/components/arduino
+	url = https://github.com/espressif/arduino-esp32.git
