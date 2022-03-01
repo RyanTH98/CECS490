@@ -1363,3 +1363,14 @@
 2294	2331	0	/home/graham/esp4/CECS490/tests/build/esp-idf/esptool_py/CMakeFiles/app_check_size	ce9ec4886a1613fd
 2331	7181	0	CMakeFiles/flash	e8ca3006672640b3
 2331	7181	0	/home/graham/esp4/CECS490/tests/build/CMakeFiles/flash	e8ca3006672640b3
+0	2640	1646177196	build.ninja	dd91bca4e048dcc4
+12	75	1646177196	esp-idf/app_update/CMakeFiles/__idf_app_update.dir/esp_app_desc.c.obj	c9274ae2c4a0101d
+75	81	1646177196	esp-idf/app_update/libapp_update.a	132813e280ce0a80
+11	83	1646161528	bootloader-prefix/src/bootloader-stamp/bootloader-build	c422f4ff90585910
+11	83	1646161528	bootloader/bootloader.elf	c422f4ff90585910
+11	83	1646161528	bootloader/bootloader.bin	c422f4ff90585910
+11	83	1646161528	bootloader/bootloader.map	c422f4ff90585910
+11	83	1646161528	/home/graham/esp4/CECS490/tests/build/bootloader-prefix/src/bootloader-stamp/bootloader-build	c422f4ff90585910
+11	83	1646161528	/home/graham/esp4/CECS490/tests/build/bootloader/bootloader.elf	c422f4ff90585910
+11	83	1646161528	/home/graham/esp4/CECS490/tests/build/bootloader/bootloader.bin	c422f4ff90585910
+11	83	1646161528	/home/graham/esp4/CECS490/tests/build/bootloader/bootloader.map	c422f4ff90585910
