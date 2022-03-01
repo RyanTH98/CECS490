@@ -6,7 +6,7 @@
 # It is included in the main 'build.ninja'.
 
 # =============================================================================
-# Project: led_blinky
+# Project: pin_test
 # Configurations: 
 # =============================================================================
 # =============================================================================
@@ -14,7 +14,7 @@
 #############################################
 # Rule for compiling C files.
 
-rule C_COMPILER__led_blinky.2eelf_
+rule C_COMPILER__pin_test.2eelf_
   depfile = $DEP_FILE
   deps = gcc
   command = /home/graham/.espressif/tools/xtensa-esp32-elf/esp-2021r2-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -24,7 +24,7 @@ rule C_COMPILER__led_blinky.2eelf_
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__led_blinky.2eelf_
+rule CXX_EXECUTABLE_LINKER__pin_test.2eelf_
   command = $PRE_LINK && /home/graham/.espressif/tools/xtensa-esp32-elf/esp-2021r2-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-g++ $FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
@@ -1576,7 +1576,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_arduino_
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /usr/local/bin/cmake --regenerate-during-build -S/home/graham/esp4/pin_test -B/home/graham/esp4/pin_test/build
+  command = /usr/local/bin/cmake --regenerate-during-build -S/home/graham/esp4/CECS490/pin_test -B/home/graham/esp4/CECS490/pin_test/build
   description = Re-running CMake...
   generator = 1
 

@@ -1,4 +1,4 @@
-# Install script for directory: /home/graham/esp4/pin_test/main
+# Install script for directory: /home/graham/esp4/CECS490/pin_test/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -1,4 +1,4 @@
-/* * Data converted from /home/graham/esp4/pin_test/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from /home/graham/esp4/CECS490/pin_test/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 .section .rodata.embedded
