@@ -15,7 +15,7 @@
 void mux_test();
 void decoder_test();
 void led_test();
-void init()
+void init();
 void delay_1ms(int);
 
 
@@ -37,7 +37,7 @@ unsigned short decoder_counter = 0;
 
 //led
 gpio_num_t led_strip = GPIO_NUM_23;
-Adafruit_NeoPixel pixels(NUMPIXELS, led_strip, NEO_GRB + NEO_KHZ800);
+Adafruit_NeoPixel pixels(NUM_PIXELS, led_strip, NEO_GRB + NEO_KHZ800);
 
 //other
 gpio_mode_t out = GPIO_MODE_OUTPUT;
@@ -93,7 +93,7 @@ void led_test(){
 	pixels.clear(); // Set all pixel colors to 'off'
 	
 	//set every other pixel on
-  	for(int i=0; i<NUMPIXELS; i++) {
+  	for(int i=0; i<NUM_PIXELS; i++) {
 		printf("Setting Led #%d to %d\n", i, i%2);
 		if(i%2 == 0){ //off
     			pixels.setPixelColor(i, pixels.Color(0, 0, 0));

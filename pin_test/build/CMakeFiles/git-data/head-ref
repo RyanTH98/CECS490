@@ -1,1 +1,6 @@
-c03d472a7585c3d1419dfc6e7101cfdeaff8973b
+0000000000000000000000000000000000000000 92321388d912fea1296140960942da7786814b01 Graham <bggillmore@gmail.com> 1646088378 -0800	branch: Created from main
+92321388d912fea1296140960942da7786814b01 d55306963428705c6e5bed363f36a5359f4052d2 Graham <bggillmore@gmail.com> 1646088620 -0800	commit: initial commit of the testing branch
+d55306963428705c6e5bed363f36a5359f4052d2 ba14c26b5f9a4fbfa2003acfaffda09df6622bfd Graham <bggillmore@gmail.com> 1646169759 -0800	commit: created a test for the multiplexor
+ba14c26b5f9a4fbfa2003acfaffda09df6622bfd 325f02aa61fcf8d80261f739c835c711cec7c1da Graham <bggillmore@gmail.com> 1646176303 -0800	commit: added decoder test
+325f02aa61fcf8d80261f739c835c711cec7c1da c03d472a7585c3d1419dfc6e7101cfdeaff8973b Graham <bggillmore@gmail.com> 1646177303 -0800	commit: added led test, pushing before recursevely pulling submodules to be safe
+c03d472a7585c3d1419dfc6e7101cfdeaff8973b e2c018ec814d4ec877437d8c2f838459dd5a9a54 Graham <bggillmore@gmail.com> 1646178583 -0800	commit: commmiting to change branch
