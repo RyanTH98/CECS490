@@ -59,8 +59,8 @@ extern "C" void app_main(){
 		//printf("Runnin\n");
 		delay_1ms(1000);
 		//mux_test();
-		//decoder_test();
-		led_test();
+		decoder_test();
+		//led_test();
     	}
 }
 
