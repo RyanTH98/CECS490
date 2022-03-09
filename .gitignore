@@ -1,4 +1,1 @@
-*
-!/main_project/main/*
-!/main_project/CMakeLists.txt
-!.vim*
+/code_backup
