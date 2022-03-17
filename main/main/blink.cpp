@@ -30,7 +30,7 @@ gpio_num_t led_strip_D0 =  GPIO_NUM_37;
 #define input  1
 #define output 0
 
-#define matrix_size 2 //2x2 matix
+#define matrix_size 3 //2x2 matix
 
 gpio_num_t input_pins[]  = { muxOut };
 gpio_num_t output_pins[] = { muxA, muxB, muxC, decA0, decA1, decA2, out0, out1, out2, out3, led_strip_D0 };
@@ -47,7 +47,7 @@ void Scan_Hall  (void);
 void test_led_strip(void);
 void LED_Output (void);
 
-#define NUMPIXELS 6 
+#define NUMPIXELS 9 
 Adafruit_NeoPixel pixels(NUMPIXELS, led_strip_D0, NEO_GRB + NEO_KHZ800);
 
 
@@ -58,6 +58,7 @@ extern "C" void app_main(){
 	GPIO_Init(output);
    	pixels.begin(); 
     	while(1) {
+		//delay(1000);
         	Scan_Hall();
 		LED_Output();
 		test_led_strip();
@@ -67,21 +68,28 @@ extern "C" void app_main(){
 void delay_1ms(int duration) { vTaskDelay(duration / portTICK_PERIOD_MS); }
 
 void test_led_strip(){
+	int row, column, led;
 	pixels.clear(); // Set all pixel colors to 'off'
 
-  	for(int i=0; i<NUMPIXELS; i++) {
+  	for(int i=0; i<matrix_size*matrix_size; i++) {
+		row = i % matrix_size;
+		column = i / matrix_size;
+					
+    			
+		led = (column%2 == 0)?i:((column+1)*matrix_size - row - 1);
+		
+
 		// pixels.Color() takes RGB values, from 0,0,0 up to 255,255,255
   	  	if(binary_out[i] != 0){
-			printf("Setting Led #%d High\n", i);
-    			pixels.setPixelColor(i, pixels.Color(0, 150, 0));
-    			//pixels.show();   // Send the updated pixel colors to the hardware.
+			printf("Setting Led #%d High\n", led);
+    			pixels.setPixelColor(led, pixels.Color(0, 0, 150));
+    			//pixels.setPixelColor(i, pixels.Color(0, 0, 150));
 		}
 		else{
-			printf("Setting LED #%d Low\n", i);
-    			pixels.setPixelColor(i, pixels.Color(0, 0, 0));
-    			//pixels.show();   // Send the updated pixel colors to the hardware.
+			printf("Setting LED #%d Low\n", led);
+    			pixels.setPixelColor(led, pixels.Color(150, 0, 0));
+    			//pixels.setPixelColor(i, pixels.Color(150, 0, 0));
 		}
-    		//delay(500); // Pause before next pass through loop
   	}
 	pixels.show();   // Send the updated pixel colors to the hardware.
 }
@@ -91,6 +99,10 @@ void LED_Output(void){
 	gpio_set_level(out1, binary_out[1]);
 	gpio_set_level(out2, binary_out[2]);
 	gpio_set_level(out3, binary_out[3]);
+	for(int i = 0; i<(sizeof(binary_out)/sizeof(binary_out[0])); i++){
+		printf("%lu, ", binary_out[i]);
+	}
+	printf("\n\n");
 }
 
 void Scan_Hall(void) {
@@ -109,6 +121,7 @@ void Scan_Hall(void) {
     		
 		delay(1);
     		binary_out[i] =  !gpio_get_level(muxOut);
+		delay(10);
 	}
 }
 
