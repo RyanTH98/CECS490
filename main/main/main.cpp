@@ -67,6 +67,8 @@ extern "C" void app_main(){
     	}
 }
 
+
+
 void delay_1ms(int duration) { vTaskDelay(duration / portTICK_PERIOD_MS); }
 
 void LedStrip_Output(void) {
