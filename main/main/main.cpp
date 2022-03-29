@@ -6,7 +6,7 @@
 #include "sdkconfig.h"
 #include "Arduino.h"
 #include <Adafruit_NeoPixel.h>
-
+#include "chess.h"
 #define input  1
 #define output 0
 #define matrix_size 8 //nxn matix
@@ -38,7 +38,21 @@ long binary_out[64] = {0};
 
 const int scan_delay = 1;
 int timer_flag = 0;
-
+/*
+enum Position {
+	a1, b1, c1, d1, e1, f1, g1, h1,
+	a2, b2, c2, d2, e2, f2, g2, h2,
+	a3, b3, c3, d3, e3, f3, g3, h3,
+	a4, b4, c4, d4, e4, f4, g4, h4,
+	a5, b5, c5, d5, e5, f5, g5, h5,
+	a6, b6, c6, d6, e6, f6, g6, h6,
+	a7, b7, c7, d7, e7, f7, g7, h7,
+	a8, b8, c8, d8, e8, f8, g8, h8, 
+	offBoard
+};
+enum GameStyle{OVER_BOARD, AI, REMOTE};
+enum Color{WHITE, BLACK};
+*/
 //function prototypes
 void Set   (int);
 void delay_1ms (int);
@@ -46,7 +60,14 @@ void GPIO_Init  (int);
 void Scan_Hall  (void);
 void Serial_Output(void);
 void LedStrip_Output(void);
-
+//class ChessBoard;
+//class ChessPiece;
+//class King;
+//class Queen;
+//class Bishop;
+//class Rook;
+//class Knight;
+//class Pawn;
 
 
 extern "C" void app_main(){
@@ -59,15 +80,179 @@ extern "C" void app_main(){
 	gpio_set_level(muxEn_n, 0);
 	
    	pixels.begin(); 
-    	while(1) {
+	Chess::Board board();
+    while(1) {
 		//delay(1000);
-        	Scan_Hall();
+        Scan_Hall();
 		Serial_Output();
 		//LedStrip_Output();
     	}
 }
+/*
+class Player{
+	private:
+	Color color;
+	Position position = offBoard;
+	King king(position, color);
+	
+	public:
+	Player(Color color){
+		this->color = color;
+		//king = King(a4);
+	}
+	
+};
+
+class ChessPiece{
+	private:
+	bool active, is_in_starting_position;
+	Color color;
+	Position position;
+	Position legal_moves[16] = {};
+
+	public:
+	bool getActive(){
+		return active;
+	}
+	void setActive(bool active){
+		this->active = active;
+	}
+	bool getIsInStartingPosition(){
+		return is_in_starting_position;	
+	}
+	void setIsInStartingPostion(bool is_in_starting_position){
+		this->is_in_starting_position = is_in_starting_position;
+	}
+	Position getPosition(){
+		return position;
+	}
+	void setPosition(Position position){
+		this->position = position;
+	}
+	
+	ChessPiece(Position position, Color color){
+		active = true;
+		is_in_starting_position = true;
+		this->position = position;
+		this->color = color;
+	}
+	~ChessPiece(){
+		//std::cout << "Destroying Chess Piece\n";
+	}
+};
 
 
+class King: public ChessPiece{
+	private:
+	bool check;
+	bool leftCastle;
+	bool rightCastle;
+
+	public:
+	void updateLegalMoves(){
+			
+	}
+
+	//1: check if king is in check
+	//2: set check variable
+	//3: return its value
+	bool checkCheck(){
+		return check;
+	}
+	
+	//1: check if king can castle
+	//2: set left and right castle variable
+	void setCastle(){
+	
+	}
+	bool getLeftCastle(){
+		return leftCastle;
+	}
+	bool getRightCastle(){
+		return rightCastle;
+	}
+
+	King(Position position, Color color): ChessPiece{position, color}
+	{
+		check = false;
+		leftCastle = false;
+		rightCastle = false;
+	};
+};
+
+class Queen: public ChessPiece{
+
+	public:
+	void updateLegalMoves(){
+			
+	}
+	
+	Queen(Position position): ChessPiece(position){
+		
+	};
+};
+
+class Bishop: public ChessPiece{
+
+	public:
+	void updateLegalMoves(){
+			
+	}
+	
+	Bishop(Position position): ChessPiece(position){
+		
+	};
+};
+
+
+class Rook: public ChessPiece{
+	private:
+	bool castle;
+	public:
+	void updateLegalMoves(){
+			
+	}
+
+	//1: check if castling is legal
+	//2: set castle variable
+	//3: return its value
+	bool checkCastle(){
+		return castle;
+	}
+	
+	Rook(Position position): ChessPiece(position){
+		castle = false;	
+	};
+};
+
+
+class Pawn: public ChessPiece{
+	private:
+	bool enPasant, doubleMove;
+	public:
+	void updateLegalMoves(){
+			
+	}
+	//1: check if enpasant is legal
+	//2: set enpasant variable
+	//3: return its value
+	bool checkEnPasant(){
+		return enPasant;
+	}
+
+	//1: check if double move is legal
+	//2: set doubleMove variable
+	//3: return its value
+	bool checkDoubleMove(){
+		return doubleMove;
+	}
+	
+	Pawn(Position position): ChessPiece(position){
+		enPasant = false;
+		doubleMove = true;	
+	};
+};
+*/
 
 void delay_1ms(int duration) { vTaskDelay(duration / portTICK_PERIOD_MS); }
 
@@ -139,5 +324,3 @@ void GPIO_Init(int direction) {
     }
     
 }
-
-
