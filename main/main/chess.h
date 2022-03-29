@@ -11,19 +11,20 @@ namespace Chess
     } Position;
 
     class BasePiece{
-        private:
+        protected:
             Color color;
             Position pos;
-            std::vector<Position> legalMoves;
+            
 
         public:
             BasePiece();
             virtual ~BasePiece();
             
+            std::vector<Position> legalMoves;
             Position getPosition();
             void setPosition(Position pos);
             Color getColor();
-            Position* getLegalMoves();
+            std::vector<Position> getLegalMoves();
             bool validateMove(Position dest);
             virtual void populateLegalMoves() = 0;
     };
@@ -45,12 +46,12 @@ namespace Chess
         private:
             Square board[8][8];
             void initBoard();
-            bool isInBounds(Position pos);
         
         public:
             Board();
             virtual ~Board();
             
+            bool isInBounds(Position pos);
             bool movePiece(Position origin, Position dest);
             BasePiece* getPiece(Position piecePos);
     };

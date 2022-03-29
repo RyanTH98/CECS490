@@ -2,22 +2,24 @@
 
 using namespace Chess;
 
+extern Board board;
+
 //definitions for BasePiece Class
 BasePiece::BasePiece(){
 
 }
 
 BasePiece::~BasePiece(){
-    printf("Deconstructing BasePiece at %d, %d\n", pos.x, pos.y);
+    //printf("Deconstructing BasePiece at %d, %d\n", pos.x, pos.y);
 }
 
-Position* BasePiece::getLegalMoves(){
+std::vector<Position> BasePiece::getLegalMoves(){
     return legalMoves;
 }
 
 bool BasePiece::validateMove(Position dest){
     for(int i = 0; i < 24; i++){
-        if(dest == legalMoves[i]){
+        if(dest.x == legalMoves[i].x && dest.y == legalMoves[i].y){
             return true;
         }
     }
@@ -42,10 +44,10 @@ Square::Square(){
 }
 
 Square::~Square(){
-    printf("Deconstructing Square");
+    //printf("Deconstructing Square");
 }
 
-Square::setPiece(BasePiece* piece){
+void Square::setPiece(BasePiece* piece){
     this->piece = piece;
 }
 
@@ -64,54 +66,54 @@ Board::Board(){
 }
 
 Board::~Board(){
-    printf("Deconstructing Board\n");
+    //printf("Deconstructing Board\n");
 }
 
 void Board::initBoard(){
     Position pos;
 
     pos = {0,0};
-    board[pos.y][pos.x].SetPiece(new Rook(White, pos));
+    board[pos.y][pos.x].setPiece(new Rook(White, pos));
     pos = {1,0};
-    board[pos.y][pos.x].SetPiece(new Knight(White, pos));
+    board[pos.y][pos.x].setPiece(new Knight(White, pos));
     pos = {2,0};
-    board[pos.y][pos.x].SetPiece(new Bishop(White, pos));
+    board[pos.y][pos.x].setPiece(new Bishop(White, pos));
     pos = {3,0};
-    board[pos.y][pos.x].SetPiece(new King(White, pos));
+    board[pos.y][pos.x].setPiece(new King(White, pos));
     pos = {4,0};
-    board[pos.y][pos.x].SetPiece(new Queen(White, pos));
+    board[pos.y][pos.x].setPiece(new Queen(White, pos));
     pos = {5,0};
-    board[pos.y][pos.x].SetPiece(new Bishop(White, pos));
+    board[pos.y][pos.x].setPiece(new Bishop(White, pos));
     pos = {6,0};
-    board[pos.y][pos.x].SetPiece(new Knight(White, pos));
+    board[pos.y][pos.x].setPiece(new Knight(White, pos));
     pos = {7,0};
-    board[pos.y][pos.x].SetPiece(new Rook(White, pos));
+    board[pos.y][pos.x].setPiece(new Rook(White, pos));
 
     for(int i = 0; i < 8; i++){
         pos = {i,1};
-        board[pos.y][pos.x].SetPiece(new Pawn(White, pos));
+        board[pos.y][pos.x].setPiece(new Pawn(White, pos));
     }
 
     pos = {0,7};
-    board[pos.y][pos.x].SetPiece(new Rook(Black, pos));
+    board[pos.y][pos.x].setPiece(new Rook(Black, pos));
     pos = {1,7};
-    board[pos.y][pos.x].SetPiece(new Knight(Black, pos));
+    board[pos.y][pos.x].setPiece(new Knight(Black, pos));
     pos = {2,7};
-    board[pos.y][pos.x].SetPiece(new Bishop(Black, pos));
+    board[pos.y][pos.x].setPiece(new Bishop(Black, pos));
     pos = {3,7};
-    board[pos.y][pos.x].SetPiece(new Queen(Black, pos));
+    board[pos.y][pos.x].setPiece(new Queen(Black, pos));
     pos = {4,7};
-    board[pos.y][pos.x].SetPiece(new King(Black, pos));
+    board[pos.y][pos.x].setPiece(new King(Black, pos));
     pos = {5,7};
-    board[pos.y][pos.x].SetPiece(new Bishop(Black, pos));
+    board[pos.y][pos.x].setPiece(new Bishop(Black, pos));
     pos = {6,7};
-    board[pos.y][pos.x].SetPiece(new Knight(Black, pos));
+    board[pos.y][pos.x].setPiece(new Knight(Black, pos));
     pos = {7,7};
-    board[pos.y][pos.x].SetPiece(new Rook(Black, pos));
+    board[pos.y][pos.x].setPiece(new Rook(Black, pos));
 
     for(int i = 0; i < 8; i++){
         pos = {i,6};
-        board[pos.y][pos.x].SetPiece(new Pawn(Black, pos));
+        board[pos.y][pos.x].setPiece(new Pawn(Black, pos));
     }
 }
 
@@ -122,13 +124,13 @@ bool Board::isInBounds(Position pos){
     if(pos.y > 7 || pos.y < 0){
         return false;
     }
-    return true
+    return true;
 }
 
 bool Board::movePiece(Position origin, Position dest){
     if(getPiece(origin)->validateMove(dest)){
         board[dest.y][dest.x].clearSquare();
-        board[dest.y][dest.x].SetPiece(board.getPiece(origin));
+        board[dest.y][dest.x].setPiece(getPiece(origin));
         board[origin.y][origin.x].clearSquare();
         return true;
     }
@@ -151,21 +153,29 @@ Pawn::Pawn(Color color, Position pos){
 }
 
 Pawn::~Pawn(){
-    printf("Deconstructing Pawn at %d, %d\n", pos.x, pos.y);
+    //printf("Deconstructing Pawn at %d, %d\n", pos.x, pos.y);
 }
 
 void Pawn::populateLegalMoves(){
     legalMoves.clear();
+    BasePiece* piece;
+    Position testPos;
     int dir = (color == White)?1:-1;
     //if there is not a piece directly in front of the pawn -> it is legal move
-    if(board[pos.y + 1*dir][pos.x].getPiece() == NULL && board[pos.y + 1*dir][pos.x].isInBounds()){
-        legalMoves.push_back({pos.x, pos.y+1*dir});
+    testPos = {pos.x, pos.y + 1*dir};
+    piece = board.getPiece(testPos);
+    if(piece == NULL && board.isInBounds(testPos)){
+        legalMoves.push_back(testPos);
     }
     //if there is an enemy piece diagonal to the pawn it is a legal move
-    if(board[pos.y + 1*dir][pos.x+1].getPiece().color != color && board[pos.y + 1*dir][pos.x+1].isInBounds()){
+    testPos = {pos.x+1, pos.y + 1*dir};
+    piece = board.getPiece(testPos);
+    if(piece->getColor() != color && board.isInBounds(testPos)){
         legalMoves.push_back({pos.x+1, pos.y+1*dir});
     }
-    if(board[pos.y + 1*dir][pos.x-1].getPiece().color != color && board[pos.y + 1*dir][pos.x-1].isInBounds()){
+    testPos = {pos.x-1, pos.y + 1*dir};
+    piece = board.getPiece(testPos);
+    if(piece->getColor() != color && board.isInBounds(testPos)){
         legalMoves.push_back({pos.x-1, pos.y+1*dir});
     }
 }
@@ -177,7 +187,7 @@ Rook::Rook(Color color, Position pos){
 }
 
 Rook::~Rook(){
-    printf("Deconstructing Rook at %d, %d\n", pos.x, pos.y);
+    //printf("Deconstructing Rook at %d, %d\n", pos.x, pos.y);
 }
 
 void Rook::populateLegalMoves(){
@@ -191,8 +201,8 @@ void Rook::populateLegalMoves(){
         //left
         if(left){
             newPos = {pos.x-i, pos.y};
-            if(board[newPos.y][newPos.x].isInBounds()){
-                piece = board[newPos.y][newPos.x].getPiece();
+            if(board.isInBounds(newPos)){
+                piece = board.getPiece(newPos);
                 
                 //no piece
                 if(piece == NULL){
@@ -200,7 +210,7 @@ void Rook::populateLegalMoves(){
                 }
                 else{
                     //piece
-                    if(piece->color != color){ //enemy piece
+                    if(piece->getColor() != color){ //enemy piece
                         legalMoves.push_back(newPos);
                         left = false;
                     }
@@ -217,8 +227,8 @@ void Rook::populateLegalMoves(){
         //right
         if(right){
             newPos = {pos.x+i, pos.y};
-            if(board[newPos.y][newPos.x].isInBounds()){
-                piece = board[newPos.y][newPos.x].getPiece();
+            if(board.isInBounds(newPos)){
+                piece = board.getPiece(newPos);
                 
                 //no piece
                 if(piece == NULL){
@@ -226,7 +236,7 @@ void Rook::populateLegalMoves(){
                 }
                 else{
                     //piece
-                    if(piece->color != color){ //enemy piece
+                    if(piece->getColor() != color){ //enemy piece
                         legalMoves.push_back(newPos);
                         right = false;
                     }
@@ -243,8 +253,8 @@ void Rook::populateLegalMoves(){
         //up
         if(up){
             newPos = {pos.x, pos.y+i};
-            if(board[newPos.y][newPos.x].isInBounds()){
-                piece = board[newPos.y][newPos.x].getPiece();
+            if(board.isInBounds(newPos)){
+                piece = board.getPiece(newPos);
                 
                 //no piece
                 if(piece == NULL){
@@ -252,7 +262,7 @@ void Rook::populateLegalMoves(){
                 }
                 else{
                     //piece
-                    if(piece->color != color){ //enemy piece
+                    if(piece->getColor() != color){ //enemy piece
                         legalMoves.push_back(newPos);
                         up = false;
                     }
@@ -269,8 +279,8 @@ void Rook::populateLegalMoves(){
         //down
         if(down){
             newPos = {pos.x+i, pos.y};
-            if(board[newPos.y][newPos.x].isInBounds()){
-                piece = board[newPos.y][newPos.x].getPiece();
+            if(board.isInBounds(newPos)){
+                piece = board.getPiece(newPos);
                 
                 //no piece
                 if(piece == NULL){
@@ -278,7 +288,7 @@ void Rook::populateLegalMoves(){
                 }
                 else{
                     //piece
-                    if(piece->color != color){ //enemy piece
+                    if(piece->getColor() != color){ //enemy piece
                         legalMoves.push_back(newPos);
                         down = false;
                     }
@@ -301,7 +311,7 @@ Bishop::Bishop(Color color, Position pos){
 }
 
 Bishop::~Bishop(){
-    printf("Deconstructing Bishop at %d, %d\n", pos.x, pos.y);
+    //printf("Deconstructing Bishop at %d, %d\n", pos.x, pos.y);
 }
 
 void Bishop::populateLegalMoves(){
@@ -315,8 +325,8 @@ void Bishop::populateLegalMoves(){
         //up-left
         if(ul){
             newPos = {pos.x-i, pos.y+i};
-            if(board[newPos.y][newPos.x].isInBounds()){
-                piece = board[newPos.y][newPos.x].getPiece();
+            if(board.isInBounds(newPos)){
+                piece = board.getPiece(newPos);
                 
                 //no piece
                 if(piece == NULL){
@@ -324,7 +334,7 @@ void Bishop::populateLegalMoves(){
                 }
                 else{
                     //piece
-                    if(piece->color != color){ //enemy piece
+                    if(piece->getColor() != color){ //enemy piece
                         legalMoves.push_back(newPos);
                         ul = false;
                     }
@@ -341,8 +351,8 @@ void Bishop::populateLegalMoves(){
         //ur
         if(ur){
             newPos = {pos.x+i, pos.y+i};
-            if(board[newPos.y][newPos.x].isInBounds()){
-                piece = board[newPos.y][newPos.x].getPiece();
+            if(board.isInBounds(newPos)){
+                piece = board.getPiece(newPos);
                 
                 //no piece
                 if(piece == NULL){
@@ -350,7 +360,7 @@ void Bishop::populateLegalMoves(){
                 }
                 else{
                     //piece
-                    if(piece->color != color){ //enemy piece
+                    if(piece->getColor() != color){ //enemy piece
                         legalMoves.push_back(newPos);
                         ur = false;
                     }
@@ -367,8 +377,8 @@ void Bishop::populateLegalMoves(){
         //dl
         if(dl){
             newPos = {pos.x-i, pos.y-i};
-            if(board[newPos.y][newPos.x].isInBounds()){
-                piece = board[newPos.y][newPos.x].getPiece();
+            if(board.isInBounds(newPos)){
+                piece = board.getPiece(newPos);
                 
                 //no piece
                 if(piece == NULL){
@@ -376,7 +386,7 @@ void Bishop::populateLegalMoves(){
                 }
                 else{
                     //piece
-                    if(piece->color != color){ //enemy piece
+                    if(piece->getColor() != color){ //enemy piece
                         legalMoves.push_back(newPos);
                         dl = false;
                     }
@@ -393,8 +403,8 @@ void Bishop::populateLegalMoves(){
         //dr
         if(dr){
             newPos = {pos.x+i, pos.y-i};
-            if(board[newPos.y][newPos.x].isInBounds()){
-                piece = board[newPos.y][newPos.x].getPiece();
+            if(board.isInBounds(newPos)){
+                piece = board.getPiece(newPos);
                 
                 //no piece
                 if(piece == NULL){
@@ -402,7 +412,7 @@ void Bishop::populateLegalMoves(){
                 }
                 else{
                     //piece
-                    if(piece->color != color){ //enemy piece
+                    if(piece->getColor() != color){ //enemy piece
                         legalMoves.push_back(newPos);
                         dr = false;
                     }
@@ -425,7 +435,7 @@ Knight::Knight(Color color, Position pos){
 }
 
 Knight::~Knight(){
-    printf("Deconstructing Knight at %d, %d\n", pos.x, pos.y);
+    //printf("Deconstructing Knight at %d, %d\n", pos.x, pos.y);
 }
 
 void Knight::populateLegalMoves(){
@@ -439,7 +449,7 @@ Queen::Queen(Color color, Position pos){
 }
 
 Queen::~Queen(){
-    printf("Deconstructing Queen at %d, %d\n", pos.x, pos.y);
+    //printf("Deconstructing Queen at %d, %d\n", pos.x, pos.y);
 }
 
 void Queen::populateLegalMoves(){
@@ -450,6 +460,9 @@ void Queen::populateLegalMoves(){
 
     bishop->populateLegalMoves();
     rook->populateLegalMoves();
+
+    legalMoves = bishop->legalMoves;
+    legalMoves.insert(rook->legalMoves.end(), rook->legalMoves.begin(), rook->legalMoves.end());
 }
 
 //definitions for King Class
@@ -462,7 +475,7 @@ King::King(Color color, Position pos){
 }
 
 King::~King(){
-    printf("Deconstructing King at %d, %d\n", pos.x, pos.y);
+    //printf("Deconstructing King at %d, %d\n", pos.x, pos.y);
 }
 
 void King::populateLegalMoves(){
