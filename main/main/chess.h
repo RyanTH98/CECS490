@@ -14,13 +14,12 @@ namespace Chess
         protected:
             Color color;
             Position pos;
-            
+            std::vector<Position> legalMoves;
 
         public:
             BasePiece();
             virtual ~BasePiece();
             
-            std::vector<Position> legalMoves;
             Position getPosition();
             void setPosition(Position pos);
             Color getColor();
