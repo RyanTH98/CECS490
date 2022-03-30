@@ -81,6 +81,7 @@ extern "C" void app_main(){
 	
    	pixels.begin(); 
 	Chess::Board board();
+	board.getPiece(origin)->validatemove(dest);
     while(1) {
 		//delay(1000);
         Scan_Hall();

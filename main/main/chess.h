@@ -1,4 +1,6 @@
 #include <vector>
+#include <stdio.h>
+
 namespace Chess
 {
     enum Color{

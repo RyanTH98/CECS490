@@ -1,5 +1,4 @@
 #include "chess.h"
-#include <stdio.h>
 
 using namespace Chess;
 
@@ -8,7 +7,7 @@ extern Board board;
 
 /* Proposed Change
 using namespace std;
- 
+
 
 // Base Piece
 BasePiece::BasePiece(){}
@@ -47,13 +46,15 @@ BasePiece::BasePiece(){
 }
 
 BasePiece::~BasePiece(){
-    //printf("Deconstructing BasePiece at %d, %d\n", pos.x, pos.y);
+    printf("Deconstructing BasePiece at %d, %d\n", pos.x, pos.y);
 }
 
 std::vector<Position> BasePiece::getLegalMoves(){
     return legalMoves;
 }
 
+
+//incorrect now?
 bool BasePiece::validateMove(Position dest){
     for(int i = 0; i < 24; i++){
         if(dest.x == legalMoves[i].x && dest.y == legalMoves[i].y){
@@ -62,8 +63,6 @@ bool BasePiece::validateMove(Position dest){
     }
     return false;
 }
-
-
 
 Position BasePiece::getPosition(){
     return pos;
@@ -76,6 +75,12 @@ void BasePiece::setPosition(Position pos){
 Color BasePiece::getColor(){
     return color;
 }
+
+
+
+
+
+
 
 //definitions for Square class
 Square::Square(){
