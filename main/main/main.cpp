@@ -254,8 +254,14 @@ class Pawn: public ChessPiece{
 };
 */
 
+
 void delay_1ms(int duration) { vTaskDelay(duration / portTICK_PERIOD_MS); }
 
+
+/* Function:    LedStripOutput
+ * Arguments:   None
+ * Description: Turns on/off the board's LEDs based on the values found from Scan_Hall
+ */
 void LedStrip_Output(void) {
 	int row, column, led;
 	pixels.clear(); // Set all pixel colors to 'off'
@@ -281,6 +287,10 @@ void LedStrip_Output(void) {
 	pixels.show();   // Send the updated pixel colors to the hardware.
 }
 
+/* Function:    Serial_Output
+ * Arguments:   None
+ * Description: Prints a table of values to the console, corrosponding to the results found in the Scan_Hall function
+ */
 void Serial_Output(void){	
 	for(int i = 0; i < (sizeof(binary_out)/sizeof(binary_out[1])); i++){
 		printf("%3d: %lu,    ", i, binary_out[i]);
@@ -291,6 +301,10 @@ void Serial_Output(void){
 	printf("\n\n");
 }
 
+/* Function:    Scan_Hall
+ * Arguments:   None
+ * Description: Populates the binary_out array with true/false values, indicating which squares on the board currently contain a piece
+ */
 void Scan_Hall(void) {
 	unsigned short column;
 	unsigned short row;
@@ -312,6 +326,10 @@ void Scan_Hall(void) {
 	}
 }
 
+/* Function:    GPIO_Init
+ * Arguments:   direction ('1' for input pins, '0' for output pins)
+ * Description: Sets an array of pins on the ESP32 as either input or output
+ */
 void GPIO_Init(int direction) {
     gpio_num_t pin;
     char size  = (direction ? sizeof(input_pins ) : sizeof(output_pins)) / sizeof(int);

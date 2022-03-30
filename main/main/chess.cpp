@@ -5,7 +5,7 @@ using namespace Chess;
 
 extern Board board;
 
-//definitions for BasePiece Class
+// Definitions for BasePiece Class
 BasePiece::BasePiece(){
 
 }
@@ -13,6 +13,7 @@ BasePiece::BasePiece(){
 BasePiece::~BasePiece(){
     //printf("Deconstructing BasePiece at %d, %d\n", pos.x, pos.y);
 }
+
 
 std::vector<Position> BasePiece::getLegalMoves(){
     return legalMoves;
@@ -26,6 +27,8 @@ bool BasePiece::validateMove(Position dest){
     }
     return false;
 }
+
+
 
 Position BasePiece::getPosition(){
     return pos;
@@ -61,7 +64,7 @@ void Square::clearSquare(){
 }
 
 
-//definitions for Board Class
+// Definitions for the Board Class
 Board::Board(){
     initBoard();
 }
@@ -70,6 +73,10 @@ Board::~Board(){
     //printf("Deconstructing Board\n");
 }
 
+/* Function:    initBoard
+ * Arguments:   None
+ * Description: Places each player's starting pieces on their appropriate squares
+ */
 void Board::initBoard(){
     Position pos;
 
@@ -118,6 +125,11 @@ void Board::initBoard(){
     }
 }
 
+
+/* Function:    isInBounds
+ * Arguments:   Position to check
+ * Description: Returns whether or not the position is within the matrix
+ */
 bool Board::isInBounds(Position pos){
     if(pos.x > 7 || pos.x < 0){
         return false;
@@ -128,6 +140,11 @@ bool Board::isInBounds(Position pos){
     return true;
 }
 
+
+/* Function:    movePiece
+ * Arguments:   Original position, Destination position
+ * Description: Moves a piece from one square to another
+ */
 bool Board::movePiece(Position origin, Position dest){
     if(getPiece(origin)->validateMove(dest)){
         board[dest.y][dest.x].clearSquare();
@@ -140,12 +157,18 @@ bool Board::movePiece(Position origin, Position dest){
     }
 }
 
+
+/* Function:    getPiece
+ * Arguments:   (x, y) pair of coordinates
+ * Description: Returns the piece object at the given position
+ */
 BasePiece* Board::getPiece(Position piecePos){
     return board[piecePos.y][piecePos.x].getPiece();
 }
 
 
-//definitions for Pawn Class
+
+// Definitions for Pawn Class
 Pawn::Pawn(Color color, Position pos){
     this->color = color;
     this->pos = pos;
@@ -157,6 +180,11 @@ Pawn::~Pawn(){
     printf("Deconstructing Pawn at %d, %d\n", pos.x, pos.y);
 }
 
+
+/* Function:    Pawn::populateLegalMoves
+ * Arguments:   None
+ * Description: Fills a pawn's object with the possible moves it can make
+ */
 void Pawn::populateLegalMoves(){
     legalMoves.clear();
     BasePiece* piece;
@@ -181,7 +209,10 @@ void Pawn::populateLegalMoves(){
     }
 }
 
-//definitions for Rook Class
+
+
+
+// Definitions for the Rook Class
 Rook::Rook(Color color, Position pos){
     this->color = color;
     this->pos = pos;
@@ -191,6 +222,10 @@ Rook::~Rook(){
     printf("Deconstructing Rook at %d, %d\n", pos.x, pos.y);
 }
 
+/* Function:    Rook::populateLegalMoves
+ * Arguments:   None
+ * Description: Fills a rook's object with the possible moves it can make
+ */
 void Rook::populateLegalMoves(){
     legalMoves.clear();
 
@@ -305,7 +340,9 @@ void Rook::populateLegalMoves(){
     }
 }
 
-//definitions for Bishop Class
+
+
+// Definitions for the Bishop Class
 Bishop::Bishop(Color color, Position pos){
     this->color = color;
     this->pos = pos;
@@ -315,6 +352,11 @@ Bishop::~Bishop(){
     printf("Deconstructing Bishop at %d, %d\n", pos.x, pos.y);
 }
 
+
+/* Function:    Bishop::populateLegalMoves
+ * Arguments:   None
+ * Description: Fills a bishop's object with the possible moves it can make
+ */
 void Bishop::populateLegalMoves(){
     legalMoves.clear();
 
@@ -429,7 +471,10 @@ void Bishop::populateLegalMoves(){
     }
 }
 
-//definitions for Knight Class
+
+
+
+// Definitions for the Knight Class
 Knight::Knight(Color color, Position pos){
     this->color = color;
     this->pos = pos;
@@ -439,6 +484,10 @@ Knight::~Knight(){
     printf("Deconstructing Knight at %d, %d\n", pos.x, pos.y);
 }
 
+/* Function:    Knight::populateLegalMoves
+ * Arguments:   None
+ * Description: Fills a knight's object with the possible moves it can make
+ */
 void Knight::populateLegalMoves(){
     legalMoves.clear();
 
@@ -514,7 +563,10 @@ void Knight::populateLegalMoves(){
     }
 }
 
-//definitions for Queen Class
+
+
+
+// Definitions for the Queen Class
 Queen::Queen(Color color, Position pos){
     this->color = color;
     this->pos = pos;
@@ -524,6 +576,11 @@ Queen::~Queen(){
     printf("Deconstructing Queen at %d, %d\n", pos.x, pos.y);
 }
 
+
+/* Function:    Queen::populateLegalMoves
+ * Arguments:   None
+ * Description: Fills a queen's object with the possible moves it can make
+ */
 void Queen::populateLegalMoves(){
     legalMoves.clear();
 
@@ -540,7 +597,9 @@ void Queen::populateLegalMoves(){
     rook->~BasePiece();
 }
 
-//definitions for King Class
+
+
+// Definitions for the King Class
 King::King(Color color, Position pos){
     this->color = color;
     this->pos = pos;
@@ -553,6 +612,11 @@ King::~King(){
     printf("Deconstructing King at %d, %d\n", pos.x, pos.y);
 }
 
+
+/* Function:    King::populateLegalMoves
+ * Arguments:   None
+ * Description: Fills a king's object with the possible moves it can make
+ */
 void King::populateLegalMoves(){
     legalMoves.clear();
 
