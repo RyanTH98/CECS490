@@ -1,3 +1,6 @@
+#ifndef IOCONTROLLER_H
+#define IOCONTROLLER_H
+
 #include <vector>
 #include <stdio.h>
 #include <Adafruit_NeoPixel.h>
@@ -55,13 +58,16 @@ namespace IOController
 
     class LedController{
         private:
-            Adafruit_NeoPixel pixels(64, led_strip_D0, NEO_GRB + NEO_KHZ800);
+            void setupPixel();
+            Adafruit_NeoPixel pixels();
             std::vector<int> ledVector;
         public:
             LedController();
             virtual ~LedController();
             void start();
             void singleLedUpdate(Position pos, RGBColor rgb_color);
-            void vectorLedUpdate(std::vector<{Position, RGBColor}> updateVector);
+            //void vectorLedUpdate(std::vector<{Position, RGBColor}> updateVector);
     };
 }
+
+#endif

@@ -94,6 +94,7 @@ bool HalController::checkStartingPosition(){
 									1,1,1,1,1,1,1,1,
 									1,1,1,1,1,1,1,1,
 								};
+	halVector = scan();
 	return checkVector == halVector;
 }
 
@@ -138,7 +139,7 @@ Move HalController::detectChange(){
 		if(x != 0){
 			move.risingEdge = (x == 1)?true:false;
 			move.targetSquare = {i/8, i%8};
-#ifdef debug
+#ifdef DEBUG
 			printf("Detected change on collumn %d row %d -> piece has been %s\n", 
 				move.targetSquare.x, move.targetSquare.y, move.risingEdge?"placed":"removed");
 #endif
