@@ -7,9 +7,10 @@
 #include "Arduino.h"
 #include <Adafruit_NeoPixel.h>
 #include "chess.h"
+#include "IOController.h"
 #define input  1
 #define output 0
-#define matrix_size 8 //nxn matix
+//#define matrix_size 8 //nxn matix
 
 //mux
 gpio_num_t muxA = GPIO_NUM_5;
@@ -28,7 +29,7 @@ unsigned short decoder_counter = 0;
 
 //led
 gpio_num_t led_strip_D0 = GPIO_NUM_23;
-Adafruit_NeoPixel pixels(matrix_size*matrix_size, led_strip_D0, NEO_GRB + NEO_KHZ800);
+//Adafruit_NeoPixel pixels(matrix_size*matrix_size, led_strip_D0, NEO_GRB + NEO_KHZ800);
 
 //Just to make life easier
 gpio_num_t input_pins[]  = { muxY };
@@ -79,12 +80,14 @@ extern "C" void app_main(){
 	gpio_set_level(decoderEn, 1);
 	gpio_set_level(muxEn_n, 0);
 	
-   	pixels.begin(); 
+   	//pixels.begin(); 
 	Chess::Board board();
-	board.getPiece(origin)->validatemove(dest);
+	IOController::HalController hal_controller(gpio_num_t GPIO_NUM_5, gpio_num_t GPIO_NUM_18, gpio_num_t GPIO_NUM_19, gpio_num_t GPIO_NUM_2, gpio_num_t GPIO_NUM_4, 
+                        gpio_num_t GPIO_NUM_27, gpio_num_t GPIO_NUM_26, gpio_num_t GPIO_NUM_25, gpio_num_t GPIO_NUM_33);
+
     while(1) {
 		//delay(1000);
-        Scan_Hall();
+        //Scan_Hall();
 		Serial_Output();
 		//LedStrip_Output();
     	}
@@ -263,16 +266,17 @@ void delay_1ms(int duration) { vTaskDelay(duration / portTICK_PERIOD_MS); }
  * Arguments:   None
  * Description: Turns on/off the board's LEDs based on the values found from Scan_Hall
  */
+/*
 void LedStrip_Output(void) {
 	int row, column, led;
 	pixels.clear(); // Set all pixel colors to 'off'
 
-  	for(int i=0; i<matrix_size*matrix_size; i++) {
-		row = i % matrix_size;
-		column = i / matrix_size;
+  	for(int i=0; i<MATRIX_SIZE*MATrix_SIZEE; i++) {
+		row = i % MATRIX_SIZE;
+		column = i / MATRIX_SIZE;
 					
     			
-		led = (column%2 == 0)?i:((column+1)*matrix_size - row - 1);
+		led = (column%2 == 0)?i:((column+1)*MATRIX_SIZE - row - 1);
 		
 
 		// pixels.Color() takes RGB values, from 0,0,0 up to 255,255,255
@@ -287,6 +291,7 @@ void LedStrip_Output(void) {
   	}
 	pixels.show();   // Send the updated pixel colors to the hardware.
 }
+*/
 
 /* Function:    Serial_Output
  * Arguments:   None
@@ -306,12 +311,13 @@ void Serial_Output(void){
  * Arguments:   None
  * Description: Populates the binary_out array with true/false values, indicating which squares on the board currently contain a piece
  */
+/*
 void Scan_Hall(void) {
 	unsigned short column;
 	unsigned short row;
-	for(unsigned short i = 0; i < matrix_size * matrix_size; i++){
-		row = i % matrix_size;
-		column = i / matrix_size;
+	for(unsigned short i = 0; i < MATRIX_SIZE * MATRIX_SIZE; i++){
+		row = i % MATRIX_SIZE;
+		column = i / MATRIX_SIZE;
 
    		gpio_set_level(muxA, row & 0x01);
    		gpio_set_level(muxB, (row>>1)&0x01);
@@ -326,7 +332,7 @@ void Scan_Hall(void) {
 		delay(15);
 	}
 }
-
+*/
 /* Function:    GPIO_Init
  * Arguments:   direction ('1' for input pins, '0' for output pins)
  * Description: Sets an array of pins on the ESP32 as either input or output
@@ -343,3 +349,5 @@ void GPIO_Init(int direction) {
     }
     
 }
+
+

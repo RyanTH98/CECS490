@@ -5,48 +5,15 @@ using namespace Chess;
 extern Board board;
 
 
-/* Proposed Change
-using namespace std;
-
-
-// Base Piece
-BasePiece::BasePiece(){}
-BasePiece::~BasePiece(){}
-
-void BasePiece::setPosition( Position pos ) { this -> pos = pos; }
-Color BasePiece::getColor(){ return color; }
-Position BasePiece::getPosition(){ return pos; }
-vector<Position> BasePiece::getLegalMoves(){ return legalMoves; }
-
-// Square
-Square::Square(){ piece = NULL; }
-Square::~Square(){}
-
-void Square::clearSquare() { piece = NULL; }
-void Square::setPiece(BasePiece* piece){ this->piece = piece; }
-BasePiece* Square::getPiece() { return piece; }
-
-Board::Board(){ initBoard(); }
-Board::~Board(){ }
- 
-bool BasePiece::validateMove(Position dest){
-    for(int i = 0; i < 24; i++) {
-        if(dest.x == legalMoves[i].x && dest.y == legalMoves[i].y)
-            return true;
-    }
- 
-    return false;
-}
-*/
-
-
 // Definitions for BasePiece Class
 BasePiece::BasePiece(){
 
 }
 
 BasePiece::~BasePiece(){
+#ifdef DEBUG
     printf("Deconstructing BasePiece at %d, %d\n", pos.x, pos.y);
+#endif
 }
 
 std::vector<Position> BasePiece::getLegalMoves(){
@@ -110,7 +77,9 @@ Board::Board(){
 }
 
 Board::~Board(){
-    //printf("Deconstructing Board\n");
+#ifdef DEBUG
+    printf("Deconstructing Board\n");
+#endif
 }
 
 /* Function:    initBoard
@@ -217,7 +186,9 @@ Pawn::Pawn(Color color, Position pos){
 }
 
 Pawn::~Pawn(){
+#ifdef DEBUG
     printf("Deconstructing Pawn at %d, %d\n", pos.x, pos.y);
+#endif
 }
 
 
@@ -259,7 +230,9 @@ Rook::Rook(Color color, Position pos){
 }
 
 Rook::~Rook(){
+#ifdef DEBUG
     printf("Deconstructing Rook at %d, %d\n", pos.x, pos.y);
+#endif
 }
 
 /* Function:    Rook::populateLegalMoves
@@ -389,7 +362,9 @@ Bishop::Bishop(Color color, Position pos){
 }
 
 Bishop::~Bishop(){
+#ifdef DEBUG
     printf("Deconstructing Bishop at %d, %d\n", pos.x, pos.y);
+#endif
 }
 
 
@@ -521,7 +496,9 @@ Knight::Knight(Color color, Position pos){
 }
 
 Knight::~Knight(){
+#ifdef DEBUG
     printf("Deconstructing Knight at %d, %d\n", pos.x, pos.y);
+#endif
 }
 
 /* Function:    Knight::populateLegalMoves
@@ -613,7 +590,9 @@ Queen::Queen(Color color, Position pos){
 }
 
 Queen::~Queen(){
+#ifdef DEBUG
     printf("Deconstructing Queen at %d, %d\n", pos.x, pos.y);
+#endif
 }
 
 
@@ -649,7 +628,9 @@ King::King(Color color, Position pos){
 }
 
 King::~King(){
+#ifdef DEBUG
     printf("Deconstructing King at %d, %d\n", pos.x, pos.y);
+#endif
 }
 
 

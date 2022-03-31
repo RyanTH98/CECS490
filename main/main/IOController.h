@@ -1,8 +1,11 @@
 #include <vector>
 #include <stdio.h>
 #include <Adafruit_NeoPixel.h>
+#include "Arduino.h"
 
-namespace IODevices
+#define DEBOUNCE_COUNT 5
+
+namespace IOController
 {
     typedef struct Coordinates {
         int x;
@@ -16,40 +19,49 @@ namespace IODevices
     } RGBColor;
 
 
-    typedef struct Move{
-   		bool hasPiece;
+    typedef struct Move_Struct{
+   		bool risingEdge;
     	Position targetSquare;
-    }
+    } Move;
 
-    // class IOController{
-    //     private:
-    //         std::vector<> chessSquare;
-    //     public:
-    //         void clearBoard();
-    // }
 
     class HalController{
         private:
             std::vector<int> halVector;
-            void scan();
-            bool debounce();
+            std::vector<int> scan();
+            bool debounce(std::vector<int> debounceHal);
+            void enableIO();
+            //multiplexor
+            gpio_num_t muxA;
+            gpio_num_t muxB;
+            gpio_num_t muxC;
+            gpio_num_t muxEn_n;
+            gpio_num_t muxY;
+
+            //decoder
+            gpio_num_t decoderA0;
+            gpio_num_t decoderA1;
+            gpio_num_t decoderA2;
+            gpio_num_t decoderEn;
         public:
-            HalController();
+            HalController(gpio_num_t muxA, gpio_num_t muxB, gpio_num_t muxC, gpio_num_t muxEn_n, gpio_num_t muxY, 
+                        gpio_num_t decoderA0, gpio_num_t decoderA1, gpio_num_t decoderA2, gpio_num_t decoderEn);
             virtual ~HalController();
             
             bool checkStartingPosition();
             Move detectChange();
+            void start();
     };
 
     class LedController{
         private:
-            Adafruit_NeoPixel pixels(matrix_size*matrix_size, led_strip_D0, NEO_GRB + NEO_KHZ800);
+            //Adafruit_NeoPixel pixels(64, led_strip_D0, NEO_GRB + NEO_KHZ800);
             std::vector<int> ledVector;
         public:
-            HalController();
-            virtual ~HalController();
+            LedController();
+            virtual ~LedController();
             void start();
             void singleLedUpdate(Position pos, RGBColor rgb_color);
-            void vectorLedUpdate(std::vector<{Position, RGBColor}> updateVector);
+            //void vectorLedUpdate(std::vector<{Position, RGBColor}> updateVector);
     };
 }
