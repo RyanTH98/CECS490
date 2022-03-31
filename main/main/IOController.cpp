@@ -148,3 +148,68 @@ Move HalController::detectChange(){
 	halVector = newHalVector;
 	return move;
 }
+
+IOController::LedController(gpio_num_t placeholderPin){
+    this->pin = placeholderPin;
+    this->pixels = new Adafruit_NeoPixel(64, this->pin, NEO_GRB + NEO_KHZ800);
+}
+
+IOController::~IOController(){
+#ifdef debug
+    printf("Deconstructing IOController\n");
+#endif
+}
+
+void IOController::start() {
+        
+}
+
+void IOController::singleLedUpdate(Position pos, RGBColor rgb_color){
+    
+}
+
+void IOController::vectorLedUpdate(std::vector<{Position, RGBColor}> updateVector){
+    this->ledVector = updateVector;
+}
+
+
+
+/* Function:    LedStripOutput
+ * Arguments:   None
+ * Description: Turns on/off the board's LEDs based on the values found from Scan_Hall
+ */
+/**/
+void IOController::LedStrip_Output(std::vector<LED_Light> updateVector) {
+    int row, column, led;
+    Position currentPos;
+    BasePiece currentPiece;
+    
+    //std::vector<Position> legalMoves = piece.getLegalMoves();
+    
+      for(int i = 0; i < 64; i++) {
+          row = i % 64;
+          column = i / 64;
+          led = (column%2 == 0) ? i : ((column + 1) * 64 - row - 1);
+          currentPos = {row, column};
+          
+          
+          for(LED_Light led1 : updateVector){
+              for(LED_Light led2 : ledVector){
+                  if(led1.pos == led2.pos){
+                      led2.rgb_color = led1.rgb_color;
+                      continue;
+                  }
+              }
+          }
+/*
+          if(currentPos == updateVector[i].pos) {
+              pixels.setPixelColor(led, pixels.Color(updateVector[i].color.r, 0, 150));
+          }
+          else{
+              pixels.setPixelColor(led, pixels.Color(ledVector[i].color.r, 0, 150));
+              ledVector
+          }
+      }
+*/
+          pixels.show();   // Send the updated pixel colors to the hardware.
+}

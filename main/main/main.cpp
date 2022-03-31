@@ -189,22 +189,28 @@ void delay_1ms(int duration) { vTaskDelay(duration / portTICK_PERIOD_MS); }
  * Arguments:   None
  * Description: Turns on/off the board's LEDs based on the values found from Scan_Hall
  */
-/*
-void LedStrip_Output(void) {
+/**/
+void LedStrip_Output(BasePiece* piece) {
 	int row, column, led;
+    Position pos;
+    BasePiece currentPiece;
 	pixels.clear(); // Set all pixel colors to 'off'
-
-  	for(int i=0; i<MATRIX_SIZE*MATrix_SIZEE; i++) {
-		row = i % MATRIX_SIZE;
-		column = i / MATRIX_SIZE;
+    
+    std::vector<Position> legalMoves = piece.getLegalMoves();
+    
+  	for(int i = 0; i < 64; i++) {
+		row = i % 64;
+		column = i / 64;
 					
     			
-		led = (column%2 == 0)?i:((column+1)*MATRIX_SIZE - row - 1);
-		
-
-		// pixels.Color() takes RGB values, from 0,0,0 up to 255,255,255
-  	  	if(binary_out[i] != 0){
-		//	printf("Setting Led #%d High\n", led);
+		led = (column%2 == 0) ? i : ((column + 1) * 64 - row - 1);
+        pos = {row, column};
+        currentPiece = getPiece(pos);
+        
+        if(legalMoves[i] == 1) {
+            pixels.setPixelColor(led, pixels.Color(0, 0, 150));
+        }
+        
     			pixels.setPixelColor(led, pixels.Color(0, 0, 150));
 		}
 		else{
@@ -214,5 +220,5 @@ void LedStrip_Output(void) {
   	}
 	pixels.show();   // Send the updated pixel colors to the hardware.
 }
-*/
+/**/
 

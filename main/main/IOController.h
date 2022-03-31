@@ -18,6 +18,12 @@ namespace IOController
         int b;
     } RGBColor;
 
+    typedef struct LEDUpdate {
+        Poaition pos;
+        RGBColor rgb_color;
+    } LED_Light;
+
+
 
     typedef struct Move_Struct{
    		bool risingEdge;
@@ -55,10 +61,11 @@ namespace IOController
 
     class LedController{
         private:
+            gpio_num_t pin;
             Adafruit_NeoPixel pixels(64, led_strip_D0, NEO_GRB + NEO_KHZ800);
-            std::vector<int> ledVector;
+            std::vector<LED_Light> ledVector;
         public:
-            LedController();
+            LedController(gpio_num_t placeholderPin);
             virtual ~LedController();
             void start();
             void singleLedUpdate(Position pos, RGBColor rgb_color);
