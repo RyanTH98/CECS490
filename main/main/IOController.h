@@ -55,13 +55,13 @@ namespace IOController
 
     class LedController{
         private:
-            //Adafruit_NeoPixel pixels(64, led_strip_D0, NEO_GRB + NEO_KHZ800);
+            Adafruit_NeoPixel pixels(64, led_strip_D0, NEO_GRB + NEO_KHZ800);
             std::vector<int> ledVector;
         public:
             LedController();
             virtual ~LedController();
             void start();
             void singleLedUpdate(Position pos, RGBColor rgb_color);
-            //void vectorLedUpdate(std::vector<{Position, RGBColor}> updateVector);
+            void vectorLedUpdate(std::vector<{Position, RGBColor}> updateVector);
     };
 }

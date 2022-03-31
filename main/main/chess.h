@@ -7,7 +7,7 @@ namespace Chess
         White, Black
     };
 
-    typedef struct Coordinates {
+    typedef struct  {
         int x;
         int y;
     } Position;
@@ -67,6 +67,9 @@ namespace Chess
 
             void populateLegalMoves();
     };
+
+    basePiece* piece = new Pawn();
+    piece->getColor();
 
     class Rook : public BasePiece {
         private:

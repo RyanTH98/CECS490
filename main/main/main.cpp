@@ -36,6 +36,10 @@ typedef struct StateMachineController {
     Chess::Color turnColor;
     bool isNewGame;
     IOController::Move origin1;
+    IOController::Move origin2;
+    IOController::Move dest1;
+    IOController::Move dest2;
+    IOController::Move temp;
 } State_Machine_Montroller;
 
 //function prototypes
@@ -97,7 +101,9 @@ extern "C" void app_main() {
 		    case ST_WAIT_FOR_LIFT:
 		        // Has a piece been lifted off the board?
 
-		    	origin1 = hal_controller.detectChange()
+		    	//Wait for new change on board
+		    	origin1 = hal_controller.detectChange()						//should i check if the ppiece is being lifted or places? possible edge case
+		    	
 		        // GOTO ST_CHECK_COLOR
 		        currentState = ST_CHECK_COLOR;
 		        break;
@@ -116,13 +122,19 @@ extern "C" void app_main() {
 		    case ST_SET_ORIGIN:
 		        // Set a variable to indicate the starting position of the move
 		        
-		        // Has the piece been placed back down?
-		            // True  - ST_VALID_CHECK
-		            // False - continue
-
+		        //Wait for new change on board
+		        temp = hal_controller.detectChange()
+		        
 		        // Has another piece been picked up?
-		            // True  - ST_CHECK_SECOND_COLOR
-		            // False - Loop
+		    	if(temp.risingEdge){
+		    		// GOTO ST_CHECK_SECOND_COLOR
+		    		currentState = ST_CHECK_SECOND_COLOR;
+		    	}
+				// Has the piece been placed back down?
+		        else{
+		        	// GOTO ST_VALID_CHECK
+		        	currentState = ST_VALID_CHECK;
+		        }
 		        break;
 		    case ST_CHECK_SECOND_COLOR:
 		        // Does (first piece color == second piece color)?
