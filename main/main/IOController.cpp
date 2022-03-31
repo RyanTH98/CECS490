@@ -138,7 +138,7 @@ Move HalController::detectChange(){
 	for(int x : subtractVector){
 		if(x != 0){
 			move.risingEdge = (x == 1)?true:false;
-			move.targetSquare = {i/8, i%8};
+			move.targetSquare = {i%8, i/8};
 #ifdef DEBUG
 			printf("Detected change on collumn %d row %d -> piece has been %s\n", 
 				move.targetSquare.x, move.targetSquare.y, move.risingEdge?"placed":"removed");
@@ -148,4 +148,79 @@ Move HalController::detectChange(){
 	}
 	halVector = newHalVector;
 	return move;
+}
+
+void HalController::printBoard(){
+	int i=0;
+	std::vector<int> reverseHalVector;
+	std::reverse_copy(halVector.begin(), halVector.end(), reverseHalVector.begin());
+
+    printf("Printing Board as seen by IOController::HalController::printBoard\n");
+	for(int sensor : reverseHalVector){
+		printf("%d: %d, ", i, sensor);
+		if(i%8 == 0){
+			printf("\n");
+		}
+		i++;
+	}
+	printf("\n\n");
+}
+
+LedController::LedController(gpio_num_t led_strip_D0, RGBColor defaultWhite, RGBColor defaultBlack){
+	this->defaultWhite = defaultWhite;
+	this->defaultBlack = defaultBlack;
+    this->pixels = new Adafruit_NeoPixel(64, led_strip_D0, NEO_GRB + NEO_KHZ800);
+    start();
+}
+
+LedController::~LedController(){
+#ifdef debug
+    printf("Deconstructing IOController\n");
+#endif
+}
+
+void LedController::start() {
+    pixels->begin();
+    setDefaultLights();
+    LedStrip_Output();
+}
+
+void LedController::setDefaultLights(){
+	for(int i = 0; i < 64; i++){
+    	ledVector.push_back({{i/8, i%8}, (i%2)?defaultWhite:defaultBlack});
+    }
+}
+
+void LedController::singleLedUpdate(LED_Light newLED){
+    for(LED_Light oldLED : ledVector){
+		if(oldLED.pos.x == newLED.pos.x && oldLED.pos.y == newLED.pos.y){
+			oldLED.rgb_color = newLED.rgb_color;
+			continue;
+		}
+	}
+}
+
+void LedController::vectorLedUpdate(std::vector<LED_Light> updateVector){
+	for(LED_Light led : updateVector){
+		singleLedUpdate(led);
+	}
+}
+
+
+
+/* Function:    LedStripOutput
+ * Arguments:   None
+ * Description: Turns on/off the board's LEDs based on the values found from ledVector
+ */
+/**/
+void LedController::LedStrip_Output() {
+	int row, column, led;
+	for(int i = 0; i < 64; i++){
+		row = i % 8;
+ 		column = i / 8;
+		led = (column%2 == 0) ? i : ((column + 1) * 64 - row - 1);
+		//There has got to be a better way to do this -- casting the struct? -- inheriting the object from the adafruit lib?
+		pixels->setPixelColor(led, pixels->Color(ledVector[i].rgb_color.r, ledVector[i].rgb_color.g, ledVector[i].rgb_color.b));
+	}
+    pixels->show();   // Send the updated pixel colors to the hardware.
 }

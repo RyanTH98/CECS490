@@ -2,6 +2,7 @@
 #define IOCONTROLLER_H
 
 #include <vector>
+//#include <copy>
 #include <stdio.h>
 #include <Adafruit_NeoPixel.h>
 #include "Arduino.h"
@@ -20,6 +21,12 @@ namespace IOController
         int g;
         int b;
     } RGBColor;
+
+    typedef struct LEDUpdate {
+        Position pos;
+        RGBColor rgb_color;
+    } LED_Light;
+
 
 
     typedef struct Move_Struct{
@@ -54,20 +61,24 @@ namespace IOController
             bool checkStartingPosition();
             Move detectChange();
             void start();
+            void printBoard();
     };
 
     class LedController{
         private:
-            void setupPixel();
-            Adafruit_NeoPixel pixels();
-            std::vector<int> ledVector;
-        public:
-            LedController();
-            virtual ~LedController();
+            //gpio_num_t led_strip_D0;
+            Adafruit_NeoPixel* pixels;
+            std::vector<LED_Light> ledVector;
+            RGBColor defaultBlack, defaultWhite;
+            void setDefaultLights();
             void start();
-            void singleLedUpdate(Position pos, RGBColor rgb_color);
-            //void vectorLedUpdate(std::vector<{Position, RGBColor}> updateVector);
+        public:
+            LedController(gpio_num_t led_strip_D0, RGBColor defaultWhite, RGBColor defaultBlack);
+            virtual ~LedController();
+            void singleLedUpdate(LED_Light newLED);
+            void vectorLedUpdate(std::vector<LED_Light> updateVector);
+            void LedStrip_Output();
+
     };
 }
-
 #endif

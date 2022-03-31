@@ -62,8 +62,7 @@ extern "C" void app_main() {
 	// - Create needed objects
 	IOController::HalController hc( GPIO_NUM_5,  GPIO_NUM_18,  GPIO_NUM_19,  GPIO_NUM_2,  GPIO_NUM_4, GPIO_NUM_27,  GPIO_NUM_26,  GPIO_NUM_25,  GPIO_NUM_33);
 	Chess::Board board;
-	//LedController::LedController led_controller(gpio_num_t GPIO_NUM_23);
-
+	IOController::LedController lc(GPIO_NUM_23, IOController::RGBColor{71,151,220}, IOController::RGBColor{220,186,71});
 	//begin
     while(1) {
 		//LedStrip_Output();
@@ -320,36 +319,42 @@ extern "C" void app_main() {
 void delay_1ms(int duration) { vTaskDelay(duration / portTICK_PERIOD_MS); }
 
 
-/* Function:    LedStripOutput
- * Arguments:   None
- * Description: Turns on/off the board's LEDs based on the values found from Scan_Hall
- */
-/*
-void LedStrip_Output(void) {
-	int row, column, led;
-	pixels.clear(); // Set all pixel colors to 'off'
+// /* Function:    LedStripOutput
+//  * Arguments:   None
+//  * Description: Turns on/off the board's LEDs based on the values found from Scan_Hall
+//  */
 
-  	for(int i=0; i<MATRIX_SIZE*MATrix_SIZEE; i++) {
-		row = i % MATRIX_SIZE;
-		column = i / MATRIX_SIZE;
+// void LedStrip_Output(BasePiece* piece) {
+// 	int row, column, led;
+//     Position pos;
+//     BasePiece currentPiece;
+// 	pixels.clear(); // Set all pixel colors to 'off'
+    
+//     std::vector<Position> legalMoves = piece.getLegalMoves();
+    
+//   	for(int i = 0; i < 64; i++) {
+// 		row = i % 64;
+// 		column = i / 64;
 					
     			
-		led = (column%2 == 0)?i:((column+1)*MATRIX_SIZE - row - 1);
-		
+// 		led = (column%2 == 0) ? i : ((column + 1) * 64 - row - 1);
+//         pos = {row, column};
+//         currentPiece = getPiece(pos);
+        
+//         if(legalMoves[i] == 1) {
+//             pixels.setPixelColor(led, pixels.Color(0, 0, 150));
+//         }
+        
+//     			pixels.setPixelColor(led, pixels.Color(0, 0, 150));
+// 		}
+// 		else{
+// 		//	printf("Setting LED #%d Low\n", led);
+//     			pixels.setPixelColor(led, pixels.Color(150, 0, 0));
+// 		}
+//   	}
+// 	pixels.show();   // Send the updated pixel colors to the hardware.
+// }
 
-		// pixels.Color() takes RGB values, from 0,0,0 up to 255,255,255
-  	  	if(binary_out[i] != 0){
-		//	printf("Setting Led #%d High\n", led);
-    			pixels.setPixelColor(led, pixels.Color(0, 0, 150));
-		}
-		else{
-		//	printf("Setting LED #%d Low\n", led);
-    			pixels.setPixelColor(led, pixels.Color(150, 0, 0));
-		}
-  	}
-	pixels.show();   // Send the updated pixel colors to the hardware.
-}
-*/
 
 // BigMommaClass {
 //     BigMommaClass(int, int);
@@ -364,22 +369,22 @@ void LedStrip_Output(void) {
 
 
 
-// GOTO ST_CHECK_CASTLE
-// Move is a castling move
-/*Chess::BasePiece* piece1 = board.getPiece({smc.origin1.targetSquare.x, smc.origin1.targetSquare.y});
-Chess::BasePiece* piece2 = board.getPiece({smc.origin2.targetSquare.x, smc.origin2.targetSquare.y});
-if((piece1->getType() == Chess::Type::KingType) && 
-	abs(smc.dest1.targetSquare.x - smc.origin1.targetSquare.x) == 2){
-	//wait for rook origin
-	smc.origin2 = hc.detectChange();
-	if(piece2->getType() == Chess::Type::RookType){
-		// wait for rook dest
-		smc.dest2 = hc.detectChange();
-		if(abs(smc.dest1.targetSquare.x - smc.origin1.targetSquare.x) == 2){ //!!!Todo!!! check this properly -> its just hacky right now
-			// !!!TODO!!! Wait for piece to go back to original space
-		}
-	}
-	else{
-		// GOTO ST_RESET_PIECE
-		smc.currentState = ST_RESET_PIECE;
-	}*/
+// // GOTO ST_CHECK_CASTLE
+// // Move is a castling move
+// Chess::BasePiece* piece1 = board.getPiece({smc.origin1.targetSquare.x, smc.origin1.targetSquare.y});
+// Chess::BasePiece* piece2 = board.getPiece({smc.origin2.targetSquare.x, smc.origin2.targetSquare.y});
+// if((piece1->getType() == Chess::Type::KingType) && 
+// 	abs(smc.dest1.targetSquare.x - smc.origin1.targetSquare.x) == 2){
+// 	//wait for rook origin
+// 	smc.origin2 = hc.detectChange();
+// 	if(piece2->getType() == Chess::Type::RookType){
+// 		// wait for rook dest
+// 		smc.dest2 = hc.detectChange();
+// 		if(abs(smc.dest1.targetSquare.x - smc.origin1.targetSquare.x) == 2){ //!!!Todo!!! check this properly -> its just hacky right now
+// 			// !!!TODO!!! Wait for piece to go back to original space
+// 		}
+// 	}
+// 	else{
+// 		// GOTO ST_RESET_PIECE
+// 		smc.currentState = ST_RESET_PIECE;
+// 	}

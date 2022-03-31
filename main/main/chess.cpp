@@ -129,6 +129,10 @@ void Board::initBoard(){
         pos = {i,6};
         board[pos.y][pos.x].setPiece(new Pawn(Black, pos, this));
     }
+
+    #ifdef DEBUG
+        printBoard();
+    #endif
 }
 
 
@@ -156,6 +160,9 @@ bool Board::movePiece(Position origin, Position dest){
         board[dest.y][dest.x].clearSquare();
         board[dest.y][dest.x].setPiece(getPiece(origin));
         board[origin.y][origin.x].clearSquare();
+        #ifdef DEBUG
+            printBoard();
+        #endif
         return true;
     }
     else{
@@ -163,6 +170,43 @@ bool Board::movePiece(Position origin, Position dest){
     }
 }
 
+void Board::printBoard(){
+    BasePiece* piece;
+    int row, column;
+
+    printf("Printing Board as seen by Chess::Board::printBoard\n");
+    for(int i = 0; i < 64; i++){
+        row = i%8;
+        column = i/8;
+        piece = board[row][column].getPiece();
+
+        if(row == 0){
+            printf("\n");
+        }
+
+        switch(piece->getType()){
+            case PawnType:
+                printf("P, ");
+                break;
+            case RookType:
+                printf("R, ");
+                break;
+            case BishopType:
+                printf("R, ");
+                break;
+            case KnightType:
+                printf("R, ");
+                break;
+            case KingType:
+                printf("R, ");
+                break;
+            case QueenType:
+                printf("R, ");
+                break;
+        }
+    }
+    printf("\n\n\n");
+}
 
 /* Function:    getPiece
  * Arguments:   (x, y) pair of coordinates

@@ -66,6 +66,7 @@ namespace Chess
             
             bool isInBounds(Position pos);
             bool movePiece(Position origin, Position dest);
+            void printBoard();
             BasePiece* getPiece(Position piecePos);
     };
 
