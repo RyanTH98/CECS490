@@ -31,6 +31,12 @@ typedef enum State_Machine {
     ST_GAME_END
 } State;
 
+typedef struct StateMachineController {
+	State currentState;
+    Chess::Color turnColor;
+    bool isNewGame;
+    IOController::Move origin1;
+} State_Machine_Montroller;
 
 //function prototypes
 void delay_1ms (int);
@@ -40,40 +46,72 @@ extern "C" void app_main() {
     printf("CODE BEGIN\n");
 	
    	//pixels.begin(); 
-	Chess::Board board();
-	IOController::HalController hal_controller(gpio_num_t GPIO_NUM_5, gpio_num_t GPIO_NUM_18, gpio_num_t GPIO_NUM_19, gpio_num_t GPIO_NUM_2, gpio_num_t GPIO_NUM_4, 
-                        gpio_num_t GPIO_NUM_27, gpio_num_t GPIO_NUM_26, gpio_num_t GPIO_NUM_25, gpio_num_t GPIO_NUM_33);
 
-	State currentState = ST_GAME_START;
+	//set up initial values for state machine
+	State_Machine_Montroller smc;
+	smc.currentState = ST_GAME_START;
+	smc.isWhiteTurn = true;
+	smc.isNewGame = true;
+
+	//begin
     while(1) {
 		//LedStrip_Output();
 		
 		switch (currentState) {
 		    case ST_GAME_START:
 		        // Set up code to begin a game
-		            // - Set GPIO pins
-		            // - Set mux/decoder initial states
-		            // - Initialize LED controller
-		            // - Create board object
+		    	// - Create needed objects
+		    	IOController::HalController hal_controller(gpio_num_t GPIO_NUM_5, gpio_num_t GPIO_NUM_18, gpio_num_t GPIO_NUM_19, gpio_num_t GPIO_NUM_2, gpio_num_t GPIO_NUM_4, 
+                        gpio_num_t GPIO_NUM_27, gpio_num_t GPIO_NUM_26, gpio_num_t GPIO_NUM_25, gpio_num_t GPIO_NUM_33);
+		    	Chess::Board board();
+
+		        // - Start IO interfacing
+		        hal_controller.start();
+		        // - Initialize LED controller
+		        
+		        currentState = ST_START_POS;
 		        break;
 		    case ST_START_POS:
 		        // Are all pieces where they should be at the start of a game?
-		            // True  - ST_SET_COLOR
-		            // False - Loop
+		    	if(hal_controller.checkStartingPosition()){
+		    		// True  -  GOTO ST_SET_COLOR
+		    		currentState = ST_SET_COLOR;
+		    	}
+		        // False - Loop
 		        break;
 		    case ST_SET_COLOR:
 		        // Match the active color to the player whose turn it is
-		        // Return void
+
+		    	//if first move it is whites turn
+		    	if(smc.isNewGame){
+		    		smc.isNewGame = false;
+		    	}
+		    	//otherwise swap turns
+		    	else{
+	    			smc.turnColor  = (smc.turnColor == White)?Black:White;
+		    	}
+
+		    	// GOTO ST_WAIT_FOR_LIFT
+		        currentState = ST_WAIT_FOR_LIFT;
 		        break;
 		    case ST_WAIT_FOR_LIFT:
 		        // Has a piece been lifted off the board?
-		            // True  - ST_CHECK_COLOR
-		            // False - Loop
+
+		    	origin1 = hal_controller.detectChange()
+		        // GOTO ST_CHECK_COLOR
+		        currentState = ST_CHECK_COLOR;
 		        break;
 		    case ST_CHECK_COLOR:
 		        // It's a player's turn. Is the lifted piece theirs?
-		            // True  - ST_SET_ORIGIN
-		            // False - Loop
+
+		    	if(board.getPiece(origin1.targetSquare).getColor() == turnColor){
+		    		// True  - GOTO ST_SET_ORIGIN
+		    		currentState = ST_SET_ORIGIN;
+		    	}
+		        else{
+		        	// !!!TODO!!!
+		            // False - Wait for the piece to be put back and GOTO ST_WAIT_FOR_LIFT
+		        }
 		        break;
 		    case ST_SET_ORIGIN:
 		        // Set a variable to indicate the starting position of the move
