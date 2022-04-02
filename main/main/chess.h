@@ -4,6 +4,8 @@
 #include <vector>
 #include <stdio.h>
 
+#define DEBUG
+
 namespace Chess
 {
     class Board;
@@ -28,6 +30,7 @@ namespace Chess
             std::vector<Position> legalMoves;
             Type type;
             Board* board;
+            bool firstMove;
 
         public:
             BasePiece();
@@ -39,6 +42,9 @@ namespace Chess
             std::vector<Position> getLegalMoves();
             bool validateMove(Position dest);
             Type getType();
+            bool getFirstMove();
+            void setFirstMove(bool firstMove);
+            void legalMovesPrint();
             virtual void populateLegalMoves() = 0;
     };
 
@@ -67,6 +73,7 @@ namespace Chess
             bool isInBounds(Position pos);
             bool movePiece(Position origin, Position dest);
             void printBoard();
+            void populateAllLegalMoves();
             BasePiece* getPiece(Position piecePos);
     };
 

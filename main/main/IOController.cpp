@@ -2,6 +2,28 @@
 
 using namespace IOController;
 
+#define DEBUG
+
+
+#ifdef DEBUG
+void vectorPrint(std::vector<int> vec){
+	int i = 0;
+    printf("Printing Board as seen by vectorPrint\n");
+	for(int sensor : vec){
+		if(i%8 == 0 && i != 0){
+			printf("\n");
+		}
+
+		printf("%2d: %2d, ", i, sensor);
+		
+		i++;
+	}
+	printf("\n\n");
+}
+#endif
+
+
+
 //definitions for HalScanner Class
 HalController::HalController(gpio_num_t muxA, gpio_num_t muxB, gpio_num_t muxC, gpio_num_t muxEn_n, gpio_num_t muxY, 
 	gpio_num_t decoderA0, gpio_num_t decoderA1, gpio_num_t decoderA2, gpio_num_t decoderEn){
@@ -41,10 +63,10 @@ std::vector<int> HalController::scan(){
    		gpio_set_level(decoderA1, (column>>1)&0x01);
    		gpio_set_level(decoderA2, (column>>2)&0x01);
     		
-		delay(10);
+		delay(25);
 		//printf("I recieved %d on sensor %d\n", gpio_get_level(muxY), i);
     	newHalVector.push_back(!gpio_get_level(muxY));
-		delay(15);
+		//delay(25);
 	}
 	return newHalVector;
 }
@@ -86,8 +108,8 @@ void HalController::start(){
 
 bool HalController::checkStartingPosition(){
 	std::vector<int> checkVector = {1,1,1,1,1,1,1,1,
-									1,1,1,0,1,1,1,1,
-									0,0,0,1,0,0,0,0,
+									1,1,1,1,1,1,1,1,
+									0,0,0,0,0,0,0,0,
 									0,0,0,0,0,0,0,0,
 									0,0,0,0,0,0,0,0,
 									0,0,0,0,0,0,0,0,
@@ -95,6 +117,15 @@ bool HalController::checkStartingPosition(){
 									1,1,1,1,1,1,1,1,
 								};
 	halVector = scan();
+	#ifdef DEBUG
+			printf("Calling printBoard from HalController::checkStartingPosition\n");
+			//printBoard();
+			printf("halVector:\n");
+			vectorPrint(halVector);
+			printf("checkVector:\n");
+			vectorPrint(checkVector);
+			printf("Equality: %d\n\n\n", checkVector == halVector);
+	#endif
 	return checkVector == halVector;
 }
 
@@ -116,51 +147,89 @@ Move HalController::detectChange(){
 	while(!db_flag){
 		//aquaire new data from sensors
 		newHalVector = scan();
-
+		#ifdef DEBUG
+			printf("Calling printBoard from HalController::detectChange\n");
+			//printBoard();
+			printf("halVector:\n");
+			vectorPrint(halVector);
+			printf("newHalVector:\n");
+			vectorPrint(newHalVector);
+			printf("Equality: %d\n\n\n", newHalVector == halVector);
+		#endif
 		//if there is a change in the sensors
 		if(halVector != newHalVector){
 			//make sure only one change has been made
-			std::set_difference(halVector.begin(), halVector.end(), newHalVector.begin(), newHalVector.end(), 
-								std::inserter(diffVector, diffVector.begin()));
+			//std::set_difference(halVector.begin(), halVector.end(), newHalVector.begin(), newHalVector.end(), 
+			//					std::inserter(diffVector, diffVector.begin()));
+			for(int i = 0; i < halVector.size(); i++){
+				if(halVector[i] != newHalVector[i]){
+					diffVector.push_back(1);
+				}
+			}
+			#ifdef DEBUG
+				printf("Calling printBoard from HalController::detectChange\n");
+				printf("Change has been detected, diffVector:\n");
+				vectorPrint(diffVector);
+				printf("diffVector size: %d\n", diffVector.size());
+			#endif
 			//call debounce on the change
 			if(diffVector.size() == 1){
+				#ifdef DEBUG
+					printf("Calling debounce\n");
+				#endif
 				db_flag = debounce(newHalVector);
 			}
+			diffVector.clear();
 		} 
 	}
 
 	//subtract vectors to find change sensor change edge direction (rising_edge (+1) or falling_edge (-1))
-	for(int i = 0; i < halVector.size(); i++){
-		subtractVector[i] = halVector[i] - newHalVector[i];
+	//for(int i = halVector.size() - 1; i >= 0 ; i--){
+	for(int i = 0; i < halVector.size() ; i++){
+		subtractVector.push_back(halVector[i] - newHalVector[i]);
 	}
-	
+
+	#ifdef DEBUG
+		printf("Calling printBoard from HalController::detectChange\n");
+		printf("subtract has been created, subtractVector:\n");
+		vectorPrint(subtractVector);
+	#endif	
 
 	for(int x : subtractVector){
 		if(x != 0){
-			move.risingEdge = (x == 1)?true:false;
+			move.risingEdge = (x == -1)?true:false;
 			move.targetSquare = {i%8, i/8};
 #ifdef DEBUG
 			printf("Detected change on collumn %d row %d -> piece has been %s\n", 
 				move.targetSquare.x, move.targetSquare.y, move.risingEdge?"placed":"removed");
+			//printBoard();
 #endif
 		}
 		i++;
 	}
 	halVector = newHalVector;
+	#ifdef DEBUG
+		printf("Updated halVector:\n");
+		printBoard();
+	#endif
 	return move;
 }
 
 void HalController::printBoard(){
 	int i=0;
 	std::vector<int> reverseHalVector;
-	std::reverse_copy(halVector.begin(), halVector.end(), reverseHalVector.begin());
+	for(int x : halVector){
+		reverseHalVector.push_back(x);
+	}
 
     printf("Printing Board as seen by IOController::HalController::printBoard\n");
 	for(int sensor : reverseHalVector){
-		printf("%d: %d, ", i, sensor);
-		if(i%8 == 0){
+		if(i%8 == 0 && i != 0){
 			printf("\n");
 		}
+
+		printf("%2d: %2d, ", i, sensor);
+		
 		i++;
 	}
 	printf("\n\n");
@@ -224,3 +293,4 @@ void LedController::LedStrip_Output() {
 	}
     pixels->show();   // Send the updated pixel colors to the hardware.
 }
+

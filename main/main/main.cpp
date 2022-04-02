@@ -10,6 +10,7 @@
 #include "chess.h"
 #include "IOController.h"
 
+#define DEBUG
 
 //led
 gpio_num_t led_strip_D0 = GPIO_NUM_23;
@@ -36,7 +37,7 @@ typedef struct StateMachineController {
 	State currentState;
     Chess::Color turnColor;
     bool isNewGame;
-    bool isWhiteTurn;
+    //bool isWhiteTurn;
     IOController::Move origin1;
     IOController::Move origin2;
     IOController::Move dest1;
@@ -56,7 +57,8 @@ extern "C" void app_main() {
 	//set up initial values for state machine
 	State_Machine_Controller smc;
 	smc.currentState = ST_GAME_START;
-	smc.isWhiteTurn = true;
+	//smc.isWhiteTurn = true;
+	smc.turnColor = Chess::White;
 	smc.isNewGame = true;
 
 	// - Create needed objects
@@ -105,10 +107,16 @@ extern "C" void app_main() {
 		    	if(smc.isNewGame){
 		    		// True - Whites Turn
 		    		smc.isNewGame = false;
+		    		#ifdef DEBUG
+				    	printf("Set newGame to false (current turnColor is: %s)\n", (smc.turnColor == Chess::White)?"White":"Black");
+					#endif
 		    	}
 		    	else{
 		    		// False - swap turns
 	    			smc.turnColor  = (smc.turnColor == Chess::White)?Chess::Black:Chess::White;
+	    			#ifdef DEBUG
+				    	printf("New turnColor is: %s\n", (smc.turnColor == Chess::White)?"White":"Black");
+					#endif
 		    	}
 
 		    	// GOTO ST_WAIT_FOR_LIFT
@@ -124,6 +132,10 @@ extern "C" void app_main() {
 		    	//Wait for new change on board
 		    	smc.origin1 = hc.detectChange();						//should i check if the ppiece is being lifted or places? possible edge case
 
+		    	#ifdef DEBUG
+				    printf("A piece has been lifted\n");
+				    printf("Setting its origin at collum: %d, row: %d\n", smc.origin1.targetSquare.x, smc.origin1.targetSquare.y);
+				#endif
 		        // GOTO ST_CHECK_COLOR
 		        smc.currentState = ST_CHECK_COLOR;
 		        break;
@@ -135,7 +147,16 @@ extern "C" void app_main() {
 				    printf("Entering ST_CHECK_COLOR\n");
 				#endif
 
+				    
+				#ifdef DEBUG
+				    printf("Getting piece that was at collum: %d, row: %d\n", smc.origin1.targetSquare.x, smc.origin1.targetSquare.y);
+				#endif    
+
 		    	Chess::BasePiece* piece = board.getPiece({smc.origin1.targetSquare.x, smc.origin1.targetSquare.y});
+		    	#ifdef DEBUG
+				    printf("Its piece color is: %s\n", (piece->getColor() == Chess::White)?"White":"Black");
+				    printf("Its turnColor is: %s\n", (smc.turnColor == Chess::White)?"White":"Black");
+				#endif 
 		    	if(piece->getColor() == smc.turnColor){
 		    		// True  - GOTO ST_SET_ACTIVITY
 		    		smc.currentState = ST_SET_ACTIVITY;
@@ -155,17 +176,16 @@ extern "C" void app_main() {
 
 		        //Wait for new change on board
 		        smc.temp = hc.detectChange();
+
+		        #ifdef DEBUG
+				    printf("SMC change recieved of -> rising edge : %d at {column: %d, row: %d}\n", 
+				    	smc.temp.risingEdge, smc.temp.targetSquare.x, smc.temp.targetSquare.y);
+				#endif
+
 		        
-		        // Has another piece been picked up?
+		        // Has another piece been placed or picked up?
 		    	if(smc.temp.risingEdge){
-		    		// Activity is a second lifted piece -> set its origin
-		    		smc.origin2 = smc.temp;
-		    		// GOTO ST_CHECK_SECOND_COLOR
-		    		smc.currentState = ST_CHECK_SECOND_COLOR;
-		    	}
-				// Has the piece been placed back down?
-		        else{
-		        	//Activity is a piece placement -> set its dest
+		    		//Activity is a piece placement -> set its dest
 
 		        	// Is piece placement a King initiating castling?
 		        		//psudocode
@@ -176,9 +196,35 @@ extern "C" void app_main() {
 		    		 */
 
 		        	smc.dest1 = smc.temp;
+		        	#ifdef DEBUG
+					    printf("A piece has been placed\n");
+					    printf("Setting its destination at collum: %d, row: %d\n", smc.dest1.targetSquare.x, smc.dest1.targetSquare.y);
+					#endif
 
-		        	// GOTO ST_VALID_CHECK
-		        	smc.currentState = ST_VALID_CHECK;
+					if(smc.origin1.targetSquare.x == smc.dest1.targetSquare.x && smc.origin1.targetSquare.y == smc.dest1.targetSquare.y){
+						// GOTO ST_WAIT_FOR_LIFT
+			        	smc.currentState = ST_WAIT_FOR_LIFT;
+			        	#ifdef DEBUG
+						    printf("Piece was placed back at its origin\n");
+						#endif
+					}
+					else{
+			        	// GOTO ST_VALID_CHECK
+			        	smc.currentState = ST_VALID_CHECK;
+			        	#ifdef DEBUG
+						    printf("Piece was placed on new square\n");
+						#endif
+					}
+		    	}
+		        else{
+		        	// Activity is a second lifted piece -> set its origin
+		    		smc.origin2 = smc.temp;
+		    		#ifdef DEBUG
+					    printf("A 2nd piece has been lifted\n");
+					    printf("Setting its origin at collum: %d, row: %d\n", smc.origin1.targetSquare.x, smc.origin1.targetSquare.y);
+					#endif
+		    		// GOTO ST_CHECK_SECOND_COLOR
+		    		smc.currentState = ST_CHECK_SECOND_COLOR;
 		        }
 		        break;
 		    }
@@ -191,6 +237,11 @@ extern "C" void app_main() {
 
 		        Chess::BasePiece* piece1 = board.getPiece({smc.origin1.targetSquare.x, smc.origin1.targetSquare.y});
 		        Chess::BasePiece* piece2 = board.getPiece({smc.origin2.targetSquare.x, smc.origin2.targetSquare.y});
+
+		        #ifdef DEBUG
+				    printf("Piece1's color is: %s\n", (piece1->getColor() == Chess::White)?"White":"Black");
+				    printf("Piece2's color is: %s\n", (piece2->getColor() == Chess::White)?"White":"Black");
+				#endif
 		    	if(piece1->getColor() != piece2->getColor()){
 		    		// GOTO ST_CHECK_TAKE
 		            smc.currentState = ST_CHECK_TAKE;
@@ -261,19 +312,34 @@ extern "C" void app_main() {
 		        // Was the piece placed down in the same spot?    
 		        if(smc.dest1.targetSquare.x == smc.origin1.targetSquare.x && smc.dest1.targetSquare.y == smc.origin2.targetSquare.y){
 		        	// True  - ST_WAIT_FOR_LIFT
+		        	#ifdef DEBUG
+				    	printf("Piece was put back in same spot, returning to ST_WAIT_FOR_LIFT\n");
+					#endif
 		        	smc.currentState = ST_WAIT_FOR_LIFT;
 		        }
 		        // False - continue
 		        
 		        // Is the move valid?
-		        Chess::BasePiece* piece1 = board.getPiece({smc.origin1.targetSquare.x, smc.origin1.targetSquare.y});
-		        if(piece1->validateMove({smc.dest1.targetSquare.x, smc.dest1.targetSquare.y})){
+		        #ifdef DEBUG
+				    printf("Getting piece that was at collum: %d, row: %d\n", smc.origin1.targetSquare.x, smc.origin1.targetSquare.y);
+				#endif   
+		        //Chess::BasePiece* piece1 = board.getPiece({smc.origin1.targetSquare.x, smc.origin1.targetSquare.y});
+		        #ifdef DEBUG
+				    printf("Checking if move to: %d, row: %d is a valid move\n", smc.dest1.targetSquare.x, smc.dest1.targetSquare.y);
+				#endif   
+		        if(board.movePiece({smc.origin1.targetSquare.x, smc.origin1.targetSquare.y}, {smc.dest1.targetSquare.x, smc.dest1.targetSquare.y})){
 		            // True  - ST_CHECK_GAMEOVER
 		            smc.currentState = ST_CHECK_GAMEOVER;
+		            #ifdef DEBUG
+					    printf("Move is a valid move\n");
+					#endif   
 		        }
 		        else{
 		        	// False - ST_RESET_PIECE
 		        	smc.currentState = ST_RESET_PIECE;
+		        	#ifdef DEBUG
+					    printf("Move is not a valid move\n");
+					#endif 
 		        }
 		        
 		        break;
@@ -301,6 +367,7 @@ extern "C" void app_main() {
 					// False  - ST_SET_COLOR
 		            smc.currentState = ST_SET_COLOR;
 				}*/
+				smc.currentState = ST_SET_COLOR;
 		        break;
 		    }
 		    case ST_GAME_END:

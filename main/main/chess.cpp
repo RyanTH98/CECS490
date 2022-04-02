@@ -5,7 +5,7 @@ using namespace Chess;
 
 // Definitions for BasePiece Class
 BasePiece::BasePiece(){
-
+    firstMove = true;
 }
 
 BasePiece::~BasePiece(){
@@ -18,11 +18,29 @@ std::vector<Position> BasePiece::getLegalMoves(){
     return legalMoves;
 }
 
+bool BasePiece::getFirstMove(){
+    #ifdef DEBUG
+        printf("Returning firstMove: %d --------------------------------------------------------------\n", firstMove);
+    #endif
+    return firstMove;
+}
+
+void BasePiece::setFirstMove(bool firstMove){
+    this->firstMove = firstMove;
+    #ifdef DEBUG
+        printf("Setting firstMove to %d\n", this->firstMove);
+    #endif
+}
+
 
 //incorrect now?
 bool BasePiece::validateMove(Position dest){
-    for(int i = 0; i < 24; i++){
-        if(dest.x == legalMoves[i].x && dest.y == legalMoves[i].y){
+    for(Position move : legalMoves){
+        #ifdef DEBUG
+            printf("Checking {%2d, %2d} against {%2d, %2d} with result: %d\n", 
+                dest.x, dest.y, move.x, move.y, (dest.x == move.x && dest.y == move.y));
+        #endif
+        if(dest.x == move.x && dest.y == move.y){
             return true;
         }
     }
@@ -45,6 +63,13 @@ Type BasePiece::getType(){
     return type;
 }
 
+void BasePiece::legalMovesPrint(){
+    for(Position m : legalMoves){
+        printf("{%2d %2d}, ", m.x, m.y);
+    }
+    printf("\n");
+}
+
 
 //definitions for Square class
 Square::Square(){
@@ -60,7 +85,12 @@ void Square::setPiece(BasePiece* piece){
 }
 
 BasePiece* Square::getPiece(){
-    return piece;
+    if(piece == NULL){
+        return NULL;
+    }
+    else{
+        return piece;
+    }
 }
 
 void Square::clearSquare(){
@@ -87,54 +117,80 @@ void Board::initBoard(){
     Position pos;
 
     pos = {0,0};
-    board[pos.y][pos.x].setPiece(new Rook(White, pos, this));
+    board[pos.x][pos.y].setPiece(new Rook(White, pos, this));
     pos = {1,0};
-    board[pos.y][pos.x].setPiece(new Knight(White, pos, this));
+    board[pos.x][pos.y].setPiece(new Knight(White, pos, this));
     pos = {2,0};
-    board[pos.y][pos.x].setPiece(new Bishop(White, pos, this));
+    board[pos.x][pos.y].setPiece(new Bishop(White, pos, this));
     pos = {3,0};
-    board[pos.y][pos.x].setPiece(new King(White, pos, this));
+    board[pos.x][pos.y].setPiece(new King(White, pos, this));
     pos = {4,0};
-    board[pos.y][pos.x].setPiece(new Queen(White, pos, this));
+    board[pos.x][pos.y].setPiece(new Queen(White, pos, this));
     pos = {5,0};
-    board[pos.y][pos.x].setPiece(new Bishop(White, pos, this));
+    board[pos.x][pos.y].setPiece(new Bishop(White, pos, this));
     pos = {6,0};
-    board[pos.y][pos.x].setPiece(new Knight(White, pos, this));
+    board[pos.x][pos.y].setPiece(new Knight(White, pos, this));
     pos = {7,0};
-    board[pos.y][pos.x].setPiece(new Rook(White, pos, this));
+    board[pos.x][pos.y].setPiece(new Rook(White, pos, this));
 
     for(int i = 0; i < 8; i++){
         pos = {i,1};
-        board[pos.y][pos.x].setPiece(new Pawn(White, pos, this));
+        board[pos.x][pos.y].setPiece(new Pawn(White, pos, this));
     }
 
     pos = {0,7};
-    board[pos.y][pos.x].setPiece(new Rook(Black, pos, this));
+    board[pos.x][pos.y].setPiece(new Rook(Black, pos, this));
     pos = {1,7};
-    board[pos.y][pos.x].setPiece(new Knight(Black, pos, this));
+    board[pos.x][pos.y].setPiece(new Knight(Black, pos, this));
     pos = {2,7};
-    board[pos.y][pos.x].setPiece(new Bishop(Black, pos, this));
+    board[pos.x][pos.y].setPiece(new Bishop(Black, pos, this));
     pos = {3,7};
-    board[pos.y][pos.x].setPiece(new Queen(Black, pos, this));
+    board[pos.x][pos.y].setPiece(new Queen(Black, pos, this));
     pos = {4,7};
-    board[pos.y][pos.x].setPiece(new King(Black, pos, this));
+    board[pos.x][pos.y].setPiece(new King(Black, pos, this));
     pos = {5,7};
-    board[pos.y][pos.x].setPiece(new Bishop(Black, pos, this));
+    board[pos.x][pos.y].setPiece(new Bishop(Black, pos, this));
     pos = {6,7};
-    board[pos.y][pos.x].setPiece(new Knight(Black, pos, this));
+    board[pos.x][pos.y].setPiece(new Knight(Black, pos, this));
     pos = {7,7};
-    board[pos.y][pos.x].setPiece(new Rook(Black, pos, this));
+    board[pos.x][pos.y].setPiece(new Rook(Black, pos, this));
 
     for(int i = 0; i < 8; i++){
         pos = {i,6};
-        board[pos.y][pos.x].setPiece(new Pawn(Black, pos, this));
+        board[pos.x][pos.y].setPiece(new Pawn(Black, pos, this));
     }
+
+    #ifdef DEBUG
+        printf("All pieces have been placed, now calling populateAllLegalMoves()\n");
+    #endif
+    populateAllLegalMoves();
 
     #ifdef DEBUG
         printBoard();
     #endif
 }
 
+void Board::populateAllLegalMoves(){
+    Position pos;
+    BasePiece* piece;
+    
+    for(int i = 0; i < 64; i++){
+        pos = {i%8, i/8};
+        piece = getPiece({pos.x, pos.y});
+
+        if(piece != NULL){
+            #ifdef DEBUG
+                //printf("Populating legal moves for piece at column: %d, row: %d\n", pos.x, pos.y);
+            #endif
+            piece->populateLegalMoves();
+        }
+        else{
+            #ifdef DEBUG
+                //printf("Piece is a NULL piece\n");
+            #endif
+        }
+    }
+}
 
 /* Function:    isInBounds
  * Arguments:   Position to check
@@ -156,13 +212,25 @@ bool Board::isInBounds(Position pos){
  * Description: Moves a piece from one square to another
  */
 bool Board::movePiece(Position origin, Position dest){
-    if(getPiece(origin)->validateMove(dest)){
-        board[dest.y][dest.x].clearSquare();
-        board[dest.y][dest.x].setPiece(getPiece(origin));
-        board[origin.y][origin.x].clearSquare();
+    BasePiece* piece = getPiece(origin);
+    #ifdef DEBUG
+        printf("Moving piece at {%2d, %2d} to {%2d, %2d} is legal(1) move: %d--------\n", origin.x, origin.y, dest.x, dest.y, piece->validateMove(dest));
+        piece->legalMovesPrint();
+    #endif
+    if(piece->validateMove(dest)){
+        if(piece->getFirstMove() == true){
+            piece->setFirstMove(false);
+        }
+        piece->setPosition(dest);
+
+        board[dest.x][dest.y].clearSquare();
+        board[dest.x][dest.y].setPiece(piece);
+        board[origin.x][origin.y].clearSquare();
+        
         #ifdef DEBUG
             printBoard();
         #endif
+        populateAllLegalMoves();
         return true;
     }
     else{
@@ -176,34 +244,39 @@ void Board::printBoard(){
 
     printf("Printing Board as seen by Chess::Board::printBoard\n");
     for(int i = 0; i < 64; i++){
-        row = i%8;
-        column = i/8;
-        piece = board[row][column].getPiece();
+        row = i/8;
+        column = i%8;
+        piece = board[column][row].getPiece();
 
-        if(row == 0){
+        if(column == 0){
             printf("\n");
         }
-
-        switch(piece->getType()){
-            case PawnType:
-                printf("P, ");
-                break;
-            case RookType:
-                printf("R, ");
-                break;
-            case BishopType:
-                printf("R, ");
-                break;
-            case KnightType:
-                printf("R, ");
-                break;
-            case KingType:
-                printf("R, ");
-                break;
-            case QueenType:
-                printf("R, ");
-                break;
+        if(piece != NULL){
+            switch(piece->getType()){
+                case PawnType:
+                    printf("P, ");
+                    break;
+                case RookType:
+                    printf("R, ");
+                    break;
+                case BishopType:
+                    printf("B, ");
+                    break;
+                case KnightType:
+                    printf("k, ");
+                    break;
+                case KingType:
+                    printf("K, ");
+                    break;
+                case QueenType:
+                    printf("Q, ");
+                    break;
+            }
         }
+        else{
+            printf(" , ");
+        }
+        
     }
     printf("\n\n\n");
 }
@@ -213,7 +286,22 @@ void Board::printBoard(){
  * Description: Returns the piece object at the given position
  */
 BasePiece* Board::getPiece(Position piecePos){
-    return board[piecePos.y][piecePos.x].getPiece();
+    BasePiece* piece = board[piecePos.x][piecePos.y].getPiece();
+    #ifdef DEBUG
+        //printf("Getting piece at piece at collum: %d, row: %d\n", piecePos.x, piecePos.y);
+    #endif
+    if(piece == NULL){
+        #ifdef DEBUG
+            //printf("Piece is NULL\n");
+        #endif
+        return NULL;
+    }
+    else{
+        #ifdef DEBUG
+            //printf("Piece is a Valid piece\n");
+        #endif
+        return piece;
+    }
 }
 
 
@@ -245,24 +333,54 @@ void Pawn::populateLegalMoves(){
     BasePiece* piece;
     Position testPos;
     int dir = (color == White)?1:-1;
+
     //if there is not a piece directly in front of the pawn -> it is legal move
     testPos = {pos.x, pos.y + 1*dir};
-    piece = board->getPiece(testPos);
-    if(piece == NULL && board->isInBounds(testPos)){
-        legalMoves.push_back(testPos);
-    }
-    //if there is an enemy piece diagonal to the pawn it is a legal move
-    testPos = {pos.x+1, pos.y + 1*dir};
-    piece = board->getPiece(testPos);
-    if(piece->getColor() != color && board->isInBounds(testPos)){
-        legalMoves.push_back({pos.x+1, pos.y+1*dir});
-    }
-    testPos = {pos.x-1, pos.y + 1*dir};
-    piece = board->getPiece(testPos);
-    if(piece->getColor() != color && board->isInBounds(testPos)){
-        legalMoves.push_back({pos.x-1, pos.y+1*dir});
+    if(board->isInBounds(testPos)){
+        piece = board->getPiece(testPos);
+        if(piece == NULL){
+            legalMoves.push_back(testPos);
+
+            //no piece two spaces in front of pawn & its pawns first move -> it is legal move
+            testPos = {pos.x, pos.y + 2*dir};
+            if(board->isInBounds(testPos)){
+                piece = board->getPiece(testPos);
+                #ifdef DEBUG
+                    //printf("firstMove as seen by Pawn::populateLegalMoves: %d\n", firstMove);
+                #endif
+                if(piece == NULL && firstMove){
+                    #ifdef DEBUG
+                        printf("double jump is legal move\n");
+                    #endif
+                    legalMoves.push_back(testPos);
+                }
+            }
+        }
     }
 
+    //if there is an enemy piece diagonal to the pawn it is a legal move
+    testPos = {pos.x+1, pos.y + 1*dir};
+    if(board->isInBounds(testPos)){
+        piece = board->getPiece(testPos);
+        if(piece != NULL){
+            if(piece->getColor() != color){
+                legalMoves.push_back({pos.x+1, pos.y+1*dir});
+            }
+        }
+    }
+    testPos = {pos.x-1, pos.y + 1*dir};
+    if(board->isInBounds(testPos)){
+        piece = board->getPiece(testPos);
+        if(piece != NULL){
+            if(piece->getColor() != color){
+                legalMoves.push_back({pos.x+1, pos.y+1*dir});
+            }
+        }
+    }
+    #ifdef DEBUG
+        printf("Legal moves for Pawn at {%2d, %2d}:     ", pos.x, pos.y);
+        legalMovesPrint();
+    #endif
 }
 
 
