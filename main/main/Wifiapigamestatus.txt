@@ -1,0 +1,54 @@
+/*
+ *  This sketch demonstrates how to scan WiFi networks.
+ *  The API is almost the same as with the WiFi Shield library,
+ *  the most obvious difference being the different file you need to include:
+ */
+#include "WiFi.h"
+#include <HTTPClient.h>
+const char* ssid = "Verizon-SM-G955U-0120";
+const char* password = "ucbg4212";
+void setup()
+{
+    Serial.begin(115200);
+
+    // Set WiFi to station mode and disconnect from an AP if it was previously connected
+    WiFi.mode(WIFI_STA);
+    WiFi.begin(ssid, password);
+    while (WiFi.status() != WL_CONNECTED) 
+    {
+    Serial.println("Connecting....");
+    delay(1000);
+    }
+}
+
+void loop()
+{
+    
+    if ((WiFi.status() == WL_CONNECTED)) // If Wifi is connected get Profile Stats and Check Status of a Game
+    { 
+      HTTPClient http;
+      HTTPClient http2;
+      // Gets Profile Stats
+      http.begin("https://lichess.org/api/account"); // Account URL
+      http.addHeader("Authorization", "Bearer INSERT TOKEN HERE"); // Authorization Token added to Header
+      http2.begin("https://lichess.org/api/bot/game/stream/QHjDY4UzUxUd"); //Specify game URL
+      http2.addHeader("Authorization", "Bearer INSERT TOKEN HERE"); // Authorization Token added to Header
+      int httpCode = http.GET();                                        //Make the profile stats request
+      int httpCode2 = http2.GET();                                      //Make the game status request
+      if (httpCode > 0) //Check for the returning code
+       { 
+    
+          String payload = http.getString();
+          String payload2 = http2.getString();
+          Serial.println(httpCode);
+          Serial.println(payload);
+          Serial.println(httpCode2);
+          Serial.println(payload2);
+        }
+    
+      else {
+        Serial.println("Error on HTTP request");
+      }
+    }
+    delay(1000);
+}
