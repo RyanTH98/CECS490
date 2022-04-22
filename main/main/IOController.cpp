@@ -2,10 +2,8 @@
 
 using namespace IOController;
 
-#define DEBUG
 
-
-#ifdef DEBUG
+#ifdef DEBUG_VECTOR_PRINT
 void vectorPrint(std::vector<int> vec){
 	int i = 0;
     printf("Printing Board as seen by vectorPrint\n");
@@ -63,7 +61,7 @@ std::vector<int> HalController::scan(){
    		gpio_set_level(decoderA1, (column>>1)&0x01);
    		gpio_set_level(decoderA2, (column>>2)&0x01);
     		
-		delay(25);
+		delay(20);
 		//printf("I recieved %d on sensor %d\n", gpio_get_level(muxY), i);
     	newHalVector.push_back(!gpio_get_level(muxY));
 		//delay(25);
@@ -117,7 +115,7 @@ bool HalController::checkStartingPosition(){
 									1,1,1,1,1,1,1,1,
 								};
 	halVector = scan();
-	#ifdef DEBUG
+	#ifdef DEBUG_CHECK_STARTING_POSITION
 			printf("Calling printBoard from HalController::checkStartingPosition\n");
 			//printBoard();
 			printf("halVector:\n");
@@ -130,11 +128,20 @@ bool HalController::checkStartingPosition(){
 }
 
 bool HalController::debounce(std::vector<int> debounceHal){
+	#ifdef DEBUG_DEBOUNCE
+		printf("Starting Debounce\n");
+	#endif
 	for(int i = 0; i < DEBOUNCE_COUNT; i++){
 		if(debounceHal != scan()){
+			#ifdef DEBUG_DEBOUNCE
+				printf("Debounce Failed.\n");
+			#endif
 			return false;
 		}
 	}
+	#ifdef DEBUG_DEBOUNCE
+		printf("Debounce Success.\n");
+	#endif
 	return true;
 }
 
@@ -147,7 +154,7 @@ Move HalController::detectChange(){
 	while(!db_flag){
 		//aquaire new data from sensors
 		newHalVector = scan();
-		#ifdef DEBUG
+		#ifdef DEBUG_DETECT_CHANGE
 			printf("Calling printBoard from HalController::detectChange\n");
 			//printBoard();
 			printf("halVector:\n");
@@ -166,7 +173,7 @@ Move HalController::detectChange(){
 					diffVector.push_back(1);
 				}
 			}
-			#ifdef DEBUG
+			#ifdef DEBUG_DETECT_CHANGE
 				printf("Calling printBoard from HalController::detectChange\n");
 				printf("Change has been detected, diffVector:\n");
 				vectorPrint(diffVector);
@@ -174,7 +181,7 @@ Move HalController::detectChange(){
 			#endif
 			//call debounce on the change
 			if(diffVector.size() == 1){
-				#ifdef DEBUG
+				#ifdef DEBUG_DETECT_CHANGE
 					printf("Calling debounce\n");
 				#endif
 				db_flag = debounce(newHalVector);
@@ -189,7 +196,7 @@ Move HalController::detectChange(){
 		subtractVector.push_back(halVector[i] - newHalVector[i]);
 	}
 
-	#ifdef DEBUG
+	#ifdef DEBUG_DETECT_CHANGE
 		printf("Calling printBoard from HalController::detectChange\n");
 		printf("subtract has been created, subtractVector:\n");
 		vectorPrint(subtractVector);
@@ -199,7 +206,7 @@ Move HalController::detectChange(){
 		if(x != 0){
 			move.risingEdge = (x == -1)?true:false;
 			move.targetSquare = {i%8, i/8};
-#ifdef DEBUG
+#ifdef DEBUG_DETECT_CHANGE
 			printf("Detected change on collumn %d row %d -> piece has been %s\n", 
 				move.targetSquare.x, move.targetSquare.y, move.risingEdge?"placed":"removed");
 			//printBoard();
@@ -208,7 +215,7 @@ Move HalController::detectChange(){
 		i++;
 	}
 	halVector = newHalVector;
-	#ifdef DEBUG
+	#ifdef DEBUG_DETECT_CHANGE
 		printf("Updated halVector:\n");
 		printBoard();
 	#endif
@@ -269,9 +276,11 @@ void LedController::singleLedUpdate(LED_Light newLED){
 	}
 }
 
-void LedController::vectorLedUpdate(std::vector<LED_Light> updateVector){
-	for(LED_Light led : updateVector){
-		singleLedUpdate(led);
+void LedController::vectorLedUpdate(std::vector<Position> updateVector, RGBColor color){
+	LED_Light light;
+	for(Position square : updateVector){
+		light = {square, color};
+		singleLedUpdate(light);
 	}
 }
 
@@ -287,10 +296,9 @@ void LedController::LedStrip_Output() {
 	for(int i = 0; i < 64; i++){
 		row = i % 8;
  		column = i / 8;
-		led = (column%2 == 0) ? i : ((column + 1) * 64 - row - 1);
+		led = (column%2 == 0) ? i : i;//((column + 1) * 8 - row - 1);
 		//There has got to be a better way to do this -- casting the struct? -- inheriting the object from the adafruit lib?
 		pixels->setPixelColor(led, pixels->Color(ledVector[i].rgb_color.r, ledVector[i].rgb_color.g, ledVector[i].rgb_color.b));
 	}
     pixels->show();   // Send the updated pixel colors to the hardware.
 }
-

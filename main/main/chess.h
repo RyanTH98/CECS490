@@ -4,7 +4,7 @@
 #include <vector>
 #include <stdio.h>
 
-#define DEBUG
+//#define DEBUG
 
 namespace Chess
 {

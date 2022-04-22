@@ -10,7 +10,10 @@
 #include "chess.h"
 #include "IOController.h"
 
-#define DEBUG
+#ifdef DEBUG
+#undef DEBUG
+#endif
+//#define DEBUG
 
 //led
 gpio_num_t led_strip_D0 = GPIO_NUM_23;
@@ -64,7 +67,7 @@ extern "C" void app_main() {
 	// - Create needed objects
 	IOController::HalController hc( GPIO_NUM_5,  GPIO_NUM_18,  GPIO_NUM_19,  GPIO_NUM_2,  GPIO_NUM_4, GPIO_NUM_27,  GPIO_NUM_26,  GPIO_NUM_25,  GPIO_NUM_33);
 	Chess::Board board;
-	IOController::LedController lc(GPIO_NUM_23, IOController::RGBColor{71,151,220}, IOController::RGBColor{220,186,71});
+	IOController::LedController lc(GPIO_NUM_23, IOController::RGBColor{255,0,0}, IOController::RGBColor{0,0,255});
 	//begin
     while(1) {
 		//LedStrip_Output();
@@ -157,8 +160,11 @@ extern "C" void app_main() {
 				    printf("Its piece color is: %s\n", (piece->getColor() == Chess::White)?"White":"Black");
 				    printf("Its turnColor is: %s\n", (smc.turnColor == Chess::White)?"White":"Black");
 				#endif 
-		    	if(piece->getColor() == smc.turnColor){
-		    		// True  - GOTO ST_SET_ACTIVITY
+		    	if(piece->getColor() == smc.turnColor){		    		
+		    		//update the led array with the lifted pieces legal moves
+					lc.vectorLedUpdate(piece->getLegalMoves(), IOController::RGBColor{0,255,0});
+					
+					// True  - GOTO ST_SET_ACTIVITY
 		    		smc.currentState = ST_SET_ACTIVITY;
 		    	}
 		        else{
@@ -174,6 +180,7 @@ extern "C" void app_main() {
 				    printf("Entering ST_SET_ACTIVITY\n");
 				#endif
 
+				
 		        //Wait for new change on board
 		        smc.temp = hc.detectChange();
 
@@ -347,9 +354,9 @@ extern "C" void app_main() {
 		    case ST_RESET_PIECE:
 		    {		        
 		    	// Wait until pieces are returned to their starting positions
-		    	#ifdef DEBUG
+		    	//#ifdef DEBUG
 				    printf("Entering ST_RESET_PIECE\n");
-				#endif
+				//#endif
 		        break;
 		    }
 		    case ST_CHECK_GAMEOVER:

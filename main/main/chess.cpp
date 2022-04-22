@@ -1,5 +1,16 @@
 #include "chess.h"
 
+
+#define KNRM  "\x1B[0m"
+#define KRED  "\x1B[31m"
+#define KGRN  "\x1B[32m"
+#define KYEL  "\x1B[33m"
+#define KBLU  "\x1B[34m"
+#define KMAG  "\x1B[35m"
+#define KCYN  "\x1B[36m"
+#define KWHT  "\x1B[37m"
+
+
 using namespace Chess;
 //extern Board board;
 
@@ -20,7 +31,7 @@ std::vector<Position> BasePiece::getLegalMoves(){
 
 bool BasePiece::getFirstMove(){
     #ifdef DEBUG
-        printf("Returning firstMove: %d --------------------------------------------------------------\n", firstMove);
+        printf("Returning firstMove: %d\n", firstMove);
     #endif
     return firstMove;
 }
@@ -145,9 +156,9 @@ void Board::initBoard(){
     pos = {2,7};
     board[pos.x][pos.y].setPiece(new Bishop(Black, pos, this));
     pos = {3,7};
-    board[pos.x][pos.y].setPiece(new Queen(Black, pos, this));
-    pos = {4,7};
     board[pos.x][pos.y].setPiece(new King(Black, pos, this));
+    pos = {4,7};
+    board[pos.x][pos.y].setPiece(new Queen(Black, pos, this));
     pos = {5,7};
     board[pos.x][pos.y].setPiece(new Bishop(Black, pos, this));
     pos = {6,7};
@@ -165,9 +176,7 @@ void Board::initBoard(){
     #endif
     populateAllLegalMoves();
 
-    #ifdef DEBUG
-        printBoard();
-    #endif
+    printBoard();
 }
 
 void Board::populateAllLegalMoves(){
@@ -227,9 +236,8 @@ bool Board::movePiece(Position origin, Position dest){
         board[dest.x][dest.y].setPiece(piece);
         board[origin.x][origin.y].clearSquare();
         
-        #ifdef DEBUG
-            printBoard();
-        #endif
+        printBoard();
+        
         populateAllLegalMoves();
         return true;
     }
@@ -241,44 +249,54 @@ bool Board::movePiece(Position origin, Position dest){
 void Board::printBoard(){
     BasePiece* piece;
     int row, column;
-
+    printf("\033[2J"); //clear screen
     printf("Printing Board as seen by Chess::Board::printBoard\n");
+
+    printf("%s---------------------------------\n", KMAG);
     for(int i = 0; i < 64; i++){
-        row = i/8;
+        row = 7 - (i/8);
         column = i%8;
         piece = board[column][row].getPiece();
 
-        if(column == 0){
-            printf("\n");
+        if(column == 0 && i != 0){
+            printf("%s|\n", KMAG);
+            printf("%s---------------------------------\n", KMAG);
         }
+
+        printf("%s|", KMAG);
+
         if(piece != NULL){
+            printf("%s", (piece->getColor() == White) ? KGRN : KBLU);
             switch(piece->getType()){
                 case PawnType:
-                    printf("P, ");
+                    printf(" P ");
                     break;
                 case RookType:
-                    printf("R, ");
+                    printf(" R ");
                     break;
                 case BishopType:
-                    printf("B, ");
+                    printf(" B ");
                     break;
                 case KnightType:
-                    printf("k, ");
+                    printf(" k ");
                     break;
                 case KingType:
-                    printf("K, ");
+                    printf(" K ");
                     break;
                 case QueenType:
-                    printf("Q, ");
+                    printf(" Q ");
                     break;
             }
         }
         else{
-            printf(" , ");
+            printf("   ");
         }
         
     }
+    printf("%s|\n", KMAG);
+    printf("%s---------------------------------\n", KMAG);
     printf("\n\n\n");
+    printf("%s", KWHT);
 }
 
 /* Function:    getPiece
@@ -373,7 +391,7 @@ void Pawn::populateLegalMoves(){
         piece = board->getPiece(testPos);
         if(piece != NULL){
             if(piece->getColor() != color){
-                legalMoves.push_back({pos.x+1, pos.y+1*dir});
+                legalMoves.push_back({pos.x-1, pos.y+1*dir});
             }
         }
     }
@@ -411,29 +429,44 @@ void Rook::populateLegalMoves(){
     BasePiece* piece;
     bool left = true, right = true, up = true, down = true;
     
-    for(int i = 0; i < 8; i++){
+    for(int i = 1; i < 8; i++){
         //left
         if(left){
             newPos = {pos.x-i, pos.y};
+            #ifdef DEBUG
+                printf("Rook @ {%d, %d}: Checking {%d, %d} in left direction\n", pos.x, pos.y, newPos.x, newPos.y);
+            #endif
             if(board->isInBounds(newPos)){
                 piece = board->getPiece(newPos);
                 
                 //no piece
                 if(piece == NULL){
+                    #ifdef DEBUG
+                        printf("Move is NULL piece -> adding to move list\n");
+                    #endif
                     legalMoves.push_back(newPos);
                 }
                 else{
                     //piece
                     if(piece->getColor() != color){ //enemy piece
+                        #ifdef DEBUG
+                            printf("Move is enemy piece -> adding to move list -> dir = over\n");
+                        #endif
                         legalMoves.push_back(newPos);
                         left = false;
                     }
                     else{ //my piece
+                        #ifdef DEBUG
+                            printf("Move is friend piece -> dir = over\n");
+                        #endif
                         left = false;
                     }
                 }
             }
             else{ //out of bounds
+                #ifdef DEBUG
+                    printf("Move is out of bounds -> dir = over\n");
+                #endif
                 left = false;
             }
         }
@@ -441,25 +474,40 @@ void Rook::populateLegalMoves(){
         //right
         if(right){
             newPos = {pos.x+i, pos.y};
+            #ifdef DEBUG
+                printf("Rook @ {%d, %d}: Checking {%d, %d} in right direction\n", pos.x, pos.y, newPos.x, newPos.y);
+            #endif
             if(board->isInBounds(newPos)){
                 piece = board->getPiece(newPos);
                 
                 //no piece
                 if(piece == NULL){
+                    #ifdef DEBUG
+                        printf("Move is NULL piece -> adding to move list\n");
+                    #endif
                     legalMoves.push_back(newPos);
                 }
                 else{
                     //piece
                     if(piece->getColor() != color){ //enemy piece
+                        #ifdef DEBUG
+                            printf("Move is enemy piece -> adding to move list -> dir = over\n");
+                        #endif
                         legalMoves.push_back(newPos);
                         right = false;
                     }
                     else{ //my piece
+                        #ifdef DEBUG
+                            printf("Move is friend piece -> dir = over\n");
+                        #endif
                         right = false;
                     }
                 }
             }
             else{ //out of bounds
+                #ifdef DEBUG
+                    printf("Move is out of bounds -> dir = over\n");
+                #endif
                 right = false;
             }
         }
@@ -467,55 +515,89 @@ void Rook::populateLegalMoves(){
         //up
         if(up){
             newPos = {pos.x, pos.y+i};
+            #ifdef DEBUG
+                printf("Rook @ {%d, %d}: Checking {%d, %d} in up direction\n", pos.x, pos.y, newPos.x, newPos.y);
+            #endif
             if(board->isInBounds(newPos)){
                 piece = board->getPiece(newPos);
                 
                 //no piece
                 if(piece == NULL){
+                    #ifdef DEBUG
+                        printf("Move is NULL piece -> adding to move list\n");
+                    #endif
                     legalMoves.push_back(newPos);
                 }
                 else{
                     //piece
                     if(piece->getColor() != color){ //enemy piece
+                        #ifdef DEBUG
+                            printf("Move is enemy piece -> adding to move list -> dir = over\n");
+                        #endif
                         legalMoves.push_back(newPos);
                         up = false;
                     }
                     else{ //my piece
+                        #ifdef DEBUG
+                            printf("Move is friend piece -> dir = over\n");
+                        #endif
                         up = false;
                     }
                 }
             }
             else{ //out of bounds
+                #ifdef DEBUG
+                    printf("Move is out of bounds -> dir = over\n");
+                #endif
                 up = false;
             }
         }
 
         //down
         if(down){
-            newPos = {pos.x+i, pos.y};
+            newPos = {pos.x, pos.y-i};
+            #ifdef DEBUG
+                printf("Rook @ {%d, %d}: Checking {%d, %d} in down direction\n", pos.x, pos.y, newPos.x, newPos.y);
+            #endif
             if(board->isInBounds(newPos)){
                 piece = board->getPiece(newPos);
                 
                 //no piece
                 if(piece == NULL){
+                    #ifdef DEBUG
+                        printf("Move is NULL piece -> adding to move list\n");
+                    #endif
                     legalMoves.push_back(newPos);
                 }
                 else{
                     //piece
                     if(piece->getColor() != color){ //enemy piece
+                        #ifdef DEBUG
+                            printf("Move is enemy piece -> adding to move list -> dir = over\n");
+                        #endif
                         legalMoves.push_back(newPos);
                         down = false;
                     }
                     else{ //my piece
+                        #ifdef DEBUG
+                            printf("Move is friend piece -> dir = over\n");
+                        #endif
                         down = false;
                     }
                 }
             }
             else{ //out of bounds
+                #ifdef DEBUG
+                    printf("Move is out of bounds -> dir = over\n");
+                #endif
                 down = false;
             }
         }
     }
+    #ifdef DEBUG
+        printf("Legal moves for Rook at {%2d, %2d}:     ", pos.x, pos.y);
+        legalMovesPrint();
+    #endif
 }
 
 
@@ -546,29 +628,43 @@ void Bishop::populateLegalMoves(){
     BasePiece* piece;
     bool ul = true, ur = true, dl = true, dr = true;
 
-    for(int i = 0; i < 8; i++){
+    for(int i = 1; i < 8; i++){
         //up-left
         if(ul){
             newPos = {pos.x-i, pos.y+i};
+            #ifdef DEBUG
+                printf("Bishop @ {%d, %d}: Checking {%d, %d} in upper right direction\n", pos.x, pos.y, newPos.x, newPos.y);
+            #endif
             if(board->isInBounds(newPos)){
                 piece = board->getPiece(newPos);
-                
                 //no piece
                 if(piece == NULL){
+                    #ifdef DEBUG
+                        printf("Move is NULL piece -> adding to move list\n");
+                    #endif
                     legalMoves.push_back(newPos);
                 }
                 else{
                     //piece
                     if(piece->getColor() != color){ //enemy piece
+                        #ifdef DEBUG
+                            printf("Move is enemy piece -> adding to move list -> dir = over\n");
+                        #endif
                         legalMoves.push_back(newPos);
                         ul = false;
                     }
                     else{ //my piece
+                        #ifdef DEBUG
+                            printf("Move is friend piece -> dir = over\n");
+                        #endif
                         ul = false;
                     }
                 }
             }
             else{ //out of bounds
+                #ifdef DEBUG
+                    printf("Move is out of bounds -> dir = over\n");
+                #endif
                 ul = false;
             }
         }
@@ -576,25 +672,40 @@ void Bishop::populateLegalMoves(){
         //up-right
         if(ur){
             newPos = {pos.x+i, pos.y+i};
+            #ifdef DEBUG
+                printf("Bishop @ {%d, %d}: Checking {%d, %d} in upper right direction\n", pos.x, pos.y, newPos.x, newPos.y);
+            #endif
             if(board->isInBounds(newPos)){
                 piece = board->getPiece(newPos);
                 
                 //no piece
                 if(piece == NULL){
+                    #ifdef DEBUG
+                        printf("Move is NULL piece -> adding to move list\n");
+                    #endif
                     legalMoves.push_back(newPos);
                 }
                 else{
                     //piece
                     if(piece->getColor() != color){ //enemy piece
+                        #ifdef DEBUG
+                            printf("Move is enemy piece -> adding to move list -> dir = over\n");
+                        #endif
                         legalMoves.push_back(newPos);
                         ur = false;
                     }
                     else{ //my piece
+                        #ifdef DEBUG
+                            printf("Move is friend piece -> dir = over\n");
+                        #endif
                         ur = false;
                     }
                 }
             }
             else{ //out of bounds
+                #ifdef DEBUG
+                    printf("Move is out of bounds -> dir = over\n");
+                #endif
                 ur = false;
             }
         }
@@ -602,25 +713,40 @@ void Bishop::populateLegalMoves(){
         //down-left
         if(dl){
             newPos = {pos.x-i, pos.y-i};
+            #ifdef DEBUG
+                printf("Bishop @ {%d, %d}: Checking {%d, %d} in upper right direction\n", pos.x, pos.y, newPos.x, newPos.y);
+            #endif
             if(board->isInBounds(newPos)){
                 piece = board->getPiece(newPos);
                 
                 //no piece
                 if(piece == NULL){
+                    #ifdef DEBUG
+                        printf("Move is NULL piece -> adding to move list\n");
+                    #endif
                     legalMoves.push_back(newPos);
                 }
                 else{
                     //piece
                     if(piece->getColor() != color){ //enemy piece
+                        #ifdef DEBUG
+                            printf("Move is enemy piece -> adding to move list -> dir = over\n");
+                        #endif
                         legalMoves.push_back(newPos);
                         dl = false;
                     }
                     else{ //my piece
+                        #ifdef DEBUG
+                            printf("Move is friend piece -> dir = over\n");
+                        #endif
                         dl = false;
                     }
                 }
             }
             else{ //out of bounds
+                #ifdef DEBUG
+                    printf("Move is out of bounds -> dir = over\n");
+                #endif
                 dl = false;
             }
         }
@@ -628,30 +754,48 @@ void Bishop::populateLegalMoves(){
         //down-right
         if(dr){
             newPos = {pos.x+i, pos.y-i};
+            #ifdef DEBUG
+                printf("Bishop @ {%d, %d}: Checking {%d, %d} in upper right direction\n", pos.x, pos.y, newPos.x, newPos.y);
+            #endif
             if(board->isInBounds(newPos)){
                 piece = board->getPiece(newPos);
                 
                 //no piece
                 if(piece == NULL){
+                    #ifdef DEBUG
+                        printf("Move is NULL piece -> adding to move list\n");
+                    #endif
                     legalMoves.push_back(newPos);
                 }
                 else{
                     //piece
                     if(piece->getColor() != color){ //enemy piece
+                        #ifdef DEBUG
+                            printf("Move is enemy piece -> adding to move list -> dir = over\n");
+                        #endif
                         legalMoves.push_back(newPos);
                         dr = false;
                     }
                     else{ //my piece
+                        #ifdef DEBUG
+                            printf("Move is friend piece -> dir = over\n");
+                        #endif
                         dr = false;
                     }
                 }
             }
             else{ //out of bounds
+                #ifdef DEBUG
+                    printf("Move is out of bounds -> dir = over\n");
+                #endif
                 dr = false;
             }
         }
     }
-
+    #ifdef DEBUG
+        printf("Legal moves for Bishop at {%2d, %2d}:     ", pos.x, pos.y);
+        legalMovesPrint();
+    #endif
 }
 
 
@@ -749,6 +893,77 @@ void Knight::populateLegalMoves(){
         }
     }
 
+    //left-up
+    newPos = {pos.x-2, pos.y+1};
+    if(board->isInBounds(newPos)){
+        piece = board->getPiece(newPos);
+        
+        //no piece
+        if(piece == NULL){
+            legalMoves.push_back(newPos);
+        }
+        else{
+            //piece
+            if(piece->getColor() != color){ //enemy piece
+                legalMoves.push_back(newPos);
+            }
+        }
+    }
+
+    //left-down
+    newPos = {pos.x-2, pos.y-1};
+    if(board->isInBounds(newPos)){
+        piece = board->getPiece(newPos);
+        
+        //no piece
+        if(piece == NULL){
+            legalMoves.push_back(newPos);
+        }
+        else{
+            //piece
+            if(piece->getColor() != color){ //enemy piece
+                legalMoves.push_back(newPos);
+            }
+        }
+    }
+
+    //right-up
+    newPos = {pos.x+2, pos.y+1};
+    if(board->isInBounds(newPos)){
+        piece = board->getPiece(newPos);
+        
+        //no piece
+        if(piece == NULL){
+            legalMoves.push_back(newPos);
+        }
+        else{
+            //piece
+            if(piece->getColor() != color){ //enemy piece
+                legalMoves.push_back(newPos);
+            }
+        }
+    }
+
+    //right-down
+    newPos = {pos.x+2, pos.y-1};
+    if(board->isInBounds(newPos)){
+        piece = board->getPiece(newPos);
+        
+        //no piece
+        if(piece == NULL){
+            legalMoves.push_back(newPos);
+        }
+        else{
+            //piece
+            if(piece->getColor() != color){ //enemy piece
+                legalMoves.push_back(newPos);
+            }
+        }
+    }
+    #ifdef DEBUG
+        printf("Legal moves for Knight at {%2d, %2d}:     ", pos.x, pos.y);
+        legalMovesPrint();
+    #endif
 }
 
 
@@ -776,17 +991,342 @@ Queen::~Queen(){
 void Queen::populateLegalMoves(){
     legalMoves.clear();
 
-    BasePiece* bishop = new Bishop(color, pos, board);
-    BasePiece* rook = new Rook(color, pos, board);
+    Position newPos;
+    BasePiece* piece;
+    bool ul = true, ur = true, dl = true, dr = true;
+    bool down = true, up = true, left = true, right = true;
 
-    bishop->populateLegalMoves();
-    rook->populateLegalMoves();
+    for(int i = 1; i < 8; i++){
+        //up-left
+        if(ul){
+            newPos = {pos.x-i, pos.y+i};
+            #ifdef DEBUG
+                printf("Queen @ {%d, %d}: Checking {%d, %d} in upper left direction\n", pos.x, pos.y, newPos.x, newPos.y);
+            #endif
+            if(board->isInBounds(newPos)){
+                piece = board->getPiece(newPos);
+                //no piece
+                if(piece == NULL){
+                    #ifdef DEBUG
+                        printf("Move is NULL piece -> adding to move list\n");
+                    #endif
+                    legalMoves.push_back(newPos);
+                }
+                else{
+                    //piece
+                    if(piece->getColor() != color){ //enemy piece
+                        #ifdef DEBUG
+                            printf("Move is enemy piece -> adding to move list -> dir = over\n");
+                        #endif
+                        legalMoves.push_back(newPos);
+                        ul = false;
+                    }
+                    else{ //my piece
+                        #ifdef DEBUG
+                            printf("Move is friend piece -> dir = over\n");
+                        #endif
+                        ul = false;
+                    }
+                }
+            }
+            else{ //out of bounds
+                #ifdef DEBUG
+                    printf("Move is out of bounds -> dir = over\n");
+                #endif
+                ul = false;
+            }
+        }
 
-    legalMoves = bishop->getLegalMoves();
-    legalMoves.insert(rook->getLegalMoves().end(), rook->getLegalMoves().begin(), rook->getLegalMoves().end());
+        //up-right
+        if(ur){
+            newPos = {pos.x+i, pos.y+i};
+            #ifdef DEBUG
+                printf("Queen @ {%d, %d}: Checking {%d, %d} in upper right direction\n", pos.x, pos.y, newPos.x, newPos.y);
+            #endif
+            if(board->isInBounds(newPos)){
+                piece = board->getPiece(newPos);
+                
+                //no piece
+                if(piece == NULL){
+                    #ifdef DEBUG
+                        printf("Move is NULL piece -> adding to move list\n");
+                    #endif
+                    legalMoves.push_back(newPos);
+                }
+                else{
+                    //piece
+                    if(piece->getColor() != color){ //enemy piece
+                        #ifdef DEBUG
+                            printf("Move is enemy piece -> adding to move list -> dir = over\n");
+                        #endif
+                        legalMoves.push_back(newPos);
+                        ur = false;
+                    }
+                    else{ //my piece
+                        #ifdef DEBUG
+                            printf("Move is friend piece -> dir = over\n");
+                        #endif
+                        ur = false;
+                    }
+                }
+            }
+            else{ //out of bounds
+                #ifdef DEBUG
+                    printf("Move is out of bounds -> dir = over\n");
+                #endif
+                ur = false;
+            }
+        }
 
-    bishop->~BasePiece();
-    rook->~BasePiece();
+        //down-left
+        if(dl){
+            newPos = {pos.x-i, pos.y-i};
+            #ifdef DEBUG
+                printf("Queen @ {%d, %d}: Checking {%d, %d} in down left direction\n", pos.x, pos.y, newPos.x, newPos.y);
+            #endif
+            if(board->isInBounds(newPos)){
+                piece = board->getPiece(newPos);
+                
+                //no piece
+                if(piece == NULL){
+                    #ifdef DEBUG
+                        printf("Move is NULL piece -> adding to move list\n");
+                    #endif
+                    legalMoves.push_back(newPos);
+                }
+                else{
+                    //piece
+                    if(piece->getColor() != color){ //enemy piece
+                        #ifdef DEBUG
+                            printf("Move is enemy piece -> adding to move list -> dir = over\n");
+                        #endif
+                        legalMoves.push_back(newPos);
+                        dl = false;
+                    }
+                    else{ //my piece
+                        #ifdef DEBUG
+                            printf("Move is friend piece -> dir = over\n");
+                        #endif
+                        dl = false;
+                    }
+                }
+            }
+            else{ //out of bounds
+                #ifdef DEBUG
+                    printf("Move is out of bounds -> dir = over\n");
+                #endif
+                dl = false;
+            }
+        }
+
+        //down-right
+        if(dr){
+            newPos = {pos.x+i, pos.y-i};
+            #ifdef DEBUG
+                printf("Queen @ {%d, %d}: Checking {%d, %d} in down right direction\n", pos.x, pos.y, newPos.x, newPos.y);
+            #endif
+            if(board->isInBounds(newPos)){
+                piece = board->getPiece(newPos);
+                
+                //no piece
+                if(piece == NULL){
+                    #ifdef DEBUG
+                        printf("Move is NULL piece -> adding to move list\n");
+                    #endif
+                    legalMoves.push_back(newPos);
+                }
+                else{
+                    //piece
+                    if(piece->getColor() != color){ //enemy piece
+                        #ifdef DEBUG
+                            printf("Move is enemy piece -> adding to move list -> dir = over\n");
+                        #endif
+                        legalMoves.push_back(newPos);
+                        dr = false;
+                    }
+                    else{ //my piece
+                        #ifdef DEBUG
+                            printf("Move is friend piece -> dir = over\n");
+                        #endif
+                        dr = false;
+                    }
+                }
+            }
+            else{ //out of bounds
+                #ifdef DEBUG
+                    printf("Move is out of bounds -> dir = over\n");
+                #endif
+                dr = false;
+            }
+        }
+
+        //up
+        if(up){
+            newPos = {pos.x, pos.y+i};
+            #ifdef DEBUG
+                printf("Queen @ {%d, %d}: Checking {%d, %d} in the up direction\n", pos.x, pos.y, newPos.x, newPos.y);
+            #endif
+            if(board->isInBounds(newPos)){
+                piece = board->getPiece(newPos);
+                //no piece
+                if(piece == NULL){
+                    #ifdef DEBUG
+                        printf("Move is NULL piece -> adding to move list\n");
+                    #endif
+                    legalMoves.push_back(newPos);
+                }
+                else{
+                    //piece
+                    if(piece->getColor() != color){ //enemy piece
+                        #ifdef DEBUG
+                            printf("Move is enemy piece -> adding to move list -> dir = over\n");
+                        #endif
+                        legalMoves.push_back(newPos);
+                        up = false;
+                    }
+                    else{ //my piece
+                        #ifdef DEBUG
+                            printf("Move is friend piece -> dir = over\n");
+                        #endif
+                        up = false;
+                    }
+                }
+            }
+            else{ //out of bounds
+                #ifdef DEBUG
+                    printf("Move is out of bounds -> dir = over\n");
+                #endif
+                up = false;
+            }
+        }
+
+        //right
+        if(right){
+            newPos = {pos.x+i, pos.y};
+            #ifdef DEBUG
+                printf("Queen @ {%d, %d}: Checking {%d, %d} in the right direction\n", pos.x, pos.y, newPos.x, newPos.y);
+            #endif
+            if(board->isInBounds(newPos)){
+                piece = board->getPiece(newPos);
+                
+                //no piece
+                if(piece == NULL){
+                    #ifdef DEBUG
+                        printf("Move is NULL piece -> adding to move list\n");
+                    #endif
+                    legalMoves.push_back(newPos);
+                }
+                else{
+                    //piece
+                    if(piece->getColor() != color){ //enemy piece
+                        #ifdef DEBUG
+                            printf("Move is enemy piece -> adding to move list -> dir = over\n");
+                        #endif
+                        legalMoves.push_back(newPos);
+                        right = false;
+                    }
+                    else{ //my piece
+                        #ifdef DEBUG
+                            printf("Move is friend piece -> dir = over\n");
+                        #endif
+                        right = false;
+                    }
+                }
+            }
+            else{ //out of bounds
+                #ifdef DEBUG
+                    printf("Move is out of bounds -> dir = over\n");
+                #endif
+                right = false;
+            }
+        }
+
+        //down
+        if(down){
+            newPos = {pos.x, pos.y-i};
+            #ifdef DEBUG
+                printf("Queen @ {%d, %d}: Checking {%d, %d} in the down direction\n", pos.x, pos.y, newPos.x, newPos.y);
+            #endif
+            if(board->isInBounds(newPos)){
+                piece = board->getPiece(newPos);
+                
+                //no piece
+                if(piece == NULL){
+                    #ifdef DEBUG
+                        printf("Move is NULL piece -> adding to move list\n");
+                    #endif
+                    legalMoves.push_back(newPos);
+                }
+                else{
+                    //piece
+                    if(piece->getColor() != color){ //enemy piece
+                        #ifdef DEBUG
+                            printf("Move is enemy piece -> adding to move list -> dir = over\n");
+                        #endif
+                        legalMoves.push_back(newPos);
+                        down = false;
+                    }
+                    else{ //my piece
+                        #ifdef DEBUG
+                            printf("Move is friend piece -> dir = over\n");
+                        #endif
+                        down = false;
+                    }
+                }
+            }
+            else{ //out of bounds
+                #ifdef DEBUG
+                    printf("Move is out of bounds -> dir = over\n");
+                #endif
+                down = false;
+            }
+        }
+
+        //left
+        if(left){
+            newPos = {pos.x-i, pos.y};
+            #ifdef DEBUG
+                printf("Queen @ {%d, %d}: Checking {%d, %d} in the left direction\n", pos.x, pos.y, newPos.x, newPos.y);
+            #endif
+            if(board->isInBounds(newPos)){
+                piece = board->getPiece(newPos);
+                
+                //no piece
+                if(piece == NULL){
+                    #ifdef DEBUG
+                        printf("Move is NULL piece -> adding to move list\n");
+                    #endif
+                    legalMoves.push_back(newPos);
+                }
+                else{
+                    //piece
+                    if(piece->getColor() != color){ //enemy piece
+                        #ifdef DEBUG
+                            printf("Move is enemy piece -> adding to move list -> dir = over\n");
+                        #endif
+                        legalMoves.push_back(newPos);
+                        left = false;
+                    }
+                    else{ //my piece
+                        #ifdef DEBUG
+                            printf("Move is friend piece -> dir = over\n");
+                        #endif
+                        left = false;
+                    }
+                }
+            }
+            else{ //out of bounds
+                #ifdef DEBUG
+                    printf("Move is out of bounds -> dir = over\n");
+                #endif
+                left = false;
+            }
+        }
+    }
+    #ifdef DEBUG
+        printf("Legal moves for Queen at {%2d, %2d}:     ", pos.x, pos.y);
+        legalMovesPrint();
+    #endif
 }
 
 
@@ -954,4 +1494,8 @@ void King::populateLegalMoves(){
             }
         }
     }
+    #ifdef DEBUG
+        printf("Legal moves for King at {%2d, %2d}:     ", pos.x, pos.y);
+        legalMovesPrint();
+    #endif
 }

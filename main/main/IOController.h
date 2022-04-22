@@ -7,7 +7,15 @@
 #include <Adafruit_NeoPixel.h>
 #include "Arduino.h"
 
-#define DEBOUNCE_COUNT 5
+#define DEBOUNCE_COUNT 2
+
+#define DEBUG
+#ifdef DEBUG
+    #define DEBUG_CHECK_STARTING_POSITION
+    #define DEBUG_VECTOR_PRINT
+    //#define DEBUG_DETECT_CHANGE
+    #define DEBUG_DEBOUNCE
+#endif
 
 namespace IOController
 {
@@ -76,7 +84,7 @@ namespace IOController
             LedController(gpio_num_t led_strip_D0, RGBColor defaultWhite, RGBColor defaultBlack);
             virtual ~LedController();
             void singleLedUpdate(LED_Light newLED);
-            void vectorLedUpdate(std::vector<LED_Light> updateVector);
+            void vectorLedUpdate(std::vector<Position> updateVector, RGBColor color);
             void LedStrip_Output();
 
     };
