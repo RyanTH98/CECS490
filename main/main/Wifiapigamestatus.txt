@@ -31,7 +31,7 @@ void loop()
       // Gets Profile Stats
       http.begin("https://lichess.org/api/account"); // Account URL
       http.addHeader("Authorization", "Bearer INSERT TOKEN HERE"); // Authorization Token added to Header
-      http2.begin("https://lichess.org/api/bot/game/stream/QHjDY4UzUxUd"); //Specify game URL
+      http2.begin("https://lichess.org/api/stream/game/QHjDY4Uz"); //Specify game URL
       http2.addHeader("Authorization", "Bearer INSERT TOKEN HERE"); // Authorization Token added to Header
       int httpCode = http.GET();                                        //Make the profile stats request
       int httpCode2 = http2.GET();                                      //Make the game status request
