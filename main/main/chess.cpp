@@ -44,7 +44,7 @@ void BasePiece::setFirstMove(bool firstMove){
 }
 
 
-//incorrect now?
+
 bool BasePiece::validateMove(Position dest){
     for(Position move : legalMoves){
         #ifdef DEBUG

@@ -6,6 +6,10 @@
 #include <stdio.h>
 #include <Adafruit_NeoPixel.h>
 #include "Arduino.h"
+#include "chess.h"
+
+//importing position struct from chess.h
+typedef Chess::Position Position;
 
 #define DEBOUNCE_COUNT 2
 
@@ -19,10 +23,10 @@
 
 namespace IOController
 {
-    typedef struct Coordinates {
-        int x;
-        int y;
-    } Position;
+    // typedef struct Coordinates {
+    //     int x;
+    //     int y;
+    // } Position;
 
     typedef struct RGBColor {
         int r;
@@ -30,16 +34,14 @@ namespace IOController
         int b;
     } RGBColor;
 
-    typedef struct LEDUpdate {
+    typedef struct LED_Light {
         Position pos;
         RGBColor rgb_color;
     } LED_Light;
 
-
-
-    typedef struct Move_Struct{
+    typedef struct Move_Struct{ //change name to something better, activity? -bgg
    		bool risingEdge;
-    	Position targetSquare;
+    	Position position;
     } Move;
 
 
@@ -78,13 +80,13 @@ namespace IOController
             Adafruit_NeoPixel* pixels;
             std::vector<LED_Light> ledVector;
             RGBColor defaultBlack, defaultWhite;
-            void setDefaultLights();
             void start();
         public:
             LedController(gpio_num_t led_strip_D0, RGBColor defaultWhite, RGBColor defaultBlack);
             virtual ~LedController();
             void singleLedUpdate(LED_Light newLED);
             void vectorLedUpdate(std::vector<Position> updateVector, RGBColor color);
+            void setDefaultLights();
             void LedStrip_Output();
 
     };
