@@ -32,7 +32,7 @@ void loop()
       http.begin("https://lichess.org/api/account"); // Account URL
       http.addHeader("Authorization", "Bearer INSERT TOKEN HERE"); // Authorization Token added to Header
       http2.begin("https://lichess.org/api/stream/game/QHjDY4Uz"); //Specify game URL
-      http2.addHeader("Authorization", "Bearer INSERT TOKEN HERE"); // Authorization Token added to Header
+      http2.addHeader("Authorization", "Bearer INESRT TOKEN HERE"); // Authorization Token added to Header
       int httpCode = http.GET();                                        //Make the profile stats request
       int httpCode2 = http2.GET();                                      //Make the game status request
       if (httpCode > 0) //Check for the returning code
@@ -49,6 +49,16 @@ void loop()
       else {
         Serial.println("Error on HTTP request");
       }
+     
+      
+        HTTPClient httppost;
+        httppost.begin("https://lichess.org/api/board/game/QHjDY4Uz/move/h7h6");
+        //httppost.addHeader("Content-Type", "application/json"); //set content type 
+        httppost.addHeader("Authorization", "Bearer lip_DN4G8debSeTowtONFpms"); // authorization token
+        int httppostResponseCode = httppost.POST(""); // move is hardcoded
+        Serial.println(httppostResponseCode);
+        Serial.println("End of Post loop");
+      
     }
     delay(1000);
 }
