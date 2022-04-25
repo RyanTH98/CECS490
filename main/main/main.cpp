@@ -69,8 +69,8 @@ extern "C" void app_main() {
 	//smc.isWhiteTurn = true;
 	smc.turnColor = Chess::White;
 	smc.isNewGame = true;
-	IOController::RGBColor white_80 = {204, 0, 0};
-	IOController::RGBColor white_20 = {0, 0, 51};
+	IOController::RGBColor white_80 = {200, 80, 0}; // Orange
+	IOController::RGBColor white_20 = {0, 0, 127};  // Blue
 
 
 	// - Create needed objects
@@ -138,6 +138,7 @@ extern "C" void app_main() {
 		    }
 		    case ST_WAIT_FOR_LIFT:
 		    {
+				lc.defaultLedUpdate();
 		        // Has a piece been lifted off the board?
 		    	#ifdef DEBUG
 				    printf("Entering ST_WAIT_FOR_LIFT\n");
@@ -149,6 +150,8 @@ extern "C" void app_main() {
 				    printf("A piece has been lifted\n");
 				    printf("Setting its origin at collum: %d, row: %d\n", smc.origin1.position.x, smc.origin1.position.y);
 				#endif
+				
+
 		        // GOTO ST_CHECK_COLOR
 		        smc.currentState = ST_CHECK_COLOR;
 		        break;
@@ -164,19 +167,43 @@ extern "C" void app_main() {
 				#ifdef DEBUG
 				    printf("Getting piece that was at collum: %d, row: %d\n", smc.origin1.position.x, smc.origin1.position.y);
 				#endif    
-
 		    	Chess::BasePiece* piece = board.getPiece({smc.origin1.position.x, smc.origin1.position.y});
-		    	#ifdef DEBUG
+				#ifdef DEBUG
 				    printf("Its piece color is: %s\n", (piece->getColor() == Chess::White)?"White":"Black");
 				    printf("Its turnColor is: %s\n", (smc.turnColor == Chess::White)?"White":"Black");
 				#endif 
 		    	if(piece->getColor() == smc.turnColor){		    		
 		    		//update the led array with the lifted pieces legal moves
 		    		printf("Updating LED Vector\n");
-					lc.vectorLedUpdate(piece->getLegalMoves(), IOController::RGBColor{0,255,0});
-					
-					// True  - GOTO ST_SET_ACTIVITY
-		    		smc.currentState = ST_SET_ACTIVITY;
+
+					std::vector<Chess::Position> legalMoves = piece->getLegalMoves();
+	
+					std::vector<Chess::Position> takingMoves;
+					std::vector<Chess::Position> normalMoves;
+					Chess::BasePiece* piece2; 
+					for(Chess::Position move : legalMoves){
+						piece2 = board.getPiece(move);
+						if(piece2 == NULL){
+							takingMoves.push_back(move);
+						}
+						else{
+							normalMoves.push_back(move);
+						}
+					}
+
+					lc.vectorLedUpdate(takingMoves, IOController::RGBColor{0,255,0});
+					lc.vectorLedUpdate(normalMoves, IOController::RGBColor{255,255,255});
+										
+					//lc.vectorLedUpdate(legalMoves, IOController::RGBColor{0,255,0});
+
+					// If a piece is lifted and has no possible moves GOTO_RESET_PIECE
+					if(piece->getLegalMoves().size() == 0) {
+						smc.currentState = ST_RESET_PIECE;
+					}
+					else{
+						// True  - GOTO ST_SET_ACTIVITY
+		    			smc.currentState = ST_SET_ACTIVITY;
+					}
 		    	}
 		        else{
 		        	// GOTO ST_RESET_PIECE
@@ -333,7 +360,7 @@ extern "C" void app_main() {
 		        	#ifdef DEBUG
 				    	printf("Piece was put back in same spot, returning to ST_WAIT_FOR_LIFT\n");
 					#endif
-					lc.setDefaultLights();
+					lc.defaultLedUpdate();
 		        	smc.currentState = ST_WAIT_FOR_LIFT;
 		        }
 		        // False - continue
@@ -349,7 +376,7 @@ extern "C" void app_main() {
 		        if(board.movePiece({smc.origin1.position.x, smc.origin1.position.y}, {smc.dest1.position.x, smc.dest1.position.y})){
 		            // True  - ST_CHECK_GAMEOVER
 					printf("--- resetting board ---\n");
-					lc.setDefaultLights();
+					lc.defaultLedUpdate();
 		            smc.currentState = ST_CHECK_GAMEOVER;
 		            #ifdef DEBUG
 					    printf("Move is a valid move\n");
@@ -373,27 +400,88 @@ extern "C" void app_main() {
 				    printf("Entering ST_RESET_PIECE\n");
 				//#endif
 				
-				#define DEBUG_A
-				#ifdef DEBUG_A
-					IOController::RGBColor red = {0, 255, 0};
-					std::vector<Chess::Position> newVector;
+				//#define DEBUG_A
+				#ifdef 	DEBUG_A	
+					IOController::RGBColor red = {255, 0, 0};
 
-					IOController::Move nextMove;					
-					Chess::Position origin_pos = smc.origin1.position;
+					// Vector of "return to" positions
+					std::vector<Chess::Position> originVector, destinationVector;
+					IOController::Move nextActivity;
 					
-					// BUG: color of board square doesn't reset after exiting state
+					// Add first position to originVector
+					originVector.push_back(smc.origin1.position);
+					lc.vectorLedUpdate(originVector, red);
 					
-					newVector.push_back(origin_pos);
-					
-					lc.vectorLedUpdate(newVector, red);
-					
-					do {
-						nextMove = hc.detectChange();
-					} while ((nextMove.position.x != origin_pos.x) && (nextMove.position.x != origin_pos.x));
+					// Loop here until piece(s) is/are returned
+					while (1) {
+						nextActivity = hc.detectChange();
+
+						// A piece was picked up
+						if (nextActivity.risingEdge == 0) {
+							bool found = false;
+							
+							for (Chess::Position destination : destinationVector) {
+								if ((destination.x == nextActivity.position.x) && (destination.x == nextActivity.position.x)) {
+									found = true;
+									break;
+								}
+							}
+
+							if (found == true) {
+								originVector.push_back(nextActivity.position);
+								lc.vectorLedUpdate(originVector, red);
+							}
+						}
+						// A piece was placed down
+						else if (nextActivity.risingEdge == 1) {
+							int i = 0;
+							
+							destinationVector.push_back(nextActivity.position);
+
+							// Was it returned to (an) origin?
+							for (Chess::Position origin : originVector) {
+								if ((nextActivity.position.x == origin.x) && (nextActivity.position.y == origin.y)) {
+									// Return *fixed* LED back to original state
+									int temp = (nextActivity.position.y * 8) + nextActivity.position.x;
+									lc.singleLedUpdate(lc.getDefaultLedVector().at(temp));
+									lc.LedStrip_Output();
+
+									lc.vectorLedUpdate(originVector, red);
+
+									originVector.erase(originVector.begin() + i);
+									break;
+								}
+
+								i++;
+							}
+						}
+					}
 
 				#endif
 
-				lc.setDefaultLights();
+
+				std::vector<int> pieceLocations = board.getActiveSquares(); // Returns last legal positions
+				std::vector<int> activeSensors  = hc.getHalVector();		// Retruns current piece positions
+				std::vector<IOController::LED_Light> defaultLedVector  = lc.getDefaultLedVector();		// Retruns current piece positions
+
+				IOController::RGBColor red = {255, 0, 0};
+				
+				while(pieceLocations != activeSensors){
+					for(int i = 0; i < 64; i++){
+						if(activeSensors.at(i) != pieceLocations.at(i)){
+							//light up square
+							lc.singleLedUpdate({{i%8, i/8}, red});
+						}
+						else{
+							lc.singleLedUpdate(defaultLedVector.at(i));
+						}
+					}
+					lc.LedStrip_Output();
+					hc.detectChange();
+					activeSensors  = hc.getHalVector();
+				}
+				
+				lc.defaultLedUpdate();
 				smc.currentState = ST_WAIT_FOR_LIFT;
 		        break;
 		    }
@@ -500,3 +588,8 @@ void delay_1ms(int duration) { vTaskDelay(duration / portTICK_PERIOD_MS); }
 // 		// GOTO ST_RESET_PIECE
 // 		smc.currentState = ST_RESET_PIECE;
 // 	}
+
+
+
+// To do:
+// -- If a piece is lifted and has no possible moves, make origin square red

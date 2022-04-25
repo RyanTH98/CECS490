@@ -26,7 +26,16 @@ BasePiece::~BasePiece(){
 }
 
 std::vector<Position> BasePiece::getLegalMoves(){
-    return legalMoves;
+    std::vector<Position> lMoves, tempMoves;
+
+    tempMoves = legalMoves;
+    for(Position move : tempMoves){
+        //legalMovesPrint();
+        if(board->checkForCheck(color, pos, move) == false){
+            lMoves.push_back(move);
+        }
+    }
+    return lMoves;
 }
 
 bool BasePiece::getFirstMove(){
@@ -52,7 +61,9 @@ bool BasePiece::validateMove(Position dest){
                 dest.x, dest.y, move.x, move.y, (dest.x == move.x && dest.y == move.y));
         #endif
         if(dest.x == move.x && dest.y == move.y){
-            return true;
+            if(board->checkForCheck(color, pos, dest) == false){
+                return true;
+            }
         }
     }
     return false;
@@ -111,6 +122,8 @@ void Square::clearSquare(){
 
 // Definitions for the Board Class
 Board::Board(){
+    whiteInCheck = false;
+    blackInCheck = false;
     initBoard();
 }
 
@@ -135,6 +148,7 @@ void Board::initBoard(){
     board[pos.x][pos.y].setPiece(new Bishop(White, pos, this));
     pos = {3,0};
     board[pos.x][pos.y].setPiece(new King(White, pos, this));
+    whiteKingLocation = pos;
     pos = {4,0};
     board[pos.x][pos.y].setPiece(new Queen(White, pos, this));
     pos = {5,0};
@@ -157,6 +171,7 @@ void Board::initBoard(){
     board[pos.x][pos.y].setPiece(new Bishop(Black, pos, this));
     pos = {3,7};
     board[pos.x][pos.y].setPiece(new King(Black, pos, this));
+    blackKingLocation = pos;
     pos = {4,7};
     board[pos.x][pos.y].setPiece(new Queen(Black, pos, this));
     pos = {5,7};
@@ -322,7 +337,84 @@ BasePiece* Board::getPiece(Position piecePos){
     }
 }
 
+std::vector<int> Board::getActiveSquares(){
+    std::vector<int> activeSquares;
 
+    for(int i = 0; i < 8; i++){
+        for(int j = 0; j < 8; j++){
+            if(board[j][i].getPiece() != NULL){
+                activeSquares.push_back(1);
+            }
+            else{
+                activeSquares.push_back(0);
+            }
+        }
+    }
+    return activeSquares;
+}
+
+bool Board::isInCheck(Color color){
+    return (color == White)? whiteInCheck : blackInCheck;
+}
+
+void Board::setCheck(Color color, bool check){
+    if(color == White){
+        whiteInCheck = check;
+    }
+    else if(color == Black){
+        blackInCheck = check;
+    }
+}
+
+bool Board::checkForCheck(Color color, Position origin, Position dest){    
+    BasePiece* originPiece = getPiece(origin);
+    BasePiece* destPiece = getPiece(dest);
+    bool check = (color == White)?whiteInCheck:blackInCheck;
+    bool checkResult;
+
+    printf("Current Dest: {%d, %d}\n", dest.x, dest.y);
+    originPiece->legalMovesPrint();
+
+    //make would be move
+    originPiece->setPosition(dest);
+    board[dest.x][dest.y].clearSquare();
+    board[dest.x][dest.y].setPiece(originPiece);
+    board[origin.x][origin.y].clearSquare();
+
+    //clear check for color of pieces
+    if(color == White){
+        whiteInCheck = false;
+    }
+    else{
+        blackInCheck = false;
+    }
+
+    //populate all legal moves with new move made
+    populateAllLegalMoves();
+    originPiece->legalMovesPrint();
+    //check if you are in check
+    checkResult = (color == White)?whiteInCheck:blackInCheck;
+
+    //move pieces back
+    originPiece->setPosition(origin);
+    board[origin.x][origin.y].clearSquare();
+    board[dest.x][dest.y].clearSquare();
+    board[origin.x][origin.y].setPiece(originPiece);
+    board[dest.x][dest.y].setPiece(destPiece);
+
+    //restore check value for color of pieces
+    if(color == White){
+        whiteInCheck = check;
+    }
+    else{
+        blackInCheck = check;
+    }
+
+    //populate all legal moves with piece moved back
+    populateAllLegalMoves();
+    originPiece->legalMovesPrint();
+    return checkResult;
+}
 
 // Definitions for Pawn Class
 Pawn::Pawn(Color color, Position pos, Board* board){
@@ -382,6 +474,11 @@ void Pawn::populateLegalMoves(){
         piece = board->getPiece(testPos);
         if(piece != NULL){
             if(piece->getColor() != color){
+                //We are attacking a king, set check
+                if(piece->getType() == KingType){
+                    printf("Setting check\n");
+                    board->setCheck((color==White) ? Black : White ,true);
+                }
                 legalMoves.push_back({pos.x+1, pos.y+1*dir});
             }
         }
@@ -391,6 +488,11 @@ void Pawn::populateLegalMoves(){
         piece = board->getPiece(testPos);
         if(piece != NULL){
             if(piece->getColor() != color){
+                //We are attacking a king, set check
+                if(piece->getType() == KingType){
+                    printf("Setting check\n");
+                    board->setCheck((color==White) ? Black : White ,true);
+                }
                 legalMoves.push_back({pos.x-1, pos.y+1*dir});
             }
         }
@@ -452,6 +554,11 @@ void Rook::populateLegalMoves(){
                         #ifdef DEBUG
                             printf("Move is enemy piece -> adding to move list -> dir = over\n");
                         #endif
+                        //We are attacking a king, set check
+                        if(piece->getType() == KingType){
+                            printf("Setting check\n");
+                            board->setCheck((color==White) ? Black : White ,true);
+                        }
                         legalMoves.push_back(newPos);
                         left = false;
                     }
@@ -493,6 +600,11 @@ void Rook::populateLegalMoves(){
                         #ifdef DEBUG
                             printf("Move is enemy piece -> adding to move list -> dir = over\n");
                         #endif
+                        //We are attacking a king, set check
+                        if(piece->getType() == KingType){
+                            printf("Setting check\n");
+                            board->setCheck((color==White) ? Black : White ,true);
+                        }
                         legalMoves.push_back(newPos);
                         right = false;
                     }
@@ -534,6 +646,11 @@ void Rook::populateLegalMoves(){
                         #ifdef DEBUG
                             printf("Move is enemy piece -> adding to move list -> dir = over\n");
                         #endif
+                        //We are attacking a king, set check
+                        if(piece->getType() == KingType){
+                            printf("Setting check\n");
+                            board->setCheck((color==White) ? Black : White ,true);
+                        }
                         legalMoves.push_back(newPos);
                         up = false;
                     }
@@ -575,6 +692,11 @@ void Rook::populateLegalMoves(){
                         #ifdef DEBUG
                             printf("Move is enemy piece -> adding to move list -> dir = over\n");
                         #endif
+                        //We are attacking a king, set check
+                        if(piece->getType() == KingType){
+                            printf("Setting check\n");
+                            board->setCheck((color==White) ? Black : White ,true);
+                        }
                         legalMoves.push_back(newPos);
                         down = false;
                     }
@@ -650,6 +772,11 @@ void Bishop::populateLegalMoves(){
                         #ifdef DEBUG
                             printf("Move is enemy piece -> adding to move list -> dir = over\n");
                         #endif
+                        //We are attacking a king, set check
+                        if(piece->getType() == KingType){
+                            printf("Setting check\n");
+                            board->setCheck((color==White) ? Black : White ,true);
+                        }
                         legalMoves.push_back(newPos);
                         ul = false;
                     }
@@ -691,6 +818,10 @@ void Bishop::populateLegalMoves(){
                         #ifdef DEBUG
                             printf("Move is enemy piece -> adding to move list -> dir = over\n");
                         #endif
+                        if(piece->getType() == KingType){
+                            printf("Setting check\n");
+                            board->setCheck((color==White) ? Black : White ,true);
+                        }
                         legalMoves.push_back(newPos);
                         ur = false;
                     }
@@ -732,6 +863,10 @@ void Bishop::populateLegalMoves(){
                         #ifdef DEBUG
                             printf("Move is enemy piece -> adding to move list -> dir = over\n");
                         #endif
+                        if(piece->getType() == KingType){
+                            printf("Setting check\n");
+                            board->setCheck((color==White) ? Black : White ,true);
+                        }
                         legalMoves.push_back(newPos);
                         dl = false;
                     }
@@ -773,6 +908,10 @@ void Bishop::populateLegalMoves(){
                         #ifdef DEBUG
                             printf("Move is enemy piece -> adding to move list -> dir = over\n");
                         #endif
+                        if(piece->getType() == KingType){
+                            printf("Setting check\n");
+                            board->setCheck((color==White) ? Black : White ,true);
+                        }
                         legalMoves.push_back(newPos);
                         dr = false;
                     }
@@ -837,6 +976,10 @@ void Knight::populateLegalMoves(){
         else{
             //piece
             if(piece->getColor() != color){ //enemy piece
+                if(piece->getType() == KingType){
+                    printf("Setting check\n");
+                    board->setCheck((color==White) ? Black : White ,true);
+                }
                 legalMoves.push_back(newPos);
             }
         }
@@ -854,6 +997,10 @@ void Knight::populateLegalMoves(){
         else{
             //piece
             if(piece->getColor() != color){ //enemy piece
+                if(piece->getType() == KingType){
+                    printf("Setting check\n");
+                    board->setCheck((color==White) ? Black : White ,true);
+                }
                 legalMoves.push_back(newPos);
             }
         }
@@ -871,6 +1018,10 @@ void Knight::populateLegalMoves(){
         else{
             //piece
             if(piece->getColor() != color){ //enemy piece
+                if(piece->getType() == KingType){
+                    printf("Setting check\n");
+                    board->setCheck((color==White) ? Black : White ,true);
+                }
                 legalMoves.push_back(newPos);
             }
         }
@@ -888,6 +1039,10 @@ void Knight::populateLegalMoves(){
         else{
             //piece
             if(piece->getColor() != color){ //enemy piece
+                if(piece->getType() == KingType){
+                    printf("Setting check\n");
+                    board->setCheck((color==White) ? Black : White ,true);
+                }
                 legalMoves.push_back(newPos);
             }
         }
@@ -905,6 +1060,10 @@ void Knight::populateLegalMoves(){
         else{
             //piece
             if(piece->getColor() != color){ //enemy piece
+                if(piece->getType() == KingType){
+                    printf("Setting check\n");
+                    board->setCheck((color==White) ? Black : White ,true);
+                }
                 legalMoves.push_back(newPos);
             }
         }
@@ -922,6 +1081,10 @@ void Knight::populateLegalMoves(){
         else{
             //piece
             if(piece->getColor() != color){ //enemy piece
+                if(piece->getType() == KingType){
+                    printf("Setting check\n");
+                    board->setCheck((color==White) ? Black : White ,true);
+                }
                 legalMoves.push_back(newPos);
             }
         }
@@ -939,6 +1102,10 @@ void Knight::populateLegalMoves(){
         else{
             //piece
             if(piece->getColor() != color){ //enemy piece
+                if(piece->getType() == KingType){
+                    printf("Setting check\n");
+                    board->setCheck((color==White) ? Black : White ,true);
+                }
                 legalMoves.push_back(newPos);
             }
         }
@@ -956,6 +1123,10 @@ void Knight::populateLegalMoves(){
         else{
             //piece
             if(piece->getColor() != color){ //enemy piece
+                if(piece->getType() == KingType){
+                    printf("Setting check\n");
+                    board->setCheck((color==White) ? Black : White ,true);
+                }
                 legalMoves.push_back(newPos);
             }
         }
@@ -1018,6 +1189,10 @@ void Queen::populateLegalMoves(){
                         #ifdef DEBUG
                             printf("Move is enemy piece -> adding to move list -> dir = over\n");
                         #endif
+                        if(piece->getType() == KingType){
+                            printf("Setting check\n");
+                            board->setCheck((color==White) ? Black : White ,true);
+                        }
                         legalMoves.push_back(newPos);
                         ul = false;
                     }
@@ -1059,6 +1234,10 @@ void Queen::populateLegalMoves(){
                         #ifdef DEBUG
                             printf("Move is enemy piece -> adding to move list -> dir = over\n");
                         #endif
+                        if(piece->getType() == KingType){
+                            printf("Setting check\n");
+                            board->setCheck((color==White) ? Black : White ,true);
+                        }
                         legalMoves.push_back(newPos);
                         ur = false;
                     }
@@ -1100,6 +1279,10 @@ void Queen::populateLegalMoves(){
                         #ifdef DEBUG
                             printf("Move is enemy piece -> adding to move list -> dir = over\n");
                         #endif
+                        if(piece->getType() == KingType){
+                            printf("Setting check\n");
+                            board->setCheck((color==White) ? Black : White ,true);
+                        }
                         legalMoves.push_back(newPos);
                         dl = false;
                     }
@@ -1141,6 +1324,10 @@ void Queen::populateLegalMoves(){
                         #ifdef DEBUG
                             printf("Move is enemy piece -> adding to move list -> dir = over\n");
                         #endif
+                        if(piece->getType() == KingType){
+                            printf("Setting check\n");
+                            board->setCheck((color==White) ? Black : White ,true);
+                        }
                         legalMoves.push_back(newPos);
                         dr = false;
                     }
@@ -1181,6 +1368,10 @@ void Queen::populateLegalMoves(){
                         #ifdef DEBUG
                             printf("Move is enemy piece -> adding to move list -> dir = over\n");
                         #endif
+                        if(piece->getType() == KingType){
+                            printf("Setting check\n");
+                            board->setCheck((color==White) ? Black : White ,true);
+                        }
                         legalMoves.push_back(newPos);
                         up = false;
                     }
@@ -1222,6 +1413,10 @@ void Queen::populateLegalMoves(){
                         #ifdef DEBUG
                             printf("Move is enemy piece -> adding to move list -> dir = over\n");
                         #endif
+                        if(piece->getType() == KingType){
+                            printf("Setting check\n");
+                            board->setCheck((color==White) ? Black : White ,true);
+                        }
                         legalMoves.push_back(newPos);
                         right = false;
                     }
@@ -1263,6 +1458,10 @@ void Queen::populateLegalMoves(){
                         #ifdef DEBUG
                             printf("Move is enemy piece -> adding to move list -> dir = over\n");
                         #endif
+                        if(piece->getType() == KingType){
+                            printf("Setting check\n");
+                            board->setCheck((color==White) ? Black : White ,true);
+                        }
                         legalMoves.push_back(newPos);
                         down = false;
                     }
@@ -1304,6 +1503,10 @@ void Queen::populateLegalMoves(){
                         #ifdef DEBUG
                             printf("Move is enemy piece -> adding to move list -> dir = over\n");
                         #endif
+                        if(piece->getType() == KingType){
+                            printf("Setting check\n");
+                            board->setCheck((color==White) ? Black : White ,true);
+                        }
                         legalMoves.push_back(newPos);
                         left = false;
                     }

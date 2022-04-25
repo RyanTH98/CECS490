@@ -63,24 +63,18 @@ HalController::~HalController(){
 std::vector<int> HalController::scan(){
 	std::vector<int> newHalVector;
 
-    unsigned short column;
-	unsigned short row;
-
-	for(unsigned short i = 0; i < 64; i++){
-		row = i % 8;
-		column = i / 8;
-
-   		gpio_set_level(muxA, row & 0x01);
-   		gpio_set_level(muxB, (row>>1)&0x01);
-   		gpio_set_level(muxC, (row>>2)&0x01);
-   		gpio_set_level(decoderA0, column&0x01);
-   		gpio_set_level(decoderA1, (column>>1)&0x01);
-   		gpio_set_level(decoderA2, (column>>2)&0x01);
-    		
-		delay(20);
-		//printf("I recieved %d on sensor %d\n", gpio_get_level(muxY), i);
-    	newHalVector.push_back(!gpio_get_level(muxY));
-		//delay(25);
+	for(unsigned short row = 0; row < 8; row++){
+		gpio_set_level(decoderA0, row&0x01);
+   		gpio_set_level(decoderA1, (row>>1)&0x01);
+   		gpio_set_level(decoderA2, (row>>2)&0x01);
+		delay(10);
+		for(unsigned short column = 0;  column < 8; column++){
+			gpio_set_level(muxA, column & 0x01);
+			gpio_set_level(muxB, (column>>1)&0x01);
+			gpio_set_level(muxC, (column>>2)&0x01);
+			delay(.00005);
+			newHalVector.push_back(!gpio_get_level(muxY));
+		}
 	}
 	return newHalVector;
 }
@@ -258,6 +252,22 @@ void HalController::printBoard(){
 	printf("\n\n");
 }
 
+std::vector<int> HalController::getHalVector() {
+	// Chess::Position pos;
+	// std::vector<int> halVector;
+
+	// for (i = 0; i < 64; i++) {
+	// 	pos = {i/8, i%8}
+	// 	if (Chess::getPiece(pos) == NULL) {
+	// 		halVector.push_back(0);
+	// 	} else {
+	// 		halVector.push_back(1);
+	// 	}
+	// }
+
+	return halVector;
+}
+
 LedController::LedController(gpio_num_t led_strip_D0, RGBColor defaultWhite, RGBColor defaultBlack){
 	this->defaultWhite = defaultWhite;
 	this->defaultBlack = defaultBlack;
@@ -275,12 +285,13 @@ void LedController::start() {
     pixels->begin();
 	pixels->show();
 	pixels->clear();
-    setDefaultLights();
+    setDefaultLedVector();
+	defaultLedUpdate();
 	//pixels->show();
 }
 
-void LedController::setDefaultLights(){
-	ledVector.clear();
+void LedController::setDefaultLedVector(){
+	defaultLedVector.clear();
 	for(int i = 0; i < 64; i++){
 		int row = i/8;
 		int column = i%8;
@@ -293,26 +304,25 @@ void LedController::setDefaultLights(){
 		}
 
 		LED_Light light = {{column, row}, color};
-		ledVector.push_back(light); // Creates grid pattern
-		//ledVectorPrint(ledVector);
+		defaultLedVector.push_back(light); // Creates grid pattern
     }
+}
+
+void LedController::defaultLedUpdate(){
+	ledVector.clear();
+	ledVector = defaultLedVector;
 	LedStrip_Output();
 }
 
+std::vector<LED_Light> LedController::getDefaultLedVector(){
+	return defaultLedVector;
+}
+
+
+
 void LedController::singleLedUpdate(LED_Light newLED){
-	int i = 0;
-    for(LED_Light oldLED : ledVector){
-		if(oldLED.pos.x == newLED.pos.x && oldLED.pos.y == newLED.pos.y){
-			printf("Updating oldLED @ {%d, %d} with newLED @ {%d, %d} in ledVector index: %d to rgb {%d,%d,%d}\n", 
-								oldLED.pos.x, oldLED.pos.y, newLED.pos.x, newLED.pos.y, i, 
-								newLED.rgb_color.r, newLED.rgb_color.g, newLED.rgb_color.b);
-			//ledVectorPrint(ledVector);
-			ledVector.at(i) = newLED;
-			//ledVectorPrint(ledVector);
-			continue;
-		}
-		i++;
-	}
+	int i = (newLED.pos.y*8)+newLED.pos.x;
+	ledVector.at(i) = newLED;
 }
 
 void LedController::vectorLedUpdate(std::vector<Position> updateVector, RGBColor color){
@@ -320,6 +330,7 @@ void LedController::vectorLedUpdate(std::vector<Position> updateVector, RGBColor
 
 	for(Position square : updateVector){
 		light = {square, color};
+		printf("setting {%d, %d} to {%d, %d, %d}\n", square.x, square.y, color.r, color.g, color.b);
 		singleLedUpdate(light);
 	}
 	
@@ -339,7 +350,6 @@ void LedController::LedStrip_Output() {
 	for(int i = 0; i < 64; i++){
 		row = i / 8;	// 0 - 7
  		column = i % 8; // 0 - 7
-		//led = i;
 		
 		led = (row % 2 == 1) ? i : (((row+1) * 8) - column - 1); // Fix for LEDs vector zig-zagging
 		printf("Mapping {%2d, %2d} to led: %2d\n", column, row, led);
@@ -348,71 +358,4 @@ void LedController::LedStrip_Output() {
 		pixels->setPixelColor(led, pixels->Color(ledVector.at(i).rgb_color.r, ledVector.at(i).rgb_color.g, ledVector.at(i).rgb_color.b));
 	}
 	pixels->show();
-		
-	//  int i, led = 0;
-	//  uint8_t* pix = pixels->getPixels();
-	// pixels->clear();
-	// for(int row = 0; row < 8; row++){
-	// 	if(row % 2 == 0){
-	// 		for(int column = 0; column < 8; column++){
-	// 			i = row * 8 + column; 
-	// 			printf("Mapping Led %d to index %d\n", led, i);
-	// 			printf("Setting led %d to {%d, %d, %d}\n", i, ledVector.at(i).rgb_color.r, ledVector.at(i).rgb_color.g, ledVector.at(i).rgb_color.b);
-				
-	// 			for(int k = 0; k < 64*3; k+=3){
-					
-	// 				if(k % 24 == 0 && k!=0){
-	// 					printf("\n");
-	// 				}
-	// 				printf("%3d:{%3u, %3u, %3u} ",k, pix[k], pix[k+1], pix[k+2]);
-	// 			}
-	// 			printf("\n");
-
-	// 			pixels->setPixelColor(led, pixels->Color(ledVector.at(i).rgb_color.r, ledVector.at(i).rgb_color.g, ledVector.at(i).rgb_color.b));
-	// 			pixels->show(); 
-	// 			pixels->show(); 
-	// 			delay(1000);
-	// 			led++;
-	// 		}
-	// 	}
-	// 	else{
-	// 		for(int column = 7; column >= 0; column--){	
-	// 			i = row * 8 + column; 
-	// 			printf("Mapping Led %d to index %d\n", led, i);
-	// 			printf("Setting led %d to {%d, %d, %d}\n", i, ledVector.at(i).rgb_color.r, ledVector.at(i).rgb_color.g, ledVector.at(i).rgb_color.b);
-				
-	// 			for(int k = 0; k < 64*3; k+=3){
-					
-	// 				if(k % 24 == 0 && k!=0){
-	// 					printf("\n");
-	// 				}
-	// 				printf("%3d:{%3u, %3u, %3u} ",k, pix[k], pix[k+1], pix[k+2]);
-	// 			}
-	// 			printf("\n");
-
-	// 			pixels->setPixelColor(led, pixels->Color(ledVector.at(i).rgb_color.r, ledVector.at(i).rgb_color.g, ledVector.at(i).rgb_color.b));
-	// 			pixels->show(); 
-	// 			pixels->show(); 
-	// 			delay(1000);
-	// 			led++;
-	// 		}
-	// 	}
-	// }
-
-	// int led;
-
-	// for(int i = 0; i <= 63; i++){
-	// 	led = i;
-
-	// 	pixels->setPixelColor(led, pixels->Color(ledVector.at(i).rgb_color.r, ledVector.at(i).rgb_color.g, ledVector.at(i).rgb_color.b));
-	// 	//pixels->show();   // Send the updated pixel colors to the hardware.
-	// 	//delay(200);
-	// }
-
-    // pixels->show();   // Send the updated pixel colors to the hardware.
 }
-
-//row = y = / --- column =  x = %
-
-
-//fix wiring on led #9

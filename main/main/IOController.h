@@ -72,6 +72,7 @@ namespace IOController
             Move detectChange();
             void start();
             void printBoard();
+            std::vector<int> getHalVector();
     };
 
     class LedController{
@@ -79,14 +80,18 @@ namespace IOController
             //gpio_num_t led_strip_D0;
             Adafruit_NeoPixel* pixels;
             std::vector<LED_Light> ledVector;
+            std::vector<LED_Light> defaultLedVector;
             RGBColor defaultBlack, defaultWhite;
-            void start();
+            void setDefaultLedVector();
+            void start();            
+
         public:
             LedController(gpio_num_t led_strip_D0, RGBColor defaultWhite, RGBColor defaultBlack);
             virtual ~LedController();
             void singleLedUpdate(LED_Light newLED);
             void vectorLedUpdate(std::vector<Position> updateVector, RGBColor color);
-            void setDefaultLights();
+            void defaultLedUpdate();
+            std::vector<LED_Light> getDefaultLedVector();
             void LedStrip_Output();
 
     };

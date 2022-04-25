@@ -77,15 +77,23 @@ namespace Chess
     private:
         Square board[8][8];
         void initBoard();
+        bool whiteInCheck;
+        bool blackInCheck;
+        Position whiteKingLocation;
+        Position blackKingLocation;
 
     public:
         Board();
         virtual ~Board();
 
+        std::vector<int> getActiveSquares();
+        bool isInCheck(Color);
         bool isInBounds(Position pos);
         bool movePiece(Position origin, Position dest);
         void printBoard();
         void populateAllLegalMoves();
+        void setCheck(Color color, bool check);
+        bool checkForCheck(Color color, Position origin, Position dest);
         BasePiece *getPiece(Position piecePos);
     };
 
