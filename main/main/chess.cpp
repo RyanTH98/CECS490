@@ -28,13 +28,16 @@ BasePiece::~BasePiece(){
 std::vector<Position> BasePiece::getLegalMoves(){
     std::vector<Position> lMoves, tempMoves;
 
-    tempMoves = legalMoves;
-    for(Position move : tempMoves){
-        //legalMovesPrint();
-        if(board->checkForCheck(color, pos, move) == false){
-            lMoves.push_back(move);
+    if(!legalMoves.empty()){
+        tempMoves = legalMoves;
+        for(Position move : tempMoves){
+            //legalMovesPrint();
+            if(board->checkForCheck(color, pos, move) == false){
+                lMoves.push_back(move);
+            }
         }
     }
+    
     return lMoves;
 }
 
@@ -237,6 +240,8 @@ bool Board::isInBounds(Position pos){
  */
 bool Board::movePiece(Position origin, Position dest){
     BasePiece* piece = getPiece(origin);
+    Chess::Color pieceColor = piece->getColor();
+
     #ifdef DEBUG
         printf("Moving piece at {%2d, %2d} to {%2d, %2d} is legal(1) move: %d--------\n", origin.x, origin.y, dest.x, dest.y, piece->validateMove(dest));
         piece->legalMovesPrint();
@@ -245,12 +250,29 @@ bool Board::movePiece(Position origin, Position dest){
         if(piece->getFirstMove() == true){
             piece->setFirstMove(false);
         }
+        
+
+        // Queening
+        #define DEBUG_A
+        #ifdef 	DEBUG_A	
+
         piece->setPosition(dest);
 
+        int row = dest.y;
+        if(piece->getType() == PawnType){
+            if ((row == 0 && pieceColor == Black) || (row == 7 && pieceColor == White)) {
+                //not very memory safe...
+                piece = new Queen(pieceColor, piece->getPosition(), this);
+            }
+        }
+
+        #endif
+    
+    
         board[dest.x][dest.y].clearSquare();
         board[dest.x][dest.y].setPiece(piece);
         board[origin.x][origin.y].clearSquare();
-        
+    
         printBoard();
         
         populateAllLegalMoves();
@@ -350,11 +372,46 @@ std::vector<int> Board::getActiveSquares(){
             }
         }
     }
+
     return activeSquares;
 }
 
 bool Board::isInCheck(Color color){
-    return (color == White)? whiteInCheck : blackInCheck;
+    return (color == White) ? whiteInCheck : blackInCheck;
+}
+
+/*
+ *  Function : evaluateGameOver()
+ *  Input: RGBColor of player to evaluate
+ *  Output: Boolean value representing if game has reached its end.
+ *  Game Over Conditions:
+ *      1) Player has no remaining moves.
+ *      2) Only two kings on board
+ */
+bool Board::evaluateGameOver(Color color) {
+    bool onlyKings = true;
+    bool noMoves = true;
+    BasePiece* piece;
+    std::vector<int> activeSquares;
+
+    for(int i = 0; i < 8; i++) {
+        for(int j = 0; j < 8; j++) {
+            piece = getPiece({i, j});
+            
+            if(piece != NULL) {
+                if(color == piece->getColor()){
+                    if (!piece->getLegalMoves().empty()) {
+                        noMoves = false;
+                    }
+                }
+                if (piece->getType() != KingType) {
+                    onlyKings = false;
+                }
+            }    
+        }
+    }
+
+    return onlyKings || noMoves;
 }
 
 void Board::setCheck(Color color, bool check){
@@ -1697,7 +1754,96 @@ void King::populateLegalMoves(){
             }
         }
     }
-    #ifdef DEBUG
+
+    std::vector<Position> legalMovesVector;
+    BasePiece* piece2;
+
+    //Castle Right
+    if(firstMove == true && !board->isInCheck(color)){
+        for(int i = 1; i <= 4; i++){
+            newPos = {pos.x+i, pos.y};
+            printf("Obtaining piece at {%d, %d}\n", newPos.x, newPos.y);
+            piece = board->getPiece(newPos);
+            if(i <= 3){
+                if(piece != NULL){
+                    printf("Piece is not NULL\n");
+                    printf("goto 1: stopRight\n");
+                    goto stopRight;
+                }
+                else{
+                    printf("Piece is NULL -> checking if square is being attacked\n");
+                    for(int j = 0; j < 8; j++){
+                        for(int k = 0; k < 8; k++){
+                            piece2 = board->getPiece({j, k});
+                            if(piece2 != NULL){
+                                if(piece2->getColor() != color && piece2->getType() != KingType){
+                                    printf("Checking if {%d, %d} is attacking square in question\n", piece2->getPosition().x, piece2->getPosition().y);
+                                    for(Position pos : piece2->legalMoves){
+                                        if(pos.x == newPos.x && pos.y == newPos.y){
+                                            printf("goto 2: stopRight\n");
+                                            goto stopRight;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            else if(piece->getType() == RookType && 
+                piece->getFirstMove() && piece->getColor() == color){
+                printf("Castling right legal\n");
+                legalMoves.push_back({pos.x+2, pos.y});
+            }
+        }
+    }
+    stopRight:
+    
+    //Castle Left
+    if(firstMove == true && !board->isInCheck(color)){
+        for(int i = 1; i <= 3; i++){
+            newPos = {pos.x-i, pos.y};
+            printf("Obtaining piece at {%d, %d}\n", newPos.x, newPos.y);
+            piece = board->getPiece(newPos);
+            if(i <= 2){
+                if(piece != NULL){
+                    printf("Piece is not NULL\n");
+                    printf("goto 1: stopLeft\n");
+                    goto stopLeft;
+                }
+                else{
+                    printf("Piece is NULL -> checking if square is being attacked\n");
+                    for(int j = 0; j < 8; j++){
+                        for(int k = 0; k < 8; k++){
+                            piece2 = board->getPiece({j, k});
+                            if(piece2 != NULL){
+                                if(piece2->getColor() != color && piece2->getType() != KingType){
+                                    //legalMovesVector = piece2->getLegalMoves();
+                                    printf("Checking if {%d, %d} is attacking square in question\n", piece2->getPosition().x, piece2->getPosition().y);
+                                    for(Position pos : piece2->legalMoves){
+                                        if(pos.x == newPos.x && pos.y == newPos.y){
+                                            printf("goto 2: stopLeft\n");
+                                            goto stopLeft;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+            else if(piece->getType() == RookType && 
+                piece->getFirstMove() && piece->getColor() == color){
+                printf("Castling left legal\n");
+                legalMoves.push_back({pos.x-2, pos.y});
+            }
+        }
+    }
+    stopLeft:
+    ; // need NULL statement after label because it expects primary expression
+
+    #ifndef DEBUG
         printf("Legal moves for King at {%2d, %2d}:     ", pos.x, pos.y);
         legalMovesPrint();
     #endif

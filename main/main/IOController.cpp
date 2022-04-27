@@ -67,12 +67,14 @@ std::vector<int> HalController::scan(){
 		gpio_set_level(decoderA0, row&0x01);
    		gpio_set_level(decoderA1, (row>>1)&0x01);
    		gpio_set_level(decoderA2, (row>>2)&0x01);
-		delay(10);
+		//delay(.005);
 		for(unsigned short column = 0;  column < 8; column++){
 			gpio_set_level(muxA, column & 0x01);
 			gpio_set_level(muxB, (column>>1)&0x01);
 			gpio_set_level(muxC, (column>>2)&0x01);
-			delay(.00005);
+			//delay(.0005);
+			delayMicroseconds(50);
+
 			newHalVector.push_back(!gpio_get_level(muxY));
 		}
 	}
@@ -352,7 +354,7 @@ void LedController::LedStrip_Output() {
  		column = i % 8; // 0 - 7
 		
 		led = (row % 2 == 1) ? i : (((row+1) * 8) - column - 1); // Fix for LEDs vector zig-zagging
-		printf("Mapping {%2d, %2d} to led: %2d\n", column, row, led);
+		//printf("Mapping {%2d, %2d} to led: %2d\n", column, row, led);
 
 		//There has got to be a better way to do this -- casting the struct? -- inheriting the object from the adafruit lib?
 		pixels->setPixelColor(led, pixels->Color(ledVector.at(i).rgb_color.r, ledVector.at(i).rgb_color.g, ledVector.at(i).rgb_color.b));

@@ -11,7 +11,7 @@
 //importing position struct from chess.h
 typedef Chess::Position Position;
 
-#define DEBOUNCE_COUNT 2
+#define DEBOUNCE_COUNT 20
 
 #define DEBUG
 #ifdef DEBUG

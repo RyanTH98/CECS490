@@ -69,7 +69,9 @@ extern "C" void app_main() {
 	//smc.isWhiteTurn = true;
 	smc.turnColor = Chess::White;
 	smc.isNewGame = true;
-	IOController::RGBColor white_80 = {200, 80, 0}; // Orange
+	//IOController::RGBColor white_80 = {255, 255, 255}; // Orange
+	//IOController::RGBColor white_20 = {5, 5, 5};  // Blue
+	IOController::RGBColor white_80 = {200, 120, 0}; // Orange
 	IOController::RGBColor white_20 = {0, 0, 127};  // Blue
 
 
@@ -80,15 +82,14 @@ extern "C" void app_main() {
 
 	//begin
     while(1) {
-		//LedStrip_Output();
-		
 		switch (smc.currentState) {
 		    case ST_GAME_START:
 		    {
-		        // Set up code to begin a game
+				// Begin Game
 		    	#ifdef DEBUG
 				    printf("Entering ST_GAME_START\n");
 				#endif
+
 		        // - Start IO interfacing
 		        hc.start();
 		        // - Initialize LED controller
@@ -106,6 +107,8 @@ extern "C" void app_main() {
 		    	if(hc.checkStartingPosition()){
 		    		// True  -  GOTO ST_SET_COLOR
 		    		smc.currentState = ST_SET_COLOR;
+
+				// Illuminate white LEDs
 		    	}
 		        // False - Loop
 		        break;
@@ -116,64 +119,79 @@ extern "C" void app_main() {
 				#ifdef DEBUG
 				    printf("Entering ST_SET_COLOR\n");
 				#endif
-		    	// If first move of the game
-		    	if(smc.isNewGame){
-		    		// True - Whites Turn
+
+		    	// If it's the first move of a game
+		    	if(smc.isNewGame) {
+		    		// True - White's Turn
 		    		smc.isNewGame = false;
+
 		    		#ifdef DEBUG
-				    	printf("Set newGame to false (current turnColor is: %s)\n", (smc.turnColor == Chess::White)?"White":"Black");
+				    	printf("Set newGame to false (current turnColor is: %s)\n", (smc.turnColor == Chess::White) ? "White" : "Black");
 					#endif
 		    	}
 		    	else{
-		    		// False - swap turns
-	    			smc.turnColor  = (smc.turnColor == Chess::White)?Chess::Black:Chess::White;
+		    		// False - Swap turns
+	    			smc.turnColor  = (smc.turnColor == Chess::White) ? Chess::Black:Chess::White;
+
 	    			#ifdef DEBUG
 				    	printf("New turnColor is: %s\n", (smc.turnColor == Chess::White)?"White":"Black");
 					#endif
 		    	}
 
-		    	// GOTO ST_WAIT_FOR_LIFT
 		        smc.currentState = ST_WAIT_FOR_LIFT;
+
 		        break;
 		    }
 		    case ST_WAIT_FOR_LIFT:
 		    {
-				lc.defaultLedUpdate();
-		        // Has a piece been lifted off the board?
-		    	#ifdef DEBUG
+				#ifdef DEBUG
 				    printf("Entering ST_WAIT_FOR_LIFT\n");
 				#endif
-		    	//Wait for new change on board
-		    	smc.origin1 = hc.detectChange();						//should i check if the ppiece is being lifted or places? possible edge case
+				
+				lc.defaultLedUpdate();
+
+		        // A chess piece is lifted
+
+		    	// Wait for new change on board
+		    	smc.origin1 = hc.detectChange(); 
+				
+				// NOTE: "should i check if the ppiece is being lifted or places? possible edge case"
 
 		    	#ifdef DEBUG
 				    printf("A piece has been lifted\n");
-				    printf("Setting its origin at collum: %d, row: %d\n", smc.origin1.position.x, smc.origin1.position.y);
+						
+					int row = smc.origin1.position.x;
+					int column = smc.origin1.position.y;	
+				    printf("Setting its origin at column: %d, row: %d\n", row, column);
 				#endif
-				
 
-		        // GOTO ST_CHECK_COLOR
 		        smc.currentState = ST_CHECK_COLOR;
 		        break;
 		    }
 		    case ST_CHECK_COLOR:
 		    {
-		        // It's a player's turn. Is the lifted piece theirs?
 		    	#ifdef DEBUG
 				    printf("Entering ST_CHECK_COLOR\n");
 				#endif
 
-				    
+				int row = smc.origin1.position.x;
+				int column = smc.origin1.position.y;
+
 				#ifdef DEBUG
-				    printf("Getting piece that was at collum: %d, row: %d\n", smc.origin1.position.x, smc.origin1.position.y);
+				    printf("Getting piece that was at collum: %d, row: %d\n", row, column);
 				#endif    
-		    	Chess::BasePiece* piece = board.getPiece({smc.origin1.position.x, smc.origin1.position.y});
+
+		        // It's a player's turn. Is the lifted piece theirs?
+
+				// "piece" pointer instantiation
+				Chess::BasePiece* piece = board.getPiece({row, column});
+				
 				#ifdef DEBUG
-				    printf("Its piece color is: %s\n", (piece->getColor() == Chess::White)?"White":"Black");
-				    printf("Its turnColor is: %s\n", (smc.turnColor == Chess::White)?"White":"Black");
+				    printf("Its piece color is: %s\n", (piece->getColor() == Chess::White) ? "White":"Black");
+				    printf("Its turnColor is: %s\n",       (smc.turnColor == Chess::White) ? "White":"Black");
 				#endif 
-		    	if(piece->getColor() == smc.turnColor){		    		
-		    		//update the led array with the lifted pieces legal moves
+		    	if(piece->getColor() == smc.turnColor) {	
+		    		// Update the led array with the lifted pieces legal moves
 		    		printf("Updating LED Vector\n");
 
 					std::vector<Chess::Position> legalMoves = piece->getLegalMoves();
@@ -181,53 +199,54 @@ extern "C" void app_main() {
 					std::vector<Chess::Position> takingMoves;
 					std::vector<Chess::Position> normalMoves;
 					Chess::BasePiece* piece2; 
+
 					for(Chess::Position move : legalMoves){
 						piece2 = board.getPiece(move);
-						if(piece2 == NULL){
+
+						if(piece2 == NULL) {
 							takingMoves.push_back(move);
-						}
-						else{
+						} else {
 							normalMoves.push_back(move);
 						}
 					}
 
 					lc.vectorLedUpdate(takingMoves, IOController::RGBColor{0,255,0});
 					lc.vectorLedUpdate(normalMoves, IOController::RGBColor{255,255,255});
-										
-					//lc.vectorLedUpdate(legalMoves, IOController::RGBColor{0,255,0});
 
-					// If a piece is lifted and has no possible moves GOTO_RESET_PIECE
+					// The piece has no legal moves
 					if(piece->getLegalMoves().size() == 0) {
 						smc.currentState = ST_RESET_PIECE;
 					}
 					else{
-						// True  - GOTO ST_SET_ACTIVITY
 		    			smc.currentState = ST_SET_ACTIVITY;
 					}
 		    	}
 		        else{
-		        	// GOTO ST_RESET_PIECE
 		        	smc.currentState = ST_RESET_PIECE;
 		        }
 		        break;
 		    }
 		    case ST_SET_ACTIVITY:
 		    {
-		        // Set a variable to indicate the starting position of the move
 		        #ifdef DEBUG
 				    printf("Entering ST_SET_ACTIVITY\n");
 				#endif
-
+		        // Set a variable to indicate the starting position of the move
 				
 		        //Wait for new change on board
 		        smc.temp = hc.detectChange();
+				smc.dest1 = smc.temp;
+
+				int originX = smc.temp.position.x;
+				int originY = smc.temp.position.y;
+				int destinationX = smc.origin1.position.x;
+				int destinationY = smc.origin1.position.y;
 
 		        #ifdef DEBUG
 				    printf("SMC change recieved of -> rising edge : %d at {column: %d, row: %d}\n", 
-				    	smc.temp.risingEdge, smc.temp.position.x, smc.temp.position.y);
+				    	smc.temp.risingEdge, originX, originY);
 				#endif
 
-		        
 		        // Has another piece been placed or picked up?
 		    	if(smc.temp.risingEdge){
 		    		//Activity is a piece placement -> set its dest
@@ -240,22 +259,26 @@ extern "C" void app_main() {
 		    		 *	}
 		    		 */
 
-		        	smc.dest1 = smc.temp;
+
+
 		        	#ifdef DEBUG
+
 					    printf("A piece has been placed\n");
-					    printf("Setting its destination at collum: %d, row: %d\n", smc.dest1.position.x, smc.dest1.position.y);
+					    printf("Setting its destination at column: %d, row: %d\n", destinationX, destinationY);
 					#endif
 
-					if(smc.origin1.position.x == smc.dest1.position.x && smc.origin1.position.y == smc.dest1.position.y){
-						// GOTO ST_WAIT_FOR_LIFT
+					// If returned to original square
+					if(originX == destinationX && originY == destinationY){
 			        	smc.currentState = ST_WAIT_FOR_LIFT;
+
 			        	#ifdef DEBUG
 						    printf("Piece was placed back at its origin\n");
 						#endif
 					}
 					else{
-			        	// GOTO ST_VALID_CHECK
+						
 			        	smc.currentState = ST_VALID_CHECK;
+
 			        	#ifdef DEBUG
 						    printf("Piece was placed on new square\n");
 						#endif
@@ -266,7 +289,7 @@ extern "C" void app_main() {
 		    		smc.origin2 = smc.temp;
 		    		#ifdef DEBUG
 					    printf("A 2nd piece has been lifted\n");
-					    printf("Setting its origin at collum: %d, row: %d\n", smc.origin1.position.x, smc.origin1.position.y);
+					    printf("Setting its origin at column: %d, row: %d\n", destinationX, destinationY);
 					#endif
 		    		// GOTO ST_CHECK_SECOND_COLOR
 		    		smc.currentState = ST_CHECK_SECOND_COLOR;
@@ -377,6 +400,7 @@ extern "C" void app_main() {
 		            // True  - ST_CHECK_GAMEOVER
 					printf("--- resetting board ---\n");
 					lc.defaultLedUpdate();
+					printf("Going to check Gameover from validcheck\n");
 		            smc.currentState = ST_CHECK_GAMEOVER;
 		            #ifdef DEBUG
 					    printf("Move is a valid move\n");
@@ -492,23 +516,51 @@ extern "C" void app_main() {
 				    printf("Entering ST_CHECK_GAMEOVER\n");
 				#endif
 
-				/*if(board.getCheckmate || board.getDraw){
+				if(board.evaluateGameOver((smc.turnColor == Chess::White) ? Chess::Black : Chess::White)){
 					// True  - ST_GAME_END
+					#ifdef DEBUG
+						printf("evaluateGameOver returned true\n");
+					#endif
 		            smc.currentState = ST_GAME_END;
 				}
 				else{
 					// False  - ST_SET_COLOR
+					#ifdef DEBUG
+						printf("evaluateGameOver returned false\n");
+					#endif
 		            smc.currentState = ST_SET_COLOR;
-				}*/
-				smc.currentState = ST_SET_COLOR;
+				}
+				//smc.currentState = ST_SET_COLOR;
 		        break;
 		    }
 		    case ST_GAME_END:
 		    {
 		        // End game
-		         #ifdef DEBUG
+		        #ifdef DEBUG
 				    printf("Entering ST_GAME_END\n");
 				#endif
+
+				//std::default_random_engine generator;
+				//std::uniform_int_distribution<int> distribution(0,255);
+				std::vector<IOController::LED_Light> randomVec;
+				int r,g,b;
+				for(int i = 0; i < 64; i++){
+					r = random(0, 255);
+					g = random(0, 255);
+					b = random(0, 255);
+					randomVec.push_back({{i%8, i/8}, {r, g, b}});
+				}
+
+				while(true){
+					for(int i = 0; i < 64; i++){
+						lc.singleLedUpdate(randomVec.at(i));
+						randomVec.at(i).rgb_color.r = (randomVec.at(i).rgb_color.r + 1) % 255;
+						randomVec.at(i).rgb_color.g = (randomVec.at(i).rgb_color.g + 1) % 255;
+						randomVec.at(i).rgb_color.b = (randomVec.at(i).rgb_color.b + 1) % 255;
+					}
+					lc.LedStrip_Output();
+					delay(100);
+				}
 		        break;
 		    }
 		}

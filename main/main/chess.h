@@ -37,7 +37,7 @@ namespace Chess
     protected:
         Color color;
         Position pos;
-        std::vector<Position> legalMoves;
+        
         Type type;
         Board *board;
         bool firstMove;
@@ -45,7 +45,8 @@ namespace Chess
     public:
         BasePiece();
         ~BasePiece();
-
+        //this should not be public, needed it for castling -> FIX LATER!!!
+        std::vector<Position> legalMoves;
         Position getPosition();
         void setPosition(Position pos);
         Color getColor();
@@ -93,6 +94,7 @@ namespace Chess
         void printBoard();
         void populateAllLegalMoves();
         void setCheck(Color color, bool check);
+        bool evaluateGameOver(Color color);
         bool checkForCheck(Color color, Position origin, Position dest);
         BasePiece *getPiece(Position piecePos);
     };
