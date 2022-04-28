@@ -268,11 +268,33 @@ bool Board::movePiece(Position origin, Position dest){
 
         #endif
     
-    
         board[dest.x][dest.y].clearSquare();
         board[dest.x][dest.y].setPiece(piece);
         board[origin.x][origin.y].clearSquare();
     
+        //Castling
+        if(piece->getType() == KingType){
+            BasePiece* rookPiece;
+            //moving two squares left -> castle left
+            if(origin.x - dest.x == 2){
+                //get rook on left
+                rookPiece = getPiece({0,0});
+                //move rook to needed square
+                board[2][0].clearSquare();
+                board[2][0].setPiece(rookPiece);
+                board[0][0].clearSquare();
+            }
+            //moving two squares right -> castle left
+            else if(dest.x - origin.x == 2){
+                //get rook on right
+                rookPiece = getPiece({7,0});
+                //move rook to needed square
+                board[4][0].clearSquare();
+                board[4][0].setPiece(rookPiece);
+                board[0][7].clearSquare();
+            }
+        }
+
         printBoard();
         
         populateAllLegalMoves();
@@ -1762,25 +1784,35 @@ void King::populateLegalMoves(){
     if(firstMove == true && !board->isInCheck(color)){
         for(int i = 1; i <= 4; i++){
             newPos = {pos.x+i, pos.y};
-            printf("Obtaining piece at {%d, %d}\n", newPos.x, newPos.y);
+            #ifdef DEBUG
+                printf("Obtaining piece at {%d, %d}\n", newPos.x, newPos.y);
+            #endif
             piece = board->getPiece(newPos);
             if(i <= 3){
                 if(piece != NULL){
-                    printf("Piece is not NULL\n");
-                    printf("goto 1: stopRight\n");
+                    #ifdef DEBUG
+                        printf("Piece is not NULL\n");
+                        printf("goto 1: stopRight\n");
+                    #endif
                     goto stopRight;
                 }
                 else{
-                    printf("Piece is NULL -> checking if square is being attacked\n");
+                    #ifdef DEBUG
+                        printf("Piece is NULL -> checking if square is being attacked\n");
+                    #endif
                     for(int j = 0; j < 8; j++){
                         for(int k = 0; k < 8; k++){
                             piece2 = board->getPiece({j, k});
                             if(piece2 != NULL){
                                 if(piece2->getColor() != color && piece2->getType() != KingType){
-                                    printf("Checking if {%d, %d} is attacking square in question\n", piece2->getPosition().x, piece2->getPosition().y);
+                                    #ifdef DEBUG
+                                        printf("Checking if {%d, %d} is attacking square in question\n", piece2->getPosition().x, piece2->getPosition().y);
+                                    #endif
                                     for(Position pos : piece2->legalMoves){
                                         if(pos.x == newPos.x && pos.y == newPos.y){
-                                            printf("goto 2: stopRight\n");
+                                            #ifdef DEBUG
+                                                printf("goto 2: stopRight\n");
+                                            #endif
                                             goto stopRight;
                                         }
                                     }
@@ -1792,7 +1824,9 @@ void King::populateLegalMoves(){
             }
             else if(piece->getType() == RookType && 
                 piece->getFirstMove() && piece->getColor() == color){
-                printf("Castling right legal\n");
+                #ifdef DEBUG
+                    printf("Castling right legal\n");
+                #endif
                 legalMoves.push_back({pos.x+2, pos.y});
             }
         }
@@ -1803,26 +1837,36 @@ void King::populateLegalMoves(){
     if(firstMove == true && !board->isInCheck(color)){
         for(int i = 1; i <= 3; i++){
             newPos = {pos.x-i, pos.y};
-            printf("Obtaining piece at {%d, %d}\n", newPos.x, newPos.y);
+            #ifdef DEBUG
+                printf("Obtaining piece at {%d, %d}\n", newPos.x, newPos.y);
+            #endif
             piece = board->getPiece(newPos);
             if(i <= 2){
                 if(piece != NULL){
-                    printf("Piece is not NULL\n");
-                    printf("goto 1: stopLeft\n");
+
+                    #ifdef DEBUG
+                        printf("Piece is not NULL\n");
+                        printf("goto 1: stopLeft\n");
+                    #endif
                     goto stopLeft;
                 }
                 else{
-                    printf("Piece is NULL -> checking if square is being attacked\n");
+                    #ifdef DEBUG
+                        printf("Piece is NULL -> checking if square is being attacked\n");
+                    #endif
                     for(int j = 0; j < 8; j++){
                         for(int k = 0; k < 8; k++){
                             piece2 = board->getPiece({j, k});
                             if(piece2 != NULL){
                                 if(piece2->getColor() != color && piece2->getType() != KingType){
-                                    //legalMovesVector = piece2->getLegalMoves();
-                                    printf("Checking if {%d, %d} is attacking square in question\n", piece2->getPosition().x, piece2->getPosition().y);
+                                    #ifdef DEBUG
+                                        printf("Checking if {%d, %d} is attacking square in question\n", piece2->getPosition().x, piece2->getPosition().y);
+                                    #endif
                                     for(Position pos : piece2->legalMoves){
                                         if(pos.x == newPos.x && pos.y == newPos.y){
-                                            printf("goto 2: stopLeft\n");
+                                            #ifdef DEBUG
+                                                printf("goto 2: stopLeft\n");
+                                            #endif
                                             goto stopLeft;
                                         }
                                     }
@@ -1835,7 +1879,9 @@ void King::populateLegalMoves(){
             }
             else if(piece->getType() == RookType && 
                 piece->getFirstMove() && piece->getColor() == color){
-                printf("Castling left legal\n");
+                #ifdef DEBUG
+                    printf("Castling left legal\n");
+                #endif
                 legalMoves.push_back({pos.x-2, pos.y});
             }
         }
@@ -1843,7 +1889,7 @@ void King::populateLegalMoves(){
     stopLeft:
     ; // need NULL statement after label because it expects primary expression
 
-    #ifndef DEBUG
+    #ifdef DEBUG
         printf("Legal moves for King at {%2d, %2d}:     ", pos.x, pos.y);
         legalMovesPrint();
     #endif
