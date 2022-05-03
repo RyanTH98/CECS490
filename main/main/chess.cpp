@@ -295,6 +295,7 @@ bool Board::movePiece(Position origin, Position dest){
             if(origin.x - dest.x == 2){
                 //get rook on left
                 rookPiece = getPiece({0,origin.y});
+                rookPiece->setPosition({2,origin.y});
                 //move rook to needed square
                 board[2][origin.y].clearSquare();
                 board[2][origin.y].setPiece(rookPiece);
@@ -304,6 +305,7 @@ bool Board::movePiece(Position origin, Position dest){
             else if(dest.x - origin.x == 2){
                 //get rook on right
                 rookPiece = getPiece({7,origin.y});
+                rookPiece->setPosition({4,origin.y});
                 //move rook to needed square
                 board[4][origin.y].clearSquare();
                 board[4][origin.y].setPiece(rookPiece);
