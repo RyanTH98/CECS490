@@ -45,7 +45,7 @@ typedef enum State_Machine {
 typedef struct StateMachineController {
 	State currentState;
     Chess::Color turnColor;
-    bool isNewGame;
+    bool isNewGame, enPass;
     //bool isWhiteTurn;
     IOController::Move origin1;
     IOController::Move origin2;
@@ -69,16 +69,18 @@ extern "C" void app_main() {
 	//smc.isWhiteTurn = true;
 	smc.turnColor = Chess::White;
 	smc.isNewGame = true;
+	smc.enPass = true;
 	//IOController::RGBColor white_80 = {255, 255, 255}; // Orange
 	//IOController::RGBColor white_20 = {5, 5, 5};  // Blue
-	IOController::RGBColor white_80 = {200, 120, 0}; // Orange
-	IOController::RGBColor white_20 = {0, 0, 127};  // Blue
+	//IOController::RGBColor white_80 = {200, 120, 0}; // Orange
+	IOController::RGBColor white_80 = {75, 0, 75}; // Orange
+	IOController::RGBColor white_20 = {0, 0, 75};  // Blue
 
 
 	// - Create needed objects
 	IOController::HalController hc(GPIO_NUM_5,  GPIO_NUM_18, GPIO_NUM_19,  GPIO_NUM_2,  GPIO_NUM_4, GPIO_NUM_27,  GPIO_NUM_26,  GPIO_NUM_25,  GPIO_NUM_33);
 	Chess::Board board;
-	IOController::LedController lc(GPIO_NUM_23, white_80, white_20); 
+	IOController::LedController lc(GPIO_NUM_23, white_20, white_80); 
 
 	//begin
     while(1) {
@@ -202,14 +204,19 @@ extern "C" void app_main() {
 
 					for(Chess::Position move : legalMoves){
 						piece2 = board.getPiece(move);
-
-						if(piece2 == NULL) {
+						//for pawn taking moves, mostly for enPassant impl
+						if(piece->getType() == Chess::PawnType && row - move.x != 0){
+							takingMoves.push_back(move);
+						}
+						else if(piece2 != NULL) {
 							takingMoves.push_back(move);
 						} else {
 							normalMoves.push_back(move);
 						}
 					}
 
+					//lc.vectorLedUpdate(takingMoves, IOController::RGBColor{0,255,0});
+					//lc.vectorLedUpdate(normalMoves, IOController::RGBColor{255,255,255});
 					lc.vectorLedUpdate(takingMoves, IOController::RGBColor{0,255,0});
 					lc.vectorLedUpdate(normalMoves, IOController::RGBColor{255,255,255});
 
@@ -276,6 +283,17 @@ extern "C" void app_main() {
 						#endif
 					}
 					else{
+						Chess::BasePiece* piece1 = board.getPiece({smc.origin1.position.x, smc.origin1.position.y});
+		        		Chess::BasePiece* piece2 = board.getPiece({smc.dest1.position.x, smc.dest1.position.y});
+						if(piece1 != NULL){
+							if(piece1->getType() == Chess::PawnType){
+								if(smc.origin1.position.x - smc.dest1.position.x != 0){
+									if(piece2 == NULL){
+										smc.enPass = true;
+									}
+								}
+							}
+						}
 						
 			        	smc.currentState = ST_VALID_CHECK;
 
@@ -360,10 +378,21 @@ extern "C" void app_main() {
 		        // Wait for piece placement
 		        smc.dest1 = hc.detectChange();
 
+				Chess::BasePiece* piece1 = board.getPiece({smc.origin1.position.x, smc.origin1.position.y});
+		        Chess::BasePiece* piece2 = board.getPiece({smc.origin2.position.x, smc.origin2.position.y});
+
 		        // Check its dest is the origin of the piece it took
 		        if(smc.dest1.position.x != smc.origin2.position.x || smc.dest1.position.y != smc.origin2.position.y){
-		        	// GOTO ST_RESET_PIECE
-		        	smc.currentState = ST_RESET_PIECE;
+					//is it because you are doing enpassant?
+					if(piece1->getType() == Chess::PawnType && piece2->getType() == Chess::PawnType){
+						// GOTO ST_VALID_CHECK
+						smc.enPass = true;
+		        		smc.currentState = ST_VALID_CHECK;
+					}
+					else{
+						// GOTO ST_RESET_PIECE
+		        		smc.currentState = ST_RESET_PIECE;
+					}
 		        }
 
 		        // GOTO ST_VALID_CHECK
@@ -392,7 +421,7 @@ extern "C" void app_main() {
 		        #ifdef DEBUG
 				    printf("Getting piece that was at collum: %d, row: %d\n", smc.origin1.position.x, smc.origin1.position.y);
 				#endif   
-		        //Chess::BasePiece* piece1 = board.getPiece({smc.origin1.position.x, smc.origin1.position.y});
+		        Chess::PieceType type = board.getPiece({smc.origin1.position.x, smc.origin1.position.y})->getType();
 		        #ifdef DEBUG
 				    printf("Checking if move to: %d, row: %d is a valid move\n", smc.dest1.position.x, smc.dest1.position.y);
 				#endif   
@@ -405,6 +434,23 @@ extern "C" void app_main() {
 		            #ifdef DEBUG
 					    printf("Move is a valid move\n");
 					#endif   
+
+					//if move is a castling move, go to reset piece intead to force rook move
+					//also change to other players turn
+					if(type == Chess::KingType){
+						if(abs(smc.origin1.position.x - smc.dest1.position.x) != 1){
+							smc.currentState = ST_RESET_PIECE;
+							smc.turnColor = (smc.turnColor == Chess::White)? Chess::Black : Chess::White;
+						}
+					}
+
+					//if the move was an enpassant move go to reset piece instead
+					//also change to other players turn
+					if(smc.enPass){
+						smc.enPass = false;
+						smc.currentState = ST_RESET_PIECE;
+						smc.turnColor = (smc.turnColor == Chess::White)? Chess::Black : Chess::White;
+					}
 		        }
 		        else{
 		        	// False - ST_RESET_PIECE
@@ -539,7 +585,7 @@ extern "C" void app_main() {
 		        #ifdef DEBUG
 				    printf("Entering ST_GAME_END\n");
 				#endif
-
+				/*
 				//std::default_random_engine generator;
 				//std::uniform_int_distribution<int> distribution(0,255);
 				std::vector<IOController::LED_Light> randomVec;
@@ -561,6 +607,7 @@ extern "C" void app_main() {
 					lc.LedStrip_Output();
 					delay(100);
 				}
+				*/
 		        break;
 		    }
 		}

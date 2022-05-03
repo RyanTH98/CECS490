@@ -72,7 +72,7 @@ std::vector<int> HalController::scan(){
 			gpio_set_level(muxA, column & 0x01);
 			gpio_set_level(muxB, (column>>1)&0x01);
 			gpio_set_level(muxC, (column>>2)&0x01);
-			//delay(.0005);
+			//delay(10);
 			delayMicroseconds(50);
 
 			newHalVector.push_back(!gpio_get_level(muxY));

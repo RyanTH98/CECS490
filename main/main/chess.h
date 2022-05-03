@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <stdio.h>
+#include <stdlib.h>
 
 //#define DEBUG
 
@@ -108,6 +109,8 @@ namespace Chess
         Pawn(Color color, Position pos, Board *board);
         virtual ~Pawn();
 
+        void setEnpassant(bool enPas);
+        bool getEnpassant();
         void populateLegalMoves();
     };
 

@@ -268,9 +268,25 @@ bool Board::movePiece(Position origin, Position dest){
 
         #endif
     
-        board[dest.x][dest.y].clearSquare();
-        board[dest.x][dest.y].setPiece(piece);
-        board[origin.x][origin.y].clearSquare();
+        BasePiece* piece2 = getPiece(dest);
+        if(piece->getType() == PawnType && piece2 == NULL && abs(dest.x-origin.x) != 0){ 
+            //enpassant move
+            int dir = (piece->getColor() == White)?-1:1;
+            piece2 = getPiece({dest.x, dest.y+dir});
+            if(piece2 != NULL){
+                if(piece2->getType() == PawnType){
+                    board[dest.x][dest.y+dir].clearSquare();
+                    board[dest.x][dest.y].clearSquare();
+                    board[dest.x][dest.y].setPiece(piece);
+                    board[origin.x][origin.y].clearSquare();
+                }
+            }
+        }
+        else{ //every other move
+            board[dest.x][dest.y].clearSquare();
+            board[dest.x][dest.y].setPiece(piece);
+            board[origin.x][origin.y].clearSquare();
+        }
     
         //Castling
         if(piece->getType() == KingType){
@@ -278,23 +294,33 @@ bool Board::movePiece(Position origin, Position dest){
             //moving two squares left -> castle left
             if(origin.x - dest.x == 2){
                 //get rook on left
-                rookPiece = getPiece({0,0});
+                rookPiece = getPiece({0,origin.y});
                 //move rook to needed square
-                board[2][0].clearSquare();
-                board[2][0].setPiece(rookPiece);
-                board[0][0].clearSquare();
+                board[2][origin.y].clearSquare();
+                board[2][origin.y].setPiece(rookPiece);
+                board[0][origin.y].clearSquare();
             }
-            //moving two squares right -> castle left
+            //moving two squares right -> castle right
             else if(dest.x - origin.x == 2){
                 //get rook on right
-                rookPiece = getPiece({7,0});
+                rookPiece = getPiece({7,origin.y});
                 //move rook to needed square
-                board[4][0].clearSquare();
-                board[4][0].setPiece(rookPiece);
-                board[0][7].clearSquare();
+                board[4][origin.y].clearSquare();
+                board[4][origin.y].setPiece(rookPiece);
+                board[7][origin.y].clearSquare();
             }
         }
 
+        //sets if piece can be taken via enpassant
+        if(piece->getType() == PawnType){
+            Pawn* pawn = static_cast<Pawn*>(piece);
+            if(abs(origin.y - dest.y) != 1){
+                pawn->setEnpassant(true);
+            }
+            else{
+                pawn->setEnpassant(false);
+            }
+        }
         printBoard();
         
         populateAllLegalMoves();
@@ -501,7 +527,7 @@ Pawn::Pawn(Color color, Position pos, Board* board){
     this->pos = pos;
     this->board = board;
     doubleJump = true;
-    enPassant = true;
+    enPassant = false;
     type = PawnType;
 }
 
@@ -511,6 +537,13 @@ Pawn::~Pawn(){
 #endif
 }
 
+void Pawn::setEnpassant(bool enPas){
+    this->enPassant = enPas;
+}
+
+bool Pawn::getEnpassant(){
+    return this->enPassant;
+}
 
 /* Function:    Pawn::populateLegalMoves
  * Arguments:   None
@@ -576,6 +609,43 @@ void Pawn::populateLegalMoves(){
             }
         }
     }
+
+    //logic for enpassant
+    //if there is a pawn directly to my side and it has enpassant set
+    //It is a legal move to take by moving one to its side and up one square
+    testPos = {pos.x-1, pos.y};
+    if(board->isInBounds(testPos)){
+        piece = board->getPiece(testPos);
+        if(piece != NULL){
+            if(piece->getColor() != color){
+                if(piece->getType() == PawnType){
+                    Pawn* pawn = static_cast<Pawn*>(piece);
+                    //piece to our left is a pawn of oppisite color
+                    if(pawn->getEnpassant()){
+                        //piece can be take by enpassant
+                        legalMoves.push_back({pos.x-1, pos.y+1*dir});
+                    }
+                }
+            }
+        }
+    }
+    testPos = {pos.x+1, pos.y};
+    if(board->isInBounds(testPos)){
+        piece = board->getPiece(testPos);
+        if(piece != NULL){
+            if(piece->getColor() != color){
+                if(piece->getType() == PawnType){
+                    Pawn* pawn = static_cast<Pawn*>(piece);
+                    //piece to our left is a pawn of oppisite color
+                    if(pawn->getEnpassant()){
+                        //piece can be take by enpassant
+                        legalMoves.push_back({pos.x+1, pos.y+1*dir});
+                    }
+                }
+            }
+        }
+    }
+
     #ifdef DEBUG
         printf("Legal moves for Pawn at {%2d, %2d}:     ", pos.x, pos.y);
         legalMovesPrint();
@@ -1636,6 +1706,7 @@ King::~King(){
  * Description: Fills a king's object with the possible moves it can make
  */
 void King::populateLegalMoves(){
+//#define DEBUG
     legalMoves.clear();
 
     Position newPos;
@@ -1788,7 +1859,7 @@ void King::populateLegalMoves(){
                 printf("Obtaining piece at {%d, %d}\n", newPos.x, newPos.y);
             #endif
             piece = board->getPiece(newPos);
-            if(i <= 3){
+            if(i < 4){
                 if(piece != NULL){
                     #ifdef DEBUG
                         printf("Piece is not NULL\n");
@@ -1822,12 +1893,14 @@ void King::populateLegalMoves(){
                     }
                 }
             }
-            else if(piece->getType() == RookType && 
-                piece->getFirstMove() && piece->getColor() == color){
-                #ifdef DEBUG
-                    printf("Castling right legal\n");
-                #endif
-                legalMoves.push_back({pos.x+2, pos.y});
+            else if(piece != NULL){ 
+                if(piece->getType() == RookType && 
+                    piece->getFirstMove() && piece->getColor() == color){
+                    #ifdef DEBUG
+                        printf("Castling right legal\n");
+                    #endif
+                    legalMoves.push_back({pos.x+2, pos.y});
+                }
             }
         }
     }
@@ -1841,7 +1914,7 @@ void King::populateLegalMoves(){
                 printf("Obtaining piece at {%d, %d}\n", newPos.x, newPos.y);
             #endif
             piece = board->getPiece(newPos);
-            if(i <= 2){
+            if(i < 3){
                 if(piece != NULL){
 
                     #ifdef DEBUG
@@ -1877,12 +1950,14 @@ void King::populateLegalMoves(){
                 }
                 
             }
-            else if(piece->getType() == RookType && 
-                piece->getFirstMove() && piece->getColor() == color){
-                #ifdef DEBUG
-                    printf("Castling left legal\n");
-                #endif
-                legalMoves.push_back({pos.x-2, pos.y});
+            else if(piece != NULL){
+                if(piece->getType() == RookType && 
+                    piece->getFirstMove() && piece->getColor() == color){
+                    #ifdef DEBUG
+                        printf("Castling left legal\n");
+                    #endif
+                    legalMoves.push_back({pos.x-2, pos.y});
+                }
             }
         }
     }
@@ -1893,4 +1968,5 @@ void King::populateLegalMoves(){
         printf("Legal moves for King at {%2d, %2d}:     ", pos.x, pos.y);
         legalMovesPrint();
     #endif
+    //#undef DEBUG
 }
