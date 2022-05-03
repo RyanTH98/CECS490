@@ -116,7 +116,9 @@ void HalController::start(){
 	halVector = scan();
 }
 
-bool HalController::checkStartingPosition(){
+std::vector<LED_Light> HalController::checkStartingPosition(){
+	std::vector<LED_Light> missingPiece;
+	missingPiece.clear();
 	std::vector<int> checkVector = {1,1,1,1,1,1,1,1,
 									1,1,1,1,1,1,1,1,
 									0,0,0,0,0,0,0,0,
@@ -127,6 +129,13 @@ bool HalController::checkStartingPosition(){
 									1,1,1,1,1,1,1,1,
 								};
 	halVector = scan();
+
+	for(int i = 0; i < 64; i++){
+		if(halVector.at(i) != checkVector.at(i)){
+			missingPiece.push_back({{i%8, i/8}, {255,0,0}});
+		}
+	}
+
 	#ifdef DEBUG_CHECK_STARTING_POSITION
 			printf("Calling printBoard from HalController::checkStartingPosition\n");
 			//printBoard();
@@ -136,7 +145,7 @@ bool HalController::checkStartingPosition(){
 			halVectorPrint(checkVector);
 			printf("Equality: %d\n\n\n", checkVector == halVector);
 	#endif
-	return checkVector == halVector;
+	return missingPiece;
 }
 
 bool HalController::debounce(std::vector<int> debounceHal){

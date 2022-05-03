@@ -68,7 +68,7 @@ namespace IOController
                         gpio_num_t decoderA0, gpio_num_t decoderA1, gpio_num_t decoderA2, gpio_num_t decoderEn);
             virtual ~HalController();
             
-            bool checkStartingPosition();
+            std::vector<LED_Light> checkStartingPosition();
             Move detectChange();
             void start();
             void printBoard();

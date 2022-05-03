@@ -105,14 +105,26 @@ extern "C" void app_main() {
 		    	#ifdef DEBUG
 				    printf("Entering ST_START_POS\n");
 				#endif
-
-		    	if(hc.checkStartingPosition()){
+				std::vector<IOController::LED_Light> misplacedPieces;
+				std::vector<IOController::LED_Light> defaultLedVector  = lc.getDefaultLedVector();		// Retruns current piece positions
+				//IOController::RGBColor red = {255, 0, 0};
+		    	
+				if( (misplacedPieces = hc.checkStartingPosition()).size() == 0){
 		    		// True  -  GOTO ST_SET_COLOR
 		    		smc.currentState = ST_SET_COLOR;
-
-				// Illuminate white LEDs
 		    	}
-		        // False - Loop
+				else{
+					// False - Loop & Illuminate with misplaced pieces LEDs
+					for(IOController::LED_Light defaultLed : defaultLedVector){
+						lc.singleLedUpdate(defaultLed);
+						for(IOController::LED_Light redLed : misplacedPieces){
+							if(redLed.pos.x == defaultLed.pos.x && redLed.pos.y == defaultLed.pos.y){
+								lc.singleLedUpdate(redLed);
+							}
+						}
+					}
+					lc.LedStrip_Output();
+				}
 		        break;
 		    }
 		    case ST_SET_COLOR:
