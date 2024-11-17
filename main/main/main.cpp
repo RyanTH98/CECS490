@@ -356,6 +356,9 @@ extern "C" void app_main() {
 		        #ifdef DEBUG
 				    printf("Entering ST_CHECK_CASTLE\n");
 				#endif
+
+
+
 				/*
 		    	if(((typeid(origin1) == typeid(Chess::Rook)) && (typeid(origin2) == typeid(Chess::King))) ||
 		    	   ((typeid(origin2) == typeid(Chess::Rook)) && (typeid(origin1) == typeid(Chess::King)))) {
@@ -666,7 +669,7 @@ void delay_1ms(int duration) { vTaskDelay(duration / portTICK_PERIOD_MS); }
 // 	pixels.show();   // Send the updated pixel colors to the hardware.
 // }
 
-
+b
 // BigMommaClass {
 //     BigMommaClass(int, int);
 
@@ -704,3 +707,5 @@ void delay_1ms(int duration) { vTaskDelay(duration / portTICK_PERIOD_MS); }
 
 // To do:
 // -- If a piece is lifted and has no possible moves, make origin square red
+
+// Alex was here 2020-11-20
